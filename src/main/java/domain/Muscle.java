@@ -3,6 +3,8 @@ package domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
@@ -10,6 +12,7 @@ import javax.validation.Valid;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
+@Access(AccessType.PROPERTY)
 public class Muscle {
 
 	private String name;
