@@ -17,9 +17,9 @@
 
 	<!-- Artifact identification and properties -->
 
-	<groupId>Design-and-Testing</groupId>
-	<artifactId>Sample</artifactId>
-	<version>1.3</version>
+	<groupId>infit-solutions</groupId>
+	<artifactId>benefits</artifactId>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	
 	<properties>
@@ -28,9 +28,8 @@
 
 	<!-- Indexing information -->
 
-	<name>Sample Project</name>
-	<url>http://www.sample-project.com</url>
-	<description>This is D&amp;T's sample project.</description>
+	<url>http://www.benefits.com</url>
+	<description>Benefits project for SE&amp;PP.</description>
 	
 	<!-- Build commands -->
 
@@ -323,4 +322,5 @@
 		
 	</dependencies>
 
+	<name>Benefits</name>
 </project> 
