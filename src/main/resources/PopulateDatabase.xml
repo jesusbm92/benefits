@@ -1046,10 +1046,10 @@
 
 	<bean id="plan1" class="domain.Plan">
 		<property name="goal" value="Goal 1" />
-		<property name="administrator" ref="userAccount1" />
+		<property name="administrator" ref="administrator1" />
 		<property name="customers">
 			<list>
-				<ref bean="userAccount2" />
+				<ref bean="customer1" />
 			</list>
 		</property>
 		<property name="diet" ref="diet1" />
@@ -1063,10 +1063,10 @@
 
 	<bean id="plan2" class="domain.Plan">
 		<property name="goal" value="Goal 2" />
-		<property name="administrator" ref="userAccount1" />
+		<property name="administrator" ref="administrator1" />
 		<property name="customers">
 			<list>
-				<ref bean="userAccount3" />
+				<ref bean="customer2" />
 			</list>
 		</property>
 		<property name="diet" ref="diet2" />
@@ -1078,35 +1078,89 @@
 		</property>
 
 	</bean>
-	
+
 	<!-- COMMENTS -->
-	
+
 	<bean id="comment1" class="domain.Comment">
 		<property name="date" value="2014/03/28" />
 		<property name="content" value="Content Comment 1" />
-		<property name="user" ref="userAccount3" />
+		<property name="user" ref="customer2" />
 		<property name="plan" ref="plan2" />
-		
+
 	</bean>
-	
+
 	<!-- ISSUES -->
-	
-	<bean id="plan1" class="domain.Plan">
-		<property name="description" value="Description 1" />
-		<property name="customer" ref="userAccount3" />
-		<property name="administrators">
-			<list>
-				<ref bean="userAccount1" />
-			</list>
-		</property>
-		<property name="diet" ref="diet1" />
-		<property name="training" ref="training1" />
+
+	<!-- ADMINISTRATORS -->
+
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="Administrator 1" />
+		<property name="surname" value="Surname 1" />
+		<property name="email" value="a@admin1.com" />
+		<property name="nationality" value="Spain" />
+		<property name="city" value="Seville" />
 		<property name="comments">
 			<list>
 			</list>
 		</property>
-		
+		<property name="userAccount" ref="userAccount1" />
+
 	</bean>
-	
-	
+
+	<!-- CUSTOMERS -->
+
+	<bean id="customer1" class="domain.Customer">
+		<property name="name" value="Customer 1" />
+		<property name="surname" value="SurnameC 1" />
+		<property name="email" value="c@customer1.com" />
+		<property name="nationality" value="Spain" />
+		<property name="city" value="Seville" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+		<property name="userAccount" ref="userAccount2" />
+		<property name="weight" value="100" />
+		<property name="height" value="180" />
+		<property name="bodyfat" value="40" />
+		<property name="waistlineMeasure" value="180" />
+		<property name="hipMeasure" value="130" />
+		<property name="chestMeasure" value="130" />
+		<property name="plan" ref="plan1" />
+		<property name="issues">
+			<list>
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="customer2" class="domain.Customer">
+		<property name="name" value="Customer 2" />
+		<property name="surname" value="SurnameC 2" />
+		<property name="email" value="c@customer2.com" />
+		<property name="nationality" value="Spain" />
+		<property name="city" value="Seville" />
+		<property name="comments">
+			<list>
+				<ref bean="comment1" />
+			</list>
+		</property>
+		<property name="userAccount" ref="userAccount3" />
+		<property name="weight" value="70" />
+		<property name="height" value="170" />
+		<property name="bodyfat" value="10" />
+		<property name="waistlineMeasure" value="70" />
+		<property name="hipMeasure" value="80" />
+		<property name="chestMeasure" value="80" />
+		<property name="plan" ref="plan2" />
+		<property name="issues">
+			<list>
+			</list>
+		</property>
+
+
+	</bean>
+
+
 </beans>
