@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
- * PopulateDatabase.xml
- *
- * Copyright (C) 2014 Universidad de Sevilla
- * 
- * The use of this project is hereby constrained to the conditions of the 
- * TDG Licence, a copy of which you may download from 
- * http://www.tdg-seville.info/License.html
- -->
+<!-- * PopulateDatabase.xml * * Copyright (C) 2014 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	">
-	
+
 	<!-- User accounts -->
 
 	<bean id="userAccount1" class="security.UserAccount">
@@ -31,8 +25,8 @@
 	</bean>
 
 	<bean id="userAccount2" class="security.UserAccount">
-		<property name="username" value="customer" />
-		<property name="password" value="91ec1f9324753048c0096d036a694f86" />
+		<property name="username" value="customer1" />
+		<property name="password" value="ffbc4675f864e0e9aab8bdf7a0437010" />
 		<property name="authorities">
 			<list>
 				<bean class="security.Authority">
@@ -43,20 +37,1076 @@
 	</bean>
 
 	<bean id="userAccount3" class="security.UserAccount">
-		<property name="username" value="super" />
-		<property name="password" value="1b3231655cebb7a1f783eddf27d254ca" />
+		<property name="username" value="customer2" />
+		<property name="password" value="5ce4d191fd14ac85a1469fb8c29b7a7b" />
 		<property name="authorities">
 			<list>
-				<bean class="security.Authority">
-					<property name="authority" value="ADMIN" />
-				</bean>
 				<bean class="security.Authority">
 					<property name="authority" value="CUSTOMER" />
 				</bean>
 			</list>
 		</property>
 	</bean>
+
+	<!-- Other domain beans come here -->
+
+
+	<!-- DIETS -->
+
+	<bean id="diet1" class="domain.Diet">
+		<property name="name" value="Diet 1" />
+		<property name="description" value="Lore ipsum" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+				<ref bean="plan2" />
+			</list>
+		</property>
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+				<ref bean="day2" />
+				<ref bean="day3" />
+				<ref bean="day4" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor1" />
+
+	</bean>
+	<bean id="diet2" class="domain.Diet">
+		<property name="name" value="Diet 2" />
+		<property name="description" value="Lore ipsum 2" />
+		<property name="plans">
+			<list>
+				<ref bean="plan3" />
+				<ref bean="plan4" />
+			</list>
+		</property>
+		<property name="days">
+			<list>
+				<ref bean="day5" />
+				<ref bean="day6" />
+				<ref bean="day7" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor2" />
+
+	</bean>
+
+	<!-- DAYS -->
+
+	<bean id="day1" class="domain.Day">
+		<property name="name" value="Day 1" />
+		<property name="diet" value="diet1" />
+		<property name="meals">
+			<list>
+				<ref bean="meal1" />
+				<ref bean="meal2" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="day2" class="domain.Day">
+		<property name="name" value="Day 2" />
+		<property name="diet" value="diet1" />
+		<property name="meals">
+			<list>
+				<ref bean="meal3" />
+				<ref bean="meal4" />
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="day3" class="domain.Day">
+		<property name="name" value="Day 3" />
+		<property name="diet" value="diet1" />
+		<property name="meals">
+			<list>
+				<ref bean="meal5" />
+				<ref bean="meal6" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="day4" class="domain.Day">
+		<property name="name" value="Day 4" />
+		<property name="diet" value="diet1" />
+		<property name="meals">
+			<list>
+				<ref bean="meal7" />
+				<ref bean="meal8" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="day5" class="domain.Day">
+		<property name="name" value="Day 5" />
+		<property name="diet" value="diet2" />
+		<property name="meals">
+			<list>
+				<ref bean="meal9" />
+				<ref bean="meal10" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="day6" class="domain.Day">
+		<property name="name" value="Day 6" />
+		<property name="diet" value="diet2" />
+		<property name="meals">
+			<list>
+				<ref bean="meal11" />
+				<ref bean="meal12" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="day7" class="domain.Day">
+		<property name="name" value="Day 7" />
+		<property name="diet" value="diet2" />
+		<property name="meals">
+			<list>
+				<ref bean="meal13" />
+				<ref bean="meal14" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- MEALS -->
+
+	<bean id="meal1" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day1" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount1" />
+				<ref bean="amount2" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal2" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day1" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount3" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal3" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day1" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount4" />
+				<ref bean="amount5" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal4" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day1" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount6" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal5" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day1" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount7" />
+				<ref bean="amount8" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal6" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day2" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount9" />
+
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal7" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day2" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount10" />
+				<ref bean="amount11" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal8" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day2" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount12" />
+
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal9" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day2" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount13" />
+				<ref bean="amount14" />
+
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal10" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day2" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount15" />
+
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal11" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day3" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount16" />
+				<ref bean="amount17" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal12" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day3" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount18" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal13" class="domain.Meal">
+		<property name="name" value="Lunch" />
+		<property name="day" value="day3" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount19" />
+				<ref bean="amount20" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="meal14" class="domain.Meal">
+		<property name="name" value="Dinner" />
+		<property name="day" value="day3" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount21" />
+			</list>
+		</property>
+
+	</bean>
+
+
+	<!-- AMOUNTS -->
+
+	<bean id="amount1" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal1" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+	<bean id="amount2" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="ml" />
+		<property name="meal" ref="meal1" />
+		<property name="food" ref="food2" />
+
+	</bean>
+
+	<bean id="amount3" class="domain.Amount">
+		<property name="quantity" value="100" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal2" />
+		<property name="food" ref="food3" />
+
+	</bean>
+
+	<bean id="amount4" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="ml" />
+		<property name="meal" ref="meal3" />
+		<property name="food" ref="food4" />
+
+	</bean>
+
+	<bean id="amount5" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal3" />
+		<property name="food" ref="food5" />
+
+	</bean>
+
+	<bean id="amount6" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal4" />
+		<property name="food" ref="food6" />
+
+	</bean>
+
+	<bean id="amount7" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal5" />
+		<property name="food" ref="food7" />
+
+	</bean>
+
+	<bean id="amount8" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="ml" />
+		<property name="meal" ref="meal5" />
+		<property name="food" ref="food8" />
+
+	</bean>
+
+	<bean id="amount9" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal6" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+	<bean id="amount10" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal7" />
+		<property name="food" ref="food1" />
+
+	</bean>
+	<bean id="amount11" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="ml" />
+		<property name="meal" ref="meal7" />
+		<property name="food" ref="food8" />
+
+	</bean>
+
+	<bean id="amount12" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal8" />
+		<property name="food" ref="food3" />
+
+	</bean>
+
+	<bean id="amount13" class="domain.Amount">
+		<property name="quantity" value="100" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal9" />
+		<property name="food" ref="food4" />
+
+	</bean>
+
+	<bean id="amount14" class="domain.Amount">
+		<property name="quantity" value="100" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal9" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+	<bean id="amount15" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal10" />
+		<property name="food" ref="food3" />
+
+	</bean>
+
+	<bean id="amount16" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal11" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+	<bean id="amount17" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="ml" />
+		<property name="meal" ref="meal11" />
+		<property name="food" ref="food2" />
+
+	</bean>
+
+	<bean id="amount18" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal12" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+	<bean id="amount19" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal13" />
+		<property name="food" ref="food3" />
+
+	</bean>
+
+	<bean id="amount20" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal13" />
+		<property name="food" ref="food4" />
+
+	</bean>
+	<bean id="amount21" class="domain.Amount">
+		<property name="quantity" value="250" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal14" />
+		<property name="food" ref="food1" />
+
+	</bean>
+
+
+	<!-- FOODS -->
+
+	<bean id="food1" class="domain.Food">
+		<property name="name" value="Chicken Steak" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount1" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food2" class="domain.Food">
+		<property name="name" value="Orange Juice" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount2" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food3" class="domain.Food">
+		<property name="name" value="Salad" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount3" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food4" class="domain.Food">
+		<property name="name" value="Beef Steak" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount5" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food5" class="domain.Food">
+		<property name="name" value="Milk" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount4" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food6" class="domain.Food">
+		<property name="name" value="Turkey breast" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount6" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food7" class="domain.Food">
+		<property name="name" value="Lentils" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount7" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food8" class="domain.Food">
+		<property name="name" value="Yogurt" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount8" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- MUSCLES -->
+
+	<bean id="muscle1" class="domain.Muscle">
+		<property name="name" value="Muscle 1" />
+
+	</bean>
+	<bean id="muscle2" class="domain.Muscle">
+		<property name="name" value="Muscle 2" />
+
+	</bean>
+	<bean id="muscle3" class="domain.Muscle">
+		<property name="name" value="Muscle 3" />
+
+	</bean>
+	<bean id="muscle4" class="domain.Muscle">
+		<property name="name" value="Muscle 4" />
+
+	</bean>
+	<bean id="muscle5" class="domain.Muscle">
+		<property name="name" value="Muscle 5" />
+
+	</bean>
+	<bean id="muscle6" class="domain.Muscle">
+		<property name="name" value="Muscle 6" />
+
+	</bean>
+	<bean id="muscle7" class="domain.Muscle">
+		<property name="name" value="Muscle 7" />
+
+	</bean>
+	<bean id="muscle8" class="domain.Muscle">
+		<property name="name" value="Muscle 8" />
+
+	</bean>
+	<bean id="muscle9" class="domain.Muscle">
+		<property name="name" value="Muscle 9" />
+
+	</bean>
+	<bean id="muscle10" class="domain.Muscle">
+		<property name="name" value="Muscle 10" />
+
+	</bean>
+	<bean id="muscle11" class="domain.Muscle">
+		<property name="name" value="Muscle 11" />
+
+	</bean>
+	<bean id="muscle12" class="domain.Muscle">
+		<property name="name" value="Muscle 12" />
+
+	</bean>
+
+
+	<!-- EXERCISES -->
+
+	<bean id="exercise1" class="domain.Exercise">
+		<property name="name" value="Exercise 1" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle1" />
+		<property name="exerciseGroup" ref="exercisegroup1" />
+
+
+	</bean>
+
+	<bean id="exercise2" class="domain.Exercise">
+		<property name="name" value="Exercise 2" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle2" />
+		<property name="exerciseGroup" ref="exercisegroup1" />
+
+
+	</bean>
+
+	<bean id="exercise3" class="domain.Exercise">
+		<property name="name" value="Exercise 3" />
+		<property name="repetitions" value="12" />
+		<property name="cycles" value="2" />
+		<property name="muscle" ref="muscle3" />
+		<property name="exerciseGroup" ref="exercisegroup2" />
+
+
+	</bean>
+
+	<bean id="exercise4" class="domain.Exercise">
+		<property name="name" value="Exercise 4" />
+		<property name="repetitions" value="5" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle4" />
+		<property name="exerciseGroup" ref="exercisegroup2" />
+
+
+	</bean>
+
+	<bean id="exercise5" class="domain.Exercise">
+		<property name="name" value="Exercise 5" />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle5" />
+		<property name="exerciseGroup" ref="exercisegroup3" />
+
+
+	</bean>
+
+	<bean id="exercise6" class="domain.Exercise">
+		<property name="name" value="Exercise 6" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle6" />
+		<property name="exerciseGroup" ref="exercisegroup3" />
+
+
+	</bean>
+
+	<bean id="exercise7" class="domain.Exercise">
+		<property name="name" value="Exercise 7" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle7" />
+		<property name="exerciseGroup" ref="exercisegroup4" />
+
+
+	</bean>
+
+	<bean id="exercise8" class="domain.Exercise">
+		<property name="name" value="Exercise 8" />
+		<property name="repetitions" value="18" />
+		<property name="cycles" value="2" />
+		<property name="muscle" ref="muscle8" />
+		<property name="exerciseGroup" ref="exercisegroup4" />
+
+
+	</bean>
+
+	<bean id="exercise9" class="domain.Exercise">
+		<property name="name" value="Exercise 9" />
+		<property name="repetitions" value="2" />
+		<property name="cycles" value="10" />
+		<property name="muscle" ref="muscle9" />
+		<property name="exerciseGroup" ref="exercisegroup5" />
+
+
+	</bean>
+
+	<bean id="exercise10" class="domain.Exercise">
+		<property name="name" value="Exercise 10" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle10" />
+		<property name="exerciseGroup" ref="exercisegroup5" />
+
+
+	</bean>
+
+	<bean id="exercise11" class="domain.Exercise">
+		<property name="name" value="Exercise 11" />
+		<property name="repetitions" value="20" />
+		<property name="cycles" value="2" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroup" ref="exercisegroup6" />
+
+
+	</bean>
+
+	<bean id="exercise12" class="domain.Exercise">
+		<property name="name" value="Exercise 12" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroup" ref="exercisegroup6" />
+
+
+	</bean>
+
+
+	<!-- EXERCISE GROUPS -->
+
+	<bean id="exercisegroup1" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 1" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise1" />
+				<ref bean="exercise2" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday1" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup2" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 2" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise3" />
+				<ref bean="exercise4" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday2" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup3" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 3" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise5" />
+				<ref bean="exercise6" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday3" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup4" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 4" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise7" />
+				<ref bean="exercise8" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup5" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 5" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise9" />
+				<ref bean="exercise10" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday5" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup6" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 6" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise11" />
+				<ref bean="exercise12" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday6" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<!-- TRAINING DAYS -->
+
+	<bean id="trainingday1" class="domain.TrainingDay">
+		<property name="name" value="Training Day 1" />
+		<property name="training" ref="training1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="trainingday2" class="domain.TrainingDay">
+		<property name="name" value="Training Day 2" />
+		<property name="training" ref="training1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="trainingday3" class="domain.TrainingDay">
+		<property name="name" value="Training Day 3" />
+		<property name="training" ref="training1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="trainingday4" class="domain.TrainingDay">
+		<property name="name" value="Training Day 4" />
+		<property name="training" ref="training2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="trainingday5" class="domain.TrainingDay">
+		<property name="name" value="Training Day 5" />
+		<property name="training" ref="training2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="trainingday6" class="domain.TrainingDay">
+		<property name="name" value="Training Day 6" />
+		<property name="training" ref="training2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup6" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<!-- Trainings -->
+
+	<bean id="training1" class="domain.Training">
+		<property name="name" value="Training 1" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday1" />
+				<ref bean="trainingday2" />
+				<ref bean="trainingday3" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor1" />
+
+
+	</bean>
+
+	<bean id="training2" class="domain.Training">
+		<property name="name" value="Training 2" />
+		<property name="plans">
+			<list>
+				<ref bean="plan2" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4" />
+				<ref bean="trainingday5" />
+				<ref bean="trainingday6" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor2" />
+
+
+	</bean>
+
+	<!-- SPONSORS -->
+
+	<bean id="sponsor1" class="domain.Sponsor">
+		<property name="name" value="Sponsor 1" />
+		<property name="address" value="Address 1" />
+		<property name="email" value="sponsor1@sponsor.com" />
+		<property name="phone" value="111111111" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1" />
+			</list>
+		</property>
+		<property name="diets">
+			<list>
+				<ref bean="diet1" />
+			</list>
+		</property>
+
+
+
+	</bean>
+	<bean id="sponsor2" class="domain.Sponsor">
+		<property name="name" value="Sponsor 2" />
+		<property name="address" value="Address 2" />
+		<property name="email" value="sponsor2@sponsor.com" />
+		<property name="phone" value="222222222" />
+		<property name="trainings">
+			<list>
+				<ref bean="training2" />
+			</list>
+		</property>
+		<property name="diets">
+			<list>
+				<ref bean="diet2" />
+			</list>
+		</property>
+
+
+
+	</bean>
+
+	<!-- PLANS -->
+
+	<bean id="plan1" class="domain.Plan">
+		<property name="goal" value="Goal 1" />
+		<property name="administrator" ref="userAccount1" />
+		<property name="customers">
+			<list>
+				<ref bean="userAccount2" />
+			</list>
+		</property>
+		<property name="diet" ref="diet1" />
+		<property name="training" ref="training1" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="plan2" class="domain.Plan">
+		<property name="goal" value="Goal 2" />
+		<property name="administrator" ref="userAccount1" />
+		<property name="customers">
+			<list>
+				<ref bean="userAccount3" />
+			</list>
+		</property>
+		<property name="diet" ref="diet2" />
+		<property name="training" ref="training2" />
+		<property name="comments">
+			<list>
+				<ref bean="comment1" />
+			</list>
+		</property>
+
+	</bean>
 	
-	<!-- Other domain beans come here -->	
+	<!-- COMMENTS -->
+	
+	<bean id="comment1" class="domain.Comment">
+		<property name="date" value="2014/03/28" />
+		<property name="content" value="Content Comment 1" />
+		<property name="user" ref="userAccount3" />
+		<property name="plan" ref="plan2" />
+		
+	</bean>
+	
+	<!-- ISSUES -->
+	
+	<bean id="plan1" class="domain.Plan">
+		<property name="description" value="Description 1" />
+		<property name="customer" ref="userAccount3" />
+		<property name="administrators">
+			<list>
+				<ref bean="userAccount1" />
+			</list>
+		</property>
+		<property name="diet" ref="diet1" />
+		<property name="training" ref="training1" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+		
+	</bean>
+	
 	
 </beans>
