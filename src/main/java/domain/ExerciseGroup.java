@@ -41,7 +41,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@OneToMany(mappedBy = "training", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "exerciseGroup", cascade = CascadeType.ALL)
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}
@@ -52,7 +52,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToMany(mappedBy = "exerciseGroup")
+	@ManyToMany
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;
 	}
