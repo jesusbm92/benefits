@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class ExerciseGroup {
+public class ExerciseGroup extends DomainEntity {
 
 	private String name;
 

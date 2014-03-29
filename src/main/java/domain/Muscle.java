@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Muscle {
+public class Muscle extends DomainEntity {
 
 	private String name;
 

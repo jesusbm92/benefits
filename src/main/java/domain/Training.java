@@ -17,7 +17,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Training {
+public class Training extends DomainEntity {
 
 	private String name;
 	private int duration;

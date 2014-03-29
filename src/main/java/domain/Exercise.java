@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Exercise {
+public class Exercise extends DomainEntity {
 
 	private String name;
 	private int repetitions;
