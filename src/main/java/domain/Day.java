@@ -7,6 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
@@ -18,7 +20,8 @@ import org.hibernate.validator.constraints.NotBlank;
 @Access(AccessType.PROPERTY)
 public class Day extends DomainEntity {
 
-	private String name;
+	@Enumerated(EnumType.STRING)
+	private Days name;
 
 	// relationship
 	private Diet diet;
@@ -30,11 +33,11 @@ public class Day extends DomainEntity {
 	}
 
 	@NotBlank
-	public String getName() {
+	public Days getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(Days name) {
 		this.name = name;
 	}
 

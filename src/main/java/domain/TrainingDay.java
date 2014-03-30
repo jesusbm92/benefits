@@ -6,6 +6,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
@@ -17,7 +19,8 @@ import org.hibernate.validator.constraints.NotBlank;
 @Access(AccessType.PROPERTY)
 public class TrainingDay extends DomainEntity {
 
-	private String name;
+	@Enumerated(EnumType.STRING)
+	private Days name;
 
 	// Relationships
 	private Training training;
@@ -29,11 +32,11 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@NotBlank
-	public String getName() {
+	public Days getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(Days name) {
 		this.name = name;
 	}
 
