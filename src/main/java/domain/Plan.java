@@ -20,7 +20,7 @@ public class Plan extends DomainEntity {
 	private String goal;
 
 	// RelationShip
-	private Administrator administrator;
+	private Collection<Issue> issues;
 	private Collection<Customer> customers;
 	private Diet diet;
 	private Training training;
@@ -30,7 +30,7 @@ public class Plan extends DomainEntity {
 		super();
 		customers = new ArrayList<Customer>();
 		comments = new ArrayList<Comment>();
-
+		issues = new ArrayList<Issue>();
 	}
 
 	@NotBlank
@@ -44,13 +44,13 @@ public class Plan extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToOne(optional = false)
-	public Administrator getAdministrator() {
-		return administrator;
+	@OneToMany(mappedBy = "plan")
+	public Collection<Issue> getIssues() {
+		return issues;
 	}
 
-	public void setAdministrator(Administrator administrator) {
-		this.administrator = administrator;
+	public void setIssues(Collection<Issue> issues) {
+		this.issues = issues;
 	}
 
 	@Valid

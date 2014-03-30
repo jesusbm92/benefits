@@ -50,7 +50,7 @@ public class TrainingDay extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToMany
+	@ManyToMany(mappedBy = "trainingDays")
 	public Collection<ExerciseGroup> getExerciseGroups() {
 		return exerciseGroups;
 	}

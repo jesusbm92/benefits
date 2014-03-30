@@ -1,12 +1,8 @@
 package domain;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -21,12 +17,10 @@ public class Issue extends DomainEntity {
 
 	// RelationShip
 	private Customer customer;
-	private Collection<Administrator> administrators;
+	private Plan plan;
 
 	public Issue() {
 		super();
-		administrators = new ArrayList<Administrator>();
-
 	}
 
 	@NotBlank
@@ -51,13 +45,13 @@ public class Issue extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToMany
-	public Collection<Administrator> getAdministrator() {
-		return administrators;
+	@ManyToOne(optional = false)
+	public Plan getPlan() {
+		return plan;
 	}
 
-	public void setAdministrator(Collection<Administrator> administrators) {
-		this.administrators = administrators;
+	public void setPlan(Plan plan) {
+		this.plan = plan;
 	}
 
 }

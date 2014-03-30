@@ -21,7 +21,6 @@ public class Day extends DomainEntity {
 	private String name;
 
 	// relationship
-
 	private Diet diet;
 	private Collection<Meal> meals;
 
