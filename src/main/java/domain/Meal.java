@@ -13,13 +13,10 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 @Entity
 @Access(AccessType.PROPERTY)
 public class Meal extends DomainEntity {
 
-	@Enumerated(EnumType.STRING)
 	private Meals name;
 
 	// RelationShip
@@ -32,7 +29,7 @@ public class Meal extends DomainEntity {
 
 	}
 
-	@NotBlank
+	@Enumerated(EnumType.STRING)
 	public Meals getName() {
 		return name;
 	}

@@ -10,9 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -40,7 +40,7 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
+	@NotEmpty
 	@OneToMany(mappedBy = "exerciseGroup", cascade = CascadeType.ALL)
 	public Collection<Exercise> getExercises() {
 		return exercises;
@@ -51,8 +51,8 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
-	@ManyToMany
+	@NotEmpty
+	@ManyToMany(mappedBy = "exerciseGroups")
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;
 	}

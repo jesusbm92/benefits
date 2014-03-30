@@ -2,6 +2,7 @@ package domain;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
@@ -15,8 +16,8 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Exercise extends DomainEntity {
 
 	private String name;
-	private int repetitions;
-	private int cycles;
+	private Integer repetitions;
+	private Integer cycles;
 
 	// Relationships
 	private Muscle muscle;
@@ -35,27 +36,29 @@ public class Exercise extends DomainEntity {
 		this.name = name;
 	}
 
+	@NotNull
 	@Min(1)
-	public int getRepetitions() {
+	public Integer getRepetitions() {
 		return repetitions;
 	}
 
-	public void setRepetitions(int repetitions) {
+	public void setRepetitions(Integer repetitions) {
 		this.repetitions = repetitions;
 	}
 
+	@NotNull
 	@Min(1)
-	public int getCycles() {
+	public Integer getCycles() {
 		return cycles;
 	}
 
-	public void setCycles(int cycles) {
+	public void setCycles(Integer cycles) {
 		this.cycles = cycles;
 	}
 
 	@Valid
 	@NotNull
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = false, cascade = CascadeType.ALL)
 	public Muscle getMuscle() {
 		return muscle;
 	}

@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -13,13 +14,10 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 @Entity
 @Access(AccessType.PROPERTY)
 public class TrainingDay extends DomainEntity {
 
-	@Enumerated(EnumType.STRING)
 	private Days name;
 
 	// Relationships
@@ -31,7 +29,7 @@ public class TrainingDay extends DomainEntity {
 		exerciseGroups = new ArrayList<ExerciseGroup>();
 	}
 
-	@NotBlank
+	@Enumerated(EnumType.STRING)
 	public Days getName() {
 		return name;
 	}
@@ -53,7 +51,7 @@ public class TrainingDay extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToMany(mappedBy = "trainingDays")
+	@ManyToMany(cascade = CascadeType.ALL)
 	public Collection<ExerciseGroup> getExerciseGroups() {
 		return exerciseGroups;
 	}

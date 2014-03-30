@@ -8,17 +8,6 @@ package domain;
  */
 public enum Meals {
 
-	BREAKFAST("Breakfast"), MID_MORNING("Mid-Morning"), LUNCH("Lunch"), TEA_TIME(
-			"Tea Time"), DINNER("Dinner");
-
-	public final String mealName;
-
-	private Meals(String mealName) {
-		this.mealName = mealName;
-	}
-
-	public String getMealName() {
-		return mealName;
-	}
+	BREAKFAST, MID_MORNING, LUNCH, TEA_TIME, DINNER
 
 }

@@ -24,7 +24,7 @@ public class Administrator extends User {
 
 	@Valid
 	@NotNull
-	@OneToMany(mappedBy = "administrator")
+	@OneToMany
 	public Collection<Plan> getPlans() {
 		return plans;
 	}
