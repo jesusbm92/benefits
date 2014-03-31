@@ -47,21 +47,7 @@
 		</property>
 	</bean>
 
-	<!-- ADMINISTRATORS -->
 
-	<bean id="administrator1" class="domain.Administrator">
-		<property name="name" value="Administrator 1" />
-		<property name="surname" value="Surname 1" />
-		<property name="email" value="a@admin1.com" />
-		<property name="nationality" value="Spain" />
-		<property name="city" value="Seville" />
-		<property name="comments">
-			<list>
-			</list>
-		</property>
-		<property name="userAccount" ref="userAccount1" />
-
-	</bean>
 
 	<!-- SPONSORS -->
 
@@ -216,6 +202,27 @@
 			</list>
 		</property>
 
+	</bean>
+
+	<!-- ADMINISTRATORS -->
+
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="Administrator 1" />
+		<property name="surname" value="Surname 1" />
+		<property name="email" value="a@admin1.com" />
+		<property name="nationality" value="Spain" />
+		<property name="city" value="Seville" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+		<property name="userAccount" ref="userAccount1" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+				<ref bean="plan2" />
+			</list>
+		</property>
 	</bean>
 
 	<!-- CUSTOMERS -->
@@ -1071,7 +1078,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<!-- EXERCISES -->
 
 	<bean id="exercise1" class="domain.Exercise">
