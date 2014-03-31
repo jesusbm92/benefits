@@ -88,7 +88,6 @@ public class Customer extends User {
 	}
 
 	@Valid
-	@NotNull
 	@ManyToOne(optional = true)
 	public Plan getPlan() {
 		return plan;
