@@ -19,16 +19,16 @@
 <%@taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<p><spring:message code="panic.text" /> <code>${name}</code>.</p>
+<%-- <p><spring:message code="panic.text" /> <code>${name}</code>.</p>
 
 <h2><spring:message code="panic.message" /></h2>
 
 <p style="font-family: 'Courier New'">
 	${exception}
-</p>
+</p> --%>
+<p style="text-align:center"><spring:message code="panic.stack" /></span></p>
+</br>
 
-<h2><spring:message code="panic.stack.trace" /></h2>
-
-<p style="font-family: 'Courier New'">	
-	${stackTrace}
+<p style="text-align:center;color: blue">
+<a href="welcome/index.do" > <spring:message code="panic.href" /></a>
 </p>
