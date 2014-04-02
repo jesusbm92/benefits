@@ -21,7 +21,7 @@
 	</display:column>
 	<security:authorize access="hasRole('ADMIN')">
 			<display:column  >
-				<a href="issue/customer/list.do?planId=${row.id}"> <spring:message
+				<a href="issue/administrator/list.do?planId=${row.id}"> <spring:message
 						code="plan.issue" />
 				</a>
 			</display:column>

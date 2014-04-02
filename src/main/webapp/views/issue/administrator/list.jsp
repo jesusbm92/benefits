@@ -9,19 +9,17 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<display:table uid="commentListTable" keepStatus="true" name="comments"
+<display:table uid="issueListTable" keepStatus="true" name="issues"
 	pagesize="5"  requestURI="${requestURI}" id="row">
 
 	
-	<display:column property="content" titleKey="comment.content" sortable="true" />
-	<display:column property="plan.id" titleKey="comment.plan" sortable="true" />
-	<display:column property="user.name" titleKey="comment.user" sortable="true" />
+	<display:column property="description" titleKey="issue.description" sortable="true" />
+	<display:column property="plan.id" titleKey="issue.plan" sortable="true" />
+	<display:column property="customer.name" titleKey="issue.user" sortable="true" />
 	
 	
 </display:table>
-			<a href="comment/create.do?planId=${plan.id}"><input type="button" value="<spring:message code="comment.create"/>"  
-			 onclick="self.location.href = comment/create.do" /></a>
-			<a href="plan/list.do"><input type="button" value="<spring:message code="comment.cancel"/>"  
+			<a href="plan/list.do"><input type="button" value="<spring:message code="issue.cancel"/>"  
 			 onclick="self.location.href = plan/list.do" /></a>
 
 
