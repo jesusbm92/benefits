@@ -99,6 +99,12 @@ public class PlanService {
 		return res;
 	}
 
+	public Collection<String> findAllGoals() {
+		Assert.isTrue(userService.IAmACustomer());
+		Collection<String> goals = planRepository.findAllGoals();
+		return goals;
+	}
+
 	// Assertions
 
 }

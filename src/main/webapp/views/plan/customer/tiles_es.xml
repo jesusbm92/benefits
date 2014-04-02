@@ -20,5 +20,10 @@
 		<put-attribute name="title" value="Mi plan " />
 		<put-attribute name="body" value="/views/plan/customer/list.jsp" />
 	</definition>
+	
+	<definition name="plan/customer/request" extends="master.page">	
+		<put-attribute name="title" value="Solicitar Plan" />
+		<put-attribute name="body" value="/views/plan/customer/request.jsp" />
+	</definition>
 
 </tiles-definitions>

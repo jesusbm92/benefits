@@ -47,8 +47,9 @@ public class CustomerPlanController extends AbstractController {
 		String requestURI = "plan/customer/list.do";
 		Collection<Plan> plans = planService.findPlanByCustomer(customer
 				.getId());
+		Boolean hasPlan = plans.iterator().next() != null;
 
-		result = createListModelAndView(requestURI, plans, uri);
+		result = createListModelAndView(requestURI, plans, uri, hasPlan);
 
 		return result;
 	}
@@ -63,6 +64,20 @@ public class CustomerPlanController extends AbstractController {
 
 		result = createEditModelAndView(plan);
 		result.addObject("create", true);
+
+		return result;
+	}
+
+	@RequestMapping(value = "/request", method = RequestMethod.GET)
+	public ModelAndView request() {
+		ModelAndView result;
+
+		Collection<String> goals = planService.findAllGoals();
+
+		Plan plan = planService.create();
+
+		result = createEditModelAndView(plan);
+		result.addObject("goals", goals);
 
 		return result;
 	}
@@ -124,12 +139,13 @@ public class CustomerPlanController extends AbstractController {
 	}
 
 	protected ModelAndView createListModelAndView(String requestURI,
-			Collection<Plan> plans, String uri) {
+			Collection<Plan> plans, String uri, Boolean res) {
 		ModelAndView result;
 
 		result = new ModelAndView(uri);
 		result.addObject("plans", plans);
 		result.addObject("requestURI", requestURI);
+		result.addObject("res", res);
 
 		return result;
 	}
