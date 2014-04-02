@@ -28,6 +28,10 @@
 		<value>/views/customer/messages</value>
 		<value>/views/profile/messages</value>
 		<value>/views/register/messages</value>
+		<value>/views/plan/customer/messages</value>
+		<value>/views/plan/messages</value>
+		<value>/views/plan/administrator/messages</value>
+		<value>/views/comment/messages</value>
 	</util:list>
 
 </beans>

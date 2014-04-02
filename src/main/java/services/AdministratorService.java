@@ -106,6 +106,25 @@ public class AdministratorService extends UserService {
 		return result;
 	}
 
+	public Administrator findByPrincipalComment() {
+
+		Administrator result;
+		UserAccount userAccount;
+		userAccount = LoginService.getPrincipal();
+		result = findByUserAccount(userAccount);
+
+		return result;
+	}
+
+	public Administrator findByUserAccountComment(UserAccount userAccount) {
+
+		Administrator result;
+		result = administratorRepository.findByUserAccountId(userAccount
+				.getId());
+
+		return result;
+	}
+
 	// Reconstruct
 
 	public Administrator reconstruct(AdministratorForm administratorForm) {

@@ -37,6 +37,48 @@
 		<bean class="converters.AdministratorToStringConverter" />
 		<bean class="converters.StringToAdministratorConverter" />
 		
+		
+<bean class="converters.AmountToStringConverter" />
+ <bean class="converters.StringToAmountConverter" />
+
+<bean class="converters.CommentToStringConverter" />
+ <bean class="converters.StringToCommentConverter" />
+
+<bean class="converters.DayToStringConverter" />
+ <bean class="converters.StringToDayConverter" />
+
+<bean class="converters.DietToStringConverter" />
+ <bean class="converters.StringToDietConverter" />
+
+<bean class="converters.ExerciseToStringConverter" />
+ <bean class="converters.StringToExerciseConverter" />
+
+<bean class="converters.ExerciseGroupToStringConverter" />
+ <bean class="converters.StringToExerciseGroupConverter" />
+
+<bean class="converters.FoodToStringConverter" />
+ <bean class="converters.StringToFoodConverter" />
+
+<bean class="converters.IssueToStringConverter" />
+ <bean class="converters.StringToIssueConverter" />
+
+<bean class="converters.MealToStringConverter" />
+ <bean class="converters.StringToMealConverter" />
+
+<bean class="converters.MuscleToStringConverter" />
+ <bean class="converters.StringToMuscleConverter" />
+
+<bean class="converters.PlanToStringConverter" />
+ <bean class="converters.StringToPlanConverter" />
+
+<bean class="converters.SponsorToStringConverter" />
+ <bean class="converters.StringToSponsorConverter" />
+
+<bean class="converters.TrainingToStringConverter" />
+ <bean class="converters.StringToTrainingConverter" />
+
+<bean class="converters.TrainingDayToStringConverter" />
+ <bean class="converters.StringToTrainingDayConverter" />
 	</util:list>
 	
 </beans>

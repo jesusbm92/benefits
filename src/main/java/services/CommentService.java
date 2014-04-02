@@ -1,6 +1,7 @@
 package services;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import org.springframework.util.Assert;
 
 import repositories.CommentRepository;
 import domain.Comment;
+import domain.Plan;
 
 @Transactional
 @Service
@@ -23,6 +25,15 @@ public class CommentService {
 	@Autowired
 	private PlanService planService;
 
+	@Autowired
+	private CustomerService customerService;
+
+	@Autowired
+	private UserService userService;
+
+	@Autowired
+	private AdministratorService administratorService;
+
 	// Constructors --------------------------
 	public CommentService() {
 		super();
@@ -34,8 +45,20 @@ public class CommentService {
 	 * 
 	 * @return Comment comment
 	 */
-	public Comment create() {
+	public Comment create(int idPlan) {
 		Comment comment = new Comment();
+		comment.setDate(new Date());
+		Plan plan = planService.findOne(idPlan);
+		comment.setPlan(plan);
+
+		// Customer customer = customerService.findByPrincipal();
+		// Administrator admin = administratorService.findByPrincipal();
+		// if (customer != null && admin == null) {
+		// comment.setUser(customer);
+		// }
+		// if (customer == null && admin != null) {
+		// comment.setUser(admin);
+		// }
 
 		return comment;
 	}
@@ -68,7 +91,6 @@ public class CommentService {
 	public void save(Comment comment) {
 		Assert.notNull(comment);
 		// TODO Restricciones de Save
-
 		commentRepository.save(comment);
 	}
 

@@ -50,8 +50,7 @@ public class Comment extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	public User getUser() {
 		return user;
 	}

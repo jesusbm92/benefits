@@ -93,9 +93,28 @@ public class CustomerService extends UserService {
 		return result;
 	}
 
+	public Customer findByPrincipalComment() {
+
+		Customer result;
+		UserAccount userAccount;
+		userAccount = LoginService.getPrincipal();
+
+		result = findByUserAccountComment(userAccount);
+
+		return result;
+	}
+
 	public Customer findByUserAccount(UserAccount userAccount) {
 
 		Assert.notNull(userAccount);
+		Customer result;
+		result = customerRepository.findByUserAccountId(userAccount.getId());
+
+		return result;
+	}
+
+	public Customer findByUserAccountComment(UserAccount userAccount) {
+
 		Customer result;
 		result = customerRepository.findByUserAccountId(userAccount.getId());
 
