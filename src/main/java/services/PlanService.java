@@ -69,7 +69,9 @@ public class PlanService {
 	 */
 	public void save(Plan plan) {
 		Assert.notNull(plan);
+
 		// TODO Restricciones de Save
+		Assert.isTrue(plan.getCustomers().isEmpty());
 
 		planRepository.save(plan);
 	}
@@ -83,6 +85,7 @@ public class PlanService {
 	public void delete(Plan plan) {
 		Assert.notNull(plan);
 		// TODO Restricciones de Borrado
+		Assert.isTrue(plan.getCustomers().isEmpty());
 
 		planRepository.delete(plan);
 	}

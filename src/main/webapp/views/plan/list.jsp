@@ -10,20 +10,21 @@
 
 
 <display:table uid="planListTable" keepStatus="true" name="plans"
-	pagesize="5"  requestURI="${requestURI}" id="row">
+	pagesize="5" requestURI="${requestURI}" id="row">
 
-	
+
 	<display:column property="goal" titleKey="plan.goal" sortable="true" />
-	<display:column >
+	<display:column>
 		<a href="comment/list.do?planId=${row.id}"> <spring:message
 				code="plan.comment" />
 		</a>
 	</display:column>
-	
+
 </display:table>
 
-			<a href="welcome/index.do"><input type="button" value="<spring:message code="plan.cancel"/>"  
-			 onclick="self.location.href = welcome/index.do" /></a>
+<a href="welcome/index.do"><input type="button"
+	value="<spring:message code="plan.cancel"/>"
+	onclick="self.location.href = welcome/index.do" /></a>
 
 
 

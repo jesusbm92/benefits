@@ -7,14 +7,19 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.DietService;
 import services.PlanService;
+import services.TrainingService;
 import controllers.AbstractController;
+import domain.Diet;
 import domain.Plan;
+import domain.Training;
 
 @Controller
 @RequestMapping("/plan/administrator")
@@ -24,6 +29,10 @@ public class AdministratorPlanController extends AbstractController {
 
 	@Autowired
 	private PlanService planService;
+	@Autowired
+	private DietService dietService;
+	@Autowired
+	private TrainingService trainingService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -48,7 +57,8 @@ public class AdministratorPlanController extends AbstractController {
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public ModelAndView create(@RequestParam int paintingId) {
+	public ModelAndView create() {
+
 		ModelAndView result;
 
 		Plan plan = planService.create();
@@ -82,13 +92,31 @@ public class AdministratorPlanController extends AbstractController {
 		} else {
 			try {
 				planService.save(plan);
-				result = new ModelAndView("");
+				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(plan, "plan.commit.error");
 			}
 			result.addObject("create", false);
 		}
 
+		return result;
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
+	public ModelAndView delete(@ModelAttribute Plan plan,
+			BindingResult bindingResult) {
+		ModelAndView result;
+
+		try {
+			planService.delete(plan);
+			result = new ModelAndView("redirect:list.do");
+		} catch (Throwable oops) {
+			if (oops.getMessage() == "Error") {
+				result = createEditModelAndView(plan, "plan.error");
+			} else {
+				result = createEditModelAndView(plan, "plan.commit.error");
+			}
+		}
 		return result;
 	}
 
@@ -105,12 +133,17 @@ public class AdministratorPlanController extends AbstractController {
 
 	protected ModelAndView createEditModelAndView(Plan plan, String message) {
 		assert plan != null;
+		Collection<Training> trainings = trainingService.findAll();
+		Collection<Diet> diets = dietService.findAll();
 
 		ModelAndView result;
 
 		result = new ModelAndView("plan/administrator/edit");
 		result.addObject("plan", plan);
 		result.addObject("message", message);
+
+		result.addObject("diets", diets);
+		result.addObject("trainings", trainings);
 
 		return result;
 	}

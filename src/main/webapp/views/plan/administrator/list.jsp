@@ -10,27 +10,38 @@
 
 
 <display:table uid="planListTable" keepStatus="true" name="plans"
-	pagesize="5"  requestURI="${requestURI}" id="row">
+	pagesize="5" requestURI="${requestURI}" id="row">
 
-	
+
 	<display:column property="goal" titleKey="plan.goal" sortable="true" />
-	<display:column >
+	<display:column>
 		<a href="comment/list.do?planId=${row.id}"> <spring:message
 				code="plan.comment" />
 		</a>
 	</display:column>
-	<security:authorize access="hasRole('ADMIN')">
-			<display:column  >
-				<a href="issue/administrator/list.do?planId=${row.id}"> <spring:message
-						code="plan.issue" />
-				</a>
-			</display:column>
-	</security:authorize>
-	
+	<display:column>
+		<a href="issue/administrator/list.do?planId=${row.id}"> <spring:message
+				code="plan.issue" />
+		</a>
+	</display:column>
+	<display:column>
+		<a href="plan/administrator/edit.do?planId=${row.id}"><input
+			type="button" value="<spring:message code="plan.edit"/>"
+			onclick="self.location.href = plan/administrator/edit.do?planId=${row.id}" /></a>
+	</display:column>
+
 </display:table>
 
-			<a href="welcome/index.do"><input type="button" value="<spring:message code="plan.cancel"/>"  
-			 onclick="self.location.href = welcome/index.do" /></a>
+
+<security:authorize access="hasRole('ADMIN')">
+	<a href="plan/administrator/create.do"><input type="button"
+		value="<spring:message code="plan.create"/>"
+		onclick="self.location.href = plan/administrator/create.do" /></a>
+</security:authorize>
+
+<a href="plan/administrator/list.do"><input type="button"
+	value="<spring:message code="plan.cancel"/>"
+	onclick="self.location.href = plan/administrator/list.do" /></a>
 
 
 
