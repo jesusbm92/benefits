@@ -27,6 +27,12 @@
 				<li><a href="plan/administrator/list.do"><spring:message code="master.page.admin.plansAll" /></a></li>	
 				</ul>
 			</li>
+			<li><a class="fNiv"><spring:message code="master.page.guest.register" /></a>
+			<ul>
+					<li class="arrow"></li>
+					<li><a href="register/registerAdministrator.do"><spring:message code="master.page.guest.registerAsAdministrator" /></a></li>			
+				</ul>
+			</li>
 		</security:authorize>
 		
 		<security:authorize access="hasRole('CUSTOMER')">
@@ -43,7 +49,6 @@
 			<li><a class="fNiv"><spring:message code="master.page.guest.register" /></a>
 			<ul>
 					<li class="arrow"></li>
-					<li><a href="register/registerAdministrator.do"><spring:message code="master.page.guest.registerAsAdministrator" /></a></li>
 					<li><a href="register/registerCustomer.do"><spring:message code="master.page.guest.registerAsCustomer" /></a></li>		
 								
 				</ul>

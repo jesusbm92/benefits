@@ -73,6 +73,7 @@ public class AdministratorService extends UserService {
 
 	public void save(Administrator administrator) {
 		Assert.notNull(administrator);
+		Assert.isTrue(this.IAmAnAdmin());
 
 		encoder = new Md5PasswordEncoder();
 
