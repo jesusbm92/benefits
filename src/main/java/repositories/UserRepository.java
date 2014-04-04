@@ -12,4 +12,7 @@ import domain.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select a from User a where a.userAccount.username = '?1'")
 	Collection<User> findActorByUsername(String username);
+
+	@Query("select a from User a where a.userAccount.id= ?1")
+	User findByUserAccountId(int id);
 }

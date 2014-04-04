@@ -5,10 +5,13 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
 
 import repositories.UserRepository;
 import security.Authority;
 import security.LoginService;
+import security.UserAccount;
+import domain.User;
 
 @Transactional
 @Service
@@ -51,6 +54,27 @@ public class UserService {
 			res = res || auth.getAuthority().toUpperCase().compareTo(role) == 0;
 
 		return res;
+	}
+
+	public User findByPrincipal() {
+
+		User result;
+		UserAccount userAccount;
+		userAccount = LoginService.getPrincipal();
+		Assert.notNull(userAccount);
+		result = findByUserAccount(userAccount);
+		Assert.notNull(result);
+
+		return result;
+	}
+
+	public User findByUserAccount(UserAccount userAccount) {
+
+		Assert.notNull(userAccount);
+		User result;
+		result = userRepository.findByUserAccountId(userAccount.getId());
+
+		return result;
 	}
 
 }

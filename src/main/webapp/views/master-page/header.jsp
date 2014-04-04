@@ -48,12 +48,6 @@
 								
 				</ul>
 			</li>
-			<li><a class="fNiv"><spring:message code="master.page.guest.other" /></a>
-			<ul>	
-			<li class="arrow"></li>
-			<li><a href="plan/list.do"><spring:message code="master.page.admin.plansAll" /></a></li>	
-			</ul>
-			</li>	
 		</security:authorize>
 		
 		<security:authorize access="isAuthenticated()">

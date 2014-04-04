@@ -50,15 +50,7 @@ public class CommentService {
 		comment.setDate(new Date());
 		Plan plan = planService.findOne(idPlan);
 		comment.setPlan(plan);
-
-		// Customer customer = customerService.findByPrincipal();
-		// Administrator admin = administratorService.findByPrincipal();
-		// if (customer != null && admin == null) {
-		// comment.setUser(customer);
-		// }
-		// if (customer == null && admin != null) {
-		// comment.setUser(admin);
-		// }
+		comment.setUser(userService.findByPrincipal());
 
 		return comment;
 	}
@@ -90,6 +82,8 @@ public class CommentService {
 	 */
 	public void save(Comment comment) {
 		Assert.notNull(comment);
+		Assert.isTrue((customerService.IAmACustomer())
+				|| (administratorService.IAmAnAdmin()));
 		// TODO Restricciones de Save
 		commentRepository.save(comment);
 	}
