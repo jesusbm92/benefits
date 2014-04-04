@@ -13,6 +13,7 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="date" />
+	<form:hidden path="version" />
 	<form:hidden path="user" />
 	<form:hidden path="plan" />
 	

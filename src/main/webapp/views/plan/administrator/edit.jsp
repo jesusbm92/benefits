@@ -12,6 +12,7 @@
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
 	<form:hidden path="id" />
+	<form:hidden path="version" />
 	<form:hidden path="customers" />
 	<form:hidden path="comments" />
 	<form:hidden path="issues" />

@@ -13,7 +13,9 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="customer" />
-	<form:hidden path="plan" />
+	<form:hidden path="plan" />	
+	<form:hidden path="version" />
+	
 	
 	<acme:textarea code="issue.content" path="description" />
 	<br>
