@@ -23,6 +23,8 @@ public class IssueService {
 	@Autowired
 	private CustomerService customerService;
 	@Autowired
+	private AdministratorService administratorService;
+	@Autowired
 	private PlanService planService;
 
 	// Constructors --------------------------
@@ -71,19 +73,17 @@ public class IssueService {
 	 */
 	public void save(Issue issue) {
 		// TODO Restricciones de Save
-
+		Assert.notNull(issue);
+		Assert.isTrue((customerService.IAmACustomer()));
+		// si es administrador tmb añadir esto:
+		// || (administratorService.IAmAnAdmin()))
 		issueRepository.save(issue);
 	}
 
-	/**
-	 * Elimina el objeto de tipo Issue de la base de datos a través del
-	 * repositorio IssueRepository
-	 * 
-	 * @return void
-	 */
 	public void delete(Issue issue) {
 		Assert.notNull(issue);
 		// TODO Restricciones de Borrado
+		Assert.isTrue((customerService.IAmACustomer()));
 
 		issueRepository.delete(issue);
 	}
