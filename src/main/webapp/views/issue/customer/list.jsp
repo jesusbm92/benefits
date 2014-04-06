@@ -10,23 +10,33 @@
 
 
 <display:table uid="issueListTable" keepStatus="true" name="issues"
-	pagesize="5"  requestURI="${requestURI}" id="row">
+	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	id="row">
 
-	
-	<display:column property="description" titleKey="issue.description" sortable="true" />
-	<display:column property="plan.id" titleKey="issue.plan" sortable="true" />
-	<display:column property="customer.name" titleKey="issue.user" sortable="true" />
+
+	<display:column property="description" titleKey="issue.description"
+		sortable="true" />
+	<display:column property="plan.id" titleKey="issue.plan"
+		sortable="true" />
+	<display:column property="customer.name" titleKey="issue.user"
+		sortable="true" />
 	<display:column>
-		<a href="issue/customer/edit.do?issueId=${row.id}"><input type="button" value="<spring:message code="issue.edit"/>"  
-			 onclick="self.location.href = issue/customer/edit.do?issueId=${row.id}" /></a>
+		<a href="issue/customer/edit.do?issueId=${row.id}"><input
+			type="button" class="btn btn-sm btn-info"
+			value="<spring:message code="issue.edit"/>"
+			onclick="self.location.href = issue/customer/edit.do?issueId=${row.id}" /></a>
 	</display:column>
-	
-</display:table>
-			<a href="issue/customer/create.do?planId=${plan.id}"><input type="button" value="<spring:message code="issue.create"/>"  
-			 onclick="self.location.href = issue/customer/create.do?planId=${plan.id}" /></a>
 
-			<a href="plan/list.do"><input type="button" value="<spring:message code="issue.cancel"/>"  
-			 onclick="self.location.href = plan/list.do" /></a>
+</display:table>
+<a href="issue/customer/create.do?planId=${plan.id}"><input
+	type="button" class="btn btn-sm btn-info"
+	value="<spring:message code="issue.create"/>"
+	onclick="self.location.href = issue/customer/create.do?planId=${plan.id}" /></a>
+
+<a href="plan/list.do"><input type="button"
+	class="btn btn-sm btn-info"
+	value="<spring:message code="issue.cancel"/>"
+	onclick="self.location.href = plan/list.do" /></a>
 
 
 

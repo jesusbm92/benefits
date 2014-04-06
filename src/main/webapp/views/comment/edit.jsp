@@ -1,11 +1,13 @@
-<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 
-<%@taglib prefix="jstl"	uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+<%@taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
-<%@ taglib prefix="acme" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <form:form action="comment/edit.do" modelAttribute="comment">
 
@@ -16,19 +18,24 @@
 	<form:hidden path="version" />
 	<form:hidden path="user" />
 	<form:hidden path="plan" />
-	
+
 	<acme:textarea code="comment.content" path="content" />
 	<br>
-	
-	<acme:submit name="save" code="comment.save"/>
+
+	<input type="submit" name="save" class="btn btn-sm btn-info"
+		value="<spring:message code="comment.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" name="delete" value="<spring:message code="comment.delete"/>"  onclick="return confirm('<spring:message code="gallery.confirm.delete"/>')" />
+		<input type="submit" class="btn btn-sm btn-info" name="delete"
+			value="<spring:message code="comment.delete"/>"
+			onclick="return confirm('<spring:message code="gallery.confirm.delete"/>')" />
 	</jstl:if>
-	
-	<a href = "comment/list.do"><input type="button" value="<spring:message code="comment.cancel"/>"  
-	id="cancelar" name="cancelar" onclick= "self.location.href = comment/list.do" /></a>
-	
-	
+
+	<a href="comment/list.do"><input type="button"
+		class="btn btn-sm btn-info"
+		value="<spring:message code="comment.cancel"/>" id="cancelar"
+		name="cancelar" onclick="self.location.href = comment/list.do" /></a>
+
+
 </form:form>
 

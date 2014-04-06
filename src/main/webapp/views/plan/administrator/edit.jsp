@@ -37,17 +37,20 @@
 		code="plan.training" path="training" />
 	<br>
 
-	<acme:submit name="save" code="plan.save" />
+	<input type="submit" name="save" class="btn btn-sm btn-info"
+		value="<spring:message code="plan.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" name="delete"
+		<input type="submit" class="btn btn-sm btn-info" name="delete"
 			value="<spring:message code="plan.delete"/>"
 			onclick="return confirm('<spring:message code="plan.delete"/>')" />
 	</jstl:if>
 
 	<a href="plan/list.do"><input type="button"
+		class="btn btn-sm btn-info"
 		value="<spring:message code="plan.cancel"/>" id="cancelar"
-		name="cancelar" onclick="self.location.href = plan/list.do" /></a>
+		name="cancelar"
+		onclick="self.location.href = plan/administrator/list.do" /></a>
 
 
 </form:form>

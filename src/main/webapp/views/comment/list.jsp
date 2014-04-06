@@ -10,19 +10,27 @@
 
 
 <display:table uid="commentListTable" keepStatus="true" name="comments"
-	pagesize="5"  requestURI="${requestURI}" id="row">
+	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	id="row">
 
-	
-	<display:column property="content" titleKey="comment.content" sortable="true" />
-	<display:column property="plan.id" titleKey="comment.plan" sortable="true" />
-	<display:column property="user.name" titleKey="comment.user" sortable="true" />
-	
-	
+
+	<display:column property="content" titleKey="comment.content"
+		sortable="true" />
+	<display:column property="plan.id" titleKey="comment.plan"
+		sortable="true" />
+	<display:column property="user.name" titleKey="comment.user"
+		sortable="true" />
+
+
 </display:table>
-			<a href="comment/create.do?planId=${plan.id}"><input type="button" value="<spring:message code="comment.create"/>"  
-			 onclick="self.location.href = comment/create.do" /></a>
-			<a href="plan/list.do"><input type="button" value="<spring:message code="comment.cancel"/>"  
-			 onclick="self.location.href = plan/list.do" /></a>
+<a href="comment/create.do?planId=${plan.id}"><input type="button"
+	class="btn btn-sm btn-info"
+	value="<spring:message code="comment.create"/>"
+	onclick="self.location.href = comment/create.do" /></a>
+<a href="plan/list.do"><input type="button"
+	class="btn btn-sm btn-info"
+	value="<spring:message code="comment.cancel"/>"
+	onclick="self.location.href = plan/list.do" /></a>
 
 
 

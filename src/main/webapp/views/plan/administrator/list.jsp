@@ -10,7 +10,8 @@
 
 
 <display:table uid="planListTable" keepStatus="true" name="plans"
-	pagesize="5" requestURI="${requestURI}" id="row">
+	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	id="row">
 
 
 	<display:column property="goal" titleKey="plan.goal" sortable="true" />
@@ -26,7 +27,8 @@
 	</display:column>
 	<display:column>
 		<a href="plan/administrator/edit.do?planId=${row.id}"><input
-			type="button" value="<spring:message code="plan.edit"/>"
+			class="btn btn-sm btn-info" type="button"
+			value="<spring:message code="plan.edit"/>"
 			onclick="self.location.href = plan/administrator/edit.do?planId=${row.id}" /></a>
 	</display:column>
 
@@ -35,11 +37,13 @@
 
 <security:authorize access="hasRole('ADMIN')">
 	<a href="plan/administrator/create.do"><input type="button"
+		class="btn btn-sm btn-info"
 		value="<spring:message code="plan.create"/>"
 		onclick="self.location.href = plan/administrator/create.do" /></a>
 </security:authorize>
 
 <a href="plan/administrator/list.do"><input type="button"
+	class="btn btn-sm btn-info"
 	value="<spring:message code="plan.cancel"/>"
 	onclick="self.location.href = plan/administrator/list.do" /></a>
 

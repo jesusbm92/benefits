@@ -10,7 +10,8 @@
 
 
 <display:table uid="planListTable" keepStatus="true" name="plans"
-	pagesize="5" requestURI="${requestURI}" id="row">
+	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	id="row">
 
 
 	<display:column property="goal" titleKey="plan.goal" sortable="true" />
@@ -23,6 +24,7 @@
 </display:table>
 
 <a href="welcome/index.do"><input type="button"
+	class="btn btn-sm btn-info"
 	value="<spring:message code="plan.cancel"/>"
 	onclick="self.location.href = welcome/index.do" /></a>
 

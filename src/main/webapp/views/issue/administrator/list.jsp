@@ -10,18 +10,20 @@
 
 
 <display:table uid="issueListTable" keepStatus="true" name="issues"
-	pagesize="5"  requestURI="${requestURI}" id="row">
+	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	id="row">
 
-	
-	<display:column property="description" titleKey="issue.description" sortable="true" />
-	<display:column property="plan.id" titleKey="issue.plan" sortable="true" />
-	<display:column property="customer.name" titleKey="issue.user" sortable="true" />
-	
-	
+
+	<display:column property="description" titleKey="issue.description"
+		sortable="true" />
+	<display:column property="plan.id" titleKey="issue.plan"
+		sortable="true" />
+	<display:column property="customer.name" titleKey="issue.user"
+		sortable="true" />
+
+
 </display:table>
-			<a href="plan/list.do"><input type="button" value="<spring:message code="issue.cancel"/>"  
-			 onclick="self.location.href = plan/list.do" /></a>
-
-
-
-
+<a href="plan/list.do"><input type="button"
+	class="btn btn-sm btn-info"
+	value="<spring:message code="issue.cancel"/>"
+	onclick="self.location.href = plan/list.do" /></a>
