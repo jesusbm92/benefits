@@ -48,6 +48,7 @@ public class PlanService {
 	 * @return Collection<Plan> plans
 	 */
 	public Collection<Plan> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return planRepository.findAll();
 	}
 

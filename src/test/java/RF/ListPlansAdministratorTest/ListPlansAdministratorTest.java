@@ -13,7 +13,6 @@ import org.springframework.util.Assert;
 import services.AdministratorService;
 import services.PlanService;
 import utilities.PopulateDatabase;
-import domain.Administrator;
 import domain.Plan;
 import funcionalRequirement.GlobalTest;
 
@@ -38,9 +37,8 @@ public class ListPlansAdministratorTest extends GlobalTest {
 
 		authenticate("admin");
 
-		Administrator admin = administratorService.findByPrincipal();
-		Collection<Plan> plans = admin.getPlans();
-		Assert.isTrue(plans.size() == 0);
+		Collection<Plan> plans = planService.findAll();
+		Assert.isTrue(plans.size() == 2);
 
 	}
 
@@ -49,8 +47,14 @@ public class ListPlansAdministratorTest extends GlobalTest {
 
 		authenticate("customer1");
 
-		Administrator admin = administratorService.findByPrincipal();
-		Collection<Plan> plans = admin.getPlans();
+		Collection<Plan> plans = planService.findAll();
+		Assert.isTrue(plans.size() == 0);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void listPlanAdministratorCustomerNoLogTest() {
+
+		Collection<Plan> plans = planService.findAll();
 		Assert.isTrue(plans.size() == 0);
 	}
 }
