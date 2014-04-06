@@ -40,6 +40,7 @@ public class ListPlansAdministratorTest extends GlobalTest {
 
 		Administrator admin = administratorService.findByPrincipal();
 		Collection<Plan> plans = admin.getPlans();
+
 		Assert.isTrue(plans.size() == 0);
 
 	}

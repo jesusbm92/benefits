@@ -203,6 +203,21 @@
 		</property>
 
 	</bean>
+	
+		<bean id="plan3" class="domain.Plan">
+		<property name="goal" value="KEEP_FIT" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet2" />
+		<property name="training" ref="training2" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+
+	</bean>
 
 	<!-- ADMINISTRATORS -->
 
