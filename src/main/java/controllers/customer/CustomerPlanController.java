@@ -16,6 +16,7 @@ import services.CustomerService;
 import services.PlanService;
 import controllers.AbstractController;
 import domain.Customer;
+import domain.Goals;
 import domain.Plan;
 
 @Controller
@@ -72,12 +73,10 @@ public class CustomerPlanController extends AbstractController {
 	public ModelAndView request() {
 		ModelAndView result;
 
-		Collection<String> goals = planService.findAllGoals();
-
 		Plan plan = planService.create();
 
 		result = createEditModelAndView(plan);
-		result.addObject("goals", goals);
+		result.addObject("goals", Goals.values());
 
 		return result;
 	}

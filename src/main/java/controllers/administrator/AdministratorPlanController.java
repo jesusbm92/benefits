@@ -18,6 +18,7 @@ import services.PlanService;
 import services.TrainingService;
 import controllers.AbstractController;
 import domain.Diet;
+import domain.Goals;
 import domain.Plan;
 import domain.Training;
 
@@ -137,11 +138,10 @@ public class AdministratorPlanController extends AbstractController {
 		Collection<Diet> diets = dietService.findAll();
 
 		ModelAndView result;
-
 		result = new ModelAndView("plan/administrator/edit");
 		result.addObject("plan", plan);
 		result.addObject("message", message);
-
+		result.addObject("goals", Goals.values());
 		result.addObject("diets", diets);
 		result.addObject("trainings", trainings);
 

@@ -172,7 +172,7 @@
 	<!-- PLANS -->
 
 	<bean id="plan1" class="domain.Plan">
-		<property name="goal" value="Goal 1" />
+		<property name="goal" value="KEEP_FIT" />
 		<property name="customers">
 			<list>
 				<ref bean="customer1" />
@@ -188,7 +188,7 @@
 	</bean>
 
 	<bean id="plan2" class="domain.Plan">
-		<property name="goal" value="Goal 2" />
+		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="customers">
 			<list>
 				<ref bean="customer2" />
