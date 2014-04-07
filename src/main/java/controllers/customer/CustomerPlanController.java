@@ -73,8 +73,7 @@ public class CustomerPlanController extends AbstractController {
 	public ModelAndView request() {
 		ModelAndView result;
 
-		Plan plan = planService.create();
-
+		Plan plan = new Plan();
 		result = createEditModelAndView(plan);
 		result.addObject("goals", Goals.values());
 
@@ -114,6 +113,27 @@ public class CustomerPlanController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping(value = "/request", method = RequestMethod.POST, params = "save")
+	public ModelAndView saveRequest(Plan plan, BindingResult binding) {
+		ModelAndView result;
+
+		if (binding.hasErrors()) {
+			result = new ModelAndView("redirect:request.do");
+		} else {
+
+			try {
+				Goals goal = plan.getGoal();
+				planService.request(goal);
+				result = new ModelAndView("redirect:list.do");
+			} catch (Throwable oops) {
+				result = new ModelAndView("redirect:request.do");
+			}
+			result.addObject("create", false);
+		}
+
+		return result;
+	}
+
 	// Other bussiness method
 	protected ModelAndView createEditModelAndView(Plan plan) {
 		assert plan != null;
@@ -130,7 +150,7 @@ public class CustomerPlanController extends AbstractController {
 
 		ModelAndView result;
 
-		result = new ModelAndView("plan/administrator/edit");
+		result = new ModelAndView("plan/customer/request");
 		result.addObject("plan", plan);
 		result.addObject("message", message);
 

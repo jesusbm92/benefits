@@ -10,6 +10,7 @@ import org.springframework.util.Assert;
 
 import repositories.PlanRepository;
 import domain.Customer;
+import domain.Goals;
 import domain.Plan;
 
 @Transactional
@@ -28,6 +29,9 @@ public class PlanService {
 
 	@Autowired
 	private AdministratorService adminService;
+
+	@Autowired
+	private CustomerService customerService;
 
 	// Constructors --------------------------
 	public PlanService() {
@@ -121,6 +125,20 @@ public class PlanService {
 		return goals;
 	}
 
+	public void request(Goals goal) {
+
+		// Se comprueba que el goal que se pasa como parámetro está
+		// dentro
+		// de los valores del enumerado.
+		Assert.isTrue(Goals.GAIN_MUSCLE_MASS.equals(goal)
+				|| Goals.KEEP_FIT.equals(goal)
+				|| Goals.LOSE_WEIGHT.equals(goal));
+
+		Collection<Plan> plansForGoal = planRepository.findPlansByGoal(goal);
+		ArrayList<Plan> planList = new ArrayList<Plan>(plansForGoal);
+		Plan selectedPlan = planList.get((int) Math.random() * planList.size());
+		customerService.changeCustomerPlan(selectedPlan);
+	}
 	// Assertions
 
 }
