@@ -25,12 +25,6 @@
 	<input type="submit" name="save" class="btn btn-sm btn-info"
 		value="<spring:message code="issue.save" />" />
 
-	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="issue.delete"/>"
-			onclick="return confirm('<spring:message code="issue.delete"/>')" />
-	</jstl:if>
-
 	<a href="plan/customer/list.do"><input type="button"
 		class="btn btn-sm btn-info"
 		value="<spring:message code="issue.cancel"/>" id="cancelar"
