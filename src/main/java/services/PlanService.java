@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import repositories.PlanRepository;
+import domain.Customer;
 import domain.Plan;
 
 @Transactional
@@ -25,6 +26,9 @@ public class PlanService {
 	@Autowired
 	private UserService userService;
 
+	@Autowired
+	private AdministratorService adminService;
+
 	// Constructors --------------------------
 	public PlanService() {
 		super();
@@ -37,6 +41,7 @@ public class PlanService {
 	 * @return Plan plan
 	 */
 	public Plan create() {
+		Assert.notNull(adminService.findByPrincipal());
 		Plan plan = new Plan();
 
 		return plan;
@@ -72,7 +77,9 @@ public class PlanService {
 		Assert.notNull(plan);
 
 		// TODO Restricciones de Save
-		Assert.isTrue(plan.getCustomers().isEmpty());
+		Assert.notNull(adminService.findByPrincipal());
+		// Assert.isTrue(findCustomersByPlan(plan.getId()).isEmpty());
+		// ES NECESARIO QUE NO HAYA CUSTOMERS PARA MODIFICARLOS?
 
 		planRepository.save(plan);
 	}
@@ -86,7 +93,8 @@ public class PlanService {
 	public void delete(Plan plan) {
 		Assert.notNull(plan);
 		// TODO Restricciones de Borrado
-		Assert.isTrue(plan.getCustomers().isEmpty());
+		Assert.notNull(adminService.findByPrincipal());
+		Assert.isTrue(findCustomersByPlan(plan.getId()).isEmpty());
 
 		planRepository.delete(plan);
 	}
@@ -98,6 +106,13 @@ public class PlanService {
 		Collection<Plan> res = new ArrayList<Plan>();
 		res.add(plan);
 		return res;
+	}
+
+	public Collection<Customer> findCustomersByPlan(int planId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Customer> customers = planRepository
+				.findCustomersByPlan(planId);
+		return customers;
 	}
 
 	public Collection<String> findAllGoals() {

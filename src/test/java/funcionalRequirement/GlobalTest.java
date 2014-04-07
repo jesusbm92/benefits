@@ -11,23 +11,28 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import security.LoginService;
 
-@ContextConfiguration(locations = {"classpath:spring/datasource.xml",
-		"classpath:spring/config/packages.xml"})
+@ContextConfiguration(locations = { "classpath:spring/datasource.xml",
+		"classpath:spring/config/packages.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
 public class GlobalTest {
-	
+
 	@Autowired
 	LoginService loginService;
-	
-	public void authenticate(String username){
+
+	public void authenticate(String username) {
 		UserDetails userDetails;
 		TestingAuthenticationToken authenticationToken;
 		SecurityContext context;
-		
+
 		userDetails = loginService.loadUserByUsername(username);
-		authenticationToken = new  TestingAuthenticationToken(userDetails, null);
+		authenticationToken = new TestingAuthenticationToken(userDetails, null);
 		context = SecurityContextHolder.getContext();
 		context.setAuthentication(authenticationToken);
 	}
-	
+
+	public void logout() {
+		SecurityContext context;
+		context = SecurityContextHolder.getContext();
+		context.setAuthentication(null);
+	}
 }
