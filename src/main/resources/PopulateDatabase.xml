@@ -34,6 +34,18 @@
 			</list>
 		</property>
 	</bean>
+	
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="felix" />
+		<property name="password" value="25779f8829ab7a7650e85a4cc871e6ac" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="CUSTOMER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
 
 	<bean id="userAccount3" class="security.UserAccount">
 		<property name="username" value="customer2" />
@@ -260,6 +272,31 @@
 		<property name="hipMeasure" value="130" />
 		<property name="chestMeasure" value="130" />
 		<property name="plan" ref="plan1" />
+		<property name="issues">
+			<list>
+			</list>
+		</property>
+
+
+	</bean>
+	
+	<bean id="felix" class="domain.Customer">
+		<property name="name" value="Customer 1" />
+		<property name="surname" value="SurnameC 1" />
+		<property name="email" value="c@customer1.com" />
+		<property name="nationality" value="Spain" />
+		<property name="city" value="Seville" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+		<property name="userAccount" ref="userAccount8" />
+		<property name="weight" value="100" />
+		<property name="height" value="180" />
+		<property name="bodyfat" value="40" />
+		<property name="waistlineMeasure" value="180" />
+		<property name="hipMeasure" value="130" />
+		<property name="chestMeasure" value="130" />
 		<property name="issues">
 			<list>
 			</list>

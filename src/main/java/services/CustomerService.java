@@ -14,6 +14,7 @@ import security.Authority;
 import security.LoginService;
 import security.UserAccount;
 import domain.Customer;
+import domain.Plan;
 import forms.CustomerForm;
 
 @Transactional
@@ -119,6 +120,13 @@ public class CustomerService extends UserService {
 		result = customerRepository.findByUserAccountId(userAccount.getId());
 
 		return result;
+	}
+
+	public void changeCustomerPlan(Plan plan) {
+		Assert.notNull(plan);
+		Customer customer = findByPrincipal();
+		customer.setPlan(plan);
+		customerRepository.save(customer);
 	}
 
 	// Reconstruct

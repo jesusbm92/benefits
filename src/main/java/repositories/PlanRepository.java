@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import domain.Customer;
+import domain.Goals;
 import domain.Plan;
 
 @Repository
@@ -20,5 +21,8 @@ public interface PlanRepository extends JpaRepository<Plan, Integer> {
 
 	@Query("select p.goal from Plan p")
 	Collection<String> findAllGoals();
+
+	@Query("select p from Plan p where p.goal= ?1")
+	Collection<Plan> findPlansByGoal(Goals goal);
 
 }
