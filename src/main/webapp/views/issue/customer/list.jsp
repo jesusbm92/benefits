@@ -33,10 +33,10 @@
 	value="<spring:message code="issue.create"/>"
 	onclick="self.location.href = issue/customer/create.do?planId=${plan.id}" /></a>
 
-<a href="plan/list.do"><input type="button"
+<a href="plan/customer/list.do"><input type="button"
 	class="btn btn-sm btn-info"
 	value="<spring:message code="issue.cancel"/>"
-	onclick="self.location.href = plan/list.do" /></a>
+	onclick="self.location.href = plan/customer/list.do" /></a>
 
 
 

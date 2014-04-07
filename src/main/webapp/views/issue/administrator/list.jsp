@@ -23,7 +23,7 @@
 
 
 </display:table>
-<a href="plan/list.do"><input type="button"
+<a href="plan/administrator/list.do"><input type="button"
 	class="btn btn-sm btn-info"
 	value="<spring:message code="issue.cancel"/>"
-	onclick="self.location.href = plan/list.do" /></a>
+	onclick="self.location.href = plan/administrator/list.do" /></a>
