@@ -9,9 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -33,7 +32,7 @@ public class Customer extends User {
 		issues = new ArrayList<Issue>();
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getWeight() {
 		return weight;
 	}
@@ -42,7 +41,7 @@ public class Customer extends User {
 		this.weight = weight;
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getHeight() {
 		return height;
 	}
@@ -51,7 +50,7 @@ public class Customer extends User {
 		this.height = height;
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getBodyfat() {
 		return bodyfat;
 	}
@@ -60,7 +59,7 @@ public class Customer extends User {
 		this.bodyfat = bodyfat;
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getWaistlineMeasure() {
 		return waistlineMeasure;
 	}
@@ -69,7 +68,7 @@ public class Customer extends User {
 		this.waistlineMeasure = waistlineMeasure;
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getHipMeasure() {
 		return hipMeasure;
 	}
@@ -78,7 +77,7 @@ public class Customer extends User {
 		this.hipMeasure = hipMeasure;
 	}
 
-	@Range(min = 0)
+	@Min(0)
 	public Double getChestMeasure() {
 		return chestMeasure;
 	}
