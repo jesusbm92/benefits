@@ -31,10 +31,10 @@
 			onclick="return confirm('<spring:message code="gallery.confirm.delete"/>')" />
 	</jstl:if>
 
-	<a href="comment/list.do"><input type="button"
+	<a href="comment/list.do?planId=${planId}"><input type="button"
 		class="btn btn-sm btn-info"
 		value="<spring:message code="comment.cancel"/>" id="cancelar"
-		name="cancelar" onclick="self.location.href = comment/list.do" /></a>
+		name="cancelar" onclick="self.location.href = comment/list.do?planId=${planId}" /></a>
 
 
 </form:form>

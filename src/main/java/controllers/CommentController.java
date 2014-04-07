@@ -137,6 +137,7 @@ public class CommentController extends AbstractController {
 		result = new ModelAndView("comment/edit");
 		result.addObject("comment", comment);
 		result.addObject("message", message);
+		result.addObject("planId", comment.getPlan().getId());
 
 		return result;
 	}
