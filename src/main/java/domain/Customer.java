@@ -16,12 +16,12 @@ import javax.validation.constraints.NotNull;
 @Access(AccessType.PROPERTY)
 public class Customer extends User {
 
-	private Double weight;
-	private Double height;
-	private Double bodyfat;
-	private Double waistlineMeasure;
-	private Double hipMeasure;
-	private Double chestMeasure;
+	private double weight;
+	private double height;
+	private double bodyfat;
+	private double waistlineMeasure;
+	private double hipMeasure;
+	private double chestMeasure;
 
 	// RelationShip
 	private Plan plan;
@@ -33,52 +33,52 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public Double getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(Double weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
 	@Min(0)
-	public Double getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public void setHeight(Double height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
 	@Min(0)
-	public Double getBodyfat() {
+	public double getBodyfat() {
 		return bodyfat;
 	}
 
-	public void setBodyfat(Double bodyfat) {
+	public void setBodyfat(double bodyfat) {
 		this.bodyfat = bodyfat;
 	}
 
 	@Min(0)
-	public Double getWaistlineMeasure() {
+	public double getWaistlineMeasure() {
 		return waistlineMeasure;
 	}
 
-	public void setWaistlineMeasure(Double waistlineMeasure) {
+	public void setWaistlineMeasure(double waistlineMeasure) {
 		this.waistlineMeasure = waistlineMeasure;
 	}
 
 	@Min(0)
-	public Double getHipMeasure() {
+	public double getHipMeasure() {
 		return hipMeasure;
 	}
 
-	public void setHipMeasure(Double hipMeasure) {
+	public void setHipMeasure(double hipMeasure) {
 		this.hipMeasure = hipMeasure;
 	}
 
 	@Min(0)
-	public Double getChestMeasure() {
+	public double getChestMeasure() {
 		return chestMeasure;
 	}
 
