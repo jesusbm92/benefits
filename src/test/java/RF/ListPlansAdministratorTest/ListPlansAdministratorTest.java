@@ -38,7 +38,7 @@ public class ListPlansAdministratorTest extends GlobalTest {
 		authenticate("admin");
 
 		Collection<Plan> plans = planService.findAll();
-		Assert.isTrue(plans.size() == 2);
+		Assert.isTrue(plans.size() == 3);
 
 	}
 
