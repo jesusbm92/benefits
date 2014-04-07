@@ -17,7 +17,7 @@
 <tiles-definitions>
 
 	<definition name="plan/administrator/list" extends="master.page">	
-		<put-attribute name="title" value="My plan " />
+		<put-attribute name="title" value="Plans" />
 		<put-attribute name="body" value="/views/plan/administrator/list.jsp" />
 	</definition>
 	
