@@ -24,9 +24,9 @@
 		<spring:message code="plan.goal" />
 	</form:label>
 	<form:select path="goal">
-		<form:option value="-" label="--Please Select" />
 		<form:options items="${goals}" />
 	</form:select>
+	<form:errors cssClass="error" path="goal"></form:errors>
 	<br>
 
 	<acme:select items="${diets}" itemLabel="name" id="id" code="plan.diet"
