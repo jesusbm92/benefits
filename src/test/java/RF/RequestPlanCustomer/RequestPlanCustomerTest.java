@@ -6,10 +6,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
 
 import repositories.AdministratorRepository;
+import services.CustomerService;
 import services.PlanService;
 import utilities.PopulateDatabase;
+import domain.Customer;
+import domain.Plan;
 import funcionalRequirement.GlobalTest;
 
 @ContextConfiguration(locations = { "classpath:spring/datasource.xml",
@@ -23,6 +27,9 @@ public class RequestPlanCustomerTest extends GlobalTest {
 	@Autowired
 	PlanService planService;
 
+	@Autowired
+	CustomerService customerService;
+
 	@Before
 	public void setUp() {
 		PopulateDatabase.main(null);
@@ -31,14 +38,44 @@ public class RequestPlanCustomerTest extends GlobalTest {
 	@Test
 	public void testRequestPlanCustomer() {
 
-		authenticate("customer1");
+		authenticate("felix");
+
+		Plan plan = planService.findOne(68);
+
+		planService.request(plan.getGoal());
+
+		Customer customer = customerService.findByPrincipal();
+
+		Assert.isTrue(!(customer.getPlan() == null));
+
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testAddPlanException() {
+
+		authenticate("felix");
+
+		Plan plan = planService.findOne(68);
+
+		planService.request(plan.getGoal());
+
+		Customer customer = customerService.findByPrincipal();
+
+		Assert.isTrue((customer.getPlan() == null));
 
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testAddPlanNotLogin() {
+		// Error por no estar logueado entonces falla servicio
 
-		authenticate("customer1");
+		Plan plan = planService.findOne(68);
+
+		planService.request(plan.getGoal());
+
+		Customer customer = customerService.findByPrincipal();
+
+		Assert.isTrue((customer.getPlan() == null));
 
 	}
 
