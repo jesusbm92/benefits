@@ -22,8 +22,8 @@
 
 <div class="navbar navbar-default">
 	<div class="container">
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
+<!-- 		<div class="collapse navbar-collapse" -->
+<!-- 			id="bs-example-navbar-collapse-1"> -->
 			<ul class="nav navbar-nav">
 				<!-- Do not forget the "fNiv" class for the first level links !! -->
 				<security:authorize access="hasRole('ADMIN')">
@@ -84,7 +84,7 @@
 						</ul></li>
 				</security:authorize>
 			</ul>
-		</div>
+<!-- 		</div> -->
 	</div>
 </div>
 
