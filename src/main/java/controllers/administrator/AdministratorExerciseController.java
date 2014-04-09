@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.DietService;
+import services.ExerciseGroupService;
 import services.ExerciseService;
-import services.PlanService;
+import services.MuscleService;
 import controllers.AbstractController;
-import domain.Diet;
 import domain.Exercise;
-import domain.Goals;
+import domain.ExerciseGroup;
+import domain.Muscle;
 
 @Controller
 @RequestMapping("/exercise/administrator")
@@ -28,11 +29,13 @@ public class AdministratorExerciseController extends AbstractController {
 	// Services ----------------------------------------------------------------
 
 	@Autowired
-	private PlanService planService;
-	@Autowired
 	private DietService dietService;
 	@Autowired
 	private ExerciseService exerciseService;
+	@Autowired
+	private ExerciseGroupService exerciseGroupService;
+	@Autowired
+	private MuscleService muscleService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -94,7 +97,8 @@ public class AdministratorExerciseController extends AbstractController {
 				exerciseService.save(exercise);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(exercise, "plan.commit.error");
+				result = createEditModelAndView(exercise,
+						"exercise.commit.error");
 			}
 			result.addObject("create", false);
 		}
@@ -112,9 +116,10 @@ public class AdministratorExerciseController extends AbstractController {
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
-				result = createEditModelAndView(exercise, "plan.error");
+				result = createEditModelAndView(exercise, "exercise.error");
 			} else {
-				result = createEditModelAndView(exercise, "plan.commit.error");
+				result = createEditModelAndView(exercise,
+						"exercise.commit.error");
 			}
 		}
 		return result;
@@ -134,16 +139,16 @@ public class AdministratorExerciseController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Exercise exercise,
 			String message) {
 		assert exercise != null;
-		Collection<Exercise> exercises = exerciseService.findAll();
-		Collection<Diet> diets = dietService.findAll();
+		Collection<ExerciseGroup> groupExercises = exerciseGroupService
+				.findAll();
+		Collection<Muscle> muscles = muscleService.findAll();
 
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
-		result.addObject("goals", Goals.values());
-		result.addObject("diets", diets);
-		result.addObject("exercises", exercises);
+		result.addObject("groupExercises", groupExercises);
+		result.addObject("muscles", muscles);
 
 		return result;
 	}

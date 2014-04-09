@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
@@ -37,7 +38,7 @@ public class Muscle extends DomainEntity {
 
 	@Valid
 	@NotEmpty
-	@OneToMany(mappedBy = "muscle")
+	@OneToMany(mappedBy = "muscle", fetch = FetchType.EAGER)
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}

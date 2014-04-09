@@ -9,6 +9,8 @@ import org.springframework.util.Assert;
 
 import repositories.ExerciseRepository;
 import domain.Exercise;
+import domain.ExerciseGroup;
+import domain.Muscle;
 
 @Transactional
 @Service
@@ -23,6 +25,10 @@ public class ExerciseService {
 
 	@Autowired
 	private AdministratorService administratorService;
+	@Autowired
+	private ExerciseGroupService exerciseGroupService;
+	@Autowired
+	private MuscleService muscleService;
 
 	// Constructors --------------------------
 	public ExerciseService() {
@@ -71,6 +77,17 @@ public class ExerciseService {
 	public void save(Exercise exercise) {
 		// TODO Restricciones de Save
 		Assert.isTrue(administratorService.IAmAnAdmin());
+		Muscle muscle = exercise.getMuscle();
+
+		muscle.getExercises().add(exercise);
+
+		muscleService.save(muscle);
+
+		ExerciseGroup exerciseGroup = exercise.getExerciseGroup();
+
+		exerciseGroup.getExercises().add(exercise);
+
+		exerciseGroupService.save(exerciseGroup);
 
 		exerciseRepository.save(exercise);
 	}
