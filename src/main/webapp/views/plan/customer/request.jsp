@@ -31,9 +31,12 @@
 	<br>
 
 
-	<acme:submit name="save" code="plan.request.save" />
+	<input type="submit" name="save" class="btn btn-sm btn-info"
+		value="<spring:message code="plan.request.save" />" />
 
-	<a href="plan/customer/list.do"><input type="button"
+<%-- 	<acme:submit name="save" code="plan.request.save" /> --%>
+
+	<a href="plan/customer/list.do"><input type="button" class="btn btn-sm btn-info"
 		value="<spring:message code="plan.cancel"/>" id="cancelar"
 		name="cancelar" onclick="self.location.href = plan/customer/list.do" /></a>
 
