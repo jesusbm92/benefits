@@ -1,6 +1,7 @@
 package controllers.administrator;
 
 import java.util.Collection;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -142,13 +143,14 @@ public class AdministratorExerciseController extends AbstractController {
 		Collection<ExerciseGroup> groupExercises = exerciseGroupService
 				.findAll();
 		Collection<Muscle> muscles = muscleService.findAll();
+		Map<String, Integer> map = muscleService.findAllIdName();
 
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
 		result.addObject("groupExercises", groupExercises);
-		result.addObject("muscles", muscles);
+		result.addObject("map", map);
 
 		return result;
 	}

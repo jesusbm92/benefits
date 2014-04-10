@@ -1,6 +1,8 @@
 package services;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,6 +51,19 @@ public class MuscleService {
 	public Collection<Muscle> findAll() {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		return muscleRepository.findAll();
+	}
+
+	public Map<String, Integer> findAllIdName() {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		Collection<Muscle> muscles = muscleRepository.findAll();
+
+		for (Muscle aux : muscles) {
+			map.put(aux.getName(), aux.getId());
+		}
+
+		return map;
 	}
 
 	/**

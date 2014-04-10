@@ -23,9 +23,13 @@
 	<form:label path="muscle">
 		<spring:message code="exercise.muscle" />
 	</form:label>
+	
 	<form:select path="muscle.name">
-		<form:options items="${muscles}" itemLabel="name" />
+	<jstl:forEach var="var" items="${map}">
+		<form:option  value="${var.key}"/>
+		</jstl:forEach>
 	</form:select>
+	
 	<br>
 	
 	<form:label path="exerciseGroup">
