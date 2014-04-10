@@ -10,7 +10,7 @@
 
 
 <display:table uid="exercisesListTable" keepStatus="true" name="exercises"
-	pagesize="5" class="table table-hover" requestURI="${requestURI}"
+	pagesize="10" class="table table-hover" requestURI="${requestURI}"
 	id="row">
 
 

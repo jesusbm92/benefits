@@ -16,27 +16,28 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="exerciseGroup.exercises" />
-	<form:hidden path="exerciseGroup.trainingDays" />
-	<form:hidden path="muscle.exercises" />
-
+	
 	<form:label path="muscle">
 		<spring:message code="exercise.muscle" />
 	</form:label>
 	
-	<form:select path="muscle.name">
+	<form:select path="muscle">
 	<jstl:forEach var="var" items="${map}">
-		<form:option  value="${var.key}"/>
+		<form:option  value="${var.value}">${var.key}
+		</form:option>
 		</jstl:forEach>
 	</form:select>
-	
 	<br>
 	
 	<form:label path="exerciseGroup">
 		<spring:message code="exercise.groupExercise" />
 	</form:label>
-	<form:select path="exerciseGroup.name">
-		<form:options items="${groupExercises}" itemLabel="name"/>
+	
+	<form:select path="exerciseGroup">
+	<jstl:forEach var="var2" items="${mapExercises}">
+		<form:option  value="${var2.value}">${var2.key}
+		</form:option>
+		</jstl:forEach>
 	</form:select>
 	<br>
 	

@@ -14,14 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import services.DietService;
 import services.ExerciseGroupService;
 import services.ExerciseService;
 import services.MuscleService;
 import controllers.AbstractController;
 import domain.Exercise;
-import domain.ExerciseGroup;
-import domain.Muscle;
 
 @Controller
 @RequestMapping("/exercise/administrator")
@@ -29,8 +26,6 @@ public class AdministratorExerciseController extends AbstractController {
 
 	// Services ----------------------------------------------------------------
 
-	@Autowired
-	private DietService dietService;
 	@Autowired
 	private ExerciseService exerciseService;
 	@Autowired
@@ -140,16 +135,15 @@ public class AdministratorExerciseController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Exercise exercise,
 			String message) {
 		assert exercise != null;
-		Collection<ExerciseGroup> groupExercises = exerciseGroupService
-				.findAll();
-		Collection<Muscle> muscles = muscleService.findAll();
 		Map<String, Integer> map = muscleService.findAllIdName();
+
+		Map<String, Integer> mapExercises = exerciseGroupService.findAllMap();
 
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
-		result.addObject("groupExercises", groupExercises);
+		result.addObject("mapExercises", mapExercises);
 		result.addObject("map", map);
 
 		return result;

@@ -1,6 +1,8 @@
 package services;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,6 +51,20 @@ public class ExerciseGroupService {
 	public Collection<ExerciseGroup> findAll() {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		return exerciseGroupRepository.findAll();
+	}
+
+	public Map<String, Integer> findAllMap() {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		Map<String, Integer> map = new HashMap<String, Integer>();
+
+		Collection<ExerciseGroup> exerciseGroup = exerciseGroupRepository
+				.findAll();
+
+		for (ExerciseGroup aux : exerciseGroup) {
+			map.put(aux.getName(), aux.getId());
+		}
+
+		return map;
 	}
 
 	/**
