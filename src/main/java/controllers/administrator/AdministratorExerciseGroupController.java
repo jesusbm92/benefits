@@ -13,7 +13,7 @@ import controllers.AbstractController;
 import domain.ExerciseGroup;
 
 @Controller
-@RequestMapping("/exerciseGroup/administator")
+@RequestMapping("/exerciseGroup/administrator")
 public class AdministratorExerciseGroupController extends AbstractController {
 
 	// Services ----------------------------------------------------------------
@@ -35,8 +35,8 @@ public class AdministratorExerciseGroupController extends AbstractController {
 	@RequestMapping("/list")
 	public ModelAndView list() {
 		ModelAndView result;
-		String uri = "exerciseGroup/administator/list";
-		String requestURI = "exerciseGroup/administator/list.do";
+		String uri = "exerciseGroup/administrator/list";
+		String requestURI = "exerciseGroup/administrator/list.do";
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
 				.findAll();
 		result = createListModelAndView(requestURI, exerciseGroups, uri);

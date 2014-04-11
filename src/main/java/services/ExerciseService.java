@@ -104,6 +104,11 @@ public class ExerciseService {
 		exerciseRepository.delete(exercise);
 	}
 
+	public Collection<Exercise> findByExerciseGroup(int exerciseGroup) {
+		// TODO Auto-generated method stub
+		return exerciseRepository.findByExerciseGroup(exerciseGroup);
+	}
+
 	// Other business methods ----------------
 
 	// Assertions

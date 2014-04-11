@@ -53,6 +53,20 @@ public class AdministratorExerciseController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/listByExerciseGroup")
+	public ModelAndView listByGroup(@RequestParam int exerciseGroup) {
+		ModelAndView result;
+		Boolean other = true;
+		String uri = "exercise/administrator/listByExerciseGroup";
+		String requestURI = "exercise/administrator/listByExerciseGroup.do";
+		Collection<Exercise> exercises = exerciseService
+				.findByExerciseGroup(exerciseGroup);
+		result = createListModelAndView(requestURI, exercises, uri);
+		result.addObject("other", other);
+
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)

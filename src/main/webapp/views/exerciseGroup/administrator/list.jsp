@@ -15,9 +15,13 @@
 	<display:column property="name" titleKey="exerciseGroup.name"
 		sortable="true" />
 	<display:column titleKey="exerciseGroup.exercises">
-	<a href="exercise/administrator/list.do?exerciseGroupId=${row.id}"></a>
+		<a href="exercise/administrator/listByExerciseGroup.do?exerciseGroupId=${row.id}"> <spring:message
+				code="exerciseGroup.exercises.fil" />
+		</a>
 	</display:column>
 	<display:column titleKey="exerciseGroup.trainingDays">
-	<a href="trainingDay/administrator/list.do?exerciseGroupId=${row.id}"></a>
+		<a href="trainingDay/administrator/list.do?exerciseGroupId=${row.id}"> <spring:message
+				code="exerciseGroup.trainingDays.fil" />
+		</a>
 	</display:column>
 </display:table>

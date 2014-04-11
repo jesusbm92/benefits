@@ -28,7 +28,14 @@
 
 	
 </display:table>
-
+<jstl:if test="${!other }">
 	<a href="exercise/administrator/create.do" type="button"> <spring:message
 				code="exercise.create" />
 	</a>
+</jstl:if>
+
+<jstl:if test="${other }">
+	<a href="exerciseGroup/administrator/list.do" type="button"> <spring:message
+				code="exercise.cancel" />
+	</a>
+</jstl:if>

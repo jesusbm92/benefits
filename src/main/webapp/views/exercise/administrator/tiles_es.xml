@@ -20,6 +20,10 @@
 		<put-attribute name="title" value="Todos los ejercicios " />
 		<put-attribute name="body" value="/views/exercise/administrator/list.jsp" />
 	</definition>
+	<definition name="exercise/administrator/listByExerciseGroup" extends="master.page">	
+		<put-attribute name="title" value="Lista ejercicios " />
+		<put-attribute name="body" value="/views/exercise/administrator/list.jsp" />
+	</definition>
 	
 		<definition name="exercise/administrator/edit" extends="master.page">	
 		<put-attribute name="title" value="Editar ejercicio" />
