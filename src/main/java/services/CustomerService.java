@@ -82,6 +82,24 @@ public class CustomerService extends UserService {
 		customerRepository.save(customer);
 	}
 
+	public void saveOnlyCustomer(Customer customer) {
+		Assert.notNull(customer);
+
+		customerRepository.save(customer);
+	}
+
+	public void savePassword(Customer customer, String password) {
+		Assert.notNull(customer);
+
+		encoder = new Md5PasswordEncoder();
+
+		String newPassword = encoder.encodePassword(password, null);
+
+		customer.getUserAccount().setPassword(newPassword);
+
+		customerRepository.save(customer);
+	}
+
 	public Customer findByPrincipal() {
 
 		Customer result;
