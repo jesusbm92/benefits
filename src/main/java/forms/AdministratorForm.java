@@ -22,6 +22,11 @@ public class AdministratorForm {
 	private boolean TOSAccepted;
 	private String repeatPassword;
 
+	// Edición de perfil
+	private String originalPassword;
+	private String newPassword;
+	private String newConfirmedPassword;
+
 	public AdministratorForm() {
 		super();
 	}
@@ -105,6 +110,14 @@ public class AdministratorForm {
 		this.repeatPassword = repeatPassword;
 	}
 
+	public String getOriginalPassword() {
+		return originalPassword;
+	}
+
+	public void setOriginalPassword(String originalPassword) {
+		this.originalPassword = originalPassword;
+	}
+
 	@NotBlank
 	public String getNationality() {
 		return nationality;
@@ -121,6 +134,22 @@ public class AdministratorForm {
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public String getNewConfirmedPassword() {
+		return newConfirmedPassword;
+	}
+
+	public void setNewConfirmedPassword(String newConfirmedPassword) {
+		this.newConfirmedPassword = newConfirmedPassword;
+	}
+
+	public String getNewPassword() {
+		return newPassword;
+	}
+
+	public void setNewPassword(String newPassword) {
+		this.newPassword = newPassword;
 	}
 
 }

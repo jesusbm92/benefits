@@ -57,7 +57,8 @@
 		<security:intercept-url pattern="/plan/customer/**" access="hasRole('CUSTOMER')" /> 
 
 		<security:intercept-url pattern="/profile/action-1.do" access="isAuthenticated()" /> 
-	
+		<security:intercept-url pattern="/profile/administrator/edit.do" access="hasRole('ADMIN')" /> 
+		
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
 
 		<security:form-login 

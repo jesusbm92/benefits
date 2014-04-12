@@ -77,8 +77,14 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li class="arrow"></li>
-							<li><a href="profile/action-1.do"><spring:message
-										code="master.page.profile.action.1" /></a></li>
+							<security:authorize access="hasRole('ADMIN')">
+								<li><a href="profile/administrator/edit.do"><spring:message
+											code="master.page.profile.administrator.edit" /></a></li>
+							</security:authorize>
+							<security:authorize access="hasRole('CUSTOMER')">
+								<li><a href="profile/customer/edit.do"><spring:message
+											code="master.page.profile.administrator.edit" /></a></li>
+							</security:authorize>
 							<li><a href="j_spring_security_logout"><spring:message
 										code="master.page.logout" /> </a></li>
 						</ul></li>
