@@ -85,6 +85,26 @@ public class AdministratorService extends UserService {
 		administratorRepository.save(administrator);
 	}
 
+	public void saveOnlyAdmin(Administrator administrator) {
+		Assert.notNull(administrator);
+		Assert.isTrue(this.IAmAnAdmin());
+
+		administratorRepository.save(administrator);
+	}
+
+	public void savePassword(Administrator administrator, String password) {
+		Assert.notNull(administrator);
+		Assert.isTrue(this.IAmAnAdmin());
+
+		encoder = new Md5PasswordEncoder();
+
+		String newPassword = encoder.encodePassword(password, null);
+
+		administrator.getUserAccount().setPassword(newPassword);
+
+		administratorRepository.save(administrator);
+	}
+
 	public Administrator findByPrincipal() {
 
 		Administrator result;

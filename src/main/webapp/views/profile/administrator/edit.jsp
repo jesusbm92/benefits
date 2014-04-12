@@ -21,20 +21,15 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <form:form action="profile/administrator/edit.do"
-	modelAttribute="administratorForm">
+	modelAttribute="administrator">
 	
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="city" />
 	<form:hidden path="nationality" />
 	<form:hidden path="name" />
 	<form:hidden path="surname" />
-	<form:hidden path="password" />
-	<form:hidden path="repeatPassword" />
+	<form:hidden path="userAccount" />
 	
-	<acme:password code="profile.administrator.currentPassword" path="originalPassword" />
-	<acme:password code="profile.administrator.password" path="newPassword" />
-	<acme:password code="profile.administrator.passwordRepeat" path="newConfirmedPassword" />
 	<acme:textbox code="profile.administrator.email" path="email" />
 	<acme:textbox code="profile.administrator.city" path="city" />
 	
@@ -42,3 +37,19 @@
 		value="<spring:message code="profile.administrator.save" />" />
 	
 </form:form>
+
+<form:form action="profile/administrator/edit.do"
+	modelAttribute="cpForm">
+	
+	
+	<acme:password code="profile.administrator.currentPassword" path="currentPassword" />
+	<acme:password code="profile.administrator.password" path="newPassword" />
+	<acme:password code="profile.administrator.passwordRepeat" path="newPasswordConfirmation" />
+	
+	<input type="submit" name="changePassword" class="btn btn-sm btn-info"
+		value="<spring:message code="profile.administrator.save" />" />
+	
+</form:form>
+
+
+
