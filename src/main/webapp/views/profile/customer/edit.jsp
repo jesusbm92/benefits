@@ -20,7 +20,7 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <div class="row">
-	<div class="col-md-5">
+	<div class="col-md-5 col-md-offset-1">
 
 		<h2 class="text-center">
 			<spring:message code="profile.customer.editInfoHeader" />
@@ -42,6 +42,7 @@
 				<div class="col-md-4">
 					<form:input id="cutomerName" path="name" class="form-control" />
 				</div>
+				<form:errors path="name" cssClass="error" />
 			</div>
 
 			<div class="form-group">
@@ -52,6 +53,7 @@
 				<div class="col-md-4">
 					<form:input id="cutomerSurname" path="surname" class="form-control" />
 				</div>
+				<form:errors path="surname" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="cutomerEmail" path="email"
@@ -61,6 +63,7 @@
 				<div class="col-md-4">
 					<form:input id="cutomerEmail" path="email" class="form-control" />
 				</div>
+				<form:errors path="email" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="cutomerCity" path="city"
@@ -70,6 +73,7 @@
 				<div class="col-md-4">
 					<form:input id="cutomerCity" path="city" class="form-control" />
 				</div>
+				<form:errors path="city" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="cutomerNationality" path="nationality"
@@ -80,6 +84,7 @@
 					<form:input id="cutomerNationality" path="nationality"
 						class="form-control" />
 				</div>
+				<form:errors path="nationality" cssClass="error" />
 			</div>
 
 			<div class="form-group">
@@ -90,13 +95,15 @@
 				<div class="col-md-2">
 					<form:input id="cutomerWeight" path="weight" class="form-control" />
 				</div>
+				<form:errors path="weight" cssClass="error" />
 				<form:label for="cutomerHeight" path="height"
-					class="col-md-3 control-label">
+					class="col-md-3 col-md-offset-1 control-label">
 					<spring:message code="profile.customer.height" />
 				</form:label>
 				<div class="col-md-2">
 					<form:input id="cutomerHeight" path="height" class="form-control" />
 				</div>
+				<form:errors path="height" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="cutomerBodyfat" path="bodyfat"
@@ -106,14 +113,16 @@
 				<div class="col-md-2">
 					<form:input id="cutomerBodyfat" path="bodyfat" class="form-control" />
 				</div>
+				<form:errors path="bodyfat" cssClass="error" />
 				<form:label for="cutomerWaistlineMeasure" path="waistlineMeasure"
-					class="col-md-3 control-label">
+					class="col-md-3 col-md-offset-1 control-label">
 					<spring:message code="profile.customer.waistlineMeasure" />
 				</form:label>
 				<div class="col-md-2">
 					<form:input id="cutomerWaistlineMeasure" path="waistlineMeasure"
 						class="form-control" />
 				</div>
+				<form:errors path="waistlineMeasure" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="cutomerHipMeasure" path="hipMeasure"
@@ -124,14 +133,16 @@
 					<form:input id="cutomerHipMeasure" path="hipMeasure"
 						class="form-control" />
 				</div>
+				<form:errors path="hipMeasure" cssClass="error" />
 				<form:label for="cutomerChestMeasure" path="chestMeasure"
-					class="col-md-3 control-label">
+					class="col-md-3 col-md-offset-1 control-label">
 					<spring:message code="profile.customer.chestMeasure" />
 				</form:label>
 				<div class="col-md-2">
 					<form:input id="cutomerChestMeasure" path="chestMeasure"
 						class="form-control" />
 				</div>
+				<form:errors path="chestMeasure" cssClass="error" />
 			</div>
 
 			<div class="form-group">
@@ -145,7 +156,7 @@
 
 	<div class="col-md-5">
 
-		<h2 class="text-center">
+		<h2>
 			<spring:message code="profile.customer.passwordChangeHeader" />
 		</h2>
 		<br />
@@ -160,6 +171,7 @@
 					<form:input type="password" id="customerCurrentPassword"
 						path="currentPassword" class="form-control" />
 				</div>
+				<form:errors path="currentPassword" cssClass="error" />
 			</div>
 
 			<div class="form-group">
@@ -171,6 +183,7 @@
 					<form:input type="password" id="customerNewPassword"
 						path="newPassword" class="form-control" />
 				</div>
+				<form:errors path="newPassword" cssClass="error" />
 			</div>
 
 			<div class="form-group">
@@ -182,6 +195,7 @@
 					<form:input type="password" id="customerNewPasswordConfirmation"
 						path="newPasswordConfirmation" class="form-control" />
 				</div>
+				<form:errors path="newPasswordConfirmation" cssClass="error" />
 			</div>
 
 			<div class="form-group">
