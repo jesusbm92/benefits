@@ -6,17 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.AdministratorService;
+import controllers.AbstractController;
 import domain.Administrator;
 import forms.ChangePasswordForm;
 
 @Controller
 @RequestMapping("/profile/administrator")
-public class AdministratorProfileController {
+public class AdministratorProfileController extends AbstractController {
 
 	@Autowired
 	private AdministratorService administratorService;
@@ -55,7 +57,8 @@ public class AdministratorProfileController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "changePassword")
-	public ModelAndView changeAdminPassword(@Valid ChangePasswordForm cpForm,
+	public ModelAndView changeAdminPassword(
+			@ModelAttribute("cpForm") @Valid ChangePasswordForm cpForm,
 			BindingResult binding) {
 
 		ModelAndView result;

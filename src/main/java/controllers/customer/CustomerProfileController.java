@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.CustomerService;
+import controllers.AbstractController;
 import domain.Customer;
 import forms.ChangePasswordForm;
 
 @Controller
 @RequestMapping("/profile/customer")
-public class CustomerProfileController {
+public class CustomerProfileController extends AbstractController {
 
 	@Autowired
 	private CustomerService customerService;
