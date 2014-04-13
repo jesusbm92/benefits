@@ -16,4 +16,4 @@
 
 <hr />
 
-<b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" /> Benefits Co., Inc.</b>
+<p class="text-center"><b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" /> Benefits Co. Inc. by Infit Solutions</b></p>

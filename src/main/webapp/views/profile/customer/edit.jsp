@@ -22,8 +22,10 @@
 <div class="row">
 	<div class="col-md-5">
 
-		<h2 class="text-center"><spring:message code="profile.customer.editInfoHeader"/></h2>
-
+		<h2 class="text-center">
+			<spring:message code="profile.customer.editInfoHeader" />
+		</h2>
+		<br />
 		<form:form action="profile/customer/edit.do" modelAttribute="customer"
 			role="form" class="form-horizontal">
 
@@ -134,33 +136,21 @@
 
 			<div class="form-group">
 				<div class="col-md-offset-2 col-md-3">
-					<input type="submit" name="save" class="btn btn-md btn-info"
+					<input type="submit" name="save" class="btn btn-default"
 						value="<spring:message code="profile.customer.save" />" />
 				</div>
 			</div>
-
-			<%-- <acme:textbox code="profile.customer.name" path="name"/> --%>
-			<%-- 	<acme:textbox code="profile.customer.surname" path="surname" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.email" path="email" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.city" path="city" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.nationality" path="nationality" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.weight" path="weight" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.height" path="height" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.bodyFat" path="bodyfat" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.waistlineMeasure" --%>
-			<%-- 		path="waistlineMeasure" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.hipMeasure" path="hipMeasure" /> --%>
-			<%-- 	<acme:textbox code="profile.customer.chestMeasure" path="chestMeasure" /> --%>
-
 		</form:form>
 	</div>
+
 	<div class="col-md-5">
 
-		<h2 class="text-center"><spring:message code="profile.customer.passwordChangeHeader"/></h2>
+		<h2 class="text-center">
+			<spring:message code="profile.customer.passwordChangeHeader" />
+		</h2>
+		<br />
 		<form:form action="profile/customer/edit.do" modelAttribute="cpForm"
 			role="form" class="form-horizontal">
-
-
 			<div class="form-group">
 				<form:label for="cutomerCurrentPassword" path="currentPassword"
 					class="col-md-3 control-label">
@@ -194,15 +184,9 @@
 				</div>
 			</div>
 
-			<%-- 	<acme:password code="profile.customer.currentPassword" --%>
-			<%-- 		path="currentPassword" /> --%>
-			<%-- 	<acme:password code="profile.customer.password" path="newPassword" /> --%>
-			<%-- 	<acme:password code="profile.customer.passwordRepeat" --%>
-			<%-- 		path="newPasswordConfirmation" /> --%>
 			<div class="form-group">
 				<div class="col-md-offset-2 col-md-10">
-					<input type="submit" name="changePassword"
-						class="btn btn-md btn-info"
+					<input type="submit" name="changePassword" class="btn btn-default"
 						value="<spring:message code="profile.customer.changePassword" />" />
 				</div>
 			</div>
