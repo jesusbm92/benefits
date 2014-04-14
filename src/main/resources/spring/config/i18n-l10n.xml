@@ -37,6 +37,7 @@
 		<value>/views/training/administrator/messages</value>
 		<value>/views/exercise/administrator/messages</value>
 		<value>/views/exerciseGroup/administrator/messages</value>
+		<value>/views/trainingDay/administrator/messages</value>
 		
 	</util:list>
 

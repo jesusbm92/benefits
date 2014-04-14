@@ -12,7 +12,7 @@ import domain.TrainingDay;
 public interface TrainingDayRepository extends
 		JpaRepository<TrainingDay, Integer> {
 
-	@Query("select t from TrainingDay t where t.exerciseGroup.id= ?1")
+	@Query("select t from TrainingDay t inner join t.exerciseGroups g where g.id= ?1")
 	Collection<TrainingDay> findAllByExerciseGroup(int exerciseGroup);
 
 }

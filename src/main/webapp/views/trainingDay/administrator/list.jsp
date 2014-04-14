@@ -12,8 +12,9 @@
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
 
-	<display:column property="name" titleKey="trainingDay.name"
-		sortable="true" />
+	<display:column  titleKey="trainingDay.name" sortable="true">
+	<spring:message code="trainingDay.name.${row.name}" />
+	</display:column>
 	<display:column titleKey="trainingDay.training">
 		<a href="training/administrator/listTraining.do?trainingDayId=${row.id}"> <spring:message
 				code="trainingDay.training.fil" />
