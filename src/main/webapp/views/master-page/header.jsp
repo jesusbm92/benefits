@@ -45,7 +45,19 @@
 							<li><a href="training/administrator/list.do"><spring:message
 										code="master.page.admin.trainingAsigned" /></a></li>
 							<li><a href="training/administrator/list.do"><spring:message
-										code="master.page.admin.trainingFree" /></a></li>					
+										code="master.page.admin.trainingFree" /></a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown"><spring:message
+								code="master.page.administrator.diet" /><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="arrow"></li>
+							<li><a href="diet/administrator/list.do"><spring:message
+										code="master.page.admin.dietAll" /></a></li>
+							<li><a href="diet/administrator/listAssigned.do"><spring:message
+										code="master.page.admin.dietAsigned" /></a></li>
+							<li><a href="diet/administrator/listFree.do"><spring:message
+										code="master.page.admin.dietFree" /></a></li>
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown"><spring:message
