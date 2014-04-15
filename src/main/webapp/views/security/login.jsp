@@ -19,29 +19,38 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<form:form action="j_spring_security_check" modelAttribute="credentials">
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-5">
+			<form:form action="j_spring_security_check"
+				modelAttribute="credentials" class="form-signin" role="form">
+				<br />
 
-	<form:label path="username">
-		<spring:message code="security.username" />
-	</form:label>
-	<form:input path="username" />
-	<form:errors class="error" path="username" />
-	<br />
+				<spring:message code="security.username" var="username" />
+				<form:input path="username" class="form-control"
+					placeholder="${username}" required="" autofocus="" />
+				<form:errors class="error" path="username" />
+				<br />
+				<spring:message code="security.password" var="password" />
+				<form:password path="password" class="form-control"
+					placeholder="${password}" required="" />
+				<form:errors class="error" path="password" />
+				<label class="checkbox"> <input type="checkbox"
+					name="_spring_security_remember_me" />
+					<spring:message code="security.rememberMe" />
+				</label>
+				<br />
 
-	<form:label path="password">
-		<spring:message code="security.password" />
-	</form:label>
-	<form:password path="password" />
-	<form:errors class="error" path="password" />
-	<br />
+				<jstl:if test="${showError == true}">
+					<div class="error">
+						<spring:message code="security.login.failed" />
+					</div>
+				</jstl:if>
 
-	<jstl:if test="${showError == true}">
-		<div class="error">
-			<spring:message code="security.login.failed" />
+				<input type="submit" class="btn btn-lg btn-primary btn-block"
+					value="<spring:message code="security.login" />" />
+
+			</form:form>
 		</div>
-	</jstl:if>
-
-	<input type="submit" class="btn btn-sm btn-info"
-		value="<spring:message code="security.login" />" />
-
-</form:form>
+	</div>
+</div>

@@ -70,6 +70,7 @@
 		<security:logout 
 			logout-success-url="/" 
 			invalidate-session="true" />
+		<security:remember-me key="uniqueAndSecret"/>
 	</security:http>
 
 </beans>
