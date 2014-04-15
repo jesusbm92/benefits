@@ -58,6 +58,9 @@
 										code="master.page.admin.dietAsigned" /></a></li>
 							<li><a href="diet/administrator/listFree.do"><spring:message
 										code="master.page.admin.dietFree" /></a></li>
+							<li><a href="food/administrator/list.do"><spring:message
+										code="master.page.admin.foodAll" /></a></li>
+
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown"><spring:message

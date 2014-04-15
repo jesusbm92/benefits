@@ -33,6 +33,7 @@
 	</display:column>
 
 </display:table>
+<br />
 
 
 <security:authorize access="hasRole('ADMIN')">
