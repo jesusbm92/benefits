@@ -13,6 +13,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -54,6 +55,7 @@ public class Training extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "training")
 	public Collection<Plan> getPlans() {
 		return plans;
@@ -76,6 +78,7 @@ public class Training extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@ManyToOne(optional = true)
 	public Sponsor getSponsor() {
 		return sponsor;

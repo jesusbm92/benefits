@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -37,6 +38,7 @@ public class Muscle extends DomainEntity {
 
 	@Valid
 	@NotEmpty
+	@JsonIgnore
 	@OneToMany(mappedBy = "muscle")
 	public Collection<Exercise> getExercises() {
 		return exercises;

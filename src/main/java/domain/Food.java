@@ -10,6 +10,7 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -48,6 +49,7 @@ public class Food extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "food")
 	public Collection<Amount> getAmounts() {
 		return amounts;

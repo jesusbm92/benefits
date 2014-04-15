@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -61,6 +62,7 @@ public class Comment extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@ManyToOne(optional = false)
 	public Plan getPlan() {
 		return plan;

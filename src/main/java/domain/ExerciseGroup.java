@@ -11,6 +11,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -52,6 +53,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotEmpty
+	@JsonIgnore
 	@ManyToMany(mappedBy = "exerciseGroups")
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;

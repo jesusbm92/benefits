@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class TrainingDay extends DomainEntity {
@@ -40,6 +42,7 @@ public class TrainingDay extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@ManyToOne(optional = false)
 	public Training getTraining() {
 		return training;

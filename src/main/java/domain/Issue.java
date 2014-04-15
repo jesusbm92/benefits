@@ -7,6 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -45,6 +46,7 @@ public class Issue extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@ManyToOne(optional = false)
 	public Plan getPlan() {
 		return plan;

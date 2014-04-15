@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class Plan extends DomainEntity {
@@ -55,6 +57,7 @@ public class Plan extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "plan")
 	public Collection<Customer> getCustomers() {
 		return customers;

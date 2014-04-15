@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class Meal extends DomainEntity {
@@ -40,6 +42,7 @@ public class Meal extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@ManyToOne(optional = false)
 	public Day getDay() {
 		return day;
