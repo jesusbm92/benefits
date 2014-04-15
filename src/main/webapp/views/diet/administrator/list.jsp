@@ -19,12 +19,12 @@
 		sortable="true" />
 		
 	<display:column>
-		<a href="day/list.do?dietId=${row.id}"> <spring:message
+		<a href="day/administrator/listDaysByDiet.do?dietId=${row.id}"> <spring:message
 				code="diet.days" />
 		</a>
 	</display:column>
 	<display:column>
-		<a href="plan/administrator/list.do?dietId=${row.id}"> <spring:message
+		<a href="plan/administrator/listPlansByDiet.do?dietId=${row.id}"> <spring:message
 				code="diet.plans" />
 		</a>
 	</display:column>

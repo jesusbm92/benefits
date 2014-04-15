@@ -34,7 +34,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="userAccount8" class="security.UserAccount">
 		<property name="username" value="felix" />
 		<property name="password" value="25779f8829ab7a7650e85a4cc871e6ac" />
@@ -215,8 +215,8 @@
 		</property>
 
 	</bean>
-	
-		<bean id="plan3" class="domain.Plan">
+
+	<bean id="plan3" class="domain.Plan">
 		<property name="goal" value="KEEP_FIT" />
 		<property name="customers">
 			<list>
@@ -279,7 +279,7 @@
 
 
 	</bean>
-	
+
 	<bean id="felix" class="domain.Customer">
 		<property name="name" value="Customer 1" />
 		<property name="surname" value="SurnameC 1" />
@@ -341,7 +341,11 @@
 
 	<bean id="day1" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet1" />
+		<property name="diets">
+			<list>
+				<ref bean="diet1" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal1" />
@@ -353,7 +357,11 @@
 
 	<bean id="day2" class="domain.Day">
 		<property name="name" value="TUESDAY" />
-		<property name="diet" ref="diet1" />
+		<property name="diets">
+			<list>
+				<ref bean="diet1" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal3" />
@@ -366,7 +374,11 @@
 
 	<bean id="day3" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet1" />
+		<property name="diets">
+			<list>
+				<ref bean="diet1" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal5" />
@@ -378,7 +390,11 @@
 
 	<bean id="day4" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet1" />
+		<property name="diets">
+			<list>
+				<ref bean="diet1" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal7" />
@@ -390,7 +406,11 @@
 
 	<bean id="day5" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet2" />
+		<property name="diets">
+			<list>
+				<ref bean="diet2" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal9" />
@@ -402,7 +422,11 @@
 
 	<bean id="day6" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet2" />
+		<property name="diets">
+			<list>
+				<ref bean="diet2" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal11" />
@@ -414,7 +438,11 @@
 
 	<bean id="day7" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="diet" ref="diet2" />
+		<property name="diets">
+			<list>
+				<ref bean="diet2" />
+			</list>
+		</property>
 		<property name="meals">
 			<list>
 				<ref bean="meal13" />
@@ -429,7 +457,11 @@
 
 	<bean id="meal1" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day1" />
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount1" />
@@ -441,7 +473,11 @@
 
 	<bean id="meal2" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day1" />
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount3" />
@@ -452,7 +488,11 @@
 
 	<bean id="meal3" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day1" />
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount4" />
@@ -464,7 +504,11 @@
 
 	<bean id="meal4" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day1" />
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount6" />
@@ -475,7 +519,11 @@
 
 	<bean id="meal5" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day1" />
+		<property name="days">
+			<list>
+				<ref bean="day1" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount7" />
@@ -487,7 +535,11 @@
 
 	<bean id="meal6" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day2" />
+		<property name="days">
+			<list>
+				<ref bean="day2" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount9" />
@@ -497,7 +549,11 @@
 
 	<bean id="meal7" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day2" />
+		<property name="days">
+			<list>
+				<ref bean="day2" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount10" />
@@ -508,7 +564,11 @@
 
 	<bean id="meal8" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day2" />
+		<property name="days">
+			<list>
+				<ref bean="day2" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount12" />
@@ -520,7 +580,11 @@
 
 	<bean id="meal9" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day2" />
+		<property name="days">
+			<list>
+				<ref bean="day2" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount13" />
@@ -533,7 +597,11 @@
 
 	<bean id="meal10" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day2" />
+		<property name="days">
+			<list>
+				<ref bean="day2" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount15" />
@@ -545,7 +613,11 @@
 
 	<bean id="meal11" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day3" />
+		<property name="days">
+			<list>
+				<ref bean="day3" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount16" />
@@ -557,7 +629,11 @@
 
 	<bean id="meal12" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day3" />
+		<property name="days">
+			<list>
+				<ref bean="day3" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount18" />
@@ -568,7 +644,11 @@
 
 	<bean id="meal13" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="day" ref="day3" />
+		<property name="days">
+			<list>
+				<ref bean="day3" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount19" />
@@ -580,7 +660,11 @@
 
 	<bean id="meal14" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="day" ref="day3" />
+		<property name="days">
+			<list>
+				<ref bean="day3" />
+			</list>
+		</property>
 		<property name="amounts">
 			<list>
 				<ref bean="amount21" />

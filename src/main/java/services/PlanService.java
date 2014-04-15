@@ -125,6 +125,12 @@ public class PlanService {
 		return goals;
 	}
 
+	public Collection<Plan> findPlansByDiet(int dietId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Plan> plans = planRepository.findPlansByDiet(dietId);
+		return plans;
+	}
+
 	public void request(Goals goal) {
 
 		// Se comprueba que el goal que se pasa como parámetro está

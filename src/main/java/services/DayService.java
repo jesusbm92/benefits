@@ -3,11 +3,15 @@ package services;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import repositories.DayRepository;
 import domain.Day;
 
+@Transactional
+@Service
 public class DayService {
 
 	// Managed repository-----------------------
@@ -16,6 +20,8 @@ public class DayService {
 	private DayRepository dayRepository;
 
 	// Supporting services -----------------
+	@Autowired
+	private UserService userService;
 
 	// Constructors --------------------------
 	public DayService() {
@@ -79,6 +85,12 @@ public class DayService {
 	}
 
 	// Other business methods ----------------
+
+	public Collection<Day> findDaysByDiet(int dietId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Day> days = dayRepository.findDaysByDiet(dietId);
+		return days;
+	}
 
 	// Assertions
 

@@ -7,6 +7,7 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
@@ -64,8 +65,7 @@ public class Diet extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
-	@OneToMany(mappedBy = "diet", cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "diets", cascade = CascadeType.ALL)
 	public Collection<Day> getDays() {
 		return days;
 	}
