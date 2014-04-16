@@ -5,15 +5,11 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -41,8 +37,7 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Valid
-	@NotEmpty
-	@OneToMany(mappedBy = "exerciseGroup", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy = "exerciseGroups")
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}
@@ -52,7 +47,6 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Valid
-	@NotEmpty
 	@ManyToMany(mappedBy = "exerciseGroups")
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;

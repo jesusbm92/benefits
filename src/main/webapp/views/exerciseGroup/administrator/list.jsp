@@ -25,3 +25,7 @@
 		</a>
 	</display:column>
 </display:table>
+
+<a href="exerciseGroup/administrator/create.do" type="button"> <spring:message
+				code="exerciseGroup.create" />
+	</a>

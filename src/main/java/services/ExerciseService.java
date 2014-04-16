@@ -100,7 +100,10 @@ public class ExerciseService {
 		Assert.notNull(exercise);
 		// TODO Restricciones de Borrado
 		Assert.isTrue(administratorService.IAmAnAdmin());
-		Assert.isTrue(exercise.getExerciseGroup().getTrainingDays() == null);
+
+		// FALTA SABER LO QUE NO SE PUEDE BORRAR SI ESTA ASIGNADO A ALGUN
+		// EJERCICIO DE GRUPO DE UN PLAN
+
 		exerciseRepository.delete(exercise);
 	}
 
