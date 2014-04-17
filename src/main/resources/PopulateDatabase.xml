@@ -138,6 +138,110 @@
 		<property name="sponsor" ref="sponsor2" />
 
 	</bean>
+	<!-- EXERCISE GROUPS -->
+
+	<bean id="exercisegroup1" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 1" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise1" />
+				<ref bean="exercise2" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday1" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup2" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 2" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise3" />
+				<ref bean="exercise4" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday2" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup3" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 3" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise5" />
+				<ref bean="exercise6" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday3" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup4" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 4" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise7" />
+				<ref bean="exercise8" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup5" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 5" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise9" />
+				<ref bean="exercise10" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday5" />
+			</list>
+		</property>
+
+
+	</bean>
+
+	<bean id="exercisegroup6" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group 6" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise11" />
+				<ref bean="exercise12" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday6" />
+			</list>
+		</property>
+
+
+	</bean>
+
 
 	<!-- Trainings -->
 
@@ -928,207 +1032,44 @@
 		</property>
 	</bean>
 
-	<!-- EXERCISE GROUPS -->
-
-	<bean id="exercisegroup1" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 1" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-				<ref bean="exercise2" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday1" />
-			</list>
-		</property>
-
-
-	</bean>
-
-	<bean id="exercisegroup2" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 2" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise3" />
-				<ref bean="exercise4" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday2" />
-			</list>
-		</property>
-
-
-	</bean>
-
-	<bean id="exercisegroup3" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 3" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise5" />
-				<ref bean="exercise6" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday3" />
-			</list>
-		</property>
-
-
-	</bean>
-
-	<bean id="exercisegroup4" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 4" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise7" />
-				<ref bean="exercise8" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday4" />
-			</list>
-		</property>
-
-
-	</bean>
-
-	<bean id="exercisegroup5" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 5" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise9" />
-				<ref bean="exercise10" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday5" />
-			</list>
-		</property>
-
-
-	</bean>
-
-	<bean id="exercisegroup6" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 6" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise11" />
-				<ref bean="exercise12" />
-			</list>
-		</property>
-		<property name="trainingDays">
-			<list>
-				<ref bean="trainingday6" />
-			</list>
-		</property>
-
-
-	</bean>
 
 	<!-- MUSCLES -->
 
 	<bean id="muscle1" class="domain.Muscle">
 		<property name="name" value="Muscle 1" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle2" class="domain.Muscle">
 		<property name="name" value="Muscle 2" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle3" class="domain.Muscle">
 		<property name="name" value="Muscle 3" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle4" class="domain.Muscle">
 		<property name="name" value="Muscle 4" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle5" class="domain.Muscle">
 		<property name="name" value="Muscle 5" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle6" class="domain.Muscle">
 		<property name="name" value="Muscle 6" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle7" class="domain.Muscle">
 		<property name="name" value="Muscle 7" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle8" class="domain.Muscle">
 		<property name="name" value="Muscle 8" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle9" class="domain.Muscle">
 		<property name="name" value="Muscle 9" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle10" class="domain.Muscle">
 		<property name="name" value="Muscle 10" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle11" class="domain.Muscle">
 		<property name="name" value="Muscle 11" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 	<bean id="muscle12" class="domain.Muscle">
 		<property name="name" value="Muscle 12" />
-		<property name="exercises">
-			<list>
-				<ref bean="exercise1" />
-			</list>
-		</property>
 	</bean>
 
 	<!-- EXERCISES -->
@@ -1138,7 +1079,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle1" />
-		<property name="exerciseGroup" ref="exercisegroup1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="exercise2" class="domain.Exercise">
@@ -1146,7 +1091,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle2" />
-		<property name="exerciseGroup" ref="exercisegroup1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="exercise3" class="domain.Exercise">
@@ -1154,7 +1103,12 @@
 		<property name="repetitions" value="12" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle3" />
-		<property name="exerciseGroup" ref="exercisegroup2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2" />
+			</list>
+		</property>
+		
 	</bean>
 
 	<bean id="exercise4" class="domain.Exercise">
@@ -1162,7 +1116,11 @@
 		<property name="repetitions" value="5" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle4" />
-		<property name="exerciseGroup" ref="exercisegroup2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2" />
+			</list>
+		</property>
 	</bean>
 
 	<bean id="exercise5" class="domain.Exercise">
@@ -1170,7 +1128,11 @@
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle5" />
-		<property name="exerciseGroup" ref="exercisegroup3" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1180,7 +1142,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
-		<property name="exerciseGroup" ref="exercisegroup3" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1190,7 +1156,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle7" />
-		<property name="exerciseGroup" ref="exercisegroup4" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1200,7 +1170,11 @@
 		<property name="repetitions" value="18" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle8" />
-		<property name="exerciseGroup" ref="exercisegroup4" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1210,7 +1184,11 @@
 		<property name="repetitions" value="2" />
 		<property name="cycles" value="10" />
 		<property name="muscle" ref="muscle9" />
-		<property name="exerciseGroup" ref="exercisegroup5" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1220,7 +1198,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle10" />
-		<property name="exerciseGroup" ref="exercisegroup5" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1230,7 +1212,11 @@
 		<property name="repetitions" value="20" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle11" />
-		<property name="exerciseGroup" ref="exercisegroup6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup6" />
+			</list>
+		</property>
 
 
 	</bean>
@@ -1240,7 +1226,11 @@
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
-		<property name="exerciseGroup" ref="exercisegroup6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup6" />
+			</list>
+		</property>
 	</bean>
 
 	<!-- COMMENTS -->
