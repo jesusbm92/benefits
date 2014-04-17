@@ -137,7 +137,50 @@
 		</property>
 		<property name="sponsor" ref="sponsor2" />
 
+	
 	</bean>
+	
+	
+	<!-- MUSCLES -->
+
+	<bean id="muscle1" class="domain.Muscle">
+		<property name="name" value="Muscle 1" />
+	</bean>
+	<bean id="muscle2" class="domain.Muscle">
+		<property name="name" value="Muscle 2" />
+	</bean>
+	<bean id="muscle3" class="domain.Muscle">
+		<property name="name" value="Muscle 3" />
+	</bean>
+	<bean id="muscle4" class="domain.Muscle">
+		<property name="name" value="Muscle 4" />
+	</bean>
+	<bean id="muscle5" class="domain.Muscle">
+		<property name="name" value="Muscle 5" />
+	</bean>
+	<bean id="muscle6" class="domain.Muscle">
+		<property name="name" value="Muscle 6" />
+	</bean>
+	<bean id="muscle7" class="domain.Muscle">
+		<property name="name" value="Muscle 7" />
+	</bean>
+	<bean id="muscle8" class="domain.Muscle">
+		<property name="name" value="Muscle 8" />
+	</bean>
+	<bean id="muscle9" class="domain.Muscle">
+		<property name="name" value="Muscle 9" />
+	</bean>
+	<bean id="muscle10" class="domain.Muscle">
+		<property name="name" value="Muscle 10" />
+	</bean>
+	<bean id="muscle11" class="domain.Muscle">
+		<property name="name" value="Muscle 11" />
+	</bean>
+	<bean id="muscle12" class="domain.Muscle">
+		<property name="name" value="Muscle 12" />
+	</bean>
+	
+	
 	<!-- EXERCISE GROUPS -->
 
 	<bean id="exercisegroup1" class="domain.ExerciseGroup">
@@ -1033,45 +1076,6 @@
 	</bean>
 
 
-	<!-- MUSCLES -->
-
-	<bean id="muscle1" class="domain.Muscle">
-		<property name="name" value="Muscle 1" />
-	</bean>
-	<bean id="muscle2" class="domain.Muscle">
-		<property name="name" value="Muscle 2" />
-	</bean>
-	<bean id="muscle3" class="domain.Muscle">
-		<property name="name" value="Muscle 3" />
-	</bean>
-	<bean id="muscle4" class="domain.Muscle">
-		<property name="name" value="Muscle 4" />
-	</bean>
-	<bean id="muscle5" class="domain.Muscle">
-		<property name="name" value="Muscle 5" />
-	</bean>
-	<bean id="muscle6" class="domain.Muscle">
-		<property name="name" value="Muscle 6" />
-	</bean>
-	<bean id="muscle7" class="domain.Muscle">
-		<property name="name" value="Muscle 7" />
-	</bean>
-	<bean id="muscle8" class="domain.Muscle">
-		<property name="name" value="Muscle 8" />
-	</bean>
-	<bean id="muscle9" class="domain.Muscle">
-		<property name="name" value="Muscle 9" />
-	</bean>
-	<bean id="muscle10" class="domain.Muscle">
-		<property name="name" value="Muscle 10" />
-	</bean>
-	<bean id="muscle11" class="domain.Muscle">
-		<property name="name" value="Muscle 11" />
-	</bean>
-	<bean id="muscle12" class="domain.Muscle">
-		<property name="name" value="Muscle 12" />
-	</bean>
-
 	<!-- EXERCISES -->
 
 	<bean id="exercise1" class="domain.Exercise">
@@ -1232,6 +1236,7 @@
 			</list>
 		</property>
 	</bean>
+
 
 	<!-- COMMENTS -->
 

@@ -19,32 +19,13 @@
 	<acme:textbox code="exerciseGroup.name" path="name" />
 	<br>
 	
-	<display:table uid="exercisesListTable" keepStatus="true" name="exercises"
-	pagesize="10" class="table table-hover"
-	id="row">
-
-
-	<display:column property="name" titleKey="exercise.name" sortable="true" />
-	<display:column property="repetitions" titleKey="exercise.repetitions" sortable="true" />
-	<display:column property="cycles" titleKey="exercise.cycles" sortable="true" />
-	<display:column property="muscle.name" titleKey="exercise.muscle" sortable="true" />
-	
-	<display:column>
-		<a href="exerciseGroup/administrator/add.do?exerciseGroupId=exerciseGroup.id"> <spring:message
-				code="exerciseGroup.edit" />
-		</a>
-	</display:column>
-	
-
-	
-</display:table>
-	
-
-
+	<form:select multiple="${exercises.size()}" items="${exercises}" itemLabel="name" id="id" code="exerciseGroup.exercises" path="exercises"/>
+	<br>
+	<br>
 	<input type="submit" name="save" class="btn btn-sm btn-info"
 		value="<spring:message code="exerciseGroup.save" />" />
 
-	<jstl:if test="${!create}">
+	<jstl:if test="${exerciseGroup.id!=0}">
 		<input type="submit" class="btn btn-sm btn-info" name="delete"
 			value="<spring:message code="exerciseGroup.delete"/>"
 			onclick="return confirm('<spring:message code="exerciseGroup.delete.confirm"/>')" />

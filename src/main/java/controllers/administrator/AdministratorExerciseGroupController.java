@@ -1,5 +1,6 @@
 package controllers.administrator;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.validation.Valid;
@@ -92,8 +93,13 @@ public class AdministratorExerciseGroupController extends AbstractController {
 				exerciseGroupService.save(exerciseGroup);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(exerciseGroup,
-						"exercise.commit.error");
+				if (exerciseGroup.getExercises().isEmpty()) {
+					result = createEditModelAndView(exerciseGroup,
+							"exerciseGroup.commit.exercises");
+				} else {
+					result = createEditModelAndView(exerciseGroup,
+							"exerciseGroup.commit.error");
+				}
 			}
 			result.addObject("create", false);
 		}
@@ -135,12 +141,18 @@ public class AdministratorExerciseGroupController extends AbstractController {
 			String message) {
 		assert exerciseGroup != null;
 		Collection<Exercise> exercises = exerciseService.findAll();
+		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
+		if (exerciseGroup.getId() != 0) {
+			exerciseSelected = exerciseService
+					.findByExerciseGroup(exerciseGroup.getId());
+		}
 
 		ModelAndView result;
 		result = new ModelAndView("exerciseGroup/administrator/edit");
 		result.addObject("exerciseGroup", exerciseGroup);
 		result.addObject("message", message);
 		result.addObject("exercises", exercises);
+		result.addObject("exerciseSelected", exerciseSelected);
 
 		return result;
 	}
