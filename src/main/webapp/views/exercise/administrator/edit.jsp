@@ -16,6 +16,7 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
+	<form:hidden path="exerciseGroups"/>
 	
 	<form:label path="muscle">
 		<spring:message code="exercise.muscle" />
@@ -29,7 +30,7 @@
 	</form:select>
 	<br>
 	
-	<form:label path="exerciseGroup">
+	<%-- <form:label path="exerciseGroup">
 		<spring:message code="exercise.groupExercise" />
 	</form:label>
 	
@@ -39,7 +40,7 @@
 		</form:option>
 		</jstl:forEach>
 	</form:select>
-	<br>
+	<br> --%>
 	
 	<acme:textbox code="exercise.name" path="name" />
 	<acme:textbox code="exercise.repetitions" path="repetitions" />
