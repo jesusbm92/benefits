@@ -30,18 +30,6 @@
 	</form:select>
 	<br>
 	
-	<%-- <form:label path="exerciseGroup">
-		<spring:message code="exercise.groupExercise" />
-	</form:label>
-	
-	<form:select path="exerciseGroup">
-	<jstl:forEach var="var2" items="${mapExercises}">
-		<form:option  value="${var2.value}">${var2.key}
-		</form:option>
-		</jstl:forEach>
-	</form:select>
-	<br> --%>
-	
 	<acme:textbox code="exercise.name" path="name" />
 	<acme:textbox code="exercise.repetitions" path="repetitions" />
 	<acme:textbox code="exercise.cycles" path="cycles" />

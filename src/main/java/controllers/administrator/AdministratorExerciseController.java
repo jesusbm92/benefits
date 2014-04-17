@@ -150,14 +150,10 @@ public class AdministratorExerciseController extends AbstractController {
 			String message) {
 		assert exercise != null;
 		Map<String, Integer> map = muscleService.findAllIdName();
-
-		Map<String, Integer> mapExercises = exerciseGroupService.findAllMap();
-
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
-		result.addObject("mapExercises", mapExercises);
 		result.addObject("map", map);
 
 		return result;
