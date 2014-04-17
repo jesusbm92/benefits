@@ -40,7 +40,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotEmpty
-	@ManyToMany(mappedBy = "exerciseGroups", cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "exerciseGroups",cascade=CascadeType.ALL)
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}
