@@ -24,4 +24,10 @@
 	</display:column>
 </display:table>
 
+<jstl:if test="${prin }">
+<a href="training/administrator/create.do" type="button"> <spring:message
+				code="training.create" />
+	</a>
+</jstl:if>
+
 

@@ -10,47 +10,37 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
-<form:form action="training/administrator/edit.do" modelAttribute="plan">
+<form:form action="training/administrator/edit.do" modelAttribute="training">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
-	<form:hidden path="id" />
+		<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="customers" />
-	<form:hidden path="comments" />
-	<form:hidden path="issues" />
-
-	<form:label path="goal">
-		<spring:message code="plan.goal" />
-	</form:label>
-	<form:select path="goal">
-		<form:option value="-" label="--Please Select" />
-		<form:options items="${goals}" />
-	</form:select>
+	
+	<acme:textbox code="training.name" path="name" />
 	<br>
-
-	<acme:select items="${diets}" itemLabel="name" id="id" code="plan.diet"
-		path="diet" />
+	<acme:textbox code="training.duration" path="duration" />
 	<br>
-
-	<acme:select items="${trainings}" itemLabel="name" id="id"
-		code="plan.training" path="training" />
+	<form:select items="${sponsors}" itemLabel="name" id="id" code="training.sponsor" path="sponsor"/>
 	<br>
-
+	
+	<form:select multiple="${trainingDays.size()}" items="${trainingDays}" itemLabel="name" id="id" code="training.trainingDays" path="trainingDays"/>
+	<br>
+	<br>
 	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="plan.save" />" />
+		value="<spring:message code="training.save" />" />
 
-	<jstl:if test="${!create}">
+	<jstl:if test="${training.id!=0}">
 		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="plan.delete"/>"
-			onclick="return confirm('<spring:message code="plan.delete"/>')" />
+			value="<spring:message code="training.delete"/>"
+			onclick="return confirm('<spring:message code="training.delete.confirm"/>')" />
 	</jstl:if>
 
-	<a href="plan/administrator/list.do"><input type="button"
+	<a href="training/administrator/list.do"><input type="button"
 		class="btn btn-sm btn-info"
-		value="<spring:message code="plan.cancel"/>" id="cancelar"
+		value="<spring:message code="training.cancel"/>" id="cancelar"
 		name="cancelar"
-		onclick="self.location.href = plan/administrator/list.do" /></a>
+		onclick="self.location.href = training/administrator/list.do" /></a>
 
 
 </form:form>

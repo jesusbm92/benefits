@@ -49,7 +49,9 @@
 							<li><a href="exercise/administrator/list.do"><spring:message
 										code="master.page.admin.listExercise" /></a></li>
 							<li><a href="exerciseGroup/administrator/list.do"><spring:message
-										code="master.page.admin.listExerciseGroup" /></a></li>					
+										code="master.page.admin.listExerciseGroup" /></a></li>
+							<li><a href="trainingDay/administrator/list.do"><spring:message
+										code="master.page.admin.listTrainingDay" /></a></li>					
 						</ul></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown"><spring:message

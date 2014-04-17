@@ -13,14 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import services.DietService;
-import services.PlanService;
+import services.TrainingDayService;
 import services.TrainingService;
 import controllers.AbstractController;
-import domain.Diet;
-import domain.Goals;
-import domain.Plan;
 import domain.Training;
+import domain.TrainingDay;
 
 @Controller
 @RequestMapping("/training/administrator")
@@ -29,9 +26,7 @@ public class AdministratorTrainingController extends AbstractController {
 	// Services ----------------------------------------------------------------
 
 	@Autowired
-	private PlanService planService;
-	@Autowired
-	private DietService dietService;
+	private TrainingDayService trainingDayService;
 	@Autowired
 	private TrainingService trainingService;
 
@@ -75,6 +70,8 @@ public class AdministratorTrainingController extends AbstractController {
 		String requestURI = "training/administrator/list.do";
 		Collection<Training> trainings = trainingService.findAll();
 		result = createListModelAndView(requestURI, trainings, uri);
+		Boolean prin = true;
+		result.addObject("prin", prin);
 
 		return result;
 	}
@@ -86,9 +83,9 @@ public class AdministratorTrainingController extends AbstractController {
 
 		ModelAndView result;
 
-		Plan plan = planService.create();
+		Training training = trainingService.create();
 
-		result = createEditModelAndView(plan);
+		result = createEditModelAndView(training);
 		result.addObject("create", true);
 
 		return result;
@@ -98,28 +95,29 @@ public class AdministratorTrainingController extends AbstractController {
 	// -------------------------------------------------------------------
 
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
-	public ModelAndView edit(@RequestParam int planId) {
+	public ModelAndView edit(@RequestParam int trainingId) {
 		ModelAndView result;
-		Plan plan = planService.findOne(planId);
+		Training training = trainingService.findOne(trainingId);
 
-		result = createEditModelAndView(plan);
+		result = createEditModelAndView(training);
 		result.addObject("create", false);
 
 		return result;
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Plan plan, BindingResult binding) {
+	public ModelAndView save(@Valid Training training, BindingResult binding) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(plan);
+			result = createEditModelAndView(training);
 		} else {
 			try {
-				planService.save(plan);
+				trainingService.save(training);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(plan, "plan.commit.error");
+				result = createEditModelAndView(training,
+						"training.commit.error");
 			}
 			result.addObject("create", false);
 		}
@@ -128,46 +126,45 @@ public class AdministratorTrainingController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
-	public ModelAndView delete(@ModelAttribute Plan plan,
+	public ModelAndView delete(@ModelAttribute Training training,
 			BindingResult bindingResult) {
 		ModelAndView result;
 
 		try {
-			planService.delete(plan);
+			trainingService.delete(training);
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
-				result = createEditModelAndView(plan, "plan.error");
+				result = createEditModelAndView(training, "training.error");
 			} else {
-				result = createEditModelAndView(plan, "plan.commit.error");
+				result = createEditModelAndView(training,
+						"training.commit.error");
 			}
 		}
 		return result;
 	}
 
 	// Other bussiness method
-	protected ModelAndView createEditModelAndView(Plan plan) {
-		assert plan != null;
+	protected ModelAndView createEditModelAndView(Training training) {
+		assert training != null;
 
 		ModelAndView result;
 
-		result = createEditModelAndView(plan, null);
+		result = createEditModelAndView(training, null);
 
 		return result;
 	}
 
-	protected ModelAndView createEditModelAndView(Plan plan, String message) {
-		assert plan != null;
-		Collection<Training> trainings = trainingService.findAll();
-		Collection<Diet> diets = dietService.findAll();
+	protected ModelAndView createEditModelAndView(Training training,
+			String message) {
+		assert training != null;
+		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
 
 		ModelAndView result;
-		result = new ModelAndView("plan/administrator/edit");
-		result.addObject("plan", plan);
+		result = new ModelAndView("training/administrator/edit");
+		result.addObject("training", training);
 		result.addObject("message", message);
-		result.addObject("goals", Goals.values());
-		result.addObject("diets", diets);
-		result.addObject("trainings", trainings);
+		result.addObject("trainingDays", trainingDays);
 
 		return result;
 	}

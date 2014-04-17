@@ -21,3 +21,6 @@
 		</a>
 	</display:column>
 </display:table>
+<a href="trainingDay/administrator/create.do" type="button"> <spring:message
+				code="trainingDay.create" />
+	</a>

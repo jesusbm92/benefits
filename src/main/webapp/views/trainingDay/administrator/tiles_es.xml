@@ -16,10 +16,20 @@
       
 <tiles-definitions>
 
+	<definition name="trainingDay/administrator/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de dia de entrenamientos " />
+		<put-attribute name="body" value="/views/trainingDay/administrator/list.jsp" />
+	</definition>
 	
 	<definition name="trainingDay/administrator/listByExerciseGroup" extends="master.page">	
 		<put-attribute name="title" value="Lista de dia de entrenamientos por grupo de ejercicio" />
 		<put-attribute name="body" value="/views/trainingDay/administrator/list.jsp" />
+	</definition>
+	
+	<definition name="trainingDay/administrator/edit" extends="master.page">	
+		<put-attribute name="title" value="Crear dia de entrenamientos" />
+		<put-attribute name="body" value="/views/trainingDay/administrator/edit.jsp" />
+	
 	</definition>
 			
 </tiles-definitions>
