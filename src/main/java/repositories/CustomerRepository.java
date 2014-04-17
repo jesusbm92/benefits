@@ -12,4 +12,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 	@Query("select c from Customer c where c.userAccount.id= ?1")
 	Customer findByUserAccountId(int id);
 
+	@Query("select c from Customer c where c.userAccount.username= ?1")
+	Customer findByUsername(String username);
+
 }

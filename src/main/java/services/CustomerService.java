@@ -140,6 +140,14 @@ public class CustomerService extends UserService {
 		return result;
 	}
 
+	public Customer findByUsername(String username) {
+
+		Customer result;
+		result = customerRepository.findByUsername(username);
+
+		return result;
+	}
+
 	public void changeCustomerPlan(Plan plan) {
 		Assert.notNull(plan);
 		Customer customer = findByPrincipal();
