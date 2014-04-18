@@ -179,10 +179,12 @@ public class CustomerService extends UserService {
 		// Vemos si el nombre de usuario no está repetido
 		// Assert.isTrue(this.findActorByUsername(customerForm.getUsername()).isEmpty());
 		// Vemos que las passwords sean iguales
-		Assert.isTrue(customer.getUserAccount().getPassword()
-				.equals(customerForm.getRepeatPassword()));
+		Assert.isTrue(
+				customer.getUserAccount().getPassword()
+						.equals(customerForm.getRepeatPassword()),
+				"Passwords are different");
 		// Vemos si ha aceptado los TOS
-		Assert.isTrue(customerForm.isTOSAccepted());
+		Assert.isTrue(customerForm.isTOSAccepted(), "TOS is False");
 		return customer;
 	}
 
