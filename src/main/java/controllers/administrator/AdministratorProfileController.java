@@ -45,12 +45,12 @@ public class AdministratorProfileController extends AbstractController {
 				administratorService.saveOnlyAdmin(admin);
 				result = createEditModelAndView(
 						administratorService.findByPrincipal(),
-						new ChangePasswordForm(),
+						new ChangePasswordForm(), null,
 						"profile.administrator.editionSuccess");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(admin,
 						new ChangePasswordForm(),
-						"profile.administrator.register");
+						"profile.administrator.register", null);
 			}
 		}
 		return result;
@@ -81,21 +81,21 @@ public class AdministratorProfileController extends AbstractController {
 						// Se cambia la contraseña
 						administratorService.savePassword(admin,
 								cpForm.getNewPassword());
-						result = createEditModelAndView(admin, cpForm,
+						result = createEditModelAndView(admin, cpForm, null,
 								"profile.administrator.passwordChanged");
 					} else {
 						result = createEditModelAndView(admin, cpForm,
-								"profile.administrator.notEqualPasswords");
+								"profile.administrator.notEqualPasswords", null);
 					}
 				} else {
 					result = createEditModelAndView(
 							administratorService.findByPrincipal(), cpForm,
-							"profile.administrator.notCorrectPassword");
+							"profile.administrator.notCorrectPassword", null);
 				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(
 						administratorService.findByPrincipal(), cpForm,
-						"profile.administrator.register");
+						"profile.administrator.register", null);
 			}
 		}
 		return result;
@@ -108,13 +108,14 @@ public class AdministratorProfileController extends AbstractController {
 
 		ModelAndView result;
 
-		result = createEditModelAndView(administrator, cpForm, null);
+		result = createEditModelAndView(administrator, cpForm, null, null);
 
 		return result;
 	}
 
 	protected ModelAndView createEditModelAndView(Administrator administrator,
-			ChangePasswordForm cpForm, String message) {
+			ChangePasswordForm cpForm, String errorMessage,
+			String successMessage) {
 		assert cpForm != null;
 		assert administrator != null;
 
@@ -123,7 +124,8 @@ public class AdministratorProfileController extends AbstractController {
 		result = new ModelAndView("profile/administrator/edit");
 		result.addObject("cpForm", cpForm);
 		result.addObject("administrator", administrator);
-		result.addObject("message", message);
+		result.addObject("message", errorMessage);
+		result.addObject("successMessage", successMessage);
 
 		return result;
 	}

@@ -45,11 +45,12 @@ public class CustomerProfileController extends AbstractController {
 				customerService.saveOnlyCustomer(customer);
 				result = createEditModelAndView(
 						customerService.findByPrincipal(),
-						new ChangePasswordForm(),
+						new ChangePasswordForm(), null,
 						"profile.customer.editionSuccess");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(customer,
-						new ChangePasswordForm(), "profile.customer.register");
+						new ChangePasswordForm(), "profile.customer.register",
+						null);
 			}
 		}
 		return result;
@@ -80,21 +81,21 @@ public class CustomerProfileController extends AbstractController {
 						// Se cambia la contraseña
 						customerService.savePassword(customer,
 								cpForm.getNewPassword());
-						result = createEditModelAndView(customer, cpForm,
+						result = createEditModelAndView(customer, cpForm, null,
 								"profile.administrator.passwordChanged");
 					} else {
 						result = createEditModelAndView(customer, cpForm,
-								"profile.administrator.notEqualPasswords");
+								"profile.administrator.notEqualPasswords", null);
 					}
 				} else {
 					result = createEditModelAndView(
 							customerService.findByPrincipal(), cpForm,
-							"profile.administrator.notCorrectPassword");
+							"profile.administrator.notCorrectPassword", null);
 				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(
 						customerService.findByPrincipal(), cpForm,
-						"profile.administrator.register");
+						"profile.administrator.register", null);
 			}
 		}
 		return result;
@@ -107,13 +108,14 @@ public class CustomerProfileController extends AbstractController {
 
 		ModelAndView result;
 
-		result = createEditModelAndView(customer, cpForm, null);
+		result = createEditModelAndView(customer, cpForm, null, null);
 
 		return result;
 	}
 
 	protected ModelAndView createEditModelAndView(Customer customer,
-			ChangePasswordForm cpForm, String message) {
+			ChangePasswordForm cpForm, String errorMessage,
+			String successMessage) {
 		assert cpForm != null;
 		assert customer != null;
 
@@ -122,7 +124,8 @@ public class CustomerProfileController extends AbstractController {
 		result = new ModelAndView("profile/customer/edit");
 		result.addObject("cpForm", cpForm);
 		result.addObject("customer", customer);
-		result.addObject("message", message);
+		result.addObject("message", errorMessage);
+		result.addObject("successMessage", successMessage);
 
 		return result;
 	}
