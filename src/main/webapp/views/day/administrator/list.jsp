@@ -22,8 +22,8 @@
 		</a>
 	</display:column>
 	<display:column>
-		<a href="plan/administrator/listPlansByDay.do?dayId=${row.id}"> <spring:message
-				code="diet.plans" />
+		<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <spring:message
+				code="day.meals" />
 		</a>
 	</display:column>
 

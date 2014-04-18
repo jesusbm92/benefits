@@ -20,6 +20,8 @@ public class MealService {
 	private MealRepository mealRepository;
 
 	// Supporting services -----------------
+	@Autowired
+	private UserService userService;
 
 	// Constructors --------------------------
 	public MealService() {
@@ -84,6 +86,11 @@ public class MealService {
 
 	// Other business methods ----------------
 
+	public Collection<Meal> findMealsByDay(int dayId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Meal> meals = mealRepository.findMealsByDay(dayId);
+		return meals;
+	}
 	// Assertions
 
 }

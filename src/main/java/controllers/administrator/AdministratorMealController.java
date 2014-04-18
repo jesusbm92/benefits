@@ -44,6 +44,17 @@ public class AdministratorMealController {
 		return result;
 	}
 
+	@RequestMapping("/listMealsByDay")
+	public ModelAndView listMealsByDay(@RequestParam int dayId) {
+		ModelAndView result;
+
+		Collection<Meal> meals = mealService.findMealsByDay(dayId);
+		String uri = "meal/administrator/listMealsByDay";
+		String requestURI = "meal/administrator/listMealsByDay.do";
+		result = createListModelAndView(requestURI, meals, uri);
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
