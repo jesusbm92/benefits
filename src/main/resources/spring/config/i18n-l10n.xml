@@ -29,6 +29,8 @@
 		<value>/views/issue/administrator/messages</value>
 		<value>/views/issue/customer/messages</value>
 		<value>/views/diet/administrator/messages</value>
+		<value>/views/amount/administrator/messages</value>
+		<value>/views/meal/administrator/messages</value>
 		<value>/views/food/administrator/messages</value>
 		<value>/views/day/administrator/messages</value>
 

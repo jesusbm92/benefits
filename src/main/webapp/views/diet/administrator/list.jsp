@@ -9,7 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<display:table uid="dietListTable" keepStatus="true" name="diets"
+<display:table uid="dietListTable" keepStatus="false" name="diets"
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
 

@@ -21,6 +21,9 @@ public class FoodService {
 
 	// Supporting services -----------------
 
+	@Autowired
+	private UserService userService;
+
 	// Constructors --------------------------
 	public FoodService() {
 		super();
@@ -83,6 +86,12 @@ public class FoodService {
 	}
 
 	// Other business methods ----------------
+
+	public Food findFoodByAmount(int amountId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Food food = foodRepository.findFoodByAmount(amountId);
+		return food;
+	}
 
 	// Assertions
 
