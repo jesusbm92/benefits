@@ -14,11 +14,15 @@
 	id="row">
 
 
-	<display:column property="quantity" titleKey="amount.name"
+	<display:column property="quantity" titleKey="amount.quantity"
 		sortable="true" />
-	<display:column property="measure" titleKey="amount.name"
+	<display:column property="measure" titleKey="amount.measure"
 		sortable="true" />
-	
+	<display:column property="food.name" titleKey="food.name"
+		sortable="true" />
+	<display:column property="food.description" titleKey="food.description"
+		sortable="true" />
+
 	<display:column>
 		<a href="amount/administrator/edit.do?amountId=${row.id}"><input
 			class="btn btn-sm btn-info" type="button"
@@ -27,7 +31,6 @@
 	</display:column>
 
 </display:table>
-
 
 <security:authorize access="hasRole('ADMIN')">
 	<a href="amount/administrator/create.do"><input type="button"

@@ -9,7 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<display:table uid="dayListTable" keepStatus="true" name="days"
+<display:table uid="dayListTable" keepStatus="false" name="days"
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
 
@@ -17,12 +17,12 @@
 	<display:column property="name" titleKey="day.name" sortable="true" />
 		
 	<display:column>
-		<a href="diet/listDietsByDay.do?dayId=${row.id}"> <spring:message
+		<a href="diet/administrator/listDietsByDay.do?dayId=${row.id}"> <spring:message
 				code="day.diets" />
 		</a>
 	</display:column>
 	<display:column>
-		<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <spring:message
+		<a href="plan/administrator/listPlansByDay.do?dayId=${row.id}"> <spring:message
 				code="diet.plans" />
 		</a>
 	</display:column>

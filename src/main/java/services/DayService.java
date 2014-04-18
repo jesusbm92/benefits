@@ -92,6 +92,12 @@ public class DayService {
 		return days;
 	}
 
+	public Collection<Day> findDaysByMeal(int mealId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Day> days = dayRepository.findDaysByMeal(mealId);
+		return days;
+	}
+
 	// Assertions
 
 }

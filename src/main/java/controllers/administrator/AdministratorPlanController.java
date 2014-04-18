@@ -61,12 +61,23 @@ public class AdministratorPlanController extends AbstractController {
 
 		Collection<Plan> plans = planService.findPlansByDiet(dietId);
 
+		String uri = "plan/administrator/listPlansByDiet";
+		String requestURI = "issue/administrator/listPlansByDiet.do";
+		result = createListModelAndView(requestURI, plans, uri);
+		return result;
+	}
+
+	@RequestMapping("/listPlansByDay")
+	public ModelAndView listPlansByDay(@RequestParam int dayId) {
+		ModelAndView result;
+
+		Collection<Plan> plans = planService.findPlansByDay(dayId);
+
 		String uri = "plan/administrator/list";
 		String requestURI = "issue/administrator/list.do";
 		result = createListModelAndView(requestURI, plans, uri);
 		return result;
 	}
-
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)

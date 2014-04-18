@@ -131,6 +131,12 @@ public class PlanService {
 		return plans;
 	}
 
+	public Collection<Plan> findPlansByDay(int dayId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Plan> plans = planRepository.findPlansByDay(dayId);
+		return plans;
+	}
+
 	public void request(Goals goal) {
 
 		// Se comprueba que el goal que se pasa como parámetro está

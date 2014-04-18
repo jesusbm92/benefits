@@ -76,6 +76,17 @@ public class AdministratorDietController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/listDietsByDay")
+	public ModelAndView listDietsByDay(@RequestParam int dayId) {
+		ModelAndView result;
+		String uri = "diet/administrator/listDietsByDay";
+		String requestURI = "diet/administrator/listDietsByDay.do";
+		Collection<Diet> diets = dietService.findDietsByDay(dayId);
+		result = createListModelAndView(requestURI, diets, uri);
+
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)

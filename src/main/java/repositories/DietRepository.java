@@ -16,4 +16,7 @@ public interface DietRepository extends JpaRepository<Diet, Integer> {
 
 	@Query("select d from Diet d where d.plans is not empty")
 	Collection<Diet> dietsAssigned();
+
+	@Query("select d from Diet d JOIN d.days s where s.id=?1")
+	Collection<Diet> findDietsByDay(int dayId);
 }

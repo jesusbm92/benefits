@@ -17,13 +17,13 @@
 	<display:column property="name" titleKey="meal.name" sortable="true" />
 
 	<display:column>
-		<a href="amounts/administrator/listDetails.do?mealId=${row.id}"> <spring:message
+		<a href="amount/administrator/listDetails.do?mealId=${row.id}"> <spring:message
 				code="meal.details" />
 		</a>
 	</display:column>
 
 	<display:column>
-		<a href="meal/administrator/listDaysByMeal.do?mealId=${row.id}"> <spring:message
+		<a href="day/administrator/listDaysByMeal.do?mealId=${row.id}"> <spring:message
 				code="meal.days" />
 		</a>
 	</display:column>

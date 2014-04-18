@@ -28,4 +28,7 @@ public interface PlanRepository extends JpaRepository<Plan, Integer> {
 	@Query("select p from Plan p where p.diet.id= ?1")
 	Collection<Plan> findPlansByDiet(int dietId);
 
+	@Query("select p from Plan p JOIN p.diet.days d where d.id =?1")
+	Collection<Plan> findPlansByDay(int dayId);
+
 }

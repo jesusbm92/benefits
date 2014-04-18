@@ -96,6 +96,11 @@ public class DietService {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return dietRepository.dietsFree();
 	}
+
+	public Collection<Diet> findDietsByDay(int dayId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		return dietRepository.findDietsByDay(dayId);
+	}
 	// Assertions
 
 }

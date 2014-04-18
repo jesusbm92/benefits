@@ -40,6 +40,17 @@ public class AdministratorDayController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/listDaysByMeal")
+	public ModelAndView listDaysByMeal(@RequestParam int mealId) {
+		ModelAndView result;
+		String uri = "day/administrator/listDaysByMeal";
+		String requestURI = "day/administrator/listDaysByMeal.do";
+		Collection<Day> days = dayService.findDaysByMeal(mealId);
+		result = createListModelAndView(requestURI, days, uri);
+
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 
