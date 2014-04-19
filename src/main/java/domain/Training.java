@@ -14,6 +14,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -64,7 +65,7 @@ public class Training extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
+	@NotEmpty
 	@OneToMany(mappedBy = "training", cascade = CascadeType.ALL)
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;

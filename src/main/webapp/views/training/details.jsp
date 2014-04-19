@@ -9,50 +9,50 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <jstl:forEach items="${training.trainingDays }" var="first">
-<jstl:forEach items="${first.exerciseGroups }" var="second">
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>accordion demo</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-</head>
-<body>
- 
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion"
+						href="#collapseOne${first.id }"> ${first.name } </a>
+				</h4>
+			</div>
+			<div id="collapseOne${first.id}" class="panel-collapse collapse ">
+			<div class="panel-body">
+			<jstl:forEach items="${first.exerciseGroups }" var="second">
+				<div id="collapseOne${first.id}" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<div class="panel-group" id="accordion2">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion2"
+											href="#collapseOne${second.id}${first.id}"> ${second.name } </a>
+									</h4>
+									</div>
+									<div id="collapseOne${second.id}${first.id}" class="panel-collapse collapse">
+										<div class="panel-body">
 
-<div id="accordion">
-  <h3>${first.name }</h3>
-  <div>
-   <div id="accordion2">
-  <h3>${second.name }</h3>
-  <div>
-  
- 	<h4>Exercises</h4>
-	<jstl:forEach items="${second.exercises }" var="thirt">
-    
-    <p>Name: ${thirt.name }</p>
-    <ul>
-      <li>Repetition: ${thirt.repetitions }</li>
-      <li>Cycles: ${thirt.cycles }</li>
-    </ul>
-	</jstl:forEach>
-  </div>
-</div>
 
- 
-<script>
-$( "#accordion2" ).accordion();
-</script>
-  </div>
-</div>
+											<h4>Exercises</h4>
+											<jstl:forEach items="${second.exercises }" var="thirt">
 
- 
-<script>
-$( "#accordion" ).accordion();
-</script>
+												<p>Name: ${thirt.name }</p>
+												<ul>
+													<li>Repetition: ${thirt.repetitions }</li>
+													<li>Cycles: ${thirt.cycles }</li>
+												</ul>
+											</jstl:forEach>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</jstl:forEach>
+		</div>
+		</div>
 
-</body>
-</html>
-</jstl:forEach>
+		</div>
+	</div>
 </jstl:forEach>

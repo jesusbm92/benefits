@@ -1173,6 +1173,7 @@
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup1" />
+				<ref bean="exercisegroup2" />
 			</list>
 		</property>
 
