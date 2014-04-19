@@ -70,7 +70,7 @@ public class Exercise extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToMany
+	@ManyToMany(mappedBy = "exercises")
 	public Collection<ExerciseGroup> getExerciseGroups() {
 		return exerciseGroups;
 	}

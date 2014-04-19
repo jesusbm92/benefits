@@ -15,6 +15,11 @@
 	<display:column  titleKey="trainingDay.name" sortable="true">
 	<spring:message code="trainingDay.name.${row.name}" />
 	</display:column>
+	<display:column titleKey="trainingDay.exerciseGroups">
+		<a href="exerciseGroup/administrator/listExerciseGroup.do?trainingDayId=${row.id}"> <spring:message
+				code="trainingDay.exerciseGroups" />
+		</a>
+	</display:column>
 	<display:column titleKey="trainingDay.training">
 		<a href="training/administrator/listTraining.do?trainingDayId=${row.id}"> <spring:message
 				code="trainingDay.training.fil" />

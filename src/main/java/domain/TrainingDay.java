@@ -11,7 +11,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -38,8 +39,7 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	public Training getTraining() {
 		return training;
 	}
@@ -49,6 +49,7 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@Valid
+	@NotEmpty
 	@ManyToMany
 	public Collection<ExerciseGroup> getExerciseGroups() {
 		return exerciseGroups;

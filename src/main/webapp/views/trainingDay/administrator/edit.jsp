@@ -16,9 +16,13 @@
 	<form:hidden path="id" />
 	<form:hidden path="version" />
 	
-	<acme:textbox code="trainingDay.name" path="name" />
-	<br>
+	<%-- <form:label path="name"><spring:message code="trainingDay.name" /></form:label>
+	<form:select items="${days}" itemLabel="name" id="id" code="trainingDay.name" path="name"/>
+	<br> --%>
+	<acme:textarea code="trainingDay.name" path="name"/>
+	<br/>
 	
+	<form:label path="exerciseGroups"><spring:message code="trainingDay.exerciseGroups" /></form:label>
 	<form:select multiple="${exerciseGroups.size()}" items="${exerciseGroups}" itemLabel="name" id="id" code="trainingDay.exerciseGroups" path="exerciseGroups"/>
 	<br>
 	<br>

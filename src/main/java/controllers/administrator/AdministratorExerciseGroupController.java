@@ -52,6 +52,18 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/listExerciseGroup")
+	public ModelAndView listExerciseGroups(@RequestParam int trainingDayId) {
+		ModelAndView result;
+		String uri = "exerciseGroup/administrator/listExerciseGroup";
+		String requestURI = "exerciseGroup/administrator/listExerciseGroup.do";
+		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
+				.findByTrainingDay(trainingDayId);
+		result = createListModelAndView(requestURI, exerciseGroups, uri);
+
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)

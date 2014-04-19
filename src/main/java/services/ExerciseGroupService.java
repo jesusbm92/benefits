@@ -104,6 +104,11 @@ public class ExerciseGroupService {
 		exerciseGroupRepository.delete(exerciseGroup);
 	}
 
+	public Collection<ExerciseGroup> findByTrainingDay(int trainingDayId) {
+		// TODO Auto-generated method stub
+		return exerciseGroupRepository.findByTrainingDay(trainingDayId);
+	}
+
 	// Other business methods ----------------
 
 	// Assertions

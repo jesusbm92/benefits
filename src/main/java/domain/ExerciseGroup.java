@@ -5,7 +5,6 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.Valid;
@@ -40,7 +39,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotEmpty
-	@ManyToMany(mappedBy = "exerciseGroups",cascade=CascadeType.ALL)
+	@ManyToMany
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}

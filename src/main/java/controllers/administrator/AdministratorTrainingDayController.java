@@ -156,11 +156,20 @@ public class AdministratorTrainingDayController extends AbstractController {
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
 				.findAll();
 
+		// Collection<Days> days = new ArrayList<Days>();
+		// days.add("MONDAY");
+		// days.add("TUESDAY");
+		// days.add("WEDNESDAY");
+		// days.add("THURSDAY");
+		// days.add("FRIDAY");
+		// days.add("SATURDAY");
+		// days.add("SUNDAY");
 		ModelAndView result;
 		result = new ModelAndView("trainingDay/administrator/edit");
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("message", message);
 		result.addObject("exerciseGroups", exerciseGroups);
+		// result.addObject("days", days);
 
 		return result;
 	}
