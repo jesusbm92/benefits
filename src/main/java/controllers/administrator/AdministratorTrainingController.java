@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.SponsorService;
 import services.TrainingDayService;
 import services.TrainingService;
 import controllers.AbstractController;
+import domain.Sponsor;
 import domain.Training;
 import domain.TrainingDay;
 
@@ -29,6 +31,8 @@ public class AdministratorTrainingController extends AbstractController {
 	private TrainingDayService trainingDayService;
 	@Autowired
 	private TrainingService trainingService;
+	@Autowired
+	private SponsorService sponsorService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -159,12 +163,14 @@ public class AdministratorTrainingController extends AbstractController {
 			String message) {
 		assert training != null;
 		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
+		Collection<Sponsor> sponsors = sponsorService.findAll();
 
 		ModelAndView result;
 		result = new ModelAndView("training/administrator/edit");
 		result.addObject("training", training);
 		result.addObject("message", message);
 		result.addObject("trainingDays", trainingDays);
+		result.addObject("sponsors", sponsors);
 
 		return result;
 	}
