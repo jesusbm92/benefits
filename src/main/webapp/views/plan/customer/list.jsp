@@ -29,7 +29,7 @@
 				</a>
 			</display:column>
 			<display:column>
-				<a href="training/customer/list.do?planId=${row.id}"> <spring:message
+				<a href="training/details.do?trainingId=${row.training.id}"> <spring:message
 						code="plan.training" />
 				</a>
 			</display:column>

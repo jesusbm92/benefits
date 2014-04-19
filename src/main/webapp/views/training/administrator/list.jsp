@@ -18,7 +18,7 @@
 	<display:column property="duration" titleKey="training.duration" sortable="true" />
 	<display:column property="sponsor.name" titleKey="training.sponsor" sortable="true" />
 	<display:column>
-		<a href="training/view.do?trainingId=${row.id}"> <spring:message
+		<a href="training/details.do?trainingId=${row.id}"> <spring:message
 				code="training.view" />
 		</a>
 	</display:column>
