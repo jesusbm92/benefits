@@ -17,6 +17,7 @@ import services.ExerciseGroupService;
 import services.MuscleService;
 import services.TrainingDayService;
 import controllers.AbstractController;
+import domain.Days;
 import domain.ExerciseGroup;
 import domain.TrainingDay;
 
@@ -169,7 +170,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("message", message);
 		result.addObject("exerciseGroups", exerciseGroups);
-		// result.addObject("days", days);
+		result.addObject("days", Days.values());
 
 		return result;
 	}

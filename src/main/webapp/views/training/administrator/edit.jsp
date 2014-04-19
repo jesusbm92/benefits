@@ -21,12 +21,16 @@
 	<br>
 	<acme:textbox code="training.duration" path="duration" />
 	<br>
-	<form:select items="${sponsors}" itemLabel="name" id="id" code="training.sponsor" path="sponsor"/>
+	
+	<form:select id="sponsors" path="sponsor">
+	<form:option value="0" label="----" />
+	<form:options items="${sponsors }" itemValue="id" itemLabel="name" />
+	</form:select>
 	<br>
 	
 	<form:select multiple="${trainingDays.size()}" items="${trainingDays}" itemLabel="name" id="id" code="training.trainingDays" path="trainingDays"/>
 	<br>
-	<br>
+
 	<input type="submit" name="save" class="btn btn-sm btn-info"
 		value="<spring:message code="training.save" />" />
 

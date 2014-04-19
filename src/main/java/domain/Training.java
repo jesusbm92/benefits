@@ -75,7 +75,6 @@ public class Training extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@ManyToOne(optional = true)
 	public Sponsor getSponsor() {
 		return sponsor;
