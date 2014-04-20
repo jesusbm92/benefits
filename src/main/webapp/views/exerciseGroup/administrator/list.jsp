@@ -8,6 +8,8 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<div class="container">
+
 <display:table uid="exerciseGroupListTable" keepStatus="true" name="exerciseGroups"
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
@@ -26,6 +28,9 @@
 	</display:column>
 </display:table>
 
-<a href="exerciseGroup/administrator/create.do" type="button"> <spring:message
-				code="exerciseGroup.create" />
-	</a>
+<a href="exerciseGroup/administrator/create.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="exerciseGroup.create"/>"
+					onclick="self.location.href = exerciseGroup/administrator/create.do" /></a>
+
+</div>

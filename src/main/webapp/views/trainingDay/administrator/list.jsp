@@ -8,24 +8,32 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<display:table uid="trainingDayListTable" keepStatus="true" name="trainingDays"
-	pagesize="5" class="table table-hover" requestURI="${requestURI}"
-	id="row">
+<div class="container">
 
-	<display:column  titleKey="trainingDay.name" sortable="true">
-	<spring:message code="trainingDay.name.${row.name}" />
-	</display:column>
-	<display:column titleKey="trainingDay.exerciseGroups">
-		<a href="exerciseGroup/administrator/listExerciseGroup.do?trainingDayId=${row.id}"> <spring:message
-				code="trainingDay.exerciseGroups" />
-		</a>
-	</display:column>
-	<display:column titleKey="trainingDay.training">
-		<a href="training/administrator/listTraining.do?trainingDayId=${row.id}"> <spring:message
-				code="trainingDay.training.fil" />
-		</a>
-	</display:column>
-</display:table>
-<a href="trainingDay/administrator/create.do" type="button"> <spring:message
-				code="trainingDay.create" />
-	</a>
+	<display:table uid="trainingDayListTable" keepStatus="true"
+		name="trainingDays" pagesize="5" class="table table-hover"
+		requestURI="${requestURI}" id="row">
+
+		<display:column titleKey="trainingDay.name" sortable="true">
+			<spring:message code="trainingDay.name.${row.name}" />
+		</display:column>
+		<display:column titleKey="trainingDay.exerciseGroups">
+			<a
+				href="exerciseGroup/administrator/listExerciseGroup.do?trainingDayId=${row.id}">
+				<spring:message code="trainingDay.exerciseGroups" />
+			</a>
+		</display:column>
+		<display:column titleKey="trainingDay.training">
+			<a
+				href="training/administrator/listTraining.do?trainingDayId=${row.id}">
+				<spring:message code="trainingDay.training.fil" />
+			</a>
+		</display:column>
+	</display:table>
+	
+	<a href="trainingDay/administrator/create.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="trainingDay.create"/>"
+					onclick="self.location.href = trainingDay/administrator/create.do" /></a>
+	
+</div>

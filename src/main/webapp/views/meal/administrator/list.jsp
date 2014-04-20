@@ -8,7 +8,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-
+<div class="container">
 <display:table uid="mealListTable" keepStatus="true" name="meals"
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
@@ -30,7 +30,7 @@
 
 	<display:column>
 		<a href="meal/administrator/edit.do?mealId=${row.id}"><input
-			class="btn btn-sm btn-info" type="button"
+			class="btn btn-default" type="button"
 			value="<spring:message code="meal.edit"/>"
 			onclick="self.location.href = meal/administrator/edit.do?mealId=${row.id}" /></a>
 	</display:column>
@@ -40,16 +40,16 @@
 
 <security:authorize access="hasRole('ADMIN')">
 	<a href="meal/administrator/create.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="meal.create"/>"
 		onclick="self.location.href = meal/administrator/create.do" /></a>
 </security:authorize>
 
 <a href="meal/administrator/list.do"><input type="button"
-	class="btn btn-sm btn-info"
+	class="btn btn-default"
 	value="<spring:message code="meal.cancel"/>"
 	onclick="self.location.href = meal/administrator/list.do" /></a>
 
-
+</div>
 
 

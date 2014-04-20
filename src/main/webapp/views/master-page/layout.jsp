@@ -39,7 +39,8 @@
 <link rel="stylesheet" href="styles/screen.css" type="text/css" />
 <link rel="stylesheet" href="styles/bootstrap.min.css">
 <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
@@ -58,9 +59,9 @@
 </script>
 
 <style>
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.col-centered {
+	float: none;
+	margin: 0 auto;
 }
 </style>
 
@@ -76,17 +77,19 @@
 			<tiles:insertAttribute name="title" />
 		</h1>
 		<tiles:insertAttribute name="body" />
-		<div>
-			<jstl:if test="${message != null}">
-				<br />
-				<span class="alert alert-danger"><spring:message
-						code="${message}" /></span>
-			</jstl:if>
-			<jstl:if test="${successMessage != null}">
-				<br />
-				<span class="alert alert-success"><spring:message
-						code="${successMessage}" /></span>
-			</jstl:if>
+		<div class="container">
+			<div class="col-md-3 col-centered">
+				<jstl:if test="${message != null}">
+					<br />
+					<span class="alert alert-danger"><spring:message
+							code="${message}" /></span>
+				</jstl:if>
+				<jstl:if test="${successMessage != null}">
+					<br />
+					<span class="alert alert-success"><spring:message
+							code="${successMessage}" /></span>
+				</jstl:if>
+			</div>
 		</div>
 	</div>
 	<div>
