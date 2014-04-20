@@ -18,11 +18,13 @@
 <div class="container">
 	<div class="row">
 		<div class="table-responsive">
-			<display:table uid="planListTable" keepStatus="true" name="plans" 
+			<display:table uid="planListTable" keepStatus="true" name="plans"
 				pagesize="5" requestURI="${requestURI}" id="row">
 
 
-				<display:column property="goal" titleKey="plan.goal" sortable="true" />
+				<display:column titleKey="plan.goal" sortable="true">
+					<spring:message code="plan.goal.${row.goal}" />
+				</display:column>
 				<display:column>
 					<a href="comment/list.do?planId=${row.id}"> <spring:message
 							code="plan.comment" />

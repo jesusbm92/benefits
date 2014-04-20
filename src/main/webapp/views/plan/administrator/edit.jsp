@@ -29,8 +29,12 @@
 						<spring:message code="plan.goal" />
 					</form:label>
 					<div class="col-md-4">
-						<form:select path="goal" class="form-control">
-							<form:options items="${goals}" />
+						<form:select path="goal">
+							<jstl:forEach var="goal" items="${goals}">
+								<form:option value="${goal}">
+									<spring:message code="plan.goal.${goal}" />
+								</form:option>
+							</jstl:forEach>
 						</form:select>
 						<form:errors cssClass="error" path="goal"></form:errors>
 						<br>

@@ -16,7 +16,9 @@
 		id="row">
 
 
-		<display:column property="goal" titleKey="plan.goal" sortable="true" />
+		<display:column titleKey="plan.goal" sortable="true">
+			<spring:message code="plan.goal.${row.goal}" />
+		</display:column>
 		<display:column>
 			<a href="comment/list.do?planId=${row.id}"> <spring:message
 					code="plan.comment" />
