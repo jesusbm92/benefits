@@ -5,9 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import domain.Muscle;
 
-
 @Repository
-public interface MuscleRepository extends JpaRepository<Muscle,Integer>{
+public interface MuscleRepository extends JpaRepository<Muscle, Integer> {
 
 }
-

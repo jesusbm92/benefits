@@ -5,10 +5,8 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
@@ -42,7 +40,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	@Valid
 	@NotEmpty
-	@OneToMany(mappedBy = "exerciseGroup", cascade = CascadeType.ALL)
+	@ManyToMany
 	public Collection<Exercise> getExercises() {
 		return exercises;
 	}
@@ -52,7 +50,6 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Valid
-	@NotEmpty
 	@JsonIgnore
 	@ManyToMany(mappedBy = "exerciseGroups")
 	public Collection<TrainingDay> getTrainingDays() {

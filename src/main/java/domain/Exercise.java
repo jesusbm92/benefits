@@ -1,9 +1,11 @@
 package domain;
 
+import java.util.Collection;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
@@ -22,7 +24,7 @@ public class Exercise extends DomainEntity {
 
 	// Relationships
 	private Muscle muscle;
-	private ExerciseGroup exerciseGroup;
+	private Collection<ExerciseGroup> exerciseGroups;
 
 	public Exercise() {
 		super();
@@ -59,7 +61,7 @@ public class Exercise extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToOne(optional = false, cascade = CascadeType.ALL)
+	@ManyToOne(optional = false)
 	public Muscle getMuscle() {
 		return muscle;
 	}
@@ -69,15 +71,14 @@ public class Exercise extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@JsonIgnore
-	@ManyToOne(optional = false)
-	public ExerciseGroup getExerciseGroup() {
-		return exerciseGroup;
+	@ManyToMany(mappedBy = "exercises")
+	public Collection<ExerciseGroup> getExerciseGroups() {
+		return exerciseGroups;
 	}
 
-	public void setExerciseGroup(ExerciseGroup exerciseGroup) {
-		this.exerciseGroup = exerciseGroup;
+	public void setExerciseGroups(Collection<ExerciseGroup> exerciseGroups) {
+		this.exerciseGroups = exerciseGroups;
 	}
 
 }

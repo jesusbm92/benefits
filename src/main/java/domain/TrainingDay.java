@@ -5,16 +5,15 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -41,9 +40,8 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@JsonIgnore
-	@ManyToOne(optional = false)
+	@ManyToOne(optional = true)
 	public Training getTraining() {
 		return training;
 	}
@@ -53,8 +51,8 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
-	@ManyToMany(cascade = CascadeType.ALL)
+	@NotEmpty
+	@ManyToMany
 	public Collection<ExerciseGroup> getExerciseGroups() {
 		return exerciseGroups;
 	}

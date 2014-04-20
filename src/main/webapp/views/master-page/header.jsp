@@ -36,11 +36,30 @@
 			<security:authorize access="hasRole('ADMIN')">
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown"><spring:message
-							code="master.page.administrator" /><b class="caret"></b></a>
+							code="master.page.administrator.plan" /><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="arrow"></li>
 						<li><a href="plan/administrator/list.do"><spring:message
 									code="master.page.admin.plansAll" /></a></li>
+					</ul></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown"><spring:message
+							code="master.page.administrator.training" /><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="arrow"></li>
+						<li><a href="training/administrator/list.do"><spring:message
+									code="master.page.admin.trainingAll" /></a></li>
+						<li><a href="training/administrator/listAsignTraining.do"><spring:message
+									code="master.page.admin.trainingAsigned" /></a></li>
+						<li><a
+							href="training/administrator/listNotTrainingAsigned.do"><spring:message
+									code="master.page.admin.trainingFree" /></a></li>
+						<li><a href="exercise/administrator/list.do"><spring:message
+									code="master.page.admin.listExercise" /></a></li>
+						<li><a href="exerciseGroup/administrator/list.do"><spring:message
+									code="master.page.admin.listExerciseGroup" /></a></li>
+						<li><a href="trainingDay/administrator/list.do"><spring:message
+									code="master.page.admin.listTrainingDay" /></a></li>
 					</ul></li>
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown"><spring:message
@@ -98,12 +117,12 @@
 			</security:authorize>
 
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
-				data-toggle="dropdown"><spring:message code="master.page.language" /> <b class="caret"></b></a>
+				data-toggle="dropdown"><spring:message
+						code="master.page.language" /> <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="?language=en">EN</a></li>
 					<li><a href="?language=es">ES</a></li>
 				</ul></li>
 		</ul>
-		<!-- 		</div> -->
 	</div>
 </div>

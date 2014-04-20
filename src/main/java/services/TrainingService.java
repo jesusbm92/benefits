@@ -21,6 +21,9 @@ public class TrainingService {
 
 	// Supporting services -----------------
 
+	@Autowired
+	private AdministratorService administratorService;
+
 	// Constructors --------------------------
 	public TrainingService() {
 		super();
@@ -44,6 +47,7 @@ public class TrainingService {
 	 * @return Collection<Training> trainings
 	 */
 	public Collection<Training> findAll() {
+		Assert.isTrue(administratorService.IAmAnAdmin());
 		return trainingRepository.findAll();
 	}
 
@@ -84,6 +88,15 @@ public class TrainingService {
 
 	// Other business methods ----------------
 
+	public Collection<Training> findAllTrainingAsigned() {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		return this.trainingRepository.findTrainingAsigned();
+	}
+
+	public Collection<Training> findAllNotTrainingAsigned() {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		return trainingRepository.findTrainingNotAsigned();
+	}
 	// Assertions
 
 }
