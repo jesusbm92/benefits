@@ -27,20 +27,20 @@
 
 
 <a href="comment/create.do?planId=${plan.id}"><input type="button"
-	class="btn btn-sm btn-info"
+	class="btn btn-default"
 	value="<spring:message code="comment.create"/>"
 	onclick="self.location.href = comment/create.do" /></a>
 
 <security:authorize access="hasRole('CUSTOMER')">
 	<a href="plan/customer/list.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="comment.cancel"/>"
 		onclick="self.location.href = plan/customer/list.do" /></a>
 </security:authorize>
 
 <security:authorize access="hasRole('ADMIN')">
 	<a href="plan/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="comment.cancel"/>"
 		onclick="self.location.href = plan/administrator/list.do" /></a>
 </security:authorize>

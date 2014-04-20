@@ -57,6 +57,13 @@
 	}
 </script>
 
+<style>
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+</style>
+
 </head>
 
 <body background="images/background.jpg">

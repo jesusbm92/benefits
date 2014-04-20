@@ -19,13 +19,6 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<style>
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
-</style>
-
 <div class="container">
 	<div class="row">
 		<div class="col-md-3 col-centered">

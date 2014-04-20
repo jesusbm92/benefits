@@ -24,6 +24,6 @@
 
 </display:table>
 <a href="plan/administrator/list.do"><input type="button"
-	class="btn btn-sm btn-info"
+	class="btn btn-default"
 	value="<spring:message code="issue.cancel"/>"
 	onclick="self.location.href = plan/administrator/list.do" /></a>
