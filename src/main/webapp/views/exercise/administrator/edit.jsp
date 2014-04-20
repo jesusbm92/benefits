@@ -10,48 +10,80 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
-<form:form action="exercise/administrator/edit.do" modelAttribute="exercise">
+<div class="container">
+	<div class="row">
+		<div class="col-centered">
 
-	<!-- Poner todos los atributos, los no usados en oculto -->
+			<form:form action="exercise/administrator/edit.do"
+				modelAttribute="exercise" role="form" class="form-horizontal">
 
-	<form:hidden path="id" />
-	<form:hidden path="version" />
-	<form:hidden path="exerciseGroups"/>
-	
-	<form:label path="muscle">
-		<spring:message code="exercise.muscle" />
-	</form:label>
-	
-	<form:select path="muscle">
-	<jstl:forEach var="var" items="${map}">
-		<form:option  value="${var.value}">${var.key}
-		</form:option>
-		</jstl:forEach>
-	</form:select>
-	<br>
-	
-	<acme:textbox code="exercise.name" path="name" />
-	<acme:textbox code="exercise.repetitions" path="repetitions" />
-	<acme:textbox code="exercise.cycles" path="cycles" />
-	<br>
-	
+				<!-- Poner todos los atributos, los no usados en oculto -->
 
+				<form:hidden path="id" />
+				<form:hidden path="version" />
+				<form:hidden path="exerciseGroups" />
 
-	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="exercise.save" />" />
+				<div class="form-group">
+					<form:label path="muscle" for="muscleId"
+						class="col-sm-2 control-label">
+						<spring:message code="exercise.muscle" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:select path="muscle" id="muscleId" class="form-control">
+							<jstl:forEach var="var" items="${map}">
+								<form:option value="${var.value}">${var.key}</form:option>
+							</jstl:forEach>
+						</form:select>
+					</div>
+				</div>
+				<br />
 
-	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="exercise.delete"/>"
-			onclick="return confirm('<spring:message code="exercise.delete.confirm"/>')" />
-	</jstl:if>
+				<div class="form-group">
+					<form:label path="name" class="col-sm-2 control-label" for="nameId">
+						<spring:message code="exercise.name" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:input path="name" id="nameId" class="form-control" />
+					</div>
+					<form:errors path="name" cssClass="error" />
+				</div>
+				<div class="form-group">
+					<form:label path="repetitions" class="col-sm-2 control-label"
+						for="repetitionsId">
+						<spring:message code="exercise.repetitions" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:input path="repetitions" id="repetitionsId"
+							class="form-control" />
+					</div>
+					<form:errors path="repetitions" cssClass="error" />
+				</div>
+				<div class="form-group">
+					<form:label path="cycles" class="col-sm-2 control-label"
+						for="cyclesId">
+						<spring:message code="exercise.cycles" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:input path="cycles" id="cyclesId" class="form-control" />
+					</div>
+					<form:errors path="cycles" cssClass="error" />
+				</div>
+				<br />
+				<input type="submit" name="save" class="btn btn-default"
+					value="<spring:message code="exercise.save" />" />
 
-	<a href="exercise/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="exercise.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = exercise/administrator/list.do" /></a>
+				<jstl:if test="${!create}">
+					<input type="submit" class="btn btn-default" name="delete"
+						value="<spring:message code="exercise.delete"/>"
+						onclick="return confirm('<spring:message code="exercise.delete.confirm"/>')" />
+				</jstl:if>
 
-
-</form:form>
-
+				<a href="exercise/administrator/list.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="exercise.cancel"/>" id="cancelar"
+					name="cancelar"
+					onclick="self.location.href = exercise/administrator/list.do" /></a>
+			</form:form>
+		</div>
+	</div>
+</div>

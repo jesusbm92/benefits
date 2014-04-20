@@ -32,7 +32,7 @@ thead tr {
 }
 
 th.sorted {
-	background-color: orange;
+/* 	background-color: orange; */
 }
 
 th a,th a:visited {

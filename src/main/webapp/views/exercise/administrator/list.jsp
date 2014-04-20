@@ -8,34 +8,47 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<div class="container">
+	<div class="row">
+		<div class="table-responsive">
 
-<display:table uid="exercisesListTable" keepStatus="true" name="exercises"
-	pagesize="10" class="table table-hover" requestURI="${requestURI}"
-	id="row">
+			<display:table uid="exercisesListTable" keepStatus="true"
+				name="exercises" pagesize="10" class="table table-hover"
+				requestURI="${requestURI}" id="row">
 
 
-	<display:column property="name" titleKey="exercise.name" sortable="true" />
-	<display:column property="repetitions" titleKey="exercise.repetitions" sortable="true" />
-	<display:column property="cycles" titleKey="exercise.cycles" sortable="true" />
-	<display:column property="muscle.name" titleKey="exercise.muscle" sortable="true" />
-	
-	<display:column>
-		<a href="exercise/administrator/edit.do?exerciseId=${row.id}"> <spring:message
-				code="exercise.edit" />
-		</a>
-	</display:column>
-	
+				<display:column property="name" titleKey="exercise.name"
+					sortable="true" />
+				<display:column property="repetitions"
+					titleKey="exercise.repetitions" sortable="true" />
+				<display:column property="cycles" titleKey="exercise.cycles"
+					sortable="true" />
+				<display:column property="muscle.name" titleKey="exercise.muscle"
+					sortable="true" />
 
-	
-</display:table>
-<jstl:if test="${!other }">
-	<a href="exercise/administrator/create.do" type="button"> <spring:message
-				code="exercise.create" />
-	</a>
-</jstl:if>
+				<display:column>
+					<a href="exercise/administrator/edit.do?exerciseId=${row.id}"><input
+						class="btn btn-default" type="button"
+						value="<spring:message code="exercise.edit"/>"
+						onclick="self.location.href = exercise/administrator/edit.do?exerciseId=${row.id}" /></a>
+				</display:column>
 
-<jstl:if test="${other }">
-	<a href="exerciseGroup/administrator/list.do" type="button"> <spring:message
-				code="exercise.cancel" />
-	</a>
-</jstl:if>
+
+
+			</display:table>
+			<jstl:if test="${!other }">
+				<a href="exercise/administrator/create.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="exercise.create"/>"
+					onclick="self.location.href = exercise/administrator/create.do" /></a>
+			</jstl:if>
+
+			<jstl:if test="${other }">
+				<a href="exerciseGroup/administrator/list.do" type="button"> <spring:message
+						code="exercise.cancel" />
+				</a>
+			</jstl:if>
+
+		</div>
+	</div>
+</div>
