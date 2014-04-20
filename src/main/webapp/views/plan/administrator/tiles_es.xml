@@ -14,11 +14,17 @@
 		<put-attribute name="title" value="Mi plan " />
 		<put-attribute name="body" value="/views/plan/administrator/list.jsp" />
 	</definition>
-	<definition name="plan/administrator/create" extends="master.page">
-		<put-attribute name="title" value="Crear Nuevo Plan" />
+	<definition name="plan/administrator/listPlansByDiet" extends="master.page">
+		<put-attribute name="title" value="Planes de una Dieta" />
+		<put-attribute name="body" value="/views/plan/list.jsp" />
+	</definition>
+	
+	<definition name="plan/administrator/create" extends="master.page">	
+		<put-attribute name="title" value="Crear nuevo Plan" />
 		<put-attribute name="body" value="/views/plan/administrator/edit.jsp" />
 	</definition>
-	<definition name="plan/administrator/edit" extends="master.page">
+	
+	<definition name="plan/administrator/edit" extends="master.page">	
 		<put-attribute name="title" value="Editar Plan" />
 		<put-attribute name="body" value="/views/plan/administrator/edit.jsp" />
 	</definition>

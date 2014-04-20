@@ -8,10 +8,9 @@ import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 
@@ -22,7 +21,7 @@ public class Meal extends DomainEntity {
 	private Meals name;
 
 	// RelationShip
-	private Day day;
+	private Collection<Day> days;
 	private Collection<Amount> amounts;
 
 	public Meal() {
@@ -41,19 +40,17 @@ public class Meal extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@JsonIgnore
-	@ManyToOne(optional = false)
-	public Day getDay() {
-		return day;
+	@ManyToMany()
+	public Collection<Day> getDays() {
+		return days;
 	}
 
-	public void setDay(Day day) {
-		this.day = day;
+	public void setDays(Collection<Day> days) {
+		this.days = days;
 	}
 
 	@Valid
-	@NotNull
 	@OneToMany(mappedBy = "meal")
 	public Collection<Amount> getAmounts() {
 		return amounts;

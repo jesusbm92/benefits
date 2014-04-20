@@ -50,6 +50,11 @@
 		<security:intercept-url pattern="/plan/list.do" access="isAuthenticated()" />  
 
 		<security:intercept-url pattern="/plan/administrator/**" access="hasRole('ADMIN')" /> 
+		<security:intercept-url pattern="/meal/administrator/**" access="hasRole('ADMIN')" />	
+		<security:intercept-url pattern="/diet/administrator/**" access="hasRole('ADMIN')" />
+		<security:intercept-url pattern="/food/administrator/**" access="hasRole('ADMIN')" />		
+		<security:intercept-url pattern="/amount/administrator/**" access="hasRole('ADMIN')" />		
+		<security:intercept-url pattern="/day/administrator/**" access="hasRole('ADMIN')" />			
 		<security:intercept-url pattern="/issue/administrator/list.do" access="hasRole('ADMIN')" /> 
 		<security:intercept-url pattern="/register/**" access="hasRole('ADMIN')" />
 		<security:intercept-url pattern="/training/administrator/**" access="hasRole('ADMIN')" />

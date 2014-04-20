@@ -20,6 +20,8 @@ public class DietService {
 	private DietRepository dietRepository;
 
 	// Supporting services -----------------
+	@Autowired
+	private UserService userService;
 
 	// Constructors --------------------------
 	public DietService() {
@@ -65,6 +67,7 @@ public class DietService {
 	 */
 	public void save(Diet diet) {
 		// TODO Restricciones de Save
+		Assert.isTrue(userService.IAmAnAdmin());
 
 		dietRepository.save(diet);
 	}
@@ -84,6 +87,20 @@ public class DietService {
 
 	// Other business methods ----------------
 
+	public Collection<Diet> findAssigned() {
+		Assert.isTrue(userService.IAmAnAdmin());
+		return dietRepository.dietsAssigned();
+	}
+
+	public Collection<Diet> findFree() {
+		Assert.isTrue(userService.IAmAnAdmin());
+		return dietRepository.dietsFree();
+	}
+
+	public Collection<Diet> findDietsByDay(int dayId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		return dietRepository.findDietsByDay(dayId);
+	}
 	// Assertions
 
 }

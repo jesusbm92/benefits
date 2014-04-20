@@ -20,8 +20,6 @@
 		<div class="table-responsive">
 			<display:table uid="planListTable" keepStatus="true" name="plans"
 				pagesize="5" requestURI="${requestURI}" id="row">
-
-
 				<display:column titleKey="plan.goal" sortable="true">
 					<spring:message code="plan.goal.${row.goal}" />
 				</display:column>

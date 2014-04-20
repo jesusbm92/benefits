@@ -34,7 +34,12 @@
 		<value>/views/exercise/administrator/messages</value>
 		<value>/views/exerciseGroup/administrator/messages</value>
 		<value>/views/trainingDay/administrator/messages</value>
-		
+		<value>/views/diet/administrator/messages</value>
+		<value>/views/amount/administrator/messages</value>
+		<value>/views/meal/administrator/messages</value>
+		<value>/views/food/administrator/messages</value>
+		<value>/views/day/administrator/messages</value>
+
 	</util:list>
 
 </beans>

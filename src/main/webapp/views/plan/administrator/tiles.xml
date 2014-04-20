@@ -21,6 +21,12 @@
 		<put-attribute name="body" value="/views/plan/administrator/list.jsp" />
 	</definition>
 	
+	<definition name="plan/administrator/listPlansByDiet" extends="master.page">
+		<put-attribute name="title" value="Plans of a Diet" />
+		<put-attribute name="body" value="/views/plan/list.jsp" />
+	</definition>
+	
+	
 	<definition name="plan/administrator/create" extends="master.page">	
 		<put-attribute name="title" value="Create New Plan" />
 		<put-attribute name="body" value="/views/plan/administrator/edit.jsp" />

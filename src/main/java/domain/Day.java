@@ -9,8 +9,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -23,7 +22,7 @@ public class Day extends DomainEntity {
 	private Days name;
 
 	// relationship
-	private Diet diet;
+	private Collection<Diet> diets;
 	private Collection<Meal> meals;
 
 	public Day() {
@@ -41,20 +40,19 @@ public class Day extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@JsonIgnore
-	@ManyToOne(optional = false)
-	public Diet getDiet() {
-		return diet;
+	@ManyToMany()
+	public Collection<Diet> getDiets() {
+		return diets;
 	}
 
-	public void setDiet(Diet diet) {
-		this.diet = diet;
+	public void setDiets(Collection<Diet> diets) {
+		this.diets = diets;
 	}
 
 	@Valid
 	@NotNull
-	@OneToMany(mappedBy = "day", cascade = CascadeType.ALL)
+	@ManyToMany(mappedBy = "days", cascade = CascadeType.ALL)
 	public Collection<Meal> getMeals() {
 		return meals;
 	}

@@ -86,7 +86,6 @@ public class SponsorService {
 	public void save(Sponsor sponsor) {
 		// TODO Restricciones de Save
 		Assert.isTrue(administratorService.IAmAnAdmin());
-
 		sponsorRepository.save(sponsor);
 	}
 
