@@ -41,6 +41,7 @@
 					<form:hidden path="id" />
 					<form:hidden path="version" />
 					<form:hidden path="userAccount" />
+					<form:hidden path="plan" /> 
 
 
 					<div class="form-group">
