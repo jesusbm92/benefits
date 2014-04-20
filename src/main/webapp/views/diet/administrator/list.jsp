@@ -17,6 +17,8 @@
 	<display:column property="name" titleKey="diet.name" sortable="true" />
 	<display:column property="description" titleKey="diet.description"
 		sortable="true" />
+	<display:column property="sponsor.name" titleKey="diet.sponsor"
+		sortable="true" />
 		
 	<display:column>
 		<a href="day/administrator/listDaysByDiet.do?dietId=${row.id}"> <spring:message

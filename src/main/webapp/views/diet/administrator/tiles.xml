@@ -36,6 +36,11 @@
 		<put-attribute name="body" value="/views/diet/administrator/list.jsp" />
 	</definition>
 	
+	<definition name="diet/administrator/create" extends="master.page">
+		<put-attribute name="title" value="Create Diet" />
+		<put-attribute name="body" value="/views/diet/administrator/edit.jsp" />
+	</definition>
+	
 	<definition name="diet/administrator/edit" extends="master.page">	
 		<put-attribute name="title" value="Edit Diet" />
 		<put-attribute name="body" value="/views/diet/administrator/edit.jsp" />

@@ -77,7 +77,6 @@ public class Diet extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@JsonIgnore
 	@ManyToOne(optional = true)
 	public Sponsor getSponsor() {

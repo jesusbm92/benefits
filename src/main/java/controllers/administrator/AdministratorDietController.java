@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.DayService;
 import services.DietService;
 import services.PlanService;
 import services.SponsorService;
 import controllers.AbstractController;
+import domain.Day;
 import domain.Diet;
 import domain.Plan;
 import domain.Sponsor;
@@ -33,6 +35,8 @@ public class AdministratorDietController extends AbstractController {
 	private PlanService planService;
 	@Autowired
 	private SponsorService sponsorService;
+	@Autowired
+	private DayService dayService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -108,8 +112,9 @@ public class AdministratorDietController extends AbstractController {
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
 	public ModelAndView edit(@RequestParam int dietId) {
 		ModelAndView result;
-		// Provisional hasta que se implemente el edit y delete
-		result = createListModelAndView("", null, "");
+		Diet diet = dietService.findOne(dietId);
+		result = createEditModelAndView(diet);
+		result.addObject("create", false);
 
 		return result;
 	}
@@ -117,8 +122,18 @@ public class AdministratorDietController extends AbstractController {
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
 	public ModelAndView save(@Valid Diet diet, BindingResult binding) {
 		ModelAndView result;
-		// Provisional hasta que se implemente el edit y delete
-		result = createListModelAndView("", null, "");
+		if (binding.hasErrors()) {
+			result = createEditModelAndView(diet);
+		} else {
+			try {
+				dietService.save(diet);
+				result = new ModelAndView("redirect:list.do");
+			} catch (Throwable oops) {
+				result = createEditModelAndView(diet, "diet.commit.error");
+			}
+			result.addObject("create", false);
+		}
+
 		return result;
 	}
 
@@ -126,8 +141,16 @@ public class AdministratorDietController extends AbstractController {
 	public ModelAndView delete(@ModelAttribute Diet diet,
 			BindingResult bindingResult) {
 		ModelAndView result;
-		// Provisional hasta que se implemente el edit y delete
-		result = createListModelAndView("", null, "");
+		try {
+			dietService.delete(diet);
+			result = new ModelAndView("redirect:list.do");
+		} catch (Throwable oops) {
+			if (oops.getMessage() == "Error") {
+				result = createEditModelAndView(diet, "diet.error");
+			} else {
+				result = createEditModelAndView(diet, "diet.commit.error");
+			}
+		}
 		return result;
 	}
 
@@ -147,6 +170,7 @@ public class AdministratorDietController extends AbstractController {
 		assert diet != null;
 		Collection<Plan> plans = planService.findAll();
 		Collection<Sponsor> sponsors = sponsorService.findAll();
+		Collection<Day> days = dayService.findAll();
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/edit");
@@ -154,6 +178,7 @@ public class AdministratorDietController extends AbstractController {
 		result.addObject("message", message);
 		result.addObject("plans", plans);
 		result.addObject("sponsors", sponsors);
+		result.addObject("days", days);
 
 		return result;
 	}
