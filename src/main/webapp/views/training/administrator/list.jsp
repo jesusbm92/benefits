@@ -28,6 +28,12 @@
 						value="<spring:message code="training.view"/>"
 						onclick="self.location.href = training/details.do?trainingId=${row.id}" /></a>
 				</display:column>
+				<display:column>
+					<a href="training/administrator/edit.do?trainingId=${row.id}"><input
+						class="btn btn-default" type="button"
+						value="<spring:message code="training.edit"/>"
+						onclick="self.location.href = training/administrator/edit.do?trainingId=${row.id}" /></a>
+				</display:column>
 			</display:table>
 
 			<jstl:if test="${prin }">

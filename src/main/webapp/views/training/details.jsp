@@ -40,7 +40,7 @@
 													<div class="panel-body">
 
 
-														<h4><spring:message code="training.exercise"/></h4>
+														<h4><spring:message code="training.exercises"/></h4>
 														<jstl:forEach items="${second.exercises }" var="thirt">
 
 															<p><spring:message code="training.name"/>: ${thirt.name }</p>
