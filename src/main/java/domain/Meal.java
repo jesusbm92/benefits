@@ -41,7 +41,7 @@ public class Meal extends DomainEntity {
 
 	@Valid
 	@JsonIgnore
-	@ManyToMany()
+	@ManyToMany(mappedBy = "meals")
 	public Collection<Day> getDays() {
 		return days;
 	}

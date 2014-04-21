@@ -31,7 +31,7 @@
 	<div class="container">
 		<!-- 		<div class="collapse navbar-collapse" -->
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
-		<ul class="nav navbar-nav"> 
+		<ul class="nav navbar-nav">
 			<!-- Do not forget the "fNiv" class for the first level links !! -->
 			<security:authorize access="hasRole('ADMIN')">
 				<li class="dropdown"><a class="dropdown-toggle"
@@ -73,6 +73,8 @@
 									code="master.page.admin.dietAsigned" /></a></li>
 						<li><a href="diet/administrator/listFree.do"><spring:message
 									code="master.page.admin.dietFree" /></a></li>
+						<li><a href="day/administrator/create.do"><spring:message
+									code="master.page.admin.createDay" /></a></li>
 						<li><a href="meal/administrator/list.do"><spring:message
 									code="master.page.admin.meal" /></a></li>
 						<li><a href="food/administrator/list.do"><spring:message

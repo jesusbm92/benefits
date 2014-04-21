@@ -24,25 +24,26 @@
 		sortable="true" />
 
 	<display:column>
-		<a href="amount/administrator/edit.do?amountId=${row.id}"><input
+		<a
+			href="amount/administrator/edit.do?amountId=${row.id}&mealId=${param.mealId}"><input
 			class="btn btn-sm btn-info" type="button"
 			value="<spring:message code="amount.edit"/>"
-			onclick="self.location.href = amount/administrator/edit.do?amountId=${row.id}" /></a>
+			onclick="self.location.href = amount/administrator/edit.do?amountId=${row.id}&mealId=${param.mealId}" /></a>
 	</display:column>
 
 </display:table>
 
 <security:authorize access="hasRole('ADMIN')">
-	<a href="amount/administrator/create.do"><input type="button"
-		class="btn btn-sm btn-info"
+	<a href="amount/administrator/create.do?mealId=${param.mealId }"><input
+		type="button" class="btn btn-sm btn-info"
 		value="<spring:message code="amount.create"/>"
 		onclick="self.location.href = amount/administrator/create.do" /></a>
 </security:authorize>
 
-<a href="amount/administrator/list.do"><input type="button"
+<a href="meal/administrator/list.do"><input type="button"
 	class="btn btn-sm btn-info"
 	value="<spring:message code="amount.cancel"/>"
-	onclick="self.location.href = amount/administrator/list.do" /></a>
+	onclick="self.location.href = meal/administrator/list.do" /></a>
 
 
 

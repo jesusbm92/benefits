@@ -9,38 +9,48 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="food/administrator/edit.do" modelAttribute="food">
+<form:form action="amount/administrator/edit.do?mealId=${param.mealId}"
+	modelAttribute="amount">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	<form:hidden path="amounts" />
+	<form:hidden path="meal" />
 
-	<form:label path="name">
-		<spring:message code="food.name" />
+	<form:label path="quantity">
+		<spring:message code="amount.quantity" />
 	</form:label>
-	<form:input path="name" type="text" />
+	<form:input path="quantity" type="text" />
 	<br>
 
-	<acme:textarea path="description" code="food.description" />
+	<form:label path="measure">
+		<spring:message code="amount.measure" />
+	</form:label>
+	<form:input path="measure" type="text" />
 	<br>
+
+	<form:label path="food" for="foodId">
+		<spring:message code="amount.food" />
+	</form:label>
+	<form:select id="foodId" path="food">
+		<form:options items="${foods}" itemValue="id" itemLabel="name" />
+	</form:select>
+	<form:errors path="food" cssClass="error" />
 
 	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="food.save" />" />
+		value="<spring:message code="amount.save" />" />
 
 	<jstl:if test="${!create}">
 		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="food.delete"/>"
-			onclick="return confirm('<spring:message code="food.delete"/>')" />
+			value="<spring:message code="amount.delete"/>"
+			onclick="return confirm('<spring:message code="amount.delete"/>')" />
 	</jstl:if>
 
-	<a href="food/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
+	<a href="amount/administrator/listDetails.do?mealId=${param.mealId}"><input
+		type="button" class="btn btn-sm btn-info"
 		value="<spring:message code="food.cancel"/>" id="cancelar"
 		name="cancelar"
-		onclick="self.location.href = food/administrator/list.do" /></a>
-
-
+		onclick="amount/administrator/listDetails.do?mealId=${param.mealId}" /></a>
 </form:form>
 

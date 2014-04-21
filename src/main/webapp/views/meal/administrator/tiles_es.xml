@@ -20,6 +20,11 @@
 		<put-attribute name="body" value="/views/meal/administrator/list.jsp" />
 	</definition>
 	
+		<definition name="meal/administrator/create" extends="master.page">
+		<put-attribute name="title" value="Crear Momento del Dia" />
+		<put-attribute name="body" value="/views/meal/administrator/edit.jsp" />
+	</definition>
+	
 	<definition name="meal/administrator/edit" extends="master.page">
 		<put-attribute name="title" value="Editar Momento del Dia" />
 		<put-attribute name="body" value="/views/meal/administrator/edit.jsp" />

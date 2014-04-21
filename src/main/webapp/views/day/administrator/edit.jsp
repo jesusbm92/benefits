@@ -8,8 +8,9 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
+<%@page import="domain.Days"%>
 
-<form:form action="diet/administrator/edit.do" modelAttribute="diet">
+<form:form action="day/administrator/edit.do" modelAttribute="day">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
@@ -17,38 +18,33 @@
 	<form:hidden path="version" />
 
 	<form:label path="name">
-		<spring:message code="diet.name" />
+		<spring:message code="day.name" />
 	</form:label>
-	<form:input path="name" type="text" />
+	<form:select path="name">
+		<jstl:forEach var="name" items="${names}">
+			<form:option value="${name}">
+				<spring:message code="day.name.${name}" />
+			</form:option>
+		</jstl:forEach>
+	</form:select>
 	<br>
 
-	<form:label path="description">
-		<spring:message code="diet.description" />
-	</form:label>
-	<acme:textarea path="description" code="diet.description" />
-	<br>
-
-
-	<acme:select items="${diets}" itemLabel="name" id="id" code="plan.diet"
-		path="diet" />
-	<br>
-
-	<acme:select items="${trainings}" itemLabel="name" id="id"
-		code="plan.training" path="training" />
+	<acme:select items="${meals}" itemLabel="name" id="id" code="day.meal"
+		path="meals" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="plan.save" />" />
+		value="<spring:message code="day.save" />" />
 
 	<jstl:if test="${!create}">
 		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="plan.delete"/>"
-			onclick="return confirm('<spring:message code="plan.delete"/>')" />
+			value="<spring:message code="day.delete"/>"
+			onclick="return confirm('<spring:message code="day.delete"/>')" />
 	</jstl:if>
 
 	<a href="plan/administrator/list.do"><input type="button"
 		class="btn btn-sm btn-info"
-		value="<spring:message code="plan.cancel"/>" id="cancelar"
+		value="<spring:message code="day.cancel"/>" id="cancelar"
 		name="cancelar"
 		onclick="self.location.href = plan/administrator/list.do" /></a>
 

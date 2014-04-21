@@ -5,7 +5,6 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -67,7 +66,8 @@ public class Diet extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToMany(mappedBy = "diets", cascade = CascadeType.ALL)
+	@NotNull
+	@ManyToMany
 	public Collection<Day> getDays() {
 		return days;
 	}
