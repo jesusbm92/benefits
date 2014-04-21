@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
@@ -71,7 +70,6 @@ public class Sponsor extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@OneToMany(mappedBy = "sponsor")
 	public Collection<Training> getTrainings() {
 		return trainings;
@@ -82,7 +80,6 @@ public class Sponsor extends DomainEntity {
 	}
 
 	@Valid
-	@NotNull
 	@OneToMany(mappedBy = "sponsor")
 	public Collection<Diet> getDiets() {
 		return diets;

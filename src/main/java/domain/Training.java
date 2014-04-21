@@ -5,8 +5,8 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
@@ -68,7 +68,7 @@ public class Training extends DomainEntity {
 
 	@Valid
 	@NotEmpty
-	@OneToMany(mappedBy = "training", cascade = CascadeType.ALL)
+	@ManyToMany
 	public Collection<TrainingDay> getTrainingDays() {
 		return trainingDays;
 	}
