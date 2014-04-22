@@ -18,7 +18,7 @@
 
 	<definition name="issue/administrator/list" extends="master.page">	
 		<put-attribute name="title" value="Lista de incidencias del plan" />
-		<put-attribute name="body" value="/views/issue/administator/list.jsp" />
+		<put-attribute name="body" value="/views/issue/administrator/list.jsp" />
 	</definition>
 			
 </tiles-definitions>

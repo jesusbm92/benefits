@@ -9,7 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-<display:table uid="commentListTable" keepStatus="true" name="comments"
+<display:table uid="commentListTable" keepStatus="false" name="comments"
 	pagesize="5" class="table table-hover" requestURI="${requestURI}"
 	id="row">
 

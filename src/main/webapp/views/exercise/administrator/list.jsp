@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="table-responsive">
 
-			<display:table uid="exercisesListTable" keepStatus="true"
+			<display:table uid="exercisesListTable" keepStatus="false"
 				name="exercises" pagesize="10" class="table table-hover"
 				requestURI="${requestURI}" id="row">
 

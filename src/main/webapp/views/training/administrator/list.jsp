@@ -11,7 +11,7 @@
 <div class="container">
 	<div class="row">
 		<div class="table-responsive">
-			<display:table uid="trainingListTable" keepStatus="true"
+			<display:table uid="trainingListTable" keepStatus="false"
 				name="trainings" pagesize="5" class="table table-hover"
 				requestURI="${requestURI}" id="row">
 
