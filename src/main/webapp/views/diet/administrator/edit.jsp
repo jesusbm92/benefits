@@ -29,28 +29,31 @@
 	<br>
 
 
-	<acme:select items="${diets}" itemLabel="name" id="id" code="plan.diet"
-		path="diet" />
+	<form:select id="sponsors" path="sponsor">
+		<form:option value="0" label="----" />
+		<form:options items="${sponsors }" itemValue="id" itemLabel="name" />
+	</form:select>
 	<br>
 
-	<acme:select items="${trainings}" itemLabel="name" id="id"
-		code="plan.training" path="training" />
+	<form:select multiple="${days.size()}" items="${days}"
+		itemLabel="name" id="id" code="diet.day"
+		path="days" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="plan.save" />" />
+		value="<spring:message code="diet.save" />" />
 
-	<jstl:if test="${!create}">
+	<jstl:if test="${diet.id!=0}">
 		<input type="submit" class="btn btn-sm btn-info" name="delete"
-			value="<spring:message code="plan.delete"/>"
-			onclick="return confirm('<spring:message code="plan.delete"/>')" />
+			value="<spring:message code="diet.delete"/>"
+			onclick="return confirm('<spring:message code="diet.delete.confirm"/>')" />
 	</jstl:if>
 
-	<a href="plan/administrator/list.do"><input type="button"
+	<a href="diet/administrator/list.do"><input type="button"
 		class="btn btn-sm btn-info"
-		value="<spring:message code="plan.cancel"/>" id="cancelar"
+		value="<spring:message code="diet.cancel"/>" id="cancelar"
 		name="cancelar"
-		onclick="self.location.href = plan/administrator/list.do" /></a>
+		onclick="self.location.href = diet/administrator/list.do" /></a>
 
 
 </form:form>

@@ -7,6 +7,7 @@
 <%@taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<%@page import="domain.Meals"%>
 
 
 <display:table uid="mealListTable" keepStatus="true" name="meals"
@@ -14,7 +15,9 @@
 	id="row">
 
 
-	<display:column property="name" titleKey="meal.name" sortable="true" />
+	<display:column titleKey="meal.name" sortable="true">
+		<spring:message code="meal.name.${row.name}" />
+	</display:column>
 
 	<display:column>
 		<a href="amount/administrator/listDetails.do?mealId=${row.id}"> <spring:message

@@ -5,7 +5,6 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -41,7 +40,7 @@ public class Day extends DomainEntity {
 
 	@Valid
 	@JsonIgnore
-	@ManyToMany()
+	@ManyToMany(mappedBy = "days")
 	public Collection<Diet> getDiets() {
 		return diets;
 	}
@@ -52,7 +51,7 @@ public class Day extends DomainEntity {
 
 	@Valid
 	@NotNull
-	@ManyToMany(mappedBy = "days", cascade = CascadeType.ALL)
+	@ManyToMany
 	public Collection<Meal> getMeals() {
 		return meals;
 	}

@@ -7,6 +7,7 @@
 <%@taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<%@page import="domain.Days"%>
 
 
 <display:table uid="dayListTable" keepStatus="false" name="days"
@@ -14,8 +15,10 @@
 	id="row">
 
 
-	<display:column property="name" titleKey="day.name" sortable="true" />
-		
+	<display:column titleKey="day.name" sortable="true">
+		<spring:message code="day.name.${row.name}" />
+	</display:column>
+
 	<display:column>
 		<a href="diet/administrator/listDietsByDay.do?dayId=${row.id}"> <spring:message
 				code="day.diets" />

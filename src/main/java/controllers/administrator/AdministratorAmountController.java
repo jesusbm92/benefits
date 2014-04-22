@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import services.AmountService;
 import services.FoodService;
+import services.MealService;
 import domain.Amount;
 import domain.Food;
 
@@ -28,6 +29,9 @@ public class AdministratorAmountController {
 
 	@Autowired
 	private FoodService foodService;
+
+	@Autowired
+	private MealService mealService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -55,13 +59,13 @@ public class AdministratorAmountController {
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
-	public ModelAndView create() {
+	public ModelAndView create(@RequestParam int mealId) {
 
 		ModelAndView result;
 
 		Amount amount = amountService.create();
 
-		result = createEditModelAndView(amount);
+		result = createEditModelAndView(amount, mealId);
 		result.addObject("create", true);
 
 		return result;
@@ -71,26 +75,29 @@ public class AdministratorAmountController {
 	// -------------------------------------------------------------------
 
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
-	public ModelAndView edit(@RequestParam int amountId) {
+	public ModelAndView edit(@RequestParam int amountId,
+			@RequestParam int mealId) {
 		ModelAndView result;
 		Amount amount = amountService.findOne(amountId);
 
-		result = createEditModelAndView(amount);
+		result = createEditModelAndView(amount, mealId);
 		result.addObject("create", false);
 
 		return result;
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Amount amount, BindingResult binding) {
+	public ModelAndView save(@Valid Amount amount, @RequestParam int mealId,
+			BindingResult binding) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(amount);
+			result = createEditModelAndView(amount, mealId);
 		} else {
 			try {
 				amountService.save(amount);
-				result = new ModelAndView("redirect:list.do");
+				result = new ModelAndView("redirect:listDetails.do?mealId="
+						+ mealId);
 			} catch (Throwable oops) {
 				result = createEditModelAndView(amount, "amount.commit.error");
 			}
@@ -102,12 +109,13 @@ public class AdministratorAmountController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Amount amount,
-			BindingResult bindingResult) {
+			@RequestParam int mealId, BindingResult bindingResult) {
 		ModelAndView result;
 
 		try {
 			amountService.delete(amount);
-			result = new ModelAndView("redirect:list.do");
+			result = new ModelAndView("redirect:listDetails.do?mealId="
+					+ mealId);
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
 				result = createEditModelAndView(amount, "amount.error");
@@ -119,11 +127,11 @@ public class AdministratorAmountController {
 	}
 
 	// Other bussiness method
-	protected ModelAndView createEditModelAndView(Amount amount) {
+	protected ModelAndView createEditModelAndView(Amount amount, int mealId) {
 		assert amount != null;
 
 		ModelAndView result;
-
+		amount.setMeal(mealService.findOne(mealId));
 		result = createEditModelAndView(amount, null);
 
 		return result;
@@ -131,12 +139,13 @@ public class AdministratorAmountController {
 
 	protected ModelAndView createEditModelAndView(Amount amount, String message) {
 		assert amount != null;
-		Collection<Amount> amounts = new ArrayList<Amount>();
+		Collection<Food> foods = foodService.findAll();
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/edit");
 		result.addObject("amount", amount);
-		result.addObject("amounts", amounts);
+		result.addObject("foods", foods);
+		result.addObject("message", message);
 
 		return result;
 	}

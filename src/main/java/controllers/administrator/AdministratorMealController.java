@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import services.MealService;
 import domain.Amount;
 import domain.Meal;
+import domain.Meals;
 
 @Controller
 @RequestMapping("/meal/administrator")
@@ -139,6 +140,7 @@ public class AdministratorMealController {
 		ModelAndView result;
 		result = new ModelAndView("meal/administrator/edit");
 		result.addObject("meal", meal);
+		result.addObject("names", Meals.values());
 		result.addObject("amounts", amounts);
 
 		return result;

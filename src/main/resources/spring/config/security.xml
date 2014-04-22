@@ -65,6 +65,8 @@
 		
 		<security:intercept-url pattern="/issue/customer/**" access="hasRole('CUSTOMER')" />
 		<security:intercept-url pattern="/plan/customer/**" access="hasRole('CUSTOMER')" /> 
+		<security:intercept-url pattern="/diet/customer/**" access="hasRole('CUSTOMER')" /> 
+		
 
 		<security:intercept-url pattern="/profile/customer/edit.do" access="hasRole('CUSTOMER')" /> 
 		<security:intercept-url pattern="/profile/administrator/edit.do" access="hasRole('ADMIN')" />
