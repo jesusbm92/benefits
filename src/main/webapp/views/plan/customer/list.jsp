@@ -26,7 +26,7 @@
 		</display:column>
 		<security:authorize access="hasRole('CUSTOMER')">
 			<display:column>
-				<a href="diet/customer/list.do?planId=${row.id}"> <spring:message
+				<a href="diet/customer/details.do?dietId=${row.diet.id}"> <spring:message
 						code="plan.diet" />
 				</a>
 			</display:column>
