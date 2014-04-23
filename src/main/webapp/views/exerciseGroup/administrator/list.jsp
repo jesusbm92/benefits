@@ -21,11 +21,7 @@
 				code="exerciseGroup.exercises.fil" />
 		</a>
 	</display:column>
-	<display:column titleKey="exerciseGroup.trainingDays">
-		<a href="trainingDay/administrator/listByExerciseGroup.do?exerciseGroupId=${row.id}"> <spring:message
-				code="exerciseGroup.trainingDays.fil" />
-		</a>
-	</display:column>
+	
 </display:table>
 
 <a href="exerciseGroup/administrator/create.do"><input type="button"

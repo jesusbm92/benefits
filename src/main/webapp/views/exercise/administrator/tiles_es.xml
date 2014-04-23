@@ -26,7 +26,7 @@
 	</definition>
 	
 		<definition name="exercise/administrator/edit" extends="master.page">	
-		<put-attribute name="title" value="Editar ejercicio" />
+		<put-attribute name="title" value="Crear ejercicio" />
 		<put-attribute name="body" value="/views/exercise/administrator/edit.jsp" />
 	</definition>
 

@@ -23,12 +23,7 @@
 				<spring:message code="trainingDay.exerciseGroups" />
 			</a>
 		</display:column>
-		<display:column titleKey="trainingDay.training">
-			<a
-				href="training/administrator/listTraining.do?trainingDayId=${row.id}">
-				<spring:message code="trainingDay.training.fil" />
-			</a>
-		</display:column>
+		
 	</display:table>
 	
 	<a href="trainingDay/administrator/create.do"><input type="button"
