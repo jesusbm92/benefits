@@ -1,4 +1,6 @@
-package DietsRF.ListDietTest;
+package DietsRF.ListDayByDietTest;
+
+import java.util.Collection;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,15 +11,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
 
 import repositories.AdministratorRepository;
+import services.DayService;
 import services.DietService;
-import services.PlanService;
 import utilities.PopulateDatabase;
+import domain.Day;
+import domain.Diet;
 import funcionalRequirement.GlobalTest;
 
 @ContextConfiguration(locations = { "classpath:spring/datasource.xml",
 		"classpath:spring/config/packages.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ListDietTest extends GlobalTest {
+public class ListDayByDietTest extends GlobalTest {
 
 	@Autowired
 	AdministratorRepository administratorRepository;
@@ -26,7 +30,7 @@ public class ListDietTest extends GlobalTest {
 	DietService dietService;
 
 	@Autowired
-	PlanService planService;
+	DayService dayService;
 
 	@Before
 	public void setUp() {
@@ -34,13 +38,15 @@ public class ListDietTest extends GlobalTest {
 	}
 
 	@Test
-	public void testListDietAdmin() {
+	public void testListDaysByDietAdmin() {
 
 		authenticate("admin");
 
-		int sizeDiets = dietService.findAll().size();
+		Diet diet = dietService.findOne(57);
 
-		Assert.isTrue(sizeDiets == 3);
+		Collection<Day> days = dayService.findDaysByDiet(diet.getId());
+
+		Assert.isTrue(days.size() == 4);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
@@ -48,18 +54,22 @@ public class ListDietTest extends GlobalTest {
 
 		authenticate("customer1");
 
-		int sizeEdits = dietService.findAll().size();
+		Diet diet = dietService.findOne(57);
+
+		Collection<Day> days = dayService.findDaysByDiet(diet.getId());
 
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testListException() {
+	public void testListDayException() {
 
 		authenticate("admin");
 
-		int sizeDiets = dietService.findAll().size();
+		Diet diet = dietService.findOne(57);
 
-		Assert.isTrue(sizeDiets != 3);
+		Collection<Day> days = dayService.findDaysByDiet(diet.getId());
+
+		Assert.isTrue(days.size() != 4);
 	}
 
 }
