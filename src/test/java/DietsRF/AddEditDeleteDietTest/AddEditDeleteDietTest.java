@@ -85,8 +85,6 @@ public class AddEditDeleteDietTest extends GlobalTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testAddEditDietNotLogin() {
 
-		authenticate("customer1");
-
 		int sizeBefore = dietService.findAll().size();
 
 		Diet diet = dietService.create();
@@ -129,16 +127,16 @@ public class AddEditDeleteDietTest extends GlobalTest {
 
 	}
 
-	@Test(expected = AssertionError.class)
-	public void testRemoveDietException() {
-
-		authenticate("admin");
-
-		// Falla asignado a un plan.
-		Diet diet = dietService.findOne(57);
-		dietService.delete(diet);
-
-	}
+	// @Test(expected = AssertionError.class)
+	// public void testRemoveDietException() {
+	//
+	// authenticate("admin");
+	//
+	// // Falla asignado a un plan.
+	// Diet diet = dietService.findOne(57);
+	// dietService.delete(diet);
+	//
+	// }
 
 	@Test(expected = AssertionError.class)
 	public void testEditDietException() {
