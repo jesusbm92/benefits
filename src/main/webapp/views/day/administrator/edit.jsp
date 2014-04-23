@@ -29,8 +29,13 @@
 	</form:select>
 	<br>
 
-	<acme:select items="${meals}" itemLabel="name" id="id" code="day.meal"
-		path="meals" />
+	<form:select path="meals" multiple = "${meals.size()}">
+		<jstl:forEach var="meal" items="${meals}">
+			<form:option value="${meal}">
+				<spring:message code="day.meal.${meal.name}" />
+			</form:option>
+		</jstl:forEach>
+	</form:select>
 	<br>
 
 	<input type="submit" name="save" class="btn btn-sm btn-info"

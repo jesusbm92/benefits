@@ -1183,6 +1183,28 @@
 
 
 	</bean>
+	
+	
+	<bean id="training3" class="domain.Training">
+		<property name="name" value="Trainig delete test" />
+		<property name="plans">
+			<list>
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4" />
+				<ref bean="trainingday5" />
+				<ref bean="trainingday6" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor2" />
+
+
+	</bean>
+	
+	
+	
 
 	
 	<!-- PLANS -->
