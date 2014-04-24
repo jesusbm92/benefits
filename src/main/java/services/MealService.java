@@ -46,6 +46,7 @@ public class MealService {
 	 * @return Collection<Meal> meals
 	 */
 	public Collection<Meal> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return mealRepository.findAll();
 	}
 
