@@ -69,6 +69,8 @@ public class MealService {
 	public void save(Meal meal) {
 		// TODO Restricciones de Save
 
+		Assert.isTrue(userService.IAmAnAdmin());
+
 		mealRepository.save(meal);
 	}
 
@@ -81,6 +83,8 @@ public class MealService {
 	public void delete(Meal meal) {
 		Assert.notNull(meal);
 		// TODO Restricciones de Borrado
+
+		Assert.isTrue(userService.IAmAnAdmin());
 
 		mealRepository.delete(meal);
 	}
