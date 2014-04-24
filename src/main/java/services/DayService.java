@@ -46,6 +46,7 @@ public class DayService {
 	 * @return Collection<Day> days
 	 */
 	public Collection<Day> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return dayRepository.findAll();
 	}
 
@@ -68,6 +69,8 @@ public class DayService {
 	public void save(Day day) {
 		// TODO Restricciones de Save
 
+		Assert.isTrue(userService.IAmAnAdmin());
+
 		dayRepository.save(day);
 	}
 
@@ -80,6 +83,7 @@ public class DayService {
 	public void delete(Day day) {
 		Assert.notNull(day);
 		// TODO Restricciones de Borrado
+		Assert.isTrue(userService.IAmAnAdmin());
 
 		dayRepository.delete(day);
 	}
