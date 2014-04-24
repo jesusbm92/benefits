@@ -67,7 +67,15 @@
 
 </head>
 
-<body background="images/background.jpg">
+<!-- <body background="images/background.jpg"> -->
+<body style="background-color: #E8E6E6">
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 	<div>
 		<tiles:insertAttribute name="header" />

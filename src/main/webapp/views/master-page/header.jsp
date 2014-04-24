@@ -23,14 +23,19 @@
 }
 </style>
 
-<div class="logo-pos">
-	<img src="images/benefits-transparente.png" alt="Benefits Co., Inc." />
-</div>
+<!-- <div class="logo-pos"> -->
+<!-- 	<img src="images/benefits-transparente.png" alt="Benefits Co., Inc." /> -->
+<!-- </div> -->
 
-<div class="navbar navbar-default">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<!-- 		<div class="collapse navbar-collapse" -->
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
+		<div class="navbar-header">
+			<a class="brand" href="index.jsp"><img src="images/logo_navbar.png" style="border: 0; height: 35px; margin-top: 5px; " ></a>
+<!-- 			<a class="navbar-brand" href="#" src="images/benefits-transparente.png">Benefits</a> -->
+		</div>
+		
 		<ul class="nav navbar-nav">
 			<!-- Do not forget the "fNiv" class for the first level links !! -->
 			<security:authorize access="hasRole('ADMIN')">
@@ -135,7 +140,8 @@
 									code="master.page.logout" /> </a></li>
 					</ul></li>
 			</security:authorize>
-
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown"><spring:message
 						code="master.page.language" /> <b class="caret"></b></a>

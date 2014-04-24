@@ -1,8 +1,6 @@
 package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,21 +34,28 @@ public class RestController extends AbstractController {
 		return plan;
 	}
 
+	// @RequestMapping(value = "/login", method = RequestMethod.POST)
+	// @ResponseBody
+	// public int authenticateUser(@Param(value = "username") String username,
+	// @Param(value = "password") String password) {
+	// Customer customer = customerService.findByUsername(username);
+	// int res = -1;
+	// if (customer != null) {
+	// String realPassword = customer.getUserAccount().getPassword();
+	// Md5PasswordEncoder encoder = new Md5PasswordEncoder();
+	// String encodedPassword = encoder.encodePassword(password, null);
+	// if (encodedPassword.equals(realPassword)) {
+	// res = customer.getId();
+	// }
+	// }
+	// return res;
+	// }
+
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
-	public int authenticateUser(@Param(value = "username") String username,
-			@Param(value = "password") String password) {
-		Customer customer = customerService.findByUsername(username);
-		int res = -1;
-		if (customer != null) {
-			String realPassword = customer.getUserAccount().getPassword();
-			Md5PasswordEncoder encoder = new Md5PasswordEncoder();
-			String encodedPassword = encoder.encodePassword(password, null);
-			if (encodedPassword.equals(realPassword)) {
-				res = customer.getId();
-			}
-		}
-		return res;
+	public Plan authenticateUser() {
+		Customer customer = customerService.findByPrincipal();
+		return customer.getPlan();
 	}
 
 }
