@@ -20,7 +20,7 @@
 		<put-attribute name="body" value="/views/register/registerAdministrator.jsp" />
 	</definition>   
 	<definition name="register/registerCustomer" extends="master.page">	
-		<put-attribute name="title" value="Regístrate" />
+		<put-attribute name="title" value="Crear cuenta" />
 		<put-attribute name="body" value="/views/register/registerCustomer.jsp" />
 	</definition>
 </tiles-definitions>
