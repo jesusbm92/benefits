@@ -26,10 +26,12 @@
 					code="diet.days" />
 			</a>
 		</display:column>
+		
 		<display:column>
-			<a href="plan/administrator/listPlansByDiet.do?dietId=${row.id}">
-				<spring:message code="diet.plans" />
-			</a>
+			<a href="diet/administrator/details.do?dietId=${row.id}"><input
+				class="btn btn-sm btn-info" type="button"
+				value="<spring:message code="diet.details"/>"
+				onclick="self.location.href = diet/administrator/details.do?dietId=${row.id}" /></a>
 		</display:column>
 
 		<display:column>

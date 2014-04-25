@@ -91,6 +91,17 @@ public class AdministratorDietController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/details")
+	public ModelAndView details(@RequestParam int dietId) {
+		ModelAndView result;
+		String uri = "diet/customer/details";
+		String requestURI = "diet/customer/details.do";
+		Diet diet = dietService.findOne(dietId);
+		result = createListModelAndView(requestURI, diet, uri);
+
+		return result;
+	}
+
 	// Creation
 	// ------------------------------------------------------------------
 	@RequestMapping(value = "/create", method = RequestMethod.GET)
@@ -189,6 +200,17 @@ public class AdministratorDietController extends AbstractController {
 
 		result = new ModelAndView(uri);
 		result.addObject("diets", diets);
+		result.addObject("requestURI", requestURI);
+
+		return result;
+	}
+
+	protected ModelAndView createListModelAndView(String requestURI, Diet diet,
+			String uri) {
+		ModelAndView result;
+
+		result = new ModelAndView(uri);
+		result.addObject("diet", diet);
 		result.addObject("requestURI", requestURI);
 
 		return result;

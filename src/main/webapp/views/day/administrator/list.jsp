@@ -18,12 +18,7 @@
 	<display:column titleKey="day.name" sortable="true">
 		<spring:message code="day.name.${row.name}" />
 	</display:column>
-
-	<display:column>
-		<a href="diet/administrator/listDietsByDay.do?dayId=${row.id}"> <spring:message
-				code="day.diets" />
-		</a>
-	</display:column>
+	
 	<display:column>
 		<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <spring:message
 				code="day.meals" />
