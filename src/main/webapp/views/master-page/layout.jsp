@@ -74,8 +74,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
 
 	<div>
 		<tiles:insertAttribute name="header" />

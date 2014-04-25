@@ -21,7 +21,7 @@
 <style>
 .jumbotron {
 	margin-bottom: 0px;
-	background-image: url(images/gym.jpg);
+	background-image: url(images/gym_opacity_black.png);
 	background-position: 0% 25%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -37,8 +37,8 @@
 			<div class="col-md-7">
 				<h1>Welcome to Benefits!</h1>
 				<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-				<br />
 				<p>The app where health, job and planing become possible</p>
+				<br />
 				<p>
 					<a class="btn btn-primary btn-lg" role="button">What's
 						Benefits?</a>
