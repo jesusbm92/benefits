@@ -127,12 +127,12 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		authenticate("admin");
 
-		Training trainingToModify = trainingService.findOne(95);
+		Training trainingToModify = trainingService.findOne(98);
 		trainingToModify.setDuration(25);
 		trainingToModify.setName("name modified");
 		trainingToModify.setSponsor(sponsorService.findOne(6));
 		trainingService.save(trainingToModify);
-		Training trainingAfter = trainingService.findOne(95);
+		Training trainingAfter = trainingService.findOne(98);
 		Assert.isTrue(trainingAfter.getDuration() == (25));
 		Assert.isTrue(trainingAfter.getName().equals("name modified"));
 		Assert.isTrue(trainingAfter.getSponsor().equals(
@@ -145,12 +145,12 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		authenticate("customer1");
 
-		Training trainingToModify = trainingService.findOne(95);
+		Training trainingToModify = trainingService.findOne(98);
 		trainingToModify.setDuration(25);
 		trainingToModify.setName("name modified");
 		trainingToModify.setSponsor(sponsorService.findOne(6));
 		trainingService.save(trainingToModify);
-		Training trainingAfter = trainingService.findOne(95);
+		Training trainingAfter = trainingService.findOne(98);
 		Assert.isTrue(trainingAfter.getDuration() == (25));
 		Assert.isTrue(trainingAfter.getName().equals("name modified"));
 		Assert.isTrue(trainingAfter.getSponsor().equals(
@@ -160,12 +160,12 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void nonRegisteredCantModifyTrainingTest() {
 
-		Training trainingToModify = trainingService.findOne(95);
+		Training trainingToModify = trainingService.findOne(98);
 		trainingToModify.setDuration(25);
 		trainingToModify.setName("name modified");
 		trainingToModify.setSponsor(sponsorService.findOne(6));
 		trainingService.save(trainingToModify);
-		Training trainingAfter = trainingService.findOne(95);
+		Training trainingAfter = trainingService.findOne(98);
 		Assert.isTrue(trainingAfter.getDuration() == (25));
 		Assert.isTrue(trainingAfter.getName().equals("name modified"));
 		Assert.isTrue(trainingAfter.getSponsor().equals(
@@ -181,7 +181,7 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		// El training elegido tiene que ser uno sin planes, ya que si esta
 		// asignado a un customer no se puede borrar
-		Training trainingToDelete = trainingService.findOne(97);
+		Training trainingToDelete = trainingService.findOne(100);
 		trainingService.delete(trainingToDelete);
 
 		Collection<Training> trainingsAfter = trainingService.findAll();
@@ -201,7 +201,7 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		Collection<Training> trainingsBefore = trainingService.findAll();
 
-		Training trainingToDelete = trainingService.findOne(96);
+		Training trainingToDelete = trainingService.findOne(98);
 		trainingService.delete(trainingToDelete);
 
 		Collection<Training> trainingsAfter = trainingService.findAll();
@@ -223,7 +223,7 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		// El training elegido tiene que ser uno sin planes, ya que si esta
 		// asignado a un customer no se puede borrar
-		Training trainingToDelete = trainingService.findOne(97);
+		Training trainingToDelete = trainingService.findOne(100);
 		trainingService.delete(trainingToDelete);
 
 		Collection<Training> trainingsAfter = trainingService.findAll();
@@ -243,7 +243,7 @@ public class CreateModifyDeleteTrainingTest extends GlobalTest {
 
 		// El training elegido tiene que ser uno sin planes, ya que si esta
 		// asignado a un customer no se puede borrar
-		Training trainingToDelete = trainingService.findOne(97);
+		Training trainingToDelete = trainingService.findOne(100);
 		trainingService.delete(trainingToDelete);
 
 		Collection<Training> trainingsAfter = trainingService.findAll();
