@@ -35,17 +35,16 @@
 <div class="jumbotron">
 		<div class="row">
 			<div class="col-md-7">
-				<h1>Welcome to Benefits!</h1>
+				<h1><spring:message code="welcome.header" /></h1>
 				<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-				<p>The app where health, job and planing become possible</p>
+				<p><spring:message code="welcome.description" /></p>
 				<br />
 				<p>
-					<a class="btn btn-primary btn-lg" role="button">What's
-						Benefits?</a>
+					<a class="btn btn-primary btn-lg" role="button"><spring:message code="welcome.button.whats" /></a>
 				</p>
 			</div>
 			<div class="col-md-3 col-md-offset-1">
-				<h2 class="text-center">Sign in</h2>
+				<h2 class="text-center"><spring:message code="welcome.signin" /></h2>
 				<br />
 				<form:form action="j_spring_security_check"
 					modelAttribute="credentials" class="form-signin" role="form">

@@ -12,6 +12,7 @@
 	pageEncoding="ISO-8859-1"%>
 
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <jsp:useBean id="date" class="java.util.Date" />
 
@@ -20,13 +21,13 @@
 <div class="container">
 	<footer>
 		<p class="pull-right">
-			<a href="#">Back to top</a>
+			<a href="#"><spring:message code="master.page.footer.totop" /></a>
 		</p>
 		<p>
 			Copyright &copy; <fmt:formatDate value="${date}"
 					pattern="yyyy" /> Benefits Co. Inc. by Infit Solutions
-			· <a href="#">About</a>
-			 · <a href="#">Terms</a> 
+			· <a href="#"><spring:message code="master.page.footer.about"/></a>
+			 · <a href="#"><spring:message code="master.page.footer.terms" /></a> 
 		</p>
 		<%-- <p class="text-center"><b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" /> Benefits Co. Inc. by Infit Solutions</b></p> --%>
 	</footer>

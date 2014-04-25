@@ -110,14 +110,8 @@
 			<security:authorize access="isAnonymous()">
 				<li class="dropdown"><a class="fNiv" href="security/login.do"><spring:message
 							code="master.page.login" /></a></li>
-				<li class="dropdown"><a class="fNiv dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.guest.register" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="register/registerCustomer.do"><spring:message
-									code="master.page.guest.registerAsCustomer" /></a></li>
-					</ul></li>
+				<li class="dropdown"><a class="fNiv" href="register/registerCustomer.do"><spring:message
+							code="master.page.guest.register" /></a></li>			
 			</security:authorize>
 
 			<security:authorize access="isAuthenticated()">

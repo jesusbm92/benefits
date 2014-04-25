@@ -84,7 +84,7 @@
 		</h1>
 		<tiles:insertAttribute name="body" />
 		<div class="container">
-			<div class="col-md-3 col-centered">
+			<div class="col-md-6 col-centered">
 				<jstl:if test="${message != null}">
 					<br />
 					<span class="alert alert-danger"><spring:message
