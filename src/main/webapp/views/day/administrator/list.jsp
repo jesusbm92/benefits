@@ -18,16 +18,18 @@
 	<display:column titleKey="day.name" sortable="true">
 		<spring:message code="day.name.${row.name}" />
 	</display:column>
-	
+
 	<display:column>
-		<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <spring:message
-				code="day.meals" />
+		<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <input
+			class="btn btn-default" type="button"
+			value="<spring:message code="day.meals"/>"
+			onclick="self.location.href = meal/administrator/listMealsByDay.do?dayId=${row.id}" />
 		</a>
 	</display:column>
 
 	<display:column>
 		<a href="day/administrator/edit.do?dayId=${row.id}"><input
-			class="btn btn-sm btn-info" type="button"
+			class="btn btn-default" type="button"
 			value="<spring:message code="day.edit"/>"
 			onclick="self.location.href = day/administrator/edit.do?dayId=${row.id}" /></a>
 	</display:column>
@@ -35,15 +37,17 @@
 </display:table>
 
 
+<!--  Quitar los siguientes comentarios si es necesario crear un dia a partir de la lista de dias de una dieta -->
+
 <!-- <security:authorize access="hasRole('ADMIN')">
 	<a href="day/administrator/create.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="day.create"/>"
 		onclick="self.location.href = day/administrator/create.do" /></a>
 </security:authorize>
 
 <a href="day/administrator/list.do"><input type="button"
-	class="btn btn-sm btn-info"
+	class="btn btn-default"
 	value="<spring:message code="day.cancel"/>"
 	onclick="self.location.href = day/administrator/list.do" /></a> -->
 

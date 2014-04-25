@@ -26,19 +26,18 @@
 	<acme:textarea path="description" code="food.description" />
 	<br>
 
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="food.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="food.delete"/>"
 			onclick="return confirm('<spring:message code="food.delete"/>')" />
 	</jstl:if>
 
 	<a href="food/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="food.cancel"/>" id="cancelar"
-		name="cancelar"
+		class="btn btn-default" value="<spring:message code="food.cancel"/>"
+		id="cancelar" name="cancelar"
 		onclick="self.location.href = food/administrator/list.do" /></a>
 
 

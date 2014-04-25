@@ -31,19 +31,18 @@
 	</form:select>
 	<br>
 
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="meal.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="meal.delete"/>"
 			onclick="return confirm('<spring:message code="meal.delete"/>')" />
 	</jstl:if>
 
 	<a href="meal/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="meal.cancel"/>" id="cancelar"
-		name="cancelar"
+		class="btn btn-default" value="<spring:message code="meal.cancel"/>"
+		id="cancelar" name="cancelar"
 		onclick="self.location.href = meal/administrator/list.do" /></a>
 
 

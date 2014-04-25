@@ -38,17 +38,17 @@
 	</form:select>
 	<br>
 
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="day.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="day.delete"/>"
 			onclick="return confirm('<spring:message code="day.delete"/>')" />
 	</jstl:if>
 
 	<a href="plan/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="day.cancel"/>" id="cancelar"
 		name="cancelar"
 		onclick="self.location.href = plan/administrator/list.do" /></a>
