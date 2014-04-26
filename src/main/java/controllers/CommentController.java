@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import services.CommentService;
 import services.PlanService;
+import services.UserService;
 import domain.Comment;
 import domain.Plan;
 
@@ -27,6 +28,9 @@ public class CommentController extends AbstractController {
 
 	@Autowired
 	private PlanService planService;
+
+	@Autowired
+	private UserService userService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -86,8 +90,14 @@ public class CommentController extends AbstractController {
 		} else {
 			try {
 				commentService.save(comment);
-				result = new ModelAndView("redirect:list.do?planId="
-						+ comment.getPlan().getId());
+				if (userService.IAmAnAdmin()) {
+					result = new ModelAndView("redirect:list.do?planId="
+							+ comment.getPlan().getId());
+				} else {
+					result = new ModelAndView(
+							"redirect:/plan/customer/list.do?planId="
+									+ comment.getPlan().getId());
+				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(comment, "comment.commit.error");
 			}

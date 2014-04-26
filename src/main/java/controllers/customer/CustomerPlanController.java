@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.CommentService;
 import services.CustomerService;
 import services.PlanService;
 import controllers.AbstractController;
+import domain.Comment;
 import domain.Customer;
 import domain.Goals;
 import domain.Plan;
@@ -30,6 +32,9 @@ public class CustomerPlanController extends AbstractController {
 
 	@Autowired
 	private CustomerService customerService;
+
+	@Autowired
+	private CommentService commentService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -49,11 +54,16 @@ public class CustomerPlanController extends AbstractController {
 		Collection<Plan> plans = planService.findPlanByCustomer(customer
 				.getId());
 		Plan plan = plans.iterator().next();
+		Integer idPlan = 0;
+		Comment newComment = null;
+		if (plan != null) {
+			idPlan = plan.getId();
+			newComment = commentService.create(idPlan);
+		}
 		// Boolean hasPlan = plans.iterator().next() != null;
 		Boolean hasPlan = plan != null;
-
-		result = createListModelAndView(requestURI, plan, uri, hasPlan);
-
+		result = createListModelAndView(requestURI, plan, uri, hasPlan,
+				newComment);
 		return result;
 	}
 
@@ -160,13 +170,15 @@ public class CustomerPlanController extends AbstractController {
 	}
 
 	protected ModelAndView createListModelAndView(String requestURI, Plan plan,
-			String uri, Boolean res) {
+			String uri, Boolean res, Comment newComment) {
 		ModelAndView result;
 
 		result = new ModelAndView(uri);
 		result.addObject("plan", plan);
+		result.addObject("comments", plan.getComments());
 		result.addObject("requestURI", requestURI);
 		result.addObject("res", res);
+		result.addObject("newComment", newComment);
 
 		return result;
 	}

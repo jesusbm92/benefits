@@ -91,8 +91,9 @@ public class IssueCustomerController extends AbstractController {
 		} else {
 			try {
 				issueService.save(issue);
-				result = new ModelAndView("redirect:list.do?planId="
-						+ issue.getPlan().getId());
+				result = new ModelAndView(
+						"redirect:/plan/customer/list.do?planId="
+								+ issue.getPlan().getId());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(issue, "issue.commit.error");
 			}

@@ -29,7 +29,7 @@ body {
 	display: inline
 }
 
-.widget .label-info {
+.widget .label-default {
 	float: right;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .widget .mic-info {
 	color: #666666;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 .widget .action {
@@ -53,7 +53,7 @@ body {
 }
 
 .widget .comment-text {
-	font-size: 12px;
+	font-size: 15px;
 }
 
 .widget .btn-block {
@@ -67,7 +67,6 @@ body {
 	<jstl:if test="${res}">
 		<%
 			Plan plan = (Plan) request.getAttribute("plan");
-				Collection<Comment> comments = plan.getComments();
 		%>
 		<div class="row">
 			<h2 class="text-center">
@@ -80,7 +79,7 @@ body {
 		<div class="row">
 			<div class="col-md-4 col-md-offset-2">
 				<div class="row">
-					<img src="images/diet_image.png" width="280px"/>
+					<img src="images/diet_image.png" width="280px" />
 				</div>
 				<br />
 				<div class="row">
@@ -116,44 +115,68 @@ body {
 		<br />
 
 		<div class="row">
-			<div class="panel panel-default widget">
-				<div class="panel-heading">
-					<!-- 					<span class="glyphicon glyphicon-comment"></span> -->
-					<h3 class="panel-title">Recent Comments</h3>
-					<span class="label label-info"> <%=comments.size()%></span>
-				</div>
-				<div class="panel-body">
-					<ul class="list-group">
-						<jstl:if test="${comments.size==0 }">
-							<li class="list-group-item">
-								<div class="row">
-									<div class="col-xs-10 col-md-11">
-										<div>
-											<div class="mic-info"></div>
-										</div>
-										<div class="comment-text">There are no comments for this
-											plan</div>
-									</div>
-								</div>
-							</li>
-						</jstl:if>
-						<jstl:if test="${thereAreComments}">
-							<jstl:forEach items="${comments}" var="comment">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default widget">
+					<div class="panel-heading">
+						<!-- 					<span class="glyphicon glyphicon-comment"></span> -->
+						<h3 class="panel-title">
+							<spring:message code="plan.comments" />
+						</h3>
+						<span class="label label-default">${comments.size()}</span>
+					</div>
+					<div class="panel-body">
+						<ul class="list-group">
+							<jstl:if test="${comments.size()==0 }">
 								<li class="list-group-item">
 									<div class="row">
 										<div class="col-xs-10 col-md-11">
 											<div>
-												<div class="mic-info">
-													By: <a href="#">${comment.user.name}</a> on ${comment.date}
-												</div>
+												<div class="mic-info"></div>
 											</div>
-											<div class="comment-text">${comment.content}</div>
+											<div class="comment-text">
+												<spring:message code="plan.comment.empty" />
+											</div>
 										</div>
 									</div>
 								</li>
-							</jstl:forEach>
-						</jstl:if>
-					</ul>
+							</jstl:if>
+							<jstl:if test="${comments.size()>0}">
+								<jstl:forEach items="${comments}" var="comment">
+									<li class="list-group-item">
+										<div class="row">
+											<div class="col-xs-10 col-md-11">
+												<div>
+													<div class="mic-info">
+														<spring:message code="plan.comment.by" />
+														${comment.user.name}
+														<spring:message code="plan.comment.on" />
+														${comment.date}
+													</div>
+												</div>
+												<div class="comment-text">${comment.content}</div>
+											</div>
+										</div>
+									</li>
+								</jstl:forEach>
+							</jstl:if>
+						</ul>
+					</div>
+					<div class="panel-footer">
+						<form:form action="comment/edit.do" modelAttribute="newComment">
+							<form:hidden path="id" />
+							<form:hidden path="date" />
+							<form:hidden path="version" />
+							<form:hidden path="user" />
+							<form:hidden path="plan" />
+							<div class="col-md-8">
+								<form:textarea path="content" rows="2" class="form-control" />
+							</div>
+							<form:errors path="content" cssClass="error" />
+							<br />
+							<input type="submit" name="save" class="btn btn-default"
+								value="<spring:message code="plan.comment.send" />" />
+						</form:form>
+					</div>
 				</div>
 			</div>
 		</div>
