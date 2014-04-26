@@ -94,8 +94,8 @@ public class AdministratorDietController extends AbstractController {
 	@RequestMapping("/details")
 	public ModelAndView details(@RequestParam int dietId) {
 		ModelAndView result;
-		String uri = "diet/customer/details";
-		String requestURI = "diet/customer/details.do";
+		String uri = "diet/administrator/details";
+		String requestURI = "diet/administrador/details.do";
 		Diet diet = dietService.findOne(dietId);
 		result = createListModelAndView(requestURI, diet, uri);
 
@@ -111,7 +111,7 @@ public class AdministratorDietController extends AbstractController {
 
 		Diet diet = dietService.create();
 
-		result = createEditModelAndView(diet);
+		result = createCreateModelAndView(diet);
 		result.addObject("create", true);
 
 		return result;
@@ -177,6 +177,16 @@ public class AdministratorDietController extends AbstractController {
 		return result;
 	}
 
+	protected ModelAndView createCreateModelAndView(Diet diet) {
+		assert diet != null;
+
+		ModelAndView result;
+
+		result = createCreateModelAndView(diet, null);
+
+		return result;
+	}
+
 	protected ModelAndView createEditModelAndView(Diet diet, String message) {
 		assert diet != null;
 		Collection<Plan> plans = planService.findAll();
@@ -185,6 +195,23 @@ public class AdministratorDietController extends AbstractController {
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/edit");
+		result.addObject("diet", diet);
+		result.addObject("message", message);
+		result.addObject("plans", plans);
+		result.addObject("sponsors", sponsors);
+		result.addObject("days", days);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Diet diet, String message) {
+		assert diet != null;
+		Collection<Plan> plans = planService.findAll();
+		Collection<Sponsor> sponsors = sponsorService.findAll();
+		Collection<Day> days = dayService.findAll();
+
+		ModelAndView result;
+		result = new ModelAndView("diet/administrator/create");
 		result.addObject("diet", diet);
 		result.addObject("message", message);
 		result.addObject("plans", plans);

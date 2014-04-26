@@ -79,11 +79,8 @@
 </div>
 
 
-<security:authorize access="hasRole('ADMIN')">
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="diet.back"/>" onclick="history.back()" />
-
-</security:authorize>
+<input type="button" class="btn btn-default"
+	value="<spring:message code="diet.back"/>" onclick="history.back()" />
 
 
 
