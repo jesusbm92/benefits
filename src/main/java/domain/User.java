@@ -14,6 +14,7 @@ import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -85,6 +86,7 @@ public abstract class User extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "user")
 	public Collection<Comment> getComments() {
 		return comments;
@@ -98,6 +100,7 @@ public abstract class User extends DomainEntity {
 
 	@NotNull
 	@Valid
+	@JsonIgnore
 	@OneToOne(cascade = CascadeType.ALL, optional = false)
 	public UserAccount getUserAccount() {
 		return userAccount;

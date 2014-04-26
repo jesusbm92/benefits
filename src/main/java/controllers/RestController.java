@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import services.CustomerService;
 import services.RestService;
 import domain.Customer;
+import domain.Diet;
 import domain.Plan;
+import domain.Training;
 
 @Controller
 @RequestMapping("/rest")
@@ -34,28 +36,29 @@ public class RestController extends AbstractController {
 		return plan;
 	}
 
-	// @RequestMapping(value = "/login", method = RequestMethod.POST)
-	// @ResponseBody
-	// public int authenticateUser(@Param(value = "username") String username,
-	// @Param(value = "password") String password) {
-	// Customer customer = customerService.findByUsername(username);
-	// int res = -1;
-	// if (customer != null) {
-	// String realPassword = customer.getUserAccount().getPassword();
-	// Md5PasswordEncoder encoder = new Md5PasswordEncoder();
-	// String encodedPassword = encoder.encodePassword(password, null);
-	// if (encodedPassword.equals(realPassword)) {
-	// res = customer.getId();
-	// }
-	// }
-	// return res;
-	// }
-
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
 	public Plan authenticateUser() {
 		Customer customer = customerService.findByPrincipal();
-		return customer.getPlan();
+		Plan plan = restService.findPlanByCustomerId(customer.getId());
+		return plan;
+	}
+
+	@RequestMapping(value = "/diet", method = RequestMethod.POST)
+	@ResponseBody
+	public Diet dietUser() {
+		Customer customer = customerService.findByPrincipal();
+		Diet diet = restService.findDietByCustomerId(customer.getId());
+		return diet;
+	}
+
+	@RequestMapping(value = "/training", method = RequestMethod.POST)
+	@ResponseBody
+	public Training trainingUser() {
+		Customer customer = customerService.findByPrincipal();
+		Training training = restService.findTrainingByCustomerId(customer
+				.getId());
+		return training;
 	}
 
 }

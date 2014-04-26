@@ -46,6 +46,7 @@ public class Plan extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "plan")
 	public Collection<Issue> getIssues() {
 		return issues;
@@ -91,6 +92,7 @@ public class Plan extends DomainEntity {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "plan")
 	public Collection<Comment> getComments() {
 		return comments;

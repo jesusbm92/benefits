@@ -12,6 +12,8 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class Customer extends User {
@@ -98,6 +100,7 @@ public class Customer extends User {
 
 	@Valid
 	@NotNull
+	@JsonIgnore
 	@OneToMany(mappedBy = "customer")
 	public Collection<Issue> getIssues() {
 		return issues;
