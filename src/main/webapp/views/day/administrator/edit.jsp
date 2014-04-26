@@ -29,7 +29,7 @@
 	</form:select>
 	<br>
 
-	<form:select path="meals" multiple = "${meals.size()}">
+	<form:select path="meals" multiple="${meals.size()}">
 		<jstl:forEach var="meal" items="${meals}">
 			<form:option value="${meal}">
 				<spring:message code="day.meal.${meal.name}" />
@@ -47,11 +47,8 @@
 			onclick="return confirm('<spring:message code="day.delete"/>')" />
 	</jstl:if>
 
-	<a href="plan/administrator/list.do"><input type="button"
-		class="btn btn-default"
-		value="<spring:message code="day.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = plan/administrator/list.do" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="day.cancel"/>" onclick="history.back()" />
 
 
 </form:form>

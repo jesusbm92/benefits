@@ -36,6 +36,9 @@
 
 </display:table>
 
+<input type="button" class="btn btn-default"
+	value="<spring:message code="diet.back"/>" onclick="history.back()" />
+
 
 <!--  Quitar los siguientes comentarios si es necesario crear un dia a partir de la lista de dias de una dieta -->
 

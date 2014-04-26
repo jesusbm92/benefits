@@ -33,116 +33,115 @@
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
 		<ul class="nav navbar-nav">
 			<!-- Do not forget the "fNiv" class for the first level links !! -->
-			<security:authorize access="hasRole('ADMIN')">
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.administrator.plan" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="plan/administrator/list.do"><spring:message
-									code="master.page.admin.plansAll" /></a></li>
-					</ul></li>
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.administrator.training" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="training/administrator/list.do"><spring:message
-									code="master.page.admin.trainingAll" /></a></li>
-						<li><a href="training/administrator/listAsignTraining.do"><spring:message
-									code="master.page.admin.trainingAsigned" /></a></li>
-						<li><a
-							href="training/administrator/listNotTrainingAsigned.do"><spring:message
-									code="master.page.admin.trainingFree" /></a></li>
-						<li><a href="exercise/administrator/list.do"><spring:message
-									code="master.page.admin.listExercise" /></a></li>
-						<li><a href="exerciseGroup/administrator/list.do"><spring:message
-									code="master.page.admin.listExerciseGroup" /></a></li>
-						<li><a href="trainingDay/administrator/list.do"><spring:message
-									code="master.page.admin.listTrainingDay" /></a></li>
-					</ul></li>
-
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.administrator.diet" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="diet/administrator/list.do"><spring:message
-									code="master.page.admin.dietAll" /></a></li>
-						<li><a href="diet/administrator/listAssigned.do"><spring:message
-									code="master.page.admin.dietAsigned" /></a></li>
-						<li><a href="diet/administrator/listFree.do"><spring:message
-									code="master.page.admin.dietFree" /></a></li>
-						<li><a href="day/administrator/create.do"><spring:message
-									code="master.page.admin.createDay" /></a></li>
-						<li><a href="meal/administrator/list.do"><spring:message
-									code="master.page.admin.meal" /></a></li>
-						<li><a href="food/administrator/list.do"><spring:message
-									code="master.page.admin.foodAll" /></a></li>
-
-					</ul></li>
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.guest.register" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="register/registerAdministrator.do"><spring:message
-									code="master.page.guest.registerAsAdministrator" /></a></li>
-					</ul></li>
-			</security:authorize>
-
-			<security:authorize access="hasRole('CUSTOMER')">
-				<li class="dropdown"><a class="fNiv dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.customer" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="plan/customer/list.do"><spring:message
-									code="master.page.customer.plans" /></a></li>
-					</ul></li>
-			</security:authorize>
-
-			<security:authorize access="isAnonymous()">
-				<li class="dropdown"><a class="fNiv" href="security/login.do"><spring:message
-							code="master.page.login" /></a></li>
-				<li class="dropdown"><a class="fNiv dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.guest.register" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="register/registerCustomer.do"><spring:message
-									code="master.page.guest.registerAsCustomer" /></a></li>
-					</ul></li>
-			</security:authorize>
-
-			<security:authorize access="isAuthenticated()">
-				<li class="dropdown"><a class="fNiv dropdown-toggle"
-					data-toggle="dropdown"> <spring:message
-							code="master.page.profile" /> (<security:authentication
-							property="principal.username" />) <b class="caret"></b>
-				</a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<security:authorize access="hasRole('ADMIN')">
-							<li><a href="profile/administrator/edit.do"><spring:message
-										code="master.page.profile.administrator.edit" /></a></li>
-						</security:authorize>
-						<security:authorize access="hasRole('CUSTOMER')">
-							<li><a href="profile/customer/edit.do"><spring:message
-										code="master.page.profile.administrator.edit" /></a></li>
-						</security:authorize>
-						<li><a href="j_spring_security_logout"><spring:message
-									code="master.page.logout" /> </a></li>
-					</ul></li>
-			</security:authorize>
-
-			<li class="dropdown"><a href="#" class="dropdown-toggle"
+		<security:authorize access="hasRole('ADMIN')">
+			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown"><spring:message
-						code="master.page.language" /> <b class="caret"></b></a>
+						code="master.page.administrator.plan" /><b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="?language=en">EN</a></li>
-					<li><a href="?language=es">ES</a></li>
+					<li class="arrow"></li>
+					<li><a href="plan/administrator/list.do"><spring:message
+								code="master.page.admin.plansAll" /></a></li>
 				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><spring:message
+						code="master.page.administrator.training" /><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<li><a href="training/administrator/list.do"><spring:message
+								code="master.page.admin.trainingAll" /></a></li>
+					<li><a href="training/administrator/listAsignTraining.do"><spring:message
+								code="master.page.admin.trainingAsigned" /></a></li>
+					<li><a href="training/administrator/listNotTrainingAsigned.do"><spring:message
+								code="master.page.admin.trainingFree" /></a></li>
+					<li><a href="exercise/administrator/list.do"><spring:message
+								code="master.page.admin.listExercise" /></a></li>
+					<li><a href="exerciseGroup/administrator/list.do"><spring:message
+								code="master.page.admin.listExerciseGroup" /></a></li>
+					<li><a href="trainingDay/administrator/list.do"><spring:message
+								code="master.page.admin.listTrainingDay" /></a></li>
+				</ul></li>
+
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><spring:message
+						code="master.page.administrator.diet" /><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<li><a href="diet/administrator/list.do"><spring:message
+								code="master.page.admin.dietAll" /></a></li>
+					<li><a href="diet/administrator/listAssigned.do"><spring:message
+								code="master.page.admin.dietAsigned" /></a></li>
+					<li><a href="diet/administrator/listFree.do"><spring:message
+								code="master.page.admin.dietFree" /></a></li>
+					<li><a href="day/administrator/create.do"><spring:message
+								code="master.page.admin.createDay" /></a></li>
+					<li><a href="meal/administrator/list.do"><spring:message
+								code="master.page.admin.meal" /></a></li>
+					<li><a href="food/administrator/list.do"><spring:message
+								code="master.page.admin.foodAll" /></a></li>
+
+				</ul></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown"><spring:message
+						code="master.page.guest.register" /><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<li><a href="register/registerAdministrator.do"><spring:message
+								code="master.page.guest.registerAsAdministrator" /></a></li>
+				</ul></li>
+		</security:authorize>
+
+		<security:authorize access="hasRole('CUSTOMER')">
+			<li class="dropdown"><a class="fNiv dropdown-toggle"
+				data-toggle="dropdown"><spring:message
+						code="master.page.customer" /><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<li><a href="plan/customer/list.do"><spring:message
+								code="master.page.customer.plans" /></a></li>
+				</ul></li>
+		</security:authorize>
+
+		<security:authorize access="isAnonymous()">
+			<li class="dropdown"><a class="fNiv" href="security/login.do"><spring:message
+						code="master.page.login" /></a></li>
+			<li class="dropdown"><a class="fNiv dropdown-toggle"
+				data-toggle="dropdown"><spring:message
+						code="master.page.guest.register" /><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<li><a href="register/registerCustomer.do"><spring:message
+								code="master.page.guest.registerAsCustomer" /></a></li>
+				</ul></li>
+		</security:authorize>
+
+		<security:authorize access="isAuthenticated()">
+			<li class="dropdown"><a class="fNiv dropdown-toggle"
+				data-toggle="dropdown"> <spring:message
+						code="master.page.profile" /> (<security:authentication
+						property="principal.username" />) <b class="caret"></b>
+			</a>
+				<ul class="dropdown-menu">
+					<li class="arrow"></li>
+					<security:authorize access="hasRole('ADMIN')">
+						<li><a href="profile/administrator/edit.do"><spring:message
+									code="master.page.profile.administrator.edit" /></a></li>
+					</security:authorize>
+					<security:authorize access="hasRole('CUSTOMER')">
+						<li><a href="profile/customer/edit.do"><spring:message
+									code="master.page.profile.administrator.edit" /></a></li>
+					</security:authorize>
+					<li><a href="j_spring_security_logout"><spring:message
+								code="master.page.logout" /> </a></li>
+				</ul></li>
+		</security:authorize>
+
+		<li class="dropdown"><a href="#" class="dropdown-toggle"
+			data-toggle="dropdown"><spring:message
+					code="master.page.language" /> <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="?language=en">EN</a></li>
+				<li><a href="?language=es">ES</a></li>
+			</ul></li>
 		</ul>
 	</div>
 </div>

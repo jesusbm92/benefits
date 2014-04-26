@@ -47,10 +47,8 @@
 			onclick="return confirm('<spring:message code="amount.delete"/>')" />
 	</jstl:if>
 
-	<a href="amount/administrator/listDetails.do?mealId=${param.mealId}"><input
-		type="button" class="btn btn-default"
-		value="<spring:message code="food.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="amount/administrator/listDetails.do?mealId=${param.mealId}" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="amount.cancel"/>"
+		onclick="history.back()" />
 </form:form>
 

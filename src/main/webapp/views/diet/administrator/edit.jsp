@@ -35,9 +35,8 @@
 	</form:select>
 	<br>
 
-	<form:select multiple="${days.size()}" items="${days}"
-		itemLabel="name" id="id" code="diet.day"
-		path="days" />
+	<form:select multiple="${days.size()}" items="${days}" itemLabel="name"
+		id="id" code="diet.day" path="days" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"
@@ -49,11 +48,8 @@
 			onclick="return confirm('<spring:message code="diet.delete.confirm"/>')" />
 	</jstl:if>
 
-	<a href="diet/administrator/list.do"><input type="button"
-		class="btn btn-default"
-		value="<spring:message code="diet.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = diet/administrator/list.do" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="diet.cancel"/>" onclick="history.back()" />
 
 
 </form:form>

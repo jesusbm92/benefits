@@ -36,10 +36,8 @@
 			onclick="self.location.href = food/administrator/create.do" /></a>
 	</security:authorize>
 
-	<a href="food/administrator/list.do"><input type="button"
-		class="btn btn-default"
-		value="<spring:message code="food.cancel"/>"
-		onclick="self.location.href = food/administrator/list.do" /></a>
+<input type="button" class="btn btn-default"
+	value="<spring:message code="food.back"/>" onclick="history.back()" />
 
 </div>
 

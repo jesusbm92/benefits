@@ -65,7 +65,7 @@ public class AdministratorAmountController {
 
 		Amount amount = amountService.create();
 
-		result = createEditModelAndView(amount, mealId);
+		result = createCreateModelAndView(amount, mealId);
 		result.addObject("create", true);
 
 		return result;
@@ -137,12 +137,36 @@ public class AdministratorAmountController {
 		return result;
 	}
 
+	protected ModelAndView createCreateModelAndView(Amount amount, int mealId) {
+		assert amount != null;
+
+		ModelAndView result;
+		amount.setMeal(mealService.findOne(mealId));
+		result = createCreateModelAndView(amount, null);
+
+		return result;
+	}
+
 	protected ModelAndView createEditModelAndView(Amount amount, String message) {
 		assert amount != null;
 		Collection<Food> foods = foodService.findAll();
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/edit");
+		result.addObject("amount", amount);
+		result.addObject("foods", foods);
+		result.addObject("message", message);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Amount amount,
+			String message) {
+		assert amount != null;
+		Collection<Food> foods = foodService.findAll();
+
+		ModelAndView result;
+		result = new ModelAndView("amount/administrator/create");
 		result.addObject("amount", amount);
 		result.addObject("foods", foods);
 		result.addObject("message", message);
