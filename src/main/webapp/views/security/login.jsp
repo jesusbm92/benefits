@@ -19,42 +19,75 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<style>
+.colorgraph {
+	height: 5px;
+	border-top: 0;
+	background: #993232;
+	border-radius: 5px;
+}
+</style>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-3 col-centered">
+
+	<div class="row" style="margin-top: 20px">
+		<div
+			class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 			<form:form action="j_spring_security_check"
-				modelAttribute="credentials" class="form-signin" role="form">
-				<br />
-
-				<spring:message code="security.username" var="username" />
-				<form:input path="username" class="form-control"
-					placeholder="${username}" required="" autofocus="" />
-				<form:errors class="error" path="username" />
-				<br />
-				<spring:message code="security.password" var="password" />
-				<form:password path="password" class="form-control"
-					placeholder="${password}" required="" />
-				<form:errors class="error" path="password" />
-				<label class="checkbox"> <input type="checkbox"
-					name="_spring_security_remember_me" />
-					<spring:message code="security.rememberMe" />
-				</label>
-				<br />
-
-				<jstl:if test="${showError == true}">
-					<div class="error">
-						<spring:message code="security.login.failed" />
+				modelAttribute="credentials" role="form">
+				<fieldset>
+					<h2>Please Sign In</h2>
+					<hr class="colorgraph">
+					<div class="form-group">
+						<spring:message code="security.username" var="username" />
+						<input path="username" type="text" name="username" id="username"
+							class="form-control input-lg" placeholder="${username}">
+						<form:errors class="error" path="username" />
 					</div>
-				</jstl:if>
+					<div class="form-group">
+						<spring:message code="security.password" var="password" />
+						<input path="password" type="password" name="password"
+							id="password" class="form-control input-lg"
+							placeholder="${password}">
+						<form:errors class="error" path="username" />
+					</div>
+					<span class="button-checkbox"> <label class="checkbox">
+							<input type="checkbox" name="_spring_security_remember_me" /> <spring:message
+								code="security.rememberMe" />
+					</label>
+					</span> <br />
+					<jstl:if test="${showError == true}">
+						<div class="error">
+							<spring:message code="security.login.failed" />
+						</div>
+					</jstl:if>
+					<div class="row">
 
-				<input type="submit" class="btn btn-lg btn-primary btn-block"
-					value="<spring:message code="security.login" />" />
-
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<input type="submit" class="btn btn-lg btn-success btn-block"
+								value="<spring:message code="security.login" />">
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6">
+							<a
+							href="register/registerCustomer.do"><input
+							type="button" class="btn btn-lg btn-primary btn-block"
+							value="<spring:message code="master.page.guest.register"/>"
+							onclick="self.location.href = register/registerCustomer.do" /></a>
+						
+						
+						
+						
+						
+<!-- 							<a href="" class="btn btn-lg btn-primary btn-block">Register</a> -->
+						</div>
+					</div>
+				</fieldset>
 			</form:form>
 		</div>
 	</div>
+
 </div>
-<br/>
-<br/>
-<br/>
+
+<br />
+<br />
+<br />

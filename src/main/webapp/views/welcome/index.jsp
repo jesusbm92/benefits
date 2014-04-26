@@ -82,7 +82,7 @@
 							value="<spring:message code="security.login" />" />
 						<br/>
 						<a
-							href="training/details.do?trainingId=${plan.getTraining().getId()}"><input
+							href="register/registerCustomer.do"><input
 							type="button" class="btn btn-lg btn-primary btn-block"
 							value="<spring:message code="master.page.guest.register"/>"
 							onclick="self.location.href = register/registerCustomer.do" /></a>
