@@ -97,14 +97,8 @@
 			</security:authorize>
 
 			<security:authorize access="hasRole('CUSTOMER')">
-				<li class="dropdown"><a class="fNiv dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.customer" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="plan/customer/list.do"><spring:message
-									code="master.page.customer.plans" /></a></li>
-					</ul></li>
+				<li class="dropdown"><a class="fNiv" href="plan/customer/list.do"><spring:message
+							code="master.page.customer.plans" /></a></li>
 			</security:authorize>
 
 			<security:authorize access="isAnonymous()">
@@ -130,6 +124,7 @@
 							<li><a href="profile/customer/edit.do"><spring:message
 										code="master.page.profile.administrator.edit" /></a></li>
 						</security:authorize>
+						<li class="divider"></li>
 						<li><a href="j_spring_security_logout"><spring:message
 									code="master.page.logout" /> </a></li>
 					</ul></li>
