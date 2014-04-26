@@ -17,17 +17,17 @@
 <tiles-definitions>
 
 	<definition name="issue/customer/list" extends="master.page">	
-		<put-attribute name="title" value="Lista de Incidencias plan" />
+		<put-attribute name="title" value="Lista" />
 		<put-attribute name="body" value="/views/issue/customer/list.jsp" />
 	</definition>
 	
 	<definition name="issue/customer/create" extends="master.page">	
-		<put-attribute name="title" value="Crear Incidencia" />
+		<put-attribute name="title" value="Crear" />
 		<put-attribute name="body" value="/views/issue/customer/edit.jsp" />
 	</definition>
 	
 	<definition name="issue/customer/edit" extends="master.page">	
-		<put-attribute name="title" value="Editar Incidencia" />
+		<put-attribute name="title" value="¿No te gusta tu plan? Podemos mejorarlo" />
 		<put-attribute name="body" value="/views/issue/customer/edit.jsp" />
 	</definition>
 			

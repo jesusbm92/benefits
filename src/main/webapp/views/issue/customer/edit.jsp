@@ -9,27 +9,39 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="issue/customer/edit.do" modelAttribute="issue">
 
-	<!-- Poner todos los atributos, los no usados en oculto -->
+<div class="container">
+	<form:form action="issue/customer/edit.do" modelAttribute="issue"
+		role="form">
 
-	<form:hidden path="id" />
-	<form:hidden path="customer" />
-	<form:hidden path="plan" />
-	<form:hidden path="version" />
+		<!-- Poner todos los atributos, los no usados en oculto -->
 
-
-	<acme:textarea code="issue.content" path="description" />
-	<br>
-
-	<input type="submit" name="save" class="btn btn-sm btn-info"
-		value="<spring:message code="issue.save" />" />
-
-	<a href="plan/customer/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="issue.cancel"/>" id="cancelar"
-		name="cancelar" onclick="self.location.href = plan/customer/list.do" /></a>
-
-
-</form:form>
-
+		<form:hidden path="id" />
+		<form:hidden path="customer" />
+		<form:hidden path="plan" />
+		<form:hidden path="version" />
+		<div class="col-md-6 col-md-offset-3">
+			<div class="row">
+				<br /> <br />
+				<h4>
+					<spring:message code="issue.explain" />
+				</h4>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<form:textarea path="description" rows="3" class="form-control" />
+					<form:errors path="description" cssClass="error" />
+				</div>
+			</div>
+			<div class="row">
+				<input type="submit" name="save" class="btn btn-default"
+					value="<spring:message code="issue.send" />" /> <a
+					href="plan/customer/list.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="issue.cancel"/>" id="cancelar"
+					name="cancelar"
+					onclick="self.location.href = plan/customer/list.do" /></a>
+			</div>
+		</div>
+	</form:form>
+</div>

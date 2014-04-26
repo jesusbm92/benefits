@@ -17,17 +17,17 @@
 <tiles-definitions>
 
 	<definition name="issue/customer/list" extends="master.page">	
-		<put-attribute name="title" value="List issues of plan" />
+		<put-attribute name="title" value=" " />
 		<put-attribute name="body" value="/views/issue/customer/list.jsp" />
 	</definition>
 	
 	<definition name="issue/customer/create" extends="master.page">	
-		<put-attribute name="title" value="Create issue" />
+		<put-attribute name="title" value=" " />
 		<put-attribute name="body" value="/views/issue/customer/edit.jsp" />
 	</definition>
 	
 	<definition name="issue/customer/edit" extends="master.page">	
-		<put-attribute name="title" value="Edit issue" />
+		<put-attribute name="title" value="Is there anything wrong in your plan?" />
 		<put-attribute name="body" value="/views/issue/customer/edit.jsp" />
 	</definition>
 	
