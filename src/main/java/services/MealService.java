@@ -65,10 +65,10 @@ public class MealService {
 	 * 
 	 * @return void
 	 */
-	public void save(Meal meal) {
+	public Meal save(Meal meal) {
 		// TODO Restricciones de Save
 
-		mealRepository.save(meal);
+		return mealRepository.save(meal);
 	}
 
 	/**

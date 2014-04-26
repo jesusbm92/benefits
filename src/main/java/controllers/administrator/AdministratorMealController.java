@@ -93,8 +93,10 @@ public class AdministratorMealController {
 			result = createEditModelAndView(meal);
 		} else {
 			try {
-				mealService.save(meal);
-				result = new ModelAndView("redirect:list.do");
+				Meal mealinsert = mealService.save(meal);
+				result = new ModelAndView(
+						"redirect:/amount/administrator/listDetails.do?mealId="
+								+ mealinsert.getId());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(meal, "meal.commit.error");
 			}
