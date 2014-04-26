@@ -65,7 +65,7 @@ public class AdministratorMealController {
 
 		Meal meal = mealService.create();
 
-		result = createEditModelAndView(meal);
+		result = createCreateModelAndView(meal);
 		result.addObject("create", true);
 
 		return result;
@@ -93,8 +93,10 @@ public class AdministratorMealController {
 			result = createEditModelAndView(meal);
 		} else {
 			try {
-				mealService.save(meal);
-				result = new ModelAndView("redirect:list.do");
+				Meal mealinsert = mealService.save(meal);
+				result = new ModelAndView(
+						"redirect:/amount/administrator/listDetails.do?mealId="
+								+ mealinsert.getId());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(meal, "meal.commit.error");
 			}
@@ -133,12 +135,35 @@ public class AdministratorMealController {
 		return result;
 	}
 
+	protected ModelAndView createCreateModelAndView(Meal meal) {
+		assert meal != null;
+
+		ModelAndView result;
+
+		result = createCreateModelAndView(meal, null);
+
+		return result;
+	}
+
 	protected ModelAndView createEditModelAndView(Meal meal, String message) {
 		assert meal != null;
 		Collection<Amount> amounts = new ArrayList<Amount>();
 
 		ModelAndView result;
 		result = new ModelAndView("meal/administrator/edit");
+		result.addObject("meal", meal);
+		result.addObject("names", Meals.values());
+		result.addObject("amounts", amounts);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Meal meal, String message) {
+		assert meal != null;
+		Collection<Amount> amounts = new ArrayList<Amount>();
+
+		ModelAndView result;
+		result = new ModelAndView("meal/administrator/create");
 		result.addObject("meal", meal);
 		result.addObject("names", Meals.values());
 		result.addObject("amounts", amounts);

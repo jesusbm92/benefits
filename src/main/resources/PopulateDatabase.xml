@@ -98,8 +98,8 @@
 			</list>
 		</property>
 	</bean>
-	
-	
+
+
 	<!-- MEALS -->
 
 	<bean id="meal1" class="domain.Meal">
@@ -695,8 +695,8 @@
 		</property>
 
 	</bean>
-	
-	
+
+
 	<!-- DIETS -->
 
 	<bean id="diet1" class="domain.Diet">
@@ -735,10 +735,10 @@
 		</property>
 		<property name="sponsor" ref="sponsor2" />
 
-	
+
 	</bean>
-	
-	
+
+
 	<!-- MUSCLES -->
 
 	<bean id="muscle1" class="domain.Muscle">
@@ -777,7 +777,7 @@
 	<bean id="muscle12" class="domain.Muscle">
 		<property name="name" value="Muscle 12" />
 	</bean>
-	
+
 	<!-- EXERCISES -->
 
 	<bean id="exercise1" class="domain.Exercise">
@@ -814,7 +814,7 @@
 				<ref bean="exercisegroup2" />
 			</list>
 		</property>
-		
+
 	</bean>
 
 	<bean id="exercise4" class="domain.Exercise">
@@ -938,9 +938,20 @@
 			</list>
 		</property>
 	</bean>
-	
-	
-	
+
+	<bean id="exercisetest" class="domain.Exercise">
+		<property name="name" value="Exercise Test" />
+		<property name="repetitions" value="10" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
 	<!-- EXERCISE GROUPS -->
 
 	<bean id="exercisegroup1" class="domain.ExerciseGroup">
@@ -1043,8 +1054,24 @@
 		</property>
 
 
+
+
 	</bean>
-	
+
+	<bean id="exercisegrouptest" class="domain.ExerciseGroup">
+		<property name="name" value="Exercise Group Test" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise11" />
+				<ref bean="exercise12" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+			</list>
+		</property>
+	</bean>
+
 	<!-- TRAINING DAYS -->
 
 	<bean id="trainingday1" class="domain.TrainingDay">
@@ -1142,6 +1169,20 @@
 		</property>
 	</bean>
 
+	<bean id="trainingdaytest" class="domain.TrainingDay">
+		<property name="name" value="MONDAY" />
+		<property name="trainings">
+			<list>
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup6" />
+			</list>
+		</property>
+	</bean>
+
+
 
 	<!-- Trainings -->
 
@@ -1184,7 +1225,29 @@
 
 	</bean>
 
-	
+
+	<bean id="training3" class="domain.Training">
+		<property name="name" value="Trainig delete test" />
+		<property name="plans">
+			<list>
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4" />
+				<ref bean="trainingday5" />
+				<ref bean="trainingday6" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor2" />
+
+
+	</bean>
+
+
+
+
+
 	<!-- PLANS -->
 
 	<bean id="plan1" class="domain.Plan">
@@ -1219,8 +1282,8 @@
 		</property>
 
 	</bean>
-	
-		<bean id="plan3" class="domain.Plan">
+
+	<bean id="plan3" class="domain.Plan">
 		<property name="goal" value="KEEP_FIT" />
 		<property name="customers">
 			<list>
@@ -1283,7 +1346,7 @@
 
 
 	</bean>
-	
+
 	<bean id="felix" class="domain.Customer">
 		<property name="name" value="Customer 1" />
 		<property name="surname" value="SurnameC 1" />
@@ -1341,14 +1404,14 @@
 
 	<!-- Other domain beans come here -->
 
-	
-
-	
-	
 
 
 
-	
+
+
+
+
+
 
 	<!-- COMMENTS -->
 

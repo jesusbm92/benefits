@@ -71,7 +71,7 @@ public class AdministratorDayController extends AbstractController {
 
 		Day day = dayService.create();
 
-		result = createEditModelAndView(day);
+		result = createCreateModelAndView(day);
 		result.addObject("create", true);
 
 		return result;
@@ -137,6 +137,16 @@ public class AdministratorDayController extends AbstractController {
 		return result;
 	}
 
+	protected ModelAndView createCreateModelAndView(Day day) {
+		assert day != null;
+
+		ModelAndView result;
+
+		result = createCreateModelAndView(day, null);
+
+		return result;
+	}
+
 	protected ModelAndView createEditModelAndView(Day day, String message) {
 		assert day != null;
 
@@ -144,6 +154,20 @@ public class AdministratorDayController extends AbstractController {
 
 		ModelAndView result;
 		result = new ModelAndView("day/administrator/edit");
+		result.addObject("day", day);
+		result.addObject("names", Days.values());
+		result.addObject("message", message);
+		result.addObject("meals", meals);
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Day day, String message) {
+		assert day != null;
+
+		Collection<Meal> meals = mealService.findAll();
+
+		ModelAndView result;
+		result = new ModelAndView("day/administrator/create");
 		result.addObject("day", day);
 		result.addObject("names", Days.values());
 		result.addObject("message", message);

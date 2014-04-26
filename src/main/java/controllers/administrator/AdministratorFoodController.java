@@ -53,7 +53,7 @@ public class AdministratorFoodController {
 
 		Food food = foodService.create();
 
-		result = createEditModelAndView(food);
+		result = createCreateModelAndView(food);
 		result.addObject("create", true);
 
 		return result;
@@ -121,12 +121,34 @@ public class AdministratorFoodController {
 		return result;
 	}
 
+	protected ModelAndView createCreateModelAndView(Food food) {
+		assert food != null;
+
+		ModelAndView result;
+
+		result = createCreateModelAndView(food, null);
+
+		return result;
+	}
+
 	protected ModelAndView createEditModelAndView(Food food, String message) {
 		assert food != null;
 		Collection<Amount> amounts = new ArrayList<Amount>();
 
 		ModelAndView result;
 		result = new ModelAndView("food/administrator/edit");
+		result.addObject("food", food);
+		result.addObject("amounts", amounts);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Food food, String message) {
+		assert food != null;
+		Collection<Amount> amounts = new ArrayList<Amount>();
+
+		ModelAndView result;
+		result = new ModelAndView("food/administrator/create");
 		result.addObject("food", food);
 		result.addObject("amounts", amounts);
 
