@@ -46,6 +46,7 @@ public class DietService {
 	 * @return Collection<Diet> diets
 	 */
 	public Collection<Diet> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return dietRepository.findAll();
 	}
 
@@ -56,6 +57,11 @@ public class DietService {
 	 * @return Diet diet
 	 */
 	public Diet findOne(int dietId) {
+		return dietRepository.findOne(dietId);
+	}
+
+	public Diet findOneEdit(int dietId) {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return dietRepository.findOne(dietId);
 	}
 
@@ -80,8 +86,10 @@ public class DietService {
 	 */
 	public void delete(Diet diet) {
 		Assert.notNull(diet);
-		// TODO Restricciones de Borrado
 
+		// TODO Restricciones de Borrado
+		Assert.isTrue(userService.IAmAnAdmin());
+		// Assert.isTrue(diet.getPlans().isEmpty());
 		dietRepository.delete(diet);
 	}
 

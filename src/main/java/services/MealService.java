@@ -46,6 +46,7 @@ public class MealService {
 	 * @return Collection<Meal> meals
 	 */
 	public Collection<Meal> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return mealRepository.findAll();
 	}
 
@@ -67,7 +68,7 @@ public class MealService {
 	 */
 	public Meal save(Meal meal) {
 		// TODO Restricciones de Save
-
+		Assert.isTrue(userService.IAmAnAdmin());
 		return mealRepository.save(meal);
 	}
 
@@ -80,6 +81,8 @@ public class MealService {
 	public void delete(Meal meal) {
 		Assert.notNull(meal);
 		// TODO Restricciones de Borrado
+
+		Assert.isTrue(userService.IAmAnAdmin());
 
 		mealRepository.delete(meal);
 	}

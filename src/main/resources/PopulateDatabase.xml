@@ -737,8 +737,24 @@
 
 
 	</bean>
-
-
+		<bean id="diet3" class="domain.Diet">
+		<property name="name" value="Diet 3" />
+		<property name="description" value="Lore ipsum 3" />
+		<property name="plans">
+			<list>
+			</list>
+		</property>
+		<property name="days">
+			<list>
+				<ref bean="day5" />
+				<ref bean="day6" />
+				<ref bean="day7" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor2" />
+	</bean>
+	
+	
 	<!-- MUSCLES -->
 
 	<bean id="muscle1" class="domain.Muscle">

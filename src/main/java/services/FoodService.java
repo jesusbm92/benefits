@@ -47,6 +47,7 @@ public class FoodService {
 	 * @return Collection<Food> foods
 	 */
 	public Collection<Food> findAll() {
+		Assert.isTrue(userService.IAmAnAdmin());
 		return foodRepository.findAll();
 	}
 
@@ -60,6 +61,11 @@ public class FoodService {
 		return foodRepository.findOne(foodId);
 	}
 
+	public Food findOneEdit(int foodId) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		return foodRepository.findOne(foodId);
+	}
+
 	/**
 	 * Persiste (guarda o crea) el objeto de tipo Food en la base de datos a
 	 * través del repositorio FoodRepository
@@ -68,7 +74,7 @@ public class FoodService {
 	 */
 	public void save(Food food) {
 		// TODO Restricciones de Save
-
+		Assert.isTrue(userService.IAmAnAdmin());
 		foodRepository.save(food);
 	}
 
@@ -80,6 +86,7 @@ public class FoodService {
 	 */
 	public void delete(Food food) {
 		Assert.notNull(food);
+		Assert.isTrue(userService.IAmAnAdmin());
 		// TODO Restricciones de Borrado
 
 		foodRepository.delete(food);
