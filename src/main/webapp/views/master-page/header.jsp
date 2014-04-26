@@ -32,7 +32,7 @@
 		<!-- 		<div class="collapse navbar-collapse" -->
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
 		<div class="navbar-header">
-			<a class="brand" href="index.jsp"><img src="images/logo_navbar.png" style="border: 0; height: 35px; margin-top: 5px; " ></a>
+			<a class="brand" href=""><img src="images/logo_navbar.png" style="border: 0; height: 35px; margin-top: 5px; " ></a>
 <!-- 			<a class="navbar-brand" href="#" src="images/benefits-transparente.png">Benefits</a> -->
 		</div>
 		
