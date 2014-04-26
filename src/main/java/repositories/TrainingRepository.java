@@ -11,6 +11,9 @@ import domain.Training;
 @Repository
 public interface TrainingRepository extends JpaRepository<Training, Integer> {
 
+	@Query("select c.plan.training from Customer c where c.id= ?1")
+	Training findTrainingByCustomer(int customerId);
+
 	@Query("select t from Training t where t.plans is not empty")
 	Collection<Training> findTrainingAsigned();
 

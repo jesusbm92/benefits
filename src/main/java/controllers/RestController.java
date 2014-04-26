@@ -1,8 +1,6 @@
 package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
-import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,7 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import services.CustomerService;
 import services.RestService;
 import domain.Customer;
+import domain.Diet;
 import domain.Plan;
+import domain.Training;
 
 @Controller
 @RequestMapping("/rest")
@@ -38,19 +38,36 @@ public class RestController extends AbstractController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
-	public int authenticateUser(@Param(value = "username") String username,
-			@Param(value = "password") String password) {
-		Customer customer = customerService.findByUsername(username);
-		int res = -1;
-		if (customer != null) {
-			String realPassword = customer.getUserAccount().getPassword();
-			Md5PasswordEncoder encoder = new Md5PasswordEncoder();
-			String encodedPassword = encoder.encodePassword(password, null);
-			if (encodedPassword.equals(realPassword)) {
-				res = customer.getId();
-			}
-		}
-		return res;
+	public Plan authenticateUser() {
+		Customer customer = customerService.findByPrincipal();
+		// int res = customer.getId();
+		// return res;
+
+		Plan plan = restService.findPlanByCustomerId(customer.getId());
+		return plan;
+	}
+
+	@RequestMapping(value = "/diet", method = RequestMethod.POST)
+	@ResponseBody
+	public Diet dietUser() {
+		Customer customer = customerService.findByPrincipal();
+		// int res = customer.getId();
+		// return res;
+
+		Diet diet = restService.findDietByCustomerId(customer.getId());
+		return diet;
+	}
+
+	@RequestMapping(value = "/training", method = RequestMethod.POST)
+	@ResponseBody
+	public Training trainingUser() {
+		Customer customer = customerService.findByPrincipal();
+		// int res = customer.getId();
+		// return res;
+
+		Training training = restService.findTrainingByCustomerId(customer
+				.getId());
+		return training;
 	}
 
 }
