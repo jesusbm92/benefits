@@ -46,6 +46,8 @@
 						<li class="arrow"></li>
 						<li><a href="plan/administrator/list.do"><spring:message
 									code="master.page.admin.plansAll" /></a></li>
+						<li><a href="plan/administrator/create.do"><spring:message
+									code="plan.create" /></a></li>
 					</ul></li>
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown"><spring:message
@@ -86,14 +88,6 @@
 									code="master.page.admin.foodAll" /></a></li>
 
 					</ul></li>
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown"><spring:message
-							code="master.page.guest.register" /><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li class="arrow"></li>
-						<li><a href="register/registerAdministrator.do"><spring:message
-									code="master.page.guest.registerAsAdministrator" /></a></li>
-					</ul></li>
 			</security:authorize>
 
 			<security:authorize access="hasRole('CUSTOMER')">
@@ -119,6 +113,8 @@
 						<security:authorize access="hasRole('ADMIN')">
 							<li><a href="profile/administrator/edit.do"><spring:message
 										code="master.page.profile.administrator.edit" /></a></li>
+							<li><a href="register/registerAdministrator.do"><spring:message
+										code="master.page.guest.registerAsAdministrator" /></a></li>			
 						</security:authorize>
 						<security:authorize access="hasRole('CUSTOMER')">
 							<li><a href="profile/customer/edit.do"><spring:message

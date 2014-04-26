@@ -16,9 +16,9 @@
 
 <jsp:useBean id="date" class="java.util.Date" />
 
-<hr class="featurette-divider">
 
 <div class="container">
+<hr style="border-color: #C0C2C4;">
 	<footer>
 		<p class="pull-right">
 			<a href="#"><spring:message code="master.page.footer.totop" /></a>
