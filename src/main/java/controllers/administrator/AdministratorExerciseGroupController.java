@@ -83,9 +83,10 @@ public class AdministratorExerciseGroupController extends AbstractController {
 	// -------------------------------------------------------------------
 
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
-	public ModelAndView edit(@RequestParam int exerciseId) {
+	public ModelAndView edit(@RequestParam int exerciseGroupId) {
 		ModelAndView result;
-		ExerciseGroup exerciseGroup = exerciseGroupService.findOne(exerciseId);
+		ExerciseGroup exerciseGroup = exerciseGroupService
+				.findOne(exerciseGroupId);
 
 		result = createEditModelAndView(exerciseGroup);
 		result.addObject("create", false);

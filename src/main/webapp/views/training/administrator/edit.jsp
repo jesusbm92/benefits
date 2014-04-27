@@ -37,17 +37,17 @@
 	<form:select multiple="${trainingDays.size()}" items="${trainingDays}" itemLabel="name" id="id" code="training.trainingDays" path="trainingDays"/>
 	<br>
 
-		<input type="submit" name="save" class="btn btn-sm btn-info"
+		<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="training.save" />" />
 
 	<jstl:if test="${training.id!=0}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="training.delete"/>"
 			onclick="return confirm('<spring:message code="training.delete.confirm"/>')" />
 	</jstl:if>
 
 	<a href="training/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="training.cancel"/>" id="cancelar"
 		name="cancelar"
 		onclick="self.location.href = training/administrator/list.do" /></a>
