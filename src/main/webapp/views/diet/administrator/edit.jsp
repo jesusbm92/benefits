@@ -22,9 +22,6 @@
 	<form:input path="name" type="text" />
 	<br>
 
-	<form:label path="description">
-		<spring:message code="diet.description" />
-	</form:label>
 	<acme:textarea path="description" code="diet.description" />
 	<br>
 
