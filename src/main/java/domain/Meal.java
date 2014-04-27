@@ -5,7 +5,6 @@ import java.util.Collection;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -52,23 +51,13 @@ public class Meal extends DomainEntity {
 	}
 
 	@Valid
-	@OneToMany(mappedBy = "meal", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "meal")
 	public Collection<Amount> getAmounts() {
 		return amounts;
 	}
 
 	public void setAmounts(Collection<Amount> amounts) {
 		this.amounts = amounts;
-	}
-
-	public void addAmount(Amount amount) {
-		amounts.add(amount);
-		amount.setMeal(this);
-	}
-
-	public void removeAmount(Amount amount) {
-		amounts.remove(amount);
-		amount.setMeal(null);
 	}
 
 }
