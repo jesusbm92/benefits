@@ -30,9 +30,41 @@
 		value="<spring:message code="food.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-default" name="delete"
-			value="<spring:message code="food.delete"/>"
-			onclick="return confirm('<spring:message code="food.delete"/>')" />
+
+
+		<a class="btn btn-default" data-toggle="modal"
+			data-target="#basicModal"><spring:message
+				code="food.delete" /></a>
+
+		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
+			aria-labelledby="basicModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">
+							<spring:message code="food.confirm.title" />
+						</h4>
+					</div>
+					<div class="modal-body">
+						<h3>
+							<spring:message code="food.confirm.body" />
+						</h3>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" name="delete" class="btn btn-default"
+							onclick="history.back()">
+							<spring:message code="food.confirm.yes" />
+						</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+							<spring:message code="food.confirm.no" />
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</jstl:if>
 
 	<input type="button" class="btn btn-default"

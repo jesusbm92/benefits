@@ -73,13 +73,45 @@
 					value="<spring:message code="exercise.save" />" />
 
 				<jstl:if test="${!create}">
-					<input type="submit" class="btn btn-default" name="delete"
-						value="<spring:message code="exercise.delete"/>"
-						onclick="return confirm('<spring:message code="exercise.delete.confirm"/>')" />
+
+					<a class="btn btn-default" data-toggle="modal"
+						data-target="#basicModal"><spring:message code="exercise.delete" /></a>
+
+					<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
+						aria-labelledby="basicModal" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-hidden="true">&times;</button>
+									<h4 class="modal-title" id="myModalLabel">
+										<spring:message code="exercise.confirm.title" />
+									</h4>
+								</div>
+								<div class="modal-body">
+									<h3>
+										<spring:message code="exercise.confirm.body" />
+									</h3>
+								</div>
+								<div class="modal-footer">
+									<button type="submit" name="delete" class="btn btn-default"
+										onclick="history.back()">
+										<spring:message code="exercise.confirm.yes" />
+									</button>
+									<button type="button" class="btn btn-primary"
+										data-dismiss="modal">
+										<spring:message code="exercise.confirm.no" />
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</jstl:if>
 
 				<input type="button" class="btn btn-default"
-		value="<spring:message code="exercise.cancel"/>" onclick="history.back()" />
+					value="<spring:message code="exercise.cancel"/>"
+					onclick="history.back()" />
 
 			</form:form>
 		</div>
