@@ -38,6 +38,7 @@
 	</form:select>
 	<form:errors path="food" cssClass="error" />
 
+	</br>
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="amount.save" />" />
 
