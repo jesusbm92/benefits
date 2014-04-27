@@ -29,13 +29,9 @@
 	</form:select>
 	<br>
 
-	<form:select path="meals" multiple="${meals.size()}">
-		<jstl:forEach var="meal" items="${meals}">
-			<form:option value="${meal}">
-				<spring:message code="day.meal.${meal.name}" />
-			</form:option>
-		</jstl:forEach>
-	</form:select>
+
+	<form:select multiple="${meals.size()}" items="${meals}" itemLabel="name"
+		id="id" code="day.meal" path="meals" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"

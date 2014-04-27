@@ -98,7 +98,7 @@ public class AdministratorDayController extends AbstractController {
 		} else {
 			try {
 				dayService.save(day);
-				result = new ModelAndView("plan/administrator/list");
+				result = new ModelAndView("welcome/index");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(day, "diet.commit.error");
 			}
