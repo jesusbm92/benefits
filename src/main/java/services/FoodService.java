@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import repositories.FoodRepository;
+import domain.Amount;
 import domain.Food;
 
 @Transactional
@@ -23,6 +24,9 @@ public class FoodService {
 
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private AmountService amountService;
 
 	// Constructors --------------------------
 	public FoodService() {
@@ -88,6 +92,11 @@ public class FoodService {
 		Assert.notNull(food);
 		Assert.isTrue(userService.IAmAnAdmin());
 		// TODO Restricciones de Borrado
+
+		Collection<Amount> amounts = food.getAmounts();
+		for (Amount a : amounts) {
+			amountService.delete(a);
+		}
 
 		foodRepository.delete(food);
 	}
