@@ -63,24 +63,17 @@
 					</jstl:if>
 					<div class="row">
 
-						<div class="col-xs-6 col-sm-6 col-md-6">
+						<div class="col-xs-12 col-sm-12 col-md-12">
 							<input type="submit" class="btn btn-lg btn-success btn-block"
 								value="<spring:message code="security.login" />">
 						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<a
-							href="register/registerCustomer.do"><input
-							type="button" class="btn btn-lg btn-primary btn-block"
-							value="<spring:message code="master.page.guest.register"/>"
-							onclick="self.location.href = register/registerCustomer.do" /></a>
-						
-						
-						
-						
-						
-<!-- 							<a href="" class="btn btn-lg btn-primary btn-block">Register</a> -->
-						</div>
 					</div>
+					<br/>
+					<p class="text-center">
+						<spring:message code="security.login.noaccount" />
+						<a href="register/registerCustomer.do"><spring:message
+								code="security.login.signuphere" /></a>
+					</p>
 				</fieldset>
 			</form:form>
 		</div>
