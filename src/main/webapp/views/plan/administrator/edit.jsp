@@ -28,8 +28,8 @@
 					<form:label path="goal" class="col-md-4 control-label">
 						<spring:message code="plan.goal" />
 					</form:label>
-					<div class="col-md-4">
-						<form:select path="goal">
+					<div class="col-md-7">
+						<form:select path="goal" class="form-control">
 							<jstl:forEach var="goal" items="${goals}">
 								<form:option value="${goal}">
 									<spring:message code="plan.goal.${goal}" />
@@ -44,7 +44,7 @@
 					<form:label path="diet" for="dietId" class="col-md-4 control-label">
 						<spring:message code="plan.diet" />
 					</form:label>
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<form:select id="dietId" path="diet" class="form-control">
 							<form:option value="0" label="----" />
 							<form:options items="${diets}" itemValue="id" itemLabel="name" />
@@ -57,7 +57,7 @@
 						class="col-md-4 control-label">
 						<spring:message code="plan.training" />
 					</form:label>
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<form:select id="trainingId" path="training" class="form-control">
 							<form:option value="0" label="----" />
 							<form:options items="${trainings}" itemValue="id"

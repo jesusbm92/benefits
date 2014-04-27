@@ -64,20 +64,8 @@
 		</jstl:forEach>
 
 	</div>
-	<security:authorize access="hasRole('CUSTOMER')">
-<a href="plan/customer/list.do"><input type="button"
-		class="btn btn-default"
-		value="<spring:message code="training.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = plan/customer/list.do" /></a>
-</security:authorize>
-<security:authorize access="hasRole('ADMIN')">
-<a href="training/administrator/list.do"><input type="button"
-		class="btn btn-default"
-		value="<spring:message code="training.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = training/administrator/list.do" /></a>
-</security:authorize>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="training.cancel"/>" onclick="history.back()" />
 </div>
 
 
