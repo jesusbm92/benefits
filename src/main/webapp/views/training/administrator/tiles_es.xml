@@ -22,12 +22,12 @@
 	</definition>
 	
 	<definition name="training/administrator/listNotTrainingAsigned" extends="master.page">	
-		<put-attribute name="title" value="Todos los entrenamientos asignados " />
+		<put-attribute name="title" value="Todos los entrenamientos libres " />
 		<put-attribute name="body" value="/views/training/administrator/list.jsp" />
 	</definition>
 	
 	<definition name="training/administrator/listAsignTraining" extends="master.page">	
-		<put-attribute name="title" value="Todos los entrenamientos libres " />
+		<put-attribute name="title" value="Entrenamientos asignados" />
 		<put-attribute name="body" value="/views/training/administrator/list.jsp" />
 	</definition>
 	
