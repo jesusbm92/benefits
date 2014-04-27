@@ -54,14 +54,16 @@ public class CustomerPlanController extends AbstractController {
 		Collection<Plan> plans = planService.findPlanByCustomer(customer
 				.getId());
 		Plan plan = plans.iterator().next();
+		Boolean hasPlan = plan != null;
 		Integer idPlan = 0;
-		Comment newComment = null;
+		Comment newComment = new Comment();
 		if (plan != null) {
 			idPlan = plan.getId();
 			newComment = commentService.create(idPlan);
+		} else {
+			plan = new Plan();
 		}
 		// Boolean hasPlan = plans.iterator().next() != null;
-		Boolean hasPlan = plan != null;
 		result = createListModelAndView(requestURI, plan, uri, hasPlan,
 				newComment);
 		return result;
