@@ -40,8 +40,7 @@
 		value="<spring:message code="diet.save" />" />
 
 	<jstl:if test="${diet.id!=0}">
-		<!-- <input type="submit" class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal" name="delete" value="" /> -->
+
 		<a class="btn btn-default" data-toggle="modal"
 			data-target="#basicModal"><spring:message code="diet.delete" /></a>
 
@@ -62,12 +61,12 @@
 						</h3>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">
-							<spring:message code="diet.confirm.no" />
-						</button>
-						<button type="submit" name="delete" class="btn btn-primary"
+						<button type="submit" name="delete" class="btn btn-default"
 							onclick="history.back()">
 							<spring:message code="diet.confirm.yes" />
+						</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">
+							<spring:message code="diet.confirm.no" />
 						</button>
 					</div>
 				</div>
