@@ -19,23 +19,23 @@
 	<acme:textbox code="exerciseGroup.name" path="name" />
 	<br>
 	
+	<form:label path="exercises">
+		<spring:message code="exerciseGroup.exercises" />
+		</form:label>
 	<form:select multiple="${exercises.size()}" items="${exercises}" itemLabel="name" id="id" code="exerciseGroup.exercises" path="exercises"/>
 	<br>
 	<br>
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="exerciseGroup.save" />" />
 
 	<jstl:if test="${exerciseGroup.id!=0}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="exerciseGroup.delete"/>"
 			onclick="return confirm('<spring:message code="exerciseGroup.delete.confirm"/>')" />
 	</jstl:if>
 
-	<a href="exercise/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="exercise.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = exercise/administrator/list.do" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="exerciseGroup.cancel"/>" onclick="history.back()" />
 
 
 </form:form>

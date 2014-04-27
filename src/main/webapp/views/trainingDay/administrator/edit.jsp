@@ -28,20 +28,17 @@
 	<form:select multiple="${exerciseGroups.size()}" items="${exerciseGroups}" itemLabel="name" id="id" code="trainingDay.exerciseGroups" path="exerciseGroups"/>
 	<br>
 	<br>
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="trainingDay.save" />" />
 
 	<jstl:if test="${trainingDay.id!=0}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="trainingDay.delete"/>"
 			onclick="return confirm('<spring:message code="trainingDay.delete.confirm"/>')" />
 	</jstl:if>
 
-	<a href="trainingDay/administrator/list.do"><input type="button"
-		class="btn btn-sm btn-info"
-		value="<spring:message code="trainingDay.cancel"/>" id="cancelar"
-		name="cancelar"
-		onclick="self.location.href = trainingDay/administrator/list.do" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="trainingDay.cancel"/>" onclick="history.back()" />
 
 
 </form:form>

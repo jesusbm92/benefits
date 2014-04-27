@@ -78,11 +78,9 @@
 						onclick="return confirm('<spring:message code="exercise.delete.confirm"/>')" />
 				</jstl:if>
 
-				<a href="exercise/administrator/list.do"><input type="button"
-					class="btn btn-default"
-					value="<spring:message code="exercise.cancel"/>" id="cancelar"
-					name="cancelar"
-					onclick="self.location.href = exercise/administrator/list.do" /></a>
+				<input type="button" class="btn btn-default"
+		value="<spring:message code="exercise.cancel"/>" onclick="history.back()" />
+
 			</form:form>
 		</div>
 	</div>

@@ -16,9 +16,16 @@
 
 	<display:column property="name" titleKey="exerciseGroup.name"
 		sortable="true" />
+	<display:column >
+		<a href="exerciseGroup/administrator/edit.do?exerciseGroupId=${row.id}"> <input type="button"
+					class="btn btn-default" value="<spring:message
+				code="exerciseGroup.edit" />"/>
+		</a>
+	</display:column>
 	<display:column titleKey="exerciseGroup.exercises">
-		<a href="exercise/administrator/listByExerciseGroup.do?exerciseGroupId=${row.id}"> <spring:message
-				code="exerciseGroup.exercises.fil" />
+		<a href="exercise/administrator/listByExerciseGroup.do?exerciseGroupId=${row.id}"> <input type="button"
+					class="btn btn-default" value="<spring:message
+				code="exerciseGroup.exercises.fil" />"/>
 		</a>
 	</display:column>
 	
@@ -28,5 +35,8 @@
 					class="btn btn-default"
 					value="<spring:message code="exerciseGroup.create"/>"
 					onclick="self.location.href = exerciseGroup/administrator/create.do" /></a>
+
+<input type="button" class="btn btn-default"
+		value="<spring:message code="exerciseGroup.cancel"/>" onclick="history.back()" />
 
 </div>
