@@ -76,8 +76,7 @@ public class AdministratorExerciseController extends AbstractController {
 
 		Exercise exercise = exerciseService.create();
 
-		result = createCreateModelAndView(exercise);
-		result.addObject("create", true);
+		result = createCreateModelAndView(exercise, null);
 
 		return result;
 	}
@@ -91,7 +90,6 @@ public class AdministratorExerciseController extends AbstractController {
 		Exercise exercise = exerciseService.findOne(exerciseId);
 
 		result = createEditModelAndView(exercise);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -101,16 +99,27 @@ public class AdministratorExerciseController extends AbstractController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(exercise);
+			if (exercise.getId() == 0) {
+				result = createCreateModelAndView(exercise,
+						"exercise.commit.error");
+			} else {
+				result = createEditModelAndView(exercise,
+						"exercise.commit.error");
+			}
 		} else {
 			try {
 				exerciseService.save(exercise);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(exercise,
-						"exercise.commit.error");
+				if (exercise.getId() == 0) {
+					result = createCreateModelAndView(exercise,
+							"exercise.commit.error");
+				} else {
+					result = createEditModelAndView(exercise,
+							"exercise.commit.error");
+				}
 			}
-			result.addObject("create", false);
+
 		}
 
 		return result;
@@ -154,18 +163,22 @@ public class AdministratorExerciseController extends AbstractController {
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
+		result.addObject("create", false);
 		result.addObject("map", map);
 
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(Exercise exercise) {
+	protected ModelAndView createCreateModelAndView(Exercise exercise,
+			String message) {
 		assert exercise != null;
 		Map<String, Integer> map = muscleService.findAllIdName();
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/create");
 		result.addObject("exercise", exercise);
 		result.addObject("map", map);
+		result.addObject("message", message);
+		result.addObject("create", true);
 
 		return result;
 	}

@@ -83,7 +83,6 @@ public class AdministratorDayController extends AbstractController {
 		Day day = dayService.create();
 
 		result = createCreateModelAndView(day);
-		result.addObject("create", true);
 
 		return result;
 	}
@@ -96,7 +95,6 @@ public class AdministratorDayController extends AbstractController {
 		ModelAndView result;
 		Day day = dayService.findOne(dayId);
 		result = createEditModelAndView(day);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -105,15 +103,24 @@ public class AdministratorDayController extends AbstractController {
 	public ModelAndView save(@Valid Day day, BindingResult binding) {
 		ModelAndView result;
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(day);
+			if (day.getId() == 0) {
+				result = createCreateModelAndView(day, "day.commit.error");
+			} else {
+				result = createEditModelAndView(day, "day.commit.error");
+			}
 		} else {
 			try {
 				dayService.save(day);
 				result = new ModelAndView("welcome/index");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(day, "diet.commit.error");
+				if (day.getId() == 0) {
+					result = createCreateModelAndView(day, "day.commit.error");
+				} else {
+					result = createEditModelAndView(day, "day.commit.error");
+				}
+
 			}
-			result.addObject("create", false);
+
 		}
 
 		return result;
@@ -169,6 +176,7 @@ public class AdministratorDayController extends AbstractController {
 		result.addObject("names", Days.values());
 		result.addObject("message", message);
 		result.addObject("meals", meals);
+		result.addObject("create", false);
 		return result;
 	}
 
@@ -182,6 +190,7 @@ public class AdministratorDayController extends AbstractController {
 		result.addObject("day", day);
 		result.addObject("names", Days.values());
 		result.addObject("message", message);
+		result.addObject("create", true);
 		result.addObject("meals", meals);
 		return result;
 	}

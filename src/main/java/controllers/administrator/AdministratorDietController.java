@@ -112,7 +112,6 @@ public class AdministratorDietController extends AbstractController {
 		Diet diet = dietService.create();
 
 		result = createCreateModelAndView(diet);
-		result.addObject("create", true);
 
 		return result;
 	}
@@ -125,7 +124,6 @@ public class AdministratorDietController extends AbstractController {
 		ModelAndView result;
 		Diet diet = dietService.findOne(dietId);
 		result = createEditModelAndView(diet);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -134,15 +132,24 @@ public class AdministratorDietController extends AbstractController {
 	public ModelAndView save(@Valid Diet diet, BindingResult binding) {
 		ModelAndView result;
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(diet);
+			if (diet.getId() == 0) {
+				result = createCreateModelAndView(diet, "diet.commit.error");
+			} else {
+				result = createEditModelAndView(diet, "diet.commit.error");
+			}
 		} else {
 			try {
 				dietService.save(diet);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
+				if (diet.getId() == 0) {
+					result = createCreateModelAndView(diet, "diet.commit.error");
+				} else {
+					result = createEditModelAndView(diet, "diet.commit.error");
+				}
 				result = createEditModelAndView(diet, "diet.commit.error");
 			}
-			result.addObject("create", false);
+
 		}
 
 		return result;
@@ -196,6 +203,7 @@ public class AdministratorDietController extends AbstractController {
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/edit");
 		result.addObject("diet", diet);
+		result.addObject("create", false);
 		result.addObject("message", message);
 		result.addObject("plans", plans);
 		result.addObject("sponsors", sponsors);
@@ -217,6 +225,7 @@ public class AdministratorDietController extends AbstractController {
 		result.addObject("plans", plans);
 		result.addObject("sponsors", sponsors);
 		result.addObject("days", days);
+		result.addObject("create", true);
 
 		return result;
 	}

@@ -89,8 +89,7 @@ public class AdministratorTrainingController extends AbstractController {
 
 		Training training = trainingService.create();
 
-		result = createCreateModelAndView(training);
-		result.addObject("create", true);
+		result = createCreateModelAndView(training, null);
 
 		return result;
 	}
@@ -104,7 +103,6 @@ public class AdministratorTrainingController extends AbstractController {
 		Training training = trainingService.findOne(trainingId);
 
 		result = createEditModelAndView(training);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -114,16 +112,27 @@ public class AdministratorTrainingController extends AbstractController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(training);
+			if (training.getId() == 0) {
+				result = createCreateModelAndView(training,
+						"training.commit.error");
+			} else {
+				result = createEditModelAndView(training,
+						"training.commit.error");
+			}
 		} else {
 			try {
 				trainingService.save(training);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(training,
-						"training.commit.error");
+				if (training.getId() == 0) {
+					result = createCreateModelAndView(training,
+							"training.commit.error");
+				} else {
+					result = createEditModelAndView(training,
+							"training.commit.error");
+				}
+
 			}
-			result.addObject("create", false);
 		}
 
 		return result;
@@ -170,12 +179,14 @@ public class AdministratorTrainingController extends AbstractController {
 		result.addObject("training", training);
 		result.addObject("message", message);
 		result.addObject("trainingDays", trainingDays);
+		result.addObject("create", false);
 		result.addObject("sponsors", sponsors);
 
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(Training training) {
+	protected ModelAndView createCreateModelAndView(Training training,
+			String message) {
 		assert training != null;
 		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
 		Collection<Sponsor> sponsors = sponsorService.findAll();
@@ -185,6 +196,8 @@ public class AdministratorTrainingController extends AbstractController {
 		result.addObject("training", training);
 		result.addObject("trainingDays", trainingDays);
 		result.addObject("sponsors", sponsors);
+		result.addObject("create", true);
+		result.addObject("message", message);
 
 		return result;
 	}

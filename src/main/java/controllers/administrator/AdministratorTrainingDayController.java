@@ -77,8 +77,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 
 		TrainingDay trainingDay = trainingDayService.create();
 
-		result = createCreateModelAndView(trainingDay);
-		result.addObject("create", true);
+		result = createCreateModelAndView(trainingDay, null);
 
 		return result;
 	}
@@ -92,7 +91,6 @@ public class AdministratorTrainingDayController extends AbstractController {
 		TrainingDay trainingDay = trainingDayService.findOne(trainingDayId);
 
 		result = createEditModelAndView(trainingDay);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -103,18 +101,27 @@ public class AdministratorTrainingDayController extends AbstractController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(trainingDay);
+			if (trainingDay.getId() == 0) {
+				result = createCreateModelAndView(trainingDay,
+						"trainingDay.commit.error");
+			} else {
+				result = createEditModelAndView(trainingDay,
+						"trainingDay.commit.error");
+			}
 		} else {
 			try {
 				trainingDayService.save(trainingDay);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-
-				result = createEditModelAndView(trainingDay,
-						"trainingDay.commit.error");
+				if (trainingDay.getId() == 0) {
+					result = createCreateModelAndView(trainingDay,
+							"trainingDay.commit.error");
+				} else {
+					result = createEditModelAndView(trainingDay,
+							"trainingDay.commit.error");
+				}
 
 			}
-			result.addObject("create", false);
 		}
 
 		return result;
@@ -169,13 +176,15 @@ public class AdministratorTrainingDayController extends AbstractController {
 		result = new ModelAndView("trainingDay/administrator/edit");
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("message", message);
+		result.addObject("create", false);
 		result.addObject("exerciseGroups", exerciseGroups);
 		result.addObject("days", Days.values());
 
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(TrainingDay trainingDay) {
+	protected ModelAndView createCreateModelAndView(TrainingDay trainingDay,
+			String message) {
 		assert trainingDay != null;
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
 				.findAll();
@@ -190,9 +199,11 @@ public class AdministratorTrainingDayController extends AbstractController {
 		// days.add("SUNDAY");
 		ModelAndView result;
 		result = new ModelAndView("trainingDay/administrator/create");
+		result.addObject("create", true);
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("exerciseGroups", exerciseGroups);
 		result.addObject("days", Days.values());
+		result.addObject("message", message);
 
 		return result;
 	}

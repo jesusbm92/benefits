@@ -65,8 +65,7 @@ public class AdministratorAmountController {
 
 		Amount amount = amountService.create();
 
-		result = createCreateModelAndView(amount, mealId);
-		result.addObject("create", true);
+		result = createCreateModelAndView(amount, mealId, null);
 
 		return result;
 	}
@@ -81,7 +80,6 @@ public class AdministratorAmountController {
 		Amount amount = amountService.findOne(amountId);
 
 		result = createEditModelAndView(amount, mealId);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -92,16 +90,26 @@ public class AdministratorAmountController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(amount, mealId);
+			if (amount.getId() == 0) {
+				result = createCreateModelAndView(amount, "amount.commit.error");
+			} else {
+				result = createEditModelAndView(amount, "amount.commit.error");
+			}
 		} else {
 			try {
 				amountService.save(amount);
 				result = new ModelAndView("redirect:listDetails.do?mealId="
 						+ mealId);
 			} catch (Throwable oops) {
-				result = createEditModelAndView(amount, "amount.commit.error");
+				if (amount.getId() == 0) {
+					result = createCreateModelAndView(amount,
+							"amount.commit.error");
+				} else {
+					result = createEditModelAndView(amount,
+							"amount.commit.error");
+				}
 			}
-			result.addObject("create", false);
+
 		}
 
 		return result;
@@ -137,12 +145,15 @@ public class AdministratorAmountController {
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(Amount amount, int mealId) {
+	protected ModelAndView createCreateModelAndView(Amount amount, int mealId,
+			String message) {
 		assert amount != null;
 
 		ModelAndView result;
 		amount.setMeal(mealService.findOne(mealId));
 		result = createCreateModelAndView(amount, null);
+		result.addObject("message", message);
+		result.addObject("create", true);
 
 		return result;
 	}
@@ -156,6 +167,7 @@ public class AdministratorAmountController {
 		result.addObject("amount", amount);
 		result.addObject("foods", foods);
 		result.addObject("message", message);
+		result.addObject("create", false);
 
 		return result;
 	}

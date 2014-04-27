@@ -66,7 +66,6 @@ public class AdministratorMealController {
 		Meal meal = mealService.create();
 
 		result = createCreateModelAndView(meal);
-		result.addObject("create", true);
 
 		return result;
 	}
@@ -80,7 +79,6 @@ public class AdministratorMealController {
 		Meal meal = mealService.findOne(mealId);
 
 		result = createEditModelAndView(meal);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -90,7 +88,11 @@ public class AdministratorMealController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(meal);
+			if (meal.getId() == 0) {
+				result = createCreateModelAndView(meal, "meal.commit.error");
+			} else {
+				result = createEditModelAndView(meal, "meal.commit.error");
+			}
 		} else {
 			try {
 				Meal mealinsert = mealService.save(meal);
@@ -98,9 +100,12 @@ public class AdministratorMealController {
 						"redirect:/amount/administrator/listDetails.do?mealId="
 								+ mealinsert.getId());
 			} catch (Throwable oops) {
-				result = createEditModelAndView(meal, "meal.commit.error");
+				if (meal.getId() == 0) {
+					result = createCreateModelAndView(meal, "meal.commit.error");
+				} else {
+					result = createEditModelAndView(meal, "meal.commit.error");
+				}
 			}
-			result.addObject("create", false);
 		}
 
 		return result;
@@ -154,6 +159,7 @@ public class AdministratorMealController {
 		result.addObject("meal", meal);
 		result.addObject("names", Meals.values());
 		result.addObject("amounts", amounts);
+		result.addObject("create", false);
 
 		return result;
 	}
@@ -167,6 +173,7 @@ public class AdministratorMealController {
 		result.addObject("meal", meal);
 		result.addObject("names", Meals.values());
 		result.addObject("amounts", amounts);
+		result.addObject("create", true);
 
 		return result;
 	}

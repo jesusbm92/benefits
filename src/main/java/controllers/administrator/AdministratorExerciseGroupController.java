@@ -73,8 +73,7 @@ public class AdministratorExerciseGroupController extends AbstractController {
 
 		ExerciseGroup exerciseGroup = exerciseGroupService.create();
 
-		result = createCreateModelAndView(exerciseGroup);
-		result.addObject("create", true);
+		result = createCreateModelAndView(exerciseGroup, null);
 
 		return result;
 	}
@@ -89,8 +88,6 @@ public class AdministratorExerciseGroupController extends AbstractController {
 				.findOne(exerciseGroupId);
 
 		result = createEditModelAndView(exerciseGroup);
-		result.addObject("create", false);
-
 		return result;
 	}
 
@@ -106,15 +103,25 @@ public class AdministratorExerciseGroupController extends AbstractController {
 				exerciseGroupService.save(exerciseGroup);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				if (exerciseGroup.getExercises().isEmpty()) {
-					result = createEditModelAndView(exerciseGroup,
-							"exerciseGroup.commit.exercises");
+				if (exerciseGroup.getId() == 0) {
+					if (exerciseGroup.getExercises().isEmpty()) {
+						result = createCreateModelAndView(exerciseGroup,
+								"exerciseGroup.commit.exercises");
+					} else {
+						result = createCreateModelAndView(exerciseGroup,
+								"exerciseGroup.commit.error");
+					}
+
 				} else {
-					result = createEditModelAndView(exerciseGroup,
-							"exerciseGroup.commit.error");
+					if (exerciseGroup.getExercises().isEmpty()) {
+						result = createEditModelAndView(exerciseGroup,
+								"exerciseGroup.commit.exercises");
+					} else {
+						result = createEditModelAndView(exerciseGroup,
+								"exerciseGroup.commit.error");
+					}
 				}
 			}
-			result.addObject("create", false);
 		}
 
 		return result;
@@ -164,13 +171,15 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		result = new ModelAndView("exerciseGroup/administrator/edit");
 		result.addObject("exerciseGroup", exerciseGroup);
 		result.addObject("message", message);
+		result.addObject("create", false);
 		result.addObject("exercises", exercises);
 		result.addObject("exerciseSelected", exerciseSelected);
 
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(ExerciseGroup exerciseGroup) {
+	protected ModelAndView createCreateModelAndView(
+			ExerciseGroup exerciseGroup, String message) {
 		assert exerciseGroup != null;
 		Collection<Exercise> exercises = exerciseService.findAll();
 		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
@@ -184,6 +193,8 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		result.addObject("exerciseGroup", exerciseGroup);
 		result.addObject("exercises", exercises);
 		result.addObject("exerciseSelected", exerciseSelected);
+		result.addObject("create", true);
+		result.addObject("message", message);
 
 		return result;
 	}

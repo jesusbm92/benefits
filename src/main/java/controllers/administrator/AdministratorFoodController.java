@@ -54,7 +54,6 @@ public class AdministratorFoodController {
 		Food food = foodService.create();
 
 		result = createCreateModelAndView(food);
-		result.addObject("create", true);
 
 		return result;
 	}
@@ -68,7 +67,6 @@ public class AdministratorFoodController {
 		Food food = foodService.findOne(foodId);
 
 		result = createEditModelAndView(food);
-		result.addObject("create", false);
 
 		return result;
 	}
@@ -78,15 +76,24 @@ public class AdministratorFoodController {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
-			result = createEditModelAndView(food);
+			if (food.getId() == 0) {
+				result = createEditModelAndView(food, "food.commit.error");
+			} else {
+				result = createCreateModelAndView(food, "food.commit.error");
+			}
 		} else {
 			try {
 				foodService.save(food);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
-				result = createEditModelAndView(food, "food.commit.error");
+				if (food.getId() == 0) {
+					result = createEditModelAndView(food, "food.commit.error");
+				} else {
+					result = createCreateModelAndView(food, "food.commit.error");
+				}
+
 			}
-			result.addObject("create", false);
+
 		}
 
 		return result;
@@ -139,6 +146,7 @@ public class AdministratorFoodController {
 		result = new ModelAndView("food/administrator/edit");
 		result.addObject("food", food);
 		result.addObject("amounts", amounts);
+		result.addObject("create", false);
 
 		return result;
 	}
@@ -151,6 +159,7 @@ public class AdministratorFoodController {
 		result = new ModelAndView("food/administrator/create");
 		result.addObject("food", food);
 		result.addObject("amounts", amounts);
+		result.addObject("create", true);
 
 		return result;
 	}
