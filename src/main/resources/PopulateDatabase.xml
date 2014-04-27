@@ -752,54 +752,75 @@
 		</property>
 		<property name="sponsor" ref="sponsor2" />
 	</bean>
-
-
 	<!-- MUSCLES -->
 
+	<!-- Cuadriceps -->
 	<bean id="muscle1" class="domain.Muscle">
-		<property name="name" value="Muscle 1" />
-	</bean>
-	<bean id="muscle2" class="domain.Muscle">
-		<property name="name" value="Muscle 2" />
-	</bean>
-	<bean id="muscle3" class="domain.Muscle">
-		<property name="name" value="Muscle 3" />
-	</bean>
-	<bean id="muscle4" class="domain.Muscle">
-		<property name="name" value="Muscle 4" />
-	</bean>
-	<bean id="muscle5" class="domain.Muscle">
-		<property name="name" value="Muscle 5" />
-	</bean>
-	<bean id="muscle6" class="domain.Muscle">
-		<property name="name" value="Muscle 6" />
-	</bean>
-	<bean id="muscle7" class="domain.Muscle">
-		<property name="name" value="Muscle 7" />
-	</bean>
-	<bean id="muscle8" class="domain.Muscle">
-		<property name="name" value="Muscle 8" />
-	</bean>
-	<bean id="muscle9" class="domain.Muscle">
-		<property name="name" value="Muscle 9" />
-	</bean>
-	<bean id="muscle10" class="domain.Muscle">
-		<property name="name" value="Muscle 10" />
-	</bean>
-	<bean id="muscle11" class="domain.Muscle">
-		<property name="name" value="Muscle 11" />
-	</bean>
-	<bean id="muscle12" class="domain.Muscle">
-		<property name="name" value="Muscle 12" />
+		<property name="name" value="Quadriceps" />
 	</bean>
 
+	<!-- Femoral -->
+	<bean id="muscle2" class="domain.Muscle">
+		<property name="name" value="Femoral" />
+	</bean>
+
+	<!-- Gluteos -->
+	<bean id="muscle3" class="domain.Muscle">
+		<property name="name" value="Buttocks" />
+	</bean>
+
+	<!-- Gemelos -->
+	<bean id="muscle4" class="domain.Muscle">
+		<property name="name" value="Calf" />
+	</bean>
+
+	<!-- Abductores -->
+	<bean id="muscle5" class="domain.Muscle">
+		<property name="name" value="Adductor" />
+	</bean>
+
+	<!-- Pectorales -->
+	<bean id="muscle6" class="domain.Muscle">
+		<property name="name" value="Pectoral" />
+	</bean>
+
+	<!-- Biceps -->
+	<bean id="muscle7" class="domain.Muscle">
+		<property name="name" value="Biceps" />
+	</bean>
+
+	<!-- Triceps -->
+	<bean id="muscle8" class="domain.Muscle">
+		<property name="name" value="Triceps" />
+	</bean>
+
+	<!-- Dorsal -->
+	<bean id="muscle9" class="domain.Muscle">
+		<property name="name" value="Dorsal" />
+	</bean>
+
+	<!-- Trapecio -->
+	<bean id="muscle10" class="domain.Muscle">
+		<property name="name" value="Trapezius" />
+	</bean>
+
+	<!-- Deltoides -->
+	<bean id="muscle11" class="domain.Muscle">
+		<property name="name" value="Deltoid" />
+	</bean>
+
+	<!-- Abdominales -->
+	<bean id="muscle12" class="domain.Muscle">
+		<property name="name" value="Abs" />
+	</bean>
+	
 	<!-- EXERCISES -->
 
 	<bean id="exercise1" class="domain.Exercise">
-		<property name="name" value="Exercise 1" />
+		<property name="name" value="Thigh Adductor" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle1" />
+		<property name="muscle" ref="muscle5" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup1" />
@@ -808,10 +829,10 @@
 	</bean>
 
 	<bean id="exercise2" class="domain.Exercise">
-		<property name="name" value="Exercise 2" />
+		<property name="name" value="Donkey Calf Raise" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle2" />
+		<property name="muscle" ref="muscle4" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup1" />
@@ -820,10 +841,10 @@
 	</bean>
 
 	<bean id="exercise3" class="domain.Exercise">
-		<property name="name" value="Exercise 3" />
+		<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
 		<property name="repetitions" value="12" />
 		<property name="cycles" value="2" />
-		<property name="muscle" ref="muscle3" />
+		<property name="muscle" ref="muscle9" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup2" />
@@ -833,10 +854,10 @@
 	</bean>
 
 	<bean id="exercise4" class="domain.Exercise">
-		<property name="name" value="Exercise 4" />
+		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="repetitions" value="5" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle4" />
+		<property name="muscle" ref="muscle9" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup2" />
@@ -845,10 +866,10 @@
 	</bean>
 
 	<bean id="exercise5" class="domain.Exercise">
-		<property name="name" value="Exercise 5" />
+		<property name="name" value="Barbell incline bench press with bar" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle5" />
+		<property name="muscle" ref="muscle6" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup3" />
@@ -859,7 +880,7 @@
 	</bean>
 
 	<bean id="exercise6" class="domain.Exercise">
-		<property name="name" value="Exercise 6" />
+		<property name="name" value="Barbell Bench Press" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -873,10 +894,10 @@
 	</bean>
 
 	<bean id="exercise7" class="domain.Exercise">
-		<property name="name" value="Exercise 7" />
-		<property name="repetitions" value="10" />
+		<property name="name" value="Dumbbell Shoulder Press" />
+		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle7" />
+		<property name="muscle" ref="muscle11" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup4" />
@@ -887,10 +908,10 @@
 	</bean>
 
 	<bean id="exercise8" class="domain.Exercise">
-		<property name="name" value="Exercise 8" />
-		<property name="repetitions" value="18" />
-		<property name="cycles" value="2" />
-		<property name="muscle" ref="muscle8" />
+		<property name="name" value="Front Dumbbell Raise" />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle11" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup4" />
@@ -901,10 +922,10 @@
 	</bean>
 
 	<bean id="exercise9" class="domain.Exercise">
-		<property name="name" value="Exercise 9" />
+		<property name="name" value="Triceps Pushdown" />
 		<property name="repetitions" value="2" />
 		<property name="cycles" value="10" />
-		<property name="muscle" ref="muscle9" />
+		<property name="muscle" ref="muscle8" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup5" />
@@ -915,10 +936,10 @@
 	</bean>
 
 	<bean id="exercise10" class="domain.Exercise">
-		<property name="name" value="Exercise 10" />
-		<property name="repetitions" value="10" />
+		<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
+		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle10" />
+		<property name="muscle" ref="muscle8" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup5" />
@@ -929,10 +950,10 @@
 	</bean>
 
 	<bean id="exercise11" class="domain.Exercise">
-		<property name="name" value="Exercise 11" />
-		<property name="repetitions" value="20" />
-		<property name="cycles" value="2" />
-		<property name="muscle" ref="muscle11" />
+		<property name="name" value="Crunches" />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup6" />
@@ -943,10 +964,10 @@
 	</bean>
 
 	<bean id="exercise12" class="domain.Exercise">
-		<property name="name" value="Exercise 12" />
-		<property name="repetitions" value="10" />
+		<property name="name" value="Upright Barbell Row" />
+		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
-		<property name="muscle" ref="muscle12" />
+		<property name="muscle" ref="muscle10" />
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup6" />
@@ -970,7 +991,7 @@
 	<!-- EXERCISE GROUPS -->
 
 	<bean id="exercisegroup1" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 1" />
+		<property name="name" value="Legs" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise1" />
@@ -987,7 +1008,7 @@
 	</bean>
 
 	<bean id="exercisegroup2" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 2" />
+		<property name="name" value="Back" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise3" />
@@ -1004,7 +1025,7 @@
 	</bean>
 
 	<bean id="exercisegroup3" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 3" />
+		<property name="name" value="Chest" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise5" />
@@ -1021,7 +1042,7 @@
 	</bean>
 
 	<bean id="exercisegroup4" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 4" />
+		<property name="name" value="Shoulder" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise7" />
@@ -1038,7 +1059,7 @@
 	</bean>
 
 	<bean id="exercisegroup5" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 5" />
+		<property name="name" value="Arm" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise9" />
@@ -1055,7 +1076,7 @@
 	</bean>
 
 	<bean id="exercisegroup6" class="domain.ExerciseGroup">
-		<property name="name" value="Exercise Group 6" />
+		<property name="name" value="Abs" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise11" />
@@ -1067,9 +1088,6 @@
 				<ref bean="trainingday6" />
 			</list>
 		</property>
-
-
-
 
 	</bean>
 
@@ -1255,13 +1273,7 @@
 			</list>
 		</property>
 		<property name="sponsor" ref="sponsor2" />
-
-
 	</bean>
-
-
-
-
 
 	<!-- PLANS -->
 
@@ -1410,23 +1422,9 @@
 			<list>
 			</list>
 		</property>
-
-
 	</bean>
 
-
-
-
 	<!-- Other domain beans come here -->
-
-
-
-
-
-
-
-
-
 
 	<!-- COMMENTS -->
 
@@ -1435,7 +1433,6 @@
 		<property name="content" value="Content Comment 1" />
 		<property name="user" ref="customer2" />
 		<property name="plan" ref="plan2" />
-
 	</bean>
 
 	<!-- ISSUES -->
