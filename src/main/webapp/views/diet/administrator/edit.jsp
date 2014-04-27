@@ -40,9 +40,40 @@
 		value="<spring:message code="diet.save" />" />
 
 	<jstl:if test="${diet.id!=0}">
-		<input type="submit" class="btn btn-default" name="delete"
-			value="<spring:message code="diet.delete"/>"
-			onclick="return confirm('<spring:message code="diet.delete.confirm"/>')" />
+		<!-- <input type="submit" class="btn btn-default" data-toggle="modal"
+			data-target="#basicModal" name="delete" value="" /> -->
+		<a class="btn btn-default" data-toggle="modal"
+			data-target="#basicModal"><spring:message code="diet.delete" /></a>
+
+		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
+			aria-labelledby="basicModal" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">
+							<spring:message code="diet.confirm.title" />
+						</h4>
+					</div>
+					<div class="modal-body">
+						<h3>
+							<spring:message code="diet.confirm.body" />
+						</h3>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							<spring:message code="diet.confirm.no" />
+						</button>
+						<button type="submit" name="delete" class="btn btn-primary"
+							onclick="history.back()">
+							<spring:message code="diet.confirm.yes" />
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</jstl:if>
 
 	<input type="button" class="btn btn-default"
