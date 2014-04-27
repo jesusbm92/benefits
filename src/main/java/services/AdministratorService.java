@@ -168,8 +168,6 @@ public class AdministratorService extends UserService {
 		// Vemos que las passwords sean iguales
 		Assert.isTrue(administrator.getUserAccount().getPassword()
 				.equals(administratorForm.getRepeatPassword()));
-		// Vemos si ha aceptado los TOS
-		Assert.isTrue(administratorForm.isTOSAccepted());
 		return administrator;
 	}
 

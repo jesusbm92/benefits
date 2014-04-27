@@ -19,19 +19,10 @@ public class AdministratorForm {
 	private int id;
 	private int version;
 
-	private boolean TOSAccepted;
 	private String repeatPassword;
 
 	public AdministratorForm() {
 		super();
-	}
-
-	public boolean isTOSAccepted() {
-		return TOSAccepted;
-	}
-
-	public void setTOSAccepted(boolean tOSAccepted) {
-		TOSAccepted = tOSAccepted;
 	}
 
 	@Size(min = 5, max = 32)
