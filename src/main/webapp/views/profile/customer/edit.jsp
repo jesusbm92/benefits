@@ -41,7 +41,7 @@
 					<form:hidden path="id" />
 					<form:hidden path="version" />
 					<form:hidden path="userAccount" />
-					<form:hidden path="plan" /> 
+					<form:hidden path="plan" />
 
 
 					<div class="form-group">
@@ -111,7 +111,7 @@
 									class="col-md-3 control-label">
 									<spring:message code="profile.customer.weight" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerWeight" path="weight"
 										class="form-control" />
 								</div>
@@ -122,7 +122,7 @@
 									class="col-md-3 control-label">
 									<spring:message code="profile.customer.bodyFat" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerBodyfat" path="bodyfat"
 										class="form-control" />
 								</div>
@@ -133,7 +133,7 @@
 									class="col-md-3 control-label">
 									<spring:message code="profile.customer.hipMeasure" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerHipMeasure" path="hipMeasure"
 										class="form-control" />
 								</div>
@@ -146,7 +146,7 @@
 									class="col-md-3 col-md-offset-1 control-label">
 									<spring:message code="profile.customer.height" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerHeight" path="height"
 										class="form-control" />
 								</div>
@@ -158,7 +158,7 @@
 									class="col-md-3 col-md-offset-1 control-label">
 									<spring:message code="profile.customer.waistlineMeasure" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerWaistlineMeasure"
 										path="waistlineMeasure" class="form-control" />
 								</div>
@@ -169,7 +169,7 @@
 									class="col-md-3 col-md-offset-1 control-label">
 									<spring:message code="profile.customer.chestMeasure" />
 								</form:label>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<form:input id="cutomerChestMeasure" path="chestMeasure"
 										class="form-control" />
 								</div>
@@ -178,9 +178,13 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-md-offset-5 col-md-3">
+						<div class="col-md-offset-4 col-md-5">
 							<input type="submit" name="save" class="btn btn-default"
 								value="<spring:message code="profile.customer.save" />" />
+
+							<input type="button" class="btn btn-default"
+								value="<spring:message code="profile.customer.cancel"/>"
+								onclick="history.back()" />
 						</div>
 					</div>
 				</form:form>
@@ -239,6 +243,7 @@
 					</div>
 				</form:form>
 			</div>
+
 		</div>
 	</div>
 </div>

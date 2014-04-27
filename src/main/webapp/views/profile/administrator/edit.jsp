@@ -60,9 +60,13 @@
 			</div>
 
 			<div class="form-group">
-				<div class="col-md-offset-5 col-md-3">
+				<div class="col-md-offset-4 col-md-5">
 					<input type="submit" name="save" class="btn btn-default"
 						value="<spring:message code="profile.administrator.save" />" />
+						
+						<input type="button" class="btn btn-default"
+								value="<spring:message code="profile.administrator.cancel"/>"
+								onclick="history.back()" />
 				</div>
 			</div>
 		</form:form>
