@@ -99,6 +99,97 @@
 		</property>
 	</bean>
 
+	<!-- FOODS -->
+
+	<bean id="food1" class="domain.Food">
+		<property name="name" value="Chicken Steak" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount1" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food2" class="domain.Food">
+		<property name="name" value="Orange Juice" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount2" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food3" class="domain.Food">
+		<property name="name" value="Salad" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount3" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food4" class="domain.Food">
+		<property name="name" value="Beef Steak" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount5" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food5" class="domain.Food">
+		<property name="name" value="Milk" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount4" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food6" class="domain.Food">
+		<property name="name" value="Turkey breast" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount6" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food7" class="domain.Food">
+		<property name="name" value="Lentils" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount7" />
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="food8" class="domain.Food">
+		<property name="name" value="Yogurt" />
+		<property name="description" value="Lore ipsum" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount8" />
+			</list>
+		</property>
+
+	</bean>
+
+
 
 	<!-- MEALS -->
 
@@ -319,98 +410,6 @@
 		</property>
 
 	</bean>
-
-	<!-- FOODS -->
-
-	<bean id="food1" class="domain.Food">
-		<property name="name" value="Chicken Steak" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount1" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food2" class="domain.Food">
-		<property name="name" value="Orange Juice" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount2" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food3" class="domain.Food">
-		<property name="name" value="Salad" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount3" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food4" class="domain.Food">
-		<property name="name" value="Beef Steak" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount5" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food5" class="domain.Food">
-		<property name="name" value="Milk" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount4" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food6" class="domain.Food">
-		<property name="name" value="Turkey breast" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount6" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food7" class="domain.Food">
-		<property name="name" value="Lentils" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount7" />
-			</list>
-		</property>
-
-	</bean>
-
-	<bean id="food8" class="domain.Food">
-		<property name="name" value="Yogurt" />
-		<property name="description" value="Lore ipsum" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount8" />
-			</list>
-		</property>
-
-	</bean>
-
-
 
 
 	<!-- AMOUNTS -->
@@ -737,7 +736,7 @@
 
 
 	</bean>
-		<bean id="diet3" class="domain.Diet">
+	<bean id="diet3" class="domain.Diet">
 		<property name="name" value="Diet 3" />
 		<property name="description" value="Lore ipsum 3" />
 		<property name="plans">
@@ -753,8 +752,8 @@
 		</property>
 		<property name="sponsor" ref="sponsor2" />
 	</bean>
-	
-	
+
+
 	<!-- MUSCLES -->
 
 	<bean id="muscle1" class="domain.Muscle">

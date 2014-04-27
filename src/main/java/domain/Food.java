@@ -56,5 +56,15 @@ public class Food extends DomainEntity {
 	public void setAmounts(Collection<Amount> amounts) {
 		this.amounts = amounts;
 	}
+	
+	public void addAmount(Amount amount){
+		amounts.add(amount);
+		amount.setFood(this);
+	}
+	
+	public void removeAmount(Amount amount){
+		amounts.remove(amount);
+		amount.setFood(null);
+	}
 
 }
