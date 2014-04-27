@@ -73,7 +73,7 @@ public class AdministratorExerciseGroupController extends AbstractController {
 
 		ExerciseGroup exerciseGroup = exerciseGroupService.create();
 
-		result = createEditModelAndView(exerciseGroup);
+		result = createCreateModelAndView(exerciseGroup);
 		result.addObject("create", true);
 
 		return result;
@@ -164,6 +164,24 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		result = new ModelAndView("exerciseGroup/administrator/edit");
 		result.addObject("exerciseGroup", exerciseGroup);
 		result.addObject("message", message);
+		result.addObject("exercises", exercises);
+		result.addObject("exerciseSelected", exerciseSelected);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(ExerciseGroup exerciseGroup) {
+		assert exerciseGroup != null;
+		Collection<Exercise> exercises = exerciseService.findAll();
+		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
+		if (exerciseGroup.getId() != 0) {
+			exerciseSelected = exerciseService
+					.findByExerciseGroup(exerciseGroup.getId());
+		}
+
+		ModelAndView result;
+		result = new ModelAndView("exerciseGroup/administrator/create");
+		result.addObject("exerciseGroup", exerciseGroup);
 		result.addObject("exercises", exercises);
 		result.addObject("exerciseSelected", exerciseSelected);
 

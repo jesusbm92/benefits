@@ -76,7 +76,7 @@ public class AdministratorExerciseController extends AbstractController {
 
 		Exercise exercise = exerciseService.create();
 
-		result = createEditModelAndView(exercise);
+		result = createCreateModelAndView(exercise);
 		result.addObject("create", true);
 
 		return result;
@@ -154,6 +154,17 @@ public class AdministratorExerciseController extends AbstractController {
 		result = new ModelAndView("exercise/administrator/edit");
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
+		result.addObject("map", map);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Exercise exercise) {
+		assert exercise != null;
+		Map<String, Integer> map = muscleService.findAllIdName();
+		ModelAndView result;
+		result = new ModelAndView("exercise/administrator/create");
+		result.addObject("exercise", exercise);
 		result.addObject("map", map);
 
 		return result;

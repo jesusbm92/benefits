@@ -29,7 +29,9 @@
 	</form:select>
 	<br>
 
-
+	<form:label path="meals">
+		<spring:message code="day.meals.edit" />
+	</form:label>
 	<form:select multiple="${meals.size()}" items="${meals}" itemLabel="name"
 		id="id" code="day.meal" path="meals" />
 	<br>

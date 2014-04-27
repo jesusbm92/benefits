@@ -89,7 +89,7 @@ public class AdministratorTrainingController extends AbstractController {
 
 		Training training = trainingService.create();
 
-		result = createEditModelAndView(training);
+		result = createCreateModelAndView(training);
 		result.addObject("create", true);
 
 		return result;
@@ -169,6 +169,20 @@ public class AdministratorTrainingController extends AbstractController {
 		result = new ModelAndView("training/administrator/edit");
 		result.addObject("training", training);
 		result.addObject("message", message);
+		result.addObject("trainingDays", trainingDays);
+		result.addObject("sponsors", sponsors);
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(Training training) {
+		assert training != null;
+		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
+		Collection<Sponsor> sponsors = sponsorService.findAll();
+
+		ModelAndView result;
+		result = new ModelAndView("training/administrator/create");
+		result.addObject("training", training);
 		result.addObject("trainingDays", trainingDays);
 		result.addObject("sponsors", sponsors);
 

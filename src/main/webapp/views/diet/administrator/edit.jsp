@@ -25,13 +25,18 @@
 	<acme:textarea path="description" code="diet.description" />
 	<br>
 
-
+	<form:label path="sponsor">
+		<spring:message code="diet.sponsor" />
+	</form:label>
 	<form:select id="sponsors" path="sponsor">
 		<form:option value="0" label="----" />
 		<form:options items="${sponsors }" itemValue="id" itemLabel="name" />
 	</form:select>
 	<br>
 
+	<form:label path="days">
+		<spring:message code="diet.days.edit" />
+	</form:label>
 	<form:select multiple="${days.size()}" items="${days}" itemLabel="name"
 		id="id" code="diet.day" path="days" />
 	<br>

@@ -36,6 +36,12 @@
 
 </display:table>
 
+<a href="day/administrator/create.do"><input
+			class="btn btn-default" type="button"
+			value="<spring:message code="day.create"/>"
+			onclick="self.location.href = day/administrator/create.do" /></a>
+
+
 <input type="button" class="btn btn-default"
 	value="<spring:message code="diet.back"/>" onclick="history.back()" />
 

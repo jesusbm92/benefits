@@ -27,6 +27,10 @@
 	</definition>
 	
 	<definition name="trainingDay/administrator/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit Training Day" />
+		<put-attribute name="body" value="/views/trainingDay/administrator/edit.jsp" />
+	</definition>
+	<definition name="trainingDay/administrator/create" extends="master.page">	
 		<put-attribute name="title" value="Create Training Day" />
 		<put-attribute name="body" value="/views/trainingDay/administrator/edit.jsp" />
 	</definition>

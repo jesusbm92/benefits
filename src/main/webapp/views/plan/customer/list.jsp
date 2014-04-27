@@ -204,4 +204,7 @@ body {
 			</div>
 		</div>
 	</jstl:if>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="plan.cancel"/>" onclick="history.back()" />
+	
 </div>

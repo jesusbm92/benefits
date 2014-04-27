@@ -23,10 +23,8 @@
 
 </display:table>
 
-<a href="welcome/index.do"><input type="button"
-	class="btn btn-sm btn-info"
-	value="<spring:message code="plan.cancel"/>"
-	onclick="self.location.href = welcome/index.do" /></a>
+<input type="button" class="btn btn-default"
+		value="<spring:message code="plan.cancel"/>" onclick="history.back()" />
 
 
 

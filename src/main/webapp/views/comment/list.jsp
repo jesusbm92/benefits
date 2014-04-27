@@ -25,7 +25,7 @@
 </display:table>
 
 
-
+</br>
 <a href="comment/create.do?planId=${plan.id}"><input type="button"
 	class="btn btn-default"
 	value="<spring:message code="comment.create"/>"

@@ -27,7 +27,12 @@
 	</definition>
 	
 	<definition name="exerciseGroup/administrator/edit" extends="master.page">	
-		<put-attribute name="title" value="Create group exercises" />
+		<put-attribute name="title" value="Edit group exercises" />
+		<put-attribute name="body" value="/views/exerciseGroup/administrator/edit.jsp" />
+	</definition>
+			
+	<definition name="exerciseGroup/administrator/create" extends="master.page">	
+		<put-attribute name="title" value="Create new exercise group" />
 		<put-attribute name="body" value="/views/exerciseGroup/administrator/edit.jsp" />
 	</definition>
 	

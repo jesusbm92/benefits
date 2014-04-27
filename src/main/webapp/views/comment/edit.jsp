@@ -22,17 +22,17 @@
 	<acme:textarea code="comment.content" path="content" />
 	<br>
 
-	<input type="submit" name="save" class="btn btn-sm btn-info"
+	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="comment.save" />" />
 
 	<jstl:if test="${!create}">
-		<input type="submit" class="btn btn-sm btn-info" name="delete"
+		<input type="submit" class="btn btn-default" name="delete"
 			value="<spring:message code="comment.delete"/>"
 			onclick="return confirm('<spring:message code="gallery.confirm.delete"/>')" />
 	</jstl:if>
 
 	<a href="comment/list.do?planId=${planId}"><input type="button"
-		class="btn btn-sm btn-info"
+		class="btn btn-default"
 		value="<spring:message code="comment.cancel"/>" id="cancelar"
 		name="cancelar" onclick="self.location.href = comment/list.do?planId=${planId}" /></a>
 

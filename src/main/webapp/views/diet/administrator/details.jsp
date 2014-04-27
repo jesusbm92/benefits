@@ -76,11 +76,12 @@
 
 
 	</div>
+	<input type="button" class="btn btn-default"
+	value="<spring:message code="diet.back"/>" onclick="history.back()" />
+	
 </div>
 
 
-<input type="button" class="btn btn-default"
-	value="<spring:message code="diet.back"/>" onclick="history.back()" />
 
 
 

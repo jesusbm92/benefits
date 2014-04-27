@@ -80,6 +80,8 @@
 									code="master.page.admin.dietAsigned" /></a></li>
 						<li><a href="diet/administrator/listFree.do"><spring:message
 									code="master.page.admin.dietFree" /></a></li>
+						<li><a href="day/administrator/list.do"><spring:message
+									code="master.page.admin.listDay" /></a></li>
 						<li><a href="day/administrator/create.do"><spring:message
 									code="master.page.admin.createDay" /></a></li>
 						<li><a href="meal/administrator/list.do"><spring:message

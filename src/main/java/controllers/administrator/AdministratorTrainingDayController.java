@@ -77,7 +77,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 
 		TrainingDay trainingDay = trainingDayService.create();
 
-		result = createEditModelAndView(trainingDay);
+		result = createCreateModelAndView(trainingDay);
 		result.addObject("create", true);
 
 		return result;
@@ -169,6 +169,28 @@ public class AdministratorTrainingDayController extends AbstractController {
 		result = new ModelAndView("trainingDay/administrator/edit");
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("message", message);
+		result.addObject("exerciseGroups", exerciseGroups);
+		result.addObject("days", Days.values());
+
+		return result;
+	}
+
+	protected ModelAndView createCreateModelAndView(TrainingDay trainingDay) {
+		assert trainingDay != null;
+		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
+				.findAll();
+
+		// Collection<Days> days = new ArrayList<Days>();
+		// days.add("MONDAY");
+		// days.add("TUESDAY");
+		// days.add("WEDNESDAY");
+		// days.add("THURSDAY");
+		// days.add("FRIDAY");
+		// days.add("SATURDAY");
+		// days.add("SUNDAY");
+		ModelAndView result;
+		result = new ModelAndView("trainingDay/administrator/create");
+		result.addObject("trainingDay", trainingDay);
 		result.addObject("exerciseGroups", exerciseGroups);
 		result.addObject("days", Days.values());
 
