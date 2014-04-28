@@ -63,9 +63,9 @@ public class AdministratorAmountController {
 
 		ModelAndView result;
 
-		Amount amount = amountService.create();
+		Amount amount = amountService.create(mealId);
 
-		result = createCreateModelAndView(amount, mealId, null);
+		result = createCreateModelAndView(amount, null);
 
 		return result;
 	}
@@ -85,8 +85,7 @@ public class AdministratorAmountController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Amount amount, @RequestParam int mealId,
-			BindingResult binding) {
+	public ModelAndView save(@Valid Amount amount,BindingResult binding) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -99,7 +98,7 @@ public class AdministratorAmountController {
 			try {
 				amountService.save(amount);
 				result = new ModelAndView("redirect:listDetails.do?mealId="
-						+ mealId);
+						+ amount.getMeal().getId());
 			} catch (Throwable oops) {
 				if (amount.getId() == 0) {
 					result = createCreateModelAndView(amount,
@@ -116,14 +115,13 @@ public class AdministratorAmountController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
-	public ModelAndView delete(@ModelAttribute Amount amount,
-			@RequestParam int mealId, BindingResult bindingResult) {
+	public ModelAndView delete(@ModelAttribute Amount amount, BindingResult bindingResult) {
 		ModelAndView result;
 
 		try {
 			amountService.delete(amount);
 			result = new ModelAndView("redirect:listDetails.do?mealId="
-					+ mealId);
+					+ amount.getMeal().getId());
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
 				result = createEditModelAndView(amount, "amount.error");
@@ -145,12 +143,11 @@ public class AdministratorAmountController {
 		return result;
 	}
 
-	protected ModelAndView createCreateModelAndView(Amount amount, int mealId,
-			String message) {
+	protected ModelAndView createCreateMealModelAndView(Amount amount,String message) {
 		assert amount != null;
 
 		ModelAndView result;
-		amount.setMeal(mealService.findOne(mealId));
+		amount.setMeal(mealService.findOne(amount.getId()));
 		result = createCreateModelAndView(amount, null);
 		result.addObject("message", message);
 		result.addObject("create", true);

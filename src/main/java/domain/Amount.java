@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 @Access(AccessType.PROPERTY)
 public class Amount extends DomainEntity {
-	private int quantity;
+	private Integer quantity;
 	private String measure;
 
 	// relationship
@@ -27,11 +27,12 @@ public class Amount extends DomainEntity {
 	}
 
 	@Min(0)
-	public int getQuantity() {
+	@NotNull
+	public Integer getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 

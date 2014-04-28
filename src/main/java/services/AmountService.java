@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 
 import repositories.AmountRepository;
 import domain.Amount;
+import domain.Meal;
 
 @Transactional
 @Service
@@ -23,6 +24,9 @@ public class AmountService {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private MealService mealService;
 
 	// Constructors --------------------------
 	public AmountService() {
@@ -35,8 +39,11 @@ public class AmountService {
 	 * 
 	 * @return Amount amount
 	 */
-	public Amount create() {
+	public Amount create(int mealId) {
 		Amount amount = new Amount();
+		Meal meal = mealService.findOne(mealId);
+		amount.setMeal(meal);
+		
 
 		return amount;
 	}

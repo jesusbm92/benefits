@@ -9,8 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="amount/administrator/edit.do?mealId=${param.mealId}"
-	modelAttribute="amount">
+<form:form action="amount/administrator/edit.do" modelAttribute="amount">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
