@@ -180,11 +180,10 @@
 					<div class="form-group">
 						<div class="col-md-offset-4 col-md-5">
 							<input type="submit" name="save" class="btn btn-default"
-								value="<spring:message code="profile.customer.save" />" />
-
-							<input type="button" class="btn btn-default"
+								value="<spring:message code="profile.customer.save" />" /> <input
+								type="button" class="btn btn-default"
 								value="<spring:message code="profile.customer.cancel"/>"
-								onclick="history.back()" />
+								onclick="self.location.href = welcome/index.do" />
 						</div>
 					</div>
 				</form:form>

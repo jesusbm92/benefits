@@ -36,7 +36,9 @@
 			<form:form action="j_spring_security_check"
 				modelAttribute="credentials" role="form">
 				<fieldset>
-					<h2>Please Sign In</h2>
+					<h2>
+						<spring:message code="security.login.signin" />
+					</h2>
 					<hr class="colorgraph">
 					<div class="form-group">
 						<spring:message code="security.username" var="username" />
@@ -68,7 +70,7 @@
 								value="<spring:message code="security.login" />">
 						</div>
 					</div>
-					<br/>
+					<br />
 					<p class="text-center">
 						<spring:message code="security.login.noaccount" />
 						<a href="register/registerCustomer.do"><spring:message

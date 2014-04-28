@@ -18,25 +18,28 @@
 			<spring:message code="trainingDay.name.${row.name}" />
 		</display:column>
 		<display:column titleKey="trainingDay.edit">
-			<a
-				href="trainingDay/administrator/edit.do?trainingDayId=${row.id}"><input type="button"
-					class="btn btn-default" value="<spring:message
-				code="trainingDay.edit" />"/>
-			</a>
+			<a href="trainingDay/administrator/edit.do?trainingDayId=${row.id}"><input
+				type="button" class="btn btn-default"
+				value="<spring:message
+				code="trainingDay.edit" />" /> </a>
 		</display:column>
 		<display:column titleKey="trainingDay.exerciseGroups">
 			<a
-				href="exerciseGroup/administrator/listExerciseGroup.do?trainingDayId=${row.id}"><input type="button"
-					class="btn btn-default" value="<spring:message
-				code="trainingDay.exerciseGroups" />"/>
+				href="exerciseGroup/administrator/listExerciseGroup.do?trainingDayId=${row.id}"><input
+				type="button" class="btn btn-default"
+				value="<spring:message
+				code="trainingDay.exerciseGroups" />" />
 			</a>
 		</display:column>
-		
+
 	</display:table>
-	
+
 	<a href="trainingDay/administrator/create.do"><input type="button"
-					class="btn btn-default"
-					value="<spring:message code="trainingDay.create"/>"
-					onclick="self.location.href = trainingDay/administrator/create.do" /></a>
-	
+		class="btn btn-default"
+		value="<spring:message code="trainingDay.create"/>"
+		onclick="self.location.href = trainingDay/administrator/create.do" /></a>
+	<input type="button" class="btn btn-default"
+		value="<spring:message code="trainingDay.cancel"/>"
+		onclick="self.location.href = training/administrator/list.do" />
+
 </div>

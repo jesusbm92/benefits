@@ -42,6 +42,9 @@
 					value="<spring:message code="training.create"/>"
 					onclick="self.location.href = training/administrator/create.do" /></a>
 			</jstl:if>
+			<input type="button" class="btn btn-default"
+				value="<spring:message code="training.cancel"/>"
+				onclick="self.location.href = plan/administrator/list.do" />
 		</div>
 	</div>
 </div>

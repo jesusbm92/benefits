@@ -196,15 +196,17 @@ body {
 			<br /> <br /> <br />
 		</div>
 		<div class="row">
-			<div class="col-md-2 col-md-offset-5">
+			<div class="col-md-4 col-md-offset-5">
 				<a href="plan/customer/request.do"><input type="button"
 					class="btn btn-default"
 					value="<spring:message code="plan.request"/>"
-					onclick="self.location.href = plan/customer/request.do" /></a>
+					onclick="self.location.href = plan/customer/request.do" /></a> <input
+					type="button" class="btn btn-default"
+					value="<spring:message code="plan.cancel"/>"
+					onclick="self.location.href = welcome/index.do" />
 			</div>
 		</div>
 	</jstl:if>
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="plan.cancel"/>" onclick="history.back()" />
-	
+
+
 </div>

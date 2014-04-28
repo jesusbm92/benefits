@@ -42,15 +42,16 @@
 					value="<spring:message code="exercise.create"/>"
 					onclick="self.location.href = exercise/administrator/create.do" /></a>
 			</jstl:if>
-<%-- 
+			<%-- 
 			<jstl:if test="${other }">
 				<a href="exerciseGroup/administrator/list.do" type="button"> <spring:message
 						code="exercise.cancel" />
 				</a>
 			</jstl:if> --%>
 			<input type="button" class="btn btn-default"
-		value="<spring:message code="exercise.cancel"/>" onclick="history.back()" />
-			
+				value="<spring:message code="exercise.cancel"/>"
+				onclick="self.location.href = exerciseGroup/administrator/list.do" />
+
 
 		</div>
 	</div>

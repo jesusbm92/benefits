@@ -44,7 +44,8 @@
 	</security:authorize>
 
 	<input type="button" class="btn btn-default"
-		value="<spring:message code="meal.back"/>" onclick="history.back()" />
+		value="<spring:message code="meal.back"/>"
+		onclick="self.location.href = day/administrator/list.do" />
 
 </div>
 

@@ -62,11 +62,10 @@
 			<div class="form-group">
 				<div class="col-md-offset-4 col-md-5">
 					<input type="submit" name="save" class="btn btn-default"
-						value="<spring:message code="profile.administrator.save" />" />
-						
-						<input type="button" class="btn btn-default"
-								value="<spring:message code="profile.administrator.cancel"/>"
-								onclick="history.back()" />
+						value="<spring:message code="profile.administrator.save" />" /> <input
+						type="button" class="btn btn-default"
+						value="<spring:message code="profile.administrator.cancel"/>"
+						onclick="self.location.href = welcome/index.do" />
 				</div>
 			</div>
 		</form:form>
@@ -81,7 +80,8 @@
 			modelAttribute="cpForm" role="form" class="form-horizontal">
 			<div class="form-group">
 				<form:label for="administratorCurrentPassword"
-					path="currentPassword" class="col-md-3 col-md-offset-1 control-label">
+					path="currentPassword"
+					class="col-md-3 col-md-offset-1 control-label">
 					<spring:message code="profile.administrator.currentPassword" />
 				</form:label>
 				<div class="col-md-4">
@@ -96,18 +96,20 @@
 					<spring:message code="profile.administrator.password" />
 				</form:label>
 				<div class="col-md-4">
-					<form:input type="password" id="administratorNewPassword" path="newPassword"
-						class="form-control" />
+					<form:input type="password" id="administratorNewPassword"
+						path="newPassword" class="form-control" />
 				</div>
 				<form:errors path="newPassword" cssClass="error" />
 			</div>
 			<div class="form-group">
 				<form:label for="administratorNewPasswordConfirmation"
-					path="newPasswordConfirmation" class="col-md-3 col-md-offset-1 control-label">
+					path="newPasswordConfirmation"
+					class="col-md-3 col-md-offset-1 control-label">
 					<spring:message code="profile.administrator.passwordRepeat" />
 				</form:label>
 				<div class="col-md-4">
-					<form:input type="password" id="administratorNewPasswordConfirmation"
+					<form:input type="password"
+						id="administratorNewPasswordConfirmation"
 						path="newPasswordConfirmation" class="form-control" />
 				</div>
 				<form:errors path="newPasswordConfirmation" cssClass="error" />

@@ -24,23 +24,25 @@
 					<spring:message code="plan.goal.${row.goal}" />
 				</display:column>
 				<display:column>
-					<a href="comment/list.do?planId=${row.id}"> <input type="button" class="btn btn-default"
-				value= "<spring:message code="plan.comment" />" />
+					<a href="comment/list.do?planId=${row.id}"> <input
+						type="button" class="btn btn-default"
+						value="<spring:message code="plan.comment" />" />
 					</a>
 				</display:column>
 				<display:column>
-					<a href="diet/administrator/details.do?dietId=${row.diet.id}"><input type="button" class="btn btn-default"
-				value= "<spring:message code="plan.showDiet" />" />
-					</a>
+					<a href="diet/administrator/details.do?dietId=${row.diet.id}"><input
+						type="button" class="btn btn-default"
+						value="<spring:message code="plan.showDiet" />" /> </a>
 				</display:column>
 				<display:column>
-					<a href="training/details.do?trainingId=${row.training.id}"><input type="button" class="btn btn-default"
-				value= "<spring:message code="plan.showTraining" />" />
-					</a>
+					<a href="training/details.do?trainingId=${row.training.id}"><input
+						type="button" class="btn btn-default"
+						value="<spring:message code="plan.showTraining" />" /> </a>
 				</display:column>
 				<display:column>
-					<a href="issue/administrator/list.do?planId=${row.id}"> <input type="button" class="btn btn-default"
-				value= "<spring:message code="plan.issue" />" />
+					<a href="issue/administrator/list.do?planId=${row.id}"> <input
+						type="button" class="btn btn-default"
+						value="<spring:message code="plan.issue" />" />
 					</a>
 				</display:column>
 				<display:column>
@@ -64,14 +66,12 @@
 					onclick="self.location.href = plan/administrator/create.do" /></a>
 			</security:authorize>
 
-			<a href="plan/administrator/list.do"><input type="button"
+			<a href="welcome/index.do"><input type="button"
 				class="btn btn-default" value="<spring:message code="plan.cancel"/>"
-				onclick="self.location.href = plan/administrator/list.do" /></a>
+				onclick="self.location.href = welcome/index.do" /></a>
 		</div>
 	</div>
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="plan.cancel"/>" onclick="history.back()" />
-	
+
 </div>
 
 

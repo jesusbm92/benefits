@@ -813,7 +813,7 @@
 	<bean id="muscle12" class="domain.Muscle">
 		<property name="name" value="Abs" />
 	</bean>
-	
+
 	<!-- EXERCISES -->
 
 	<bean id="exercise1" class="domain.Exercise">
@@ -1300,7 +1300,7 @@
 				<ref bean="customer2" />
 			</list>
 		</property>
-		<property name="diet" ref="diet2" />
+		<property name="diet" ref="diet1" />
 		<property name="training" ref="training2" />
 		<property name="comments">
 			<list>
@@ -1311,7 +1311,7 @@
 	</bean>
 
 	<bean id="plan3" class="domain.Plan">
-		<property name="goal" value="KEEP_FIT" />
+		<property name="goal" value="GAIN_MUSCLE_MASS" />
 		<property name="customers">
 			<list>
 			</list>
