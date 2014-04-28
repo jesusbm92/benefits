@@ -34,7 +34,9 @@
 								<form:option value="${var.value}">${var.key}</form:option>
 							</jstl:forEach>
 						</form:select>
+
 					</div>
+					<form:errors path="muscle" cssClass="error" />
 				</div>
 				<br />
 
@@ -75,7 +77,8 @@
 				<jstl:if test="${!create}">
 
 					<a class="btn btn-default" data-toggle="modal"
-						data-target="#basicModal"><spring:message code="exercise.delete" /></a>
+						data-target="#basicModal"><spring:message
+							code="exercise.delete" /></a>
 
 					<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
 						aria-labelledby="basicModal" aria-hidden="true">

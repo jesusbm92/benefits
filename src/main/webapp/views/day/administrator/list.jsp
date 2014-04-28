@@ -39,10 +39,10 @@
 	<a href="day/administrator/create.do"><input
 		class="btn btn-default" type="button"
 		value="<spring:message code="day.create"/>"
-		onclick="self.location.href = day/administrator/create.do" /></a> <input
-		type="button" class="btn btn-default"
-		value="<spring:message code="diet.back"/>"
-		onclick="self.location.href = diet/administrator/list.do" />
+		onclick="self.location.href = day/administrator/create.do" /></a> <a
+		href="diet/administrator/list.do"><input type="button"
+		class="btn btn-default" value="<spring:message code="diet.back"/>"
+		onclick="self.location.href = diet/administrator/list.do" /></a>
 
 </div>
 <!--  Quitar los siguientes comentarios si es necesario crear un dia a partir de la lista de dias de una dieta -->

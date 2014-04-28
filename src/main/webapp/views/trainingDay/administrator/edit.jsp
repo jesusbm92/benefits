@@ -22,10 +22,12 @@
 	<form:select path="name">
 		<form:options items="${days}" />
 	</form:select>
+	<form:errors path="name" cssClass="error" />
 	<br>	
 	
 	<form:label path="exerciseGroups"><spring:message code="trainingDay.exerciseGroups" /></form:label>
 	<form:select multiple="${exerciseGroups.size()}" items="${exerciseGroups}" itemLabel="name" id="id" code="trainingDay.exerciseGroups" path="exerciseGroups"/>
+	<form:errors path="exerciseGroups" cssClass="error" />
 	<br>
 	<br>
 	<input type="submit" name="save" class="btn btn-default"

@@ -52,10 +52,9 @@
 					value="<spring:message code="diet.create"/>"
 					onclick="self.location.href = diet/administrator/create.do" /></a>
 			</security:authorize>
-
-			<input type="button" class="btn btn-default"
-				value="<spring:message code="diet.back"/>"
-				onclick="self.location.href = plan/administrator/list.do" />
+			<a href="plan/administrator/list.do"> <input type="button"
+				class="btn btn-default" value="<spring:message code="diet.back"/>"
+				onclick="self.location.href = plan/administrator/list.do" /></a>
 
 		</div>
 	</div>

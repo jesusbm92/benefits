@@ -27,6 +27,7 @@
 			</form:option>
 		</jstl:forEach>
 	</form:select>
+	<form:errors path="name" cssClass="error" />
 	<br>
 
 	<form:label path="meals">
@@ -34,6 +35,7 @@
 	</form:label>
 	<form:select multiple="${meals.size()}" items="${meals}" itemLabel="name"
 		id="id" code="day.meal" path="meals" />
+		<form:errors path="meals" cssClass="error" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"

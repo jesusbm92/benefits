@@ -22,12 +22,14 @@
 		<spring:message code="amount.quantity" />
 	</form:label>
 	<form:input path="quantity" type="text" />
+	<form:errors path="quantity" cssClass="error" />
 	<br>
 
 	<form:label path="measure">
 		<spring:message code="amount.measure" />
 	</form:label>
 	<form:input path="measure" type="text" />
+	<form:errors path="measure" cssClass="error" />
 	<br>
 
 	<form:label path="food" for="foodId">

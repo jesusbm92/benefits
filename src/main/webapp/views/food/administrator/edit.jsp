@@ -21,6 +21,7 @@
 		<spring:message code="food.name" />
 	</form:label>
 	<form:input path="name" type="text" />
+	<form:errors path="name" cssClass="error" />
 	<br>
 
 	<acme:textarea path="description" code="food.description" />
@@ -33,8 +34,7 @@
 
 
 		<a class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal"><spring:message
-				code="food.delete" /></a>
+			data-target="#basicModal"><spring:message code="food.delete" /></a>
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
 			aria-labelledby="basicModal" aria-hidden="true">

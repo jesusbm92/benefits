@@ -111,7 +111,7 @@ public class AdministratorDayController extends AbstractController {
 		} else {
 			try {
 				dayService.save(day);
-				result = new ModelAndView("welcome/index");
+				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				if (day.getId() == 0) {
 					result = createCreateModelAndView(day, "day.commit.error");

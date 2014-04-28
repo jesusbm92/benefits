@@ -29,6 +29,7 @@
 			</form:option>
 		</jstl:forEach>
 	</form:select>
+	<form:errors path="name" cssClass="error" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"

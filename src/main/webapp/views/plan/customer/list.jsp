@@ -200,10 +200,11 @@ body {
 				<a href="plan/customer/request.do"><input type="button"
 					class="btn btn-default"
 					value="<spring:message code="plan.request"/>"
-					onclick="self.location.href = plan/customer/request.do" /></a> <input
-					type="button" class="btn btn-default"
+					onclick="self.location.href = plan/customer/request.do" /></a><a
+					href="welcome/index.do"> <input type="button"
+					class="btn btn-default"
 					value="<spring:message code="plan.cancel"/>"
-					onclick="self.location.href = welcome/index.do" />
+					onclick="self.location.href = welcome/index.do" /></a>
 			</div>
 		</div>
 	</jstl:if>

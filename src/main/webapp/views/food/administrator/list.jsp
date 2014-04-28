@@ -34,10 +34,9 @@
 			class="btn btn-default" value="<spring:message code="food.create"/>"
 			onclick="self.location.href = food/administrator/create.do" /></a>
 	</security:authorize>
-
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="food.back"/>"
-		onclick="self.location.href = meal/administrator/list.do" />
+	<a href="meal/administrator/list.do"> <input type="button"
+		class="btn btn-default" value="<spring:message code="food.back"/>"
+		onclick="self.location.href = meal/administrator/list.do" /></a>
 
 </div>
 

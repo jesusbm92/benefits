@@ -48,9 +48,10 @@
 						code="exercise.cancel" />
 				</a>
 			</jstl:if> --%>
-			<input type="button" class="btn btn-default"
+			<a href="exerciseGroup/administrator/list.do"> <input
+				type="button" class="btn btn-default"
 				value="<spring:message code="exercise.cancel"/>"
-				onclick="self.location.href = exerciseGroup/administrator/list.do" />
+				onclick="self.location.href = exerciseGroup/administrator/list.do" /></a>
 
 
 		</div>

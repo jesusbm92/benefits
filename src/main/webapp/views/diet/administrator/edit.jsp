@@ -20,6 +20,7 @@
 		<spring:message code="diet.name" />
 	</form:label>
 	<form:input path="name" type="text" />
+	<form:errors path="name" cssClass="error" />
 	<br>
 
 	<acme:textarea path="description" code="diet.description" />
@@ -32,6 +33,7 @@
 		<form:option value="0" label="----" />
 		<form:options items="${sponsors }" itemValue="id" itemLabel="name" />
 	</form:select>
+	<form:errors path="sponsor" cssClass="error" />
 	<br>
 
 	<form:label path="days">
@@ -39,6 +41,7 @@
 	</form:label>
 	<form:select multiple="${days.size()}" items="${days}" itemLabel="name"
 		id="id" code="diet.day" path="days" />
+		<form:errors path="days" cssClass="error" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"

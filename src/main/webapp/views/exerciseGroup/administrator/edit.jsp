@@ -9,29 +9,34 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="exerciseGroup/administrator/edit.do" modelAttribute="exerciseGroup">
+<form:form action="exerciseGroup/administrator/edit.do"
+	modelAttribute="exerciseGroup">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	
+
 	<acme:textbox code="exerciseGroup.name" path="name" />
 	<br>
-	
+
 	<form:label path="exercises">
 		<spring:message code="exerciseGroup.exercises" />
-		</form:label>
-	<form:select multiple="${exercises.size()}" items="${exercises}" itemLabel="name" id="id" code="exerciseGroup.exercises" path="exercises"/>
+	</form:label>
+	<form:select multiple="${exercises.size()}" items="${exercises}"
+		itemLabel="name" id="id" code="exerciseGroup.exercises"
+		path="exercises" />
+	<form:errors path="exercises" cssClass="error" />
 	<br>
 	<br>
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="exerciseGroup.save" />" />
 
 	<jstl:if test="${exerciseGroup.id!=0}">
-			
-			<a class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal"><spring:message code="exerciseGroup.delete" /></a>
+
+		<a class="btn btn-default" data-toggle="modal"
+			data-target="#basicModal"><spring:message
+				code="exerciseGroup.delete" /></a>
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
 			aria-labelledby="basicModal" aria-hidden="true">
@@ -61,11 +66,12 @@
 				</div>
 			</div>
 		</div>
-			
+
 	</jstl:if>
 
 	<input type="button" class="btn btn-default"
-		value="<spring:message code="exerciseGroup.cancel"/>" onclick="history.back()" />
+		value="<spring:message code="exerciseGroup.cancel"/>"
+		onclick="history.back()" />
 
 
 </form:form>

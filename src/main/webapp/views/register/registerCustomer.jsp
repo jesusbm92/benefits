@@ -188,11 +188,12 @@
 		<div class="row">
 			<div class="col-md-4 col-centered">
 				<br /> <input type="submit" name="save" class="btn btn-default"
-					value="<spring:message code="register.save" />" /> <a
+					value="<spring:message code="register.save" />" />
+				<%-- <a
 					href="welcome/index.do"> <input type="button"
 					class="btn btn-default"
 					value="<spring:message code="register.cancel"/>" id="cancelar"
-					name="cancelar" onclick="self.location.href = welcome/index.do" /></a>
+					name="cancelar" onclick="self.location.href = welcome/index.do" /></a> --%>
 				<br />
 			</div>
 		</div>

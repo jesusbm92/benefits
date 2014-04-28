@@ -87,12 +87,12 @@ body {
 			</form:form>
 		</div>
 	</div>
-	<div class="col-md-1 col-centered">
+<%-- 	<div class="col-md-1 col-centered">
 		<a href="welcome/index.do"><input type="button"
 			class="btn btn-md btn-default"
 			value="<spring:message code="register.cancel"/>" id="cancelar"
 			name="cancelar" onclick="self.location.href = welcome/index.do" /></a>
-	</div>
+	</div> --%>
 </div>
 
 <!-- <div class="container"> -->

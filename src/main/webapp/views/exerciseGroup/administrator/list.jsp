@@ -39,9 +39,9 @@
 		type="button" class="btn btn-default"
 		value="<spring:message code="exerciseGroup.create"/>"
 		onclick="self.location.href = exerciseGroup/administrator/create.do" /></a>
-
-	<input type="button" class="btn btn-default"
+	<a href="trainingDay/administrator/list.do"> <input type="button"
+		class="btn btn-default"
 		value="<spring:message code="exerciseGroup.cancel"/>"
-		onclick="self.location.href = trainingDay/administrator/list.do" />
+		onclick="self.location.href = trainingDay/administrator/list.do" /></a>
 
 </div>
