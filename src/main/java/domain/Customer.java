@@ -18,12 +18,12 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 @Access(AccessType.PROPERTY)
 public class Customer extends User {
 
-	private double weight;
-	private double height;
-	private double bodyfat;
-	private double waistlineMeasure;
-	private double hipMeasure;
-	private double chestMeasure;
+	private Double weight;
+	private Double height;
+	private Double bodyfat;
+	private Double waistlineMeasure;
+	private Double hipMeasure;
+	private Double chestMeasure;
 
 	// RelationShip
 	private Plan plan;
@@ -35,7 +35,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getWeight() {
+	public Double getWeight() {
 		return weight;
 	}
 
@@ -44,7 +44,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getHeight() {
+	public Double getHeight() {
 		return height;
 	}
 
@@ -53,7 +53,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getBodyfat() {
+	public Double getBodyfat() {
 		return bodyfat;
 	}
 
@@ -62,7 +62,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getWaistlineMeasure() {
+	public Double getWaistlineMeasure() {
 		return waistlineMeasure;
 	}
 
@@ -71,7 +71,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getHipMeasure() {
+	public Double getHipMeasure() {
 		return hipMeasure;
 	}
 
@@ -80,7 +80,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	public double getChestMeasure() {
+	public Double getChestMeasure() {
 		return chestMeasure;
 	}
 
