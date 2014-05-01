@@ -14,6 +14,8 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
+<%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
+
 
 <style>
 .logo-pos {
@@ -32,10 +34,11 @@
 		<!-- 		<div class="collapse navbar-collapse" -->
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
 		<div class="navbar-header">
-			<a class="brand" href=""><img src="images/logo_navbar.png" style="border: 0; height: 35px; margin-top: 5px; " ></a>
-<!-- 			<a class="navbar-brand" href="#" src="images/benefits-transparente.png">Benefits</a> -->
+			<a class="brand" href=""><img src="images/logo_navbar.png"
+				style="border: 0; height: 35px; margin-top: 5px;"></a>
+			<!-- 			<a class="navbar-brand" href="#" src="images/benefits-transparente.png">Benefits</a> -->
 		</div>
-		
+
 		<ul class="nav navbar-nav">
 			<!-- Do not forget the "fNiv" class for the first level links !! -->
 			<security:authorize access="hasRole('ADMIN')">
@@ -93,15 +96,17 @@
 			</security:authorize>
 
 			<security:authorize access="hasRole('CUSTOMER')">
-				<li class="dropdown"><a class="fNiv" href="plan/customer/list.do"><spring:message
+				<li class="dropdown"><a class="fNiv"
+					href="plan/customer/list.do"><spring:message
 							code="master.page.customer.plans" /></a></li>
 			</security:authorize>
 
 			<security:authorize access="isAnonymous()">
 				<li class="dropdown"><a class="fNiv" href="security/login.do"><spring:message
 							code="master.page.login" /></a></li>
-				<li class="dropdown"><a class="fNiv" href="register/registerCustomer.do"><spring:message
-							code="master.page.guest.register" /></a></li>			
+				<li class="dropdown"><a class="fNiv"
+					href="register/registerCustomer.do"><spring:message
+							code="master.page.guest.register" /></a></li>
 			</security:authorize>
 
 			<security:authorize access="isAuthenticated()">
@@ -116,7 +121,7 @@
 							<li><a href="profile/administrator/edit.do"><spring:message
 										code="master.page.profile.administrator.edit" /></a></li>
 							<li><a href="register/registerAdministrator.do"><spring:message
-										code="master.page.guest.registerAsAdministrator" /></a></li>			
+										code="master.page.guest.registerAsAdministrator" /></a></li>
 						</security:authorize>
 						<security:authorize access="hasRole('CUSTOMER')">
 							<li><a href="profile/customer/edit.do"><spring:message
@@ -137,5 +142,26 @@
 					<li><a href="?language=es">ES</a></li>
 				</ul></li>
 		</ul>
+	</div>
+</div>
+
+<div class="container">
+	<div class="col-md-6 col-centered">
+		<jstl:if test="${message != null}">
+			<br />
+			<div class="alert alert-block alert-danger">
+			<a class="close" data-dismiss="alert">×</a>
+			<h4 class="alert-heading"><spring:message code="master.page.errorOperation" /></h4>
+			<spring:message
+					code="${message}" /></div>
+		</jstl:if>
+		<jstl:if test="${successMessage != null}">
+			<br />
+			<div class="alert alert-block alert-success">
+			<a class="close" data-dismiss="alert">×</a>
+			<h4 class="alert-heading"><spring:message code="master.page.successfulOperation" /></h4>
+			<spring:message
+					code="${successMessage}" /></div>
+		</jstl:if>
 	</div>
 </div>

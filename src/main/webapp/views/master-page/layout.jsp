@@ -85,20 +85,6 @@
 			<tiles:insertAttribute name="title" />
 		</h1>
 		<tiles:insertAttribute name="body" />
-		<div class="container">
-			<div class="col-md-6 col-centered">
-				<jstl:if test="${message != null}">
-					<br />
-					<span class="alert alert-danger"><spring:message
-							code="${message}" /></span>
-				</jstl:if>
-				<jstl:if test="${successMessage != null}">
-					<br />
-					<span class="alert alert-success"><spring:message
-							code="${successMessage}" /></span>
-				</jstl:if>
-			</div>
-		</div>
 	</div>
 	<div>
 		<tiles:insertAttribute name="footer" />
