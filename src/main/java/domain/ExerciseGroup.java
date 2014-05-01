@@ -18,6 +18,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class ExerciseGroup extends DomainEntity {
 
 	private String name;
+	private String description;
 
 	// Relationships
 	private Collection<Exercise> exercises;
@@ -36,6 +37,15 @@ public class ExerciseGroup extends DomainEntity {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@NotBlank
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Valid

@@ -23,6 +23,7 @@ public class Training extends DomainEntity {
 
 	private String name;
 	private int duration;
+	private String description;
 
 	// Relationship
 	private Collection<Plan> plans;
@@ -52,6 +53,15 @@ public class Training extends DomainEntity {
 
 	public void setDuration(int duration) {
 		this.duration = duration;
+	}
+
+	@NotBlank
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Valid

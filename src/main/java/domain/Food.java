@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
@@ -18,6 +19,7 @@ public class Food extends DomainEntity {
 
 	private String name;
 	private String description;
+	private byte[] image;
 
 	// relationShip
 
@@ -44,6 +46,15 @@ public class Food extends DomainEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Lob
+	public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
 	}
 
 	@Valid

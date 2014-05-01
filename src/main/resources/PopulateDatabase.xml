@@ -104,6 +104,7 @@
 	<bean id="food1" class="domain.Food">
 		<property name="name" value="Chicken Steak" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount1" />
@@ -115,6 +116,7 @@
 	<bean id="food2" class="domain.Food">
 		<property name="name" value="Orange Juice" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount2" />
@@ -126,6 +128,7 @@
 	<bean id="food3" class="domain.Food">
 		<property name="name" value="Salad" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount3" />
@@ -137,6 +140,7 @@
 	<bean id="food4" class="domain.Food">
 		<property name="name" value="Beef Steak" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount5" />
@@ -148,6 +152,7 @@
 	<bean id="food5" class="domain.Food">
 		<property name="name" value="Milk" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount4" />
@@ -159,6 +164,7 @@
 	<bean id="food6" class="domain.Food">
 		<property name="name" value="Turkey breast" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount6" />
@@ -181,6 +187,7 @@
 	<bean id="food8" class="domain.Food">
 		<property name="name" value="Yogurt" />
 		<property name="description" value="Lore ipsum" />
+		<property name="image" value=""/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount8" />
@@ -195,6 +202,7 @@
 
 	<bean id="meal1" class="domain.Meal">
 		<property name="name" value="LUNCH" />
+		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
 				<ref bean="day1" />
@@ -210,7 +218,8 @@
 	</bean>
 
 	<bean id="meal2" class="domain.Meal">
-		<property name="name" value="DINNER" />
+		<property name="name" value="TEA_TIME" />
+		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
 				<ref bean="day1" />
@@ -225,7 +234,8 @@
 	</bean>
 
 	<bean id="meal3" class="domain.Meal">
-		<property name="name" value="LUNCH" />
+		<property name="name" value="BREAKFAST" />
+		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
 				<ref bean="day1" />
@@ -241,7 +251,9 @@
 	</bean>
 
 	<bean id="meal4" class="domain.Meal">
-		<property name="name" value="DINNER" />
+		<property name="name" value="MID_MORNING" />
+		<property name="description"
+			value="This meal contains several food to mid morning" />
 		<property name="days">
 			<list>
 				<ref bean="day1" />
@@ -257,6 +269,7 @@
 
 	<bean id="meal5" class="domain.Meal">
 		<property name="name" value="LUNCH" />
+		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
 				<ref bean="day1" />
@@ -273,6 +286,7 @@
 
 	<bean id="meal6" class="domain.Meal">
 		<property name="name" value="DINNER" />
+		<property name="description" value="This meal contains several food to dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day2" />
@@ -286,7 +300,8 @@
 	</bean>
 
 	<bean id="meal7" class="domain.Meal">
-		<property name="name" value="LUNCH" />
+		<property name="name" value="BREAKFAST" />
+		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
 				<ref bean="day2" />
@@ -301,7 +316,9 @@
 	</bean>
 
 	<bean id="meal8" class="domain.Meal">
-		<property name="name" value="DINNER" />
+		<property name="name" value="MID_MORNING" />
+		<property name="description"
+			value="This meal contains several food to mid morning" />
 		<property name="days">
 			<list>
 				<ref bean="day2" />
@@ -317,7 +334,8 @@
 	</bean>
 
 	<bean id="meal9" class="domain.Meal">
-		<property name="name" value="LUNCH" />
+		<property name="name" value="TEA_TIME" />
+		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
 				<ref bean="day2" />
@@ -335,6 +353,7 @@
 
 	<bean id="meal10" class="domain.Meal">
 		<property name="name" value="DINNER" />
+		<property name="description" value="This meal contains several food to dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day2" />
@@ -350,7 +369,8 @@
 	</bean>
 
 	<bean id="meal11" class="domain.Meal">
-		<property name="name" value="LUNCH" />
+		<property name="name" value="BREAKFAST" />
+		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
 				<ref bean="day3" />
@@ -366,7 +386,9 @@
 	</bean>
 
 	<bean id="meal12" class="domain.Meal">
-		<property name="name" value="DINNER" />
+		<property name="name" value="MID_MORNING" />
+		<property name="description"
+			value="This meal contains several food to mid morning" />
 		<property name="days">
 			<list>
 				<ref bean="day3" />
@@ -382,6 +404,7 @@
 
 	<bean id="meal13" class="domain.Meal">
 		<property name="name" value="LUNCH" />
+		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
 				<ref bean="day3" />
@@ -397,7 +420,8 @@
 	</bean>
 
 	<bean id="meal14" class="domain.Meal">
-		<property name="name" value="DINNER" />
+		<property name="name" value="TEA_TIME" />
+		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
 				<ref bean="day3" />
@@ -818,6 +842,8 @@
 
 	<bean id="exercise1" class="domain.Exercise">
 		<property name="name" value="Thigh Adductor" />
+		<property name="description" value="This is a exercise to adductor" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle5" />
@@ -830,6 +856,8 @@
 
 	<bean id="exercise2" class="domain.Exercise">
 		<property name="name" value="Donkey Calf Raise" />
+		<property name="description" value="This is a exercise to calf" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle4" />
@@ -842,6 +870,8 @@
 
 	<bean id="exercise3" class="domain.Exercise">
 		<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
+		<property name="description" value="This is a exercise to neck" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="12" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle9" />
@@ -855,6 +885,8 @@
 
 	<bean id="exercise4" class="domain.Exercise">
 		<property name="name" value="One-Arm Dumbbell Row" />
+		<property name="description" value="This is a exercise to neck" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="5" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle9" />
@@ -867,6 +899,8 @@
 
 	<bean id="exercise5" class="domain.Exercise">
 		<property name="name" value="Barbell incline bench press with bar" />
+		<property name="description" value="This is a exercise to bench" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -881,6 +915,8 @@
 
 	<bean id="exercise6" class="domain.Exercise">
 		<property name="name" value="Barbell Bench Press" />
+		<property name="description" value="This is a exercise to bench" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -895,6 +931,8 @@
 
 	<bean id="exercise7" class="domain.Exercise">
 		<property name="name" value="Dumbbell Shoulder Press" />
+		<property name="description" value="This is a exercise to shoulder" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -909,6 +947,8 @@
 
 	<bean id="exercise8" class="domain.Exercise">
 		<property name="name" value="Front Dumbbell Raise" />
+		<property name="description" value="This is a exercise to shoulder" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -923,6 +963,8 @@
 
 	<bean id="exercise9" class="domain.Exercise">
 		<property name="name" value="Triceps Pushdown" />
+		<property name="description" value="This is a exercise to triceps" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="2" />
 		<property name="cycles" value="10" />
 		<property name="muscle" ref="muscle8" />
@@ -937,6 +979,8 @@
 
 	<bean id="exercise10" class="domain.Exercise">
 		<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
+		<property name="description" value="This is a exercise to triceps" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle8" />
@@ -951,6 +995,8 @@
 
 	<bean id="exercise11" class="domain.Exercise">
 		<property name="name" value="Crunches" />
+		<property name="description" value="This is a exercise to crunches" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -965,6 +1011,8 @@
 
 	<bean id="exercise12" class="domain.Exercise">
 		<property name="name" value="Upright Barbell Row" />
+		<property name="description" value="This is a exercise to arm" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle10" />
@@ -977,6 +1025,8 @@
 
 	<bean id="exercisetest" class="domain.Exercise">
 		<property name="name" value="Exercise Test" />
+		<property name="description" value="This is a exercise to test" />
+		<property name="image" value=""/>
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -992,6 +1042,8 @@
 
 	<bean id="exercisegroup1" class="domain.ExerciseGroup">
 		<property name="name" value="Legs" />
+		<property name="description"
+			value="This exercise group contains several legs exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise1" />
@@ -1009,6 +1061,8 @@
 
 	<bean id="exercisegroup2" class="domain.ExerciseGroup">
 		<property name="name" value="Back" />
+		<property name="description"
+			value="This exercise group contains several back exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise3" />
@@ -1026,6 +1080,8 @@
 
 	<bean id="exercisegroup3" class="domain.ExerciseGroup">
 		<property name="name" value="Chest" />
+		<property name="description"
+			value="This exercise group contains several chest exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise5" />
@@ -1043,6 +1099,8 @@
 
 	<bean id="exercisegroup4" class="domain.ExerciseGroup">
 		<property name="name" value="Shoulder" />
+		<property name="description"
+			value="This exercise group contains several shoulder exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise7" />
@@ -1060,6 +1118,8 @@
 
 	<bean id="exercisegroup5" class="domain.ExerciseGroup">
 		<property name="name" value="Arm" />
+		<property name="description"
+			value="This exercise group contains several arm exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise9" />
@@ -1077,6 +1137,8 @@
 
 	<bean id="exercisegroup6" class="domain.ExerciseGroup">
 		<property name="name" value="Abs" />
+		<property name="description"
+			value="This exercise group contains several abs exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise11" />
@@ -1093,6 +1155,8 @@
 
 	<bean id="exercisegrouptest" class="domain.ExerciseGroup">
 		<property name="name" value="Exercise Group Test" />
+		<property name="description"
+			value="This exercise group contains several test exercises" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise11" />
@@ -1221,6 +1285,8 @@
 
 	<bean id="training1" class="domain.Training">
 		<property name="name" value="Training 1" />
+		<property name="description"
+			value="This training has serveral exercises to keep fit" />
 		<property name="plans">
 			<list>
 				<ref bean="plan1" />
@@ -1241,6 +1307,8 @@
 
 	<bean id="training2" class="domain.Training">
 		<property name="name" value="Training 2" />
+		<property name="description"
+			value="This training has several exercises to gain muscle mass" />
 		<property name="plans">
 			<list>
 				<ref bean="plan2" />
@@ -1261,6 +1329,8 @@
 
 	<bean id="training3" class="domain.Training">
 		<property name="name" value="Trainig delete test" />
+		<property name="description"
+			value="This training has several exercises to lose weight" />
 		<property name="plans">
 			<list>
 			</list>
@@ -1278,7 +1348,13 @@
 	<!-- PLANS -->
 
 	<bean id="plan1" class="domain.Plan">
+		<property name="name" value="Plan to keep fit" />
 		<property name="goal" value="KEEP_FIT" />
+		<property name="description" value="This is a plan to keep fit" />
+		<property name="minWeight" value="65.5" />
+		<property name="maxWeight" value="75.5" />
+		<property name="minBodyFat" value="20.5" />
+		<property name="maxBodyFat" value="25.5" />
 		<property name="customers">
 			<list>
 				<ref bean="customer1" />
@@ -1294,7 +1370,13 @@
 	</bean>
 
 	<bean id="plan2" class="domain.Plan">
+		<property name="name" value="Plan to lose weight" />
 		<property name="goal" value="LOSE_WEIGHT" />
+		<property name="description" value="This is a plan to lose weight" />
+		<property name="minWeight" value="75.5" />
+		<property name="maxWeight" value="105.5" />
+		<property name="minBodyFat" value="40.5" />
+		<property name="maxBodyFat" value="70.5" />
 		<property name="customers">
 			<list>
 				<ref bean="customer2" />
@@ -1311,7 +1393,13 @@
 	</bean>
 
 	<bean id="plan3" class="domain.Plan">
+		<property name="name" value="Plan to gain muscle mass" />
 		<property name="goal" value="GAIN_MUSCLE_MASS" />
+		<property name="description" value="This is a plan to gain muscle mass" />
+		<property name="minWeight" value="70.5" />
+		<property name="maxWeight" value="95.5" />
+		<property name="minBodyFat" value="20.5" />
+		<property name="maxBodyFat" value="25.5" />
 		<property name="customers">
 			<list>
 			</list>

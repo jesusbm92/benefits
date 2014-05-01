@@ -13,12 +13,14 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
 public class Meal extends DomainEntity {
 
 	private Meals name;
+	private String description;
 
 	// RelationShip
 	private Collection<Day> days;
@@ -37,6 +39,15 @@ public class Meal extends DomainEntity {
 
 	public void setName(Meals name) {
 		this.name = name;
+	}
+
+	@NotBlank
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Valid

@@ -11,15 +11,24 @@ import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Access(AccessType.PROPERTY)
 public class Plan extends DomainEntity {
 
+	private String name;
 	private Goals goal;
+	private String description;
+	private Double minWeight;
+	private Double maxWeight;
+	private Double minBodyFat;
+	private Double maxBodyFat;
 
 	// RelationShip
 	private Collection<Issue> issues;
@@ -42,6 +51,65 @@ public class Plan extends DomainEntity {
 
 	public void setGoal(Goals goal) {
 		this.goal = goal;
+	}
+
+	@NotBlank
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@NotBlank
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Min(0)
+	@Digits(integer=3, fraction=2)
+	public Double getMinWeight() {
+		return minWeight;
+	}
+
+	public void setMinWeight(Double minWeight) {
+		this.minWeight = minWeight;
+	}
+	
+	@Min(0)
+	@Digits(integer=3, fraction=2)
+	public Double getMaxWeight() {
+		return maxWeight;
+	}
+
+	
+	public void setMaxWeight(Double maxWeight) {
+		this.maxWeight = maxWeight;
+	}
+	
+	@Min(0)
+	@Digits(integer=3, fraction=2)
+	public Double getMinBodyFat() {
+		return minBodyFat;
+	}
+
+	public void setMinBodyFat(Double minBodyFat) {
+		this.minBodyFat = minBodyFat;
+	}
+
+	@Min(0)
+	@Digits(integer=3, fraction=2)
+	public Double getMaxBodyFat() {
+		return maxBodyFat;
+	}
+
+	public void setMaxBodyFat(Double maxBodyFat) {
+		this.maxBodyFat = maxBodyFat;
 	}
 
 	@Valid

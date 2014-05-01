@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -35,6 +36,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getWeight() {
 		return weight;
 	}
@@ -44,6 +46,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getHeight() {
 		return height;
 	}
@@ -53,6 +56,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getBodyfat() {
 		return bodyfat;
 	}
@@ -62,6 +66,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getWaistlineMeasure() {
 		return waistlineMeasure;
 	}
@@ -71,6 +76,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getHipMeasure() {
 		return hipMeasure;
 	}
@@ -80,6 +86,7 @@ public class Customer extends User {
 	}
 
 	@Min(0)
+	@Digits(integer=3, fraction=2)
 	public double getChestMeasure() {
 		return chestMeasure;
 	}
