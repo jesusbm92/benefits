@@ -45,11 +45,8 @@
 															<spring:message code="training.exercises" />
 														</h4>
 														<jstl:forEach items="${second.exercises }" var="thirt">
-
-															<embed width="420" height="345"
-																src="${thirt.urlYoutube }"
-																type="application/x-shockwave-flash"></embed>
-
+															<iframe width="200" height="200"
+																src="http://www.youtube.com/embed/${thirt.urlYoutube}"></iframe>
 															<p>
 																<spring:message code="training.name" />
 																: ${thirt.name }
