@@ -20,108 +20,115 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<div class="row">
-	<div class="col-md-5 col-md-offset-1">
-		<h2 class="text-center">
-			<spring:message code="profile.administrator.editInfoHeader" />
-		</h2>
-		<br />
-		<form:form action="profile/administrator/edit.do"
-			modelAttribute="administrator" role="form" class="form-horizontal">
-			<form:hidden path="id" />
-			<form:hidden path="version" />
-			<form:hidden path="nationality" />
-			<form:hidden path="name" />
-			<form:hidden path="surname" />
-			<form:hidden path="userAccount" />
 
+<style>
+.colorgraph {
+	height: 5px;
+	border-top: 0;
+	background: #993232;
+	border-radius: 5px;
+}
+</style>
 
-			<div class="form-group">
-				<form:label for="administratorEmail" path="email"
-					class="col-md-3 col-md-offset-1 control-label">
-					<spring:message code="profile.administrator.email" />
-				</form:label>
-				<div class="col-md-4">
-					<form:input id="administratorEmail" path="email"
-						class="form-control" />
-				</div>
-				<form:errors path="email" cssClass="error" />
-			</div>
+<div class="container">
 
-			<div class="form-group">
-				<form:label for="administratorCity" path="city"
-					class="col-md-3 col-md-offset-1 control-label">
-					<spring:message code="profile.administrator.city" />
-				</form:label>
-				<div class="col-md-4">
-					<form:input id="administratorCity" path="city" class="form-control" />
-				</div>
-				<form:errors path="city" cssClass="error" />
-			</div>
+	<div class="row" style="margin-top: 20px">
+		<div
+			class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+			<form:form action="profile/administrator/edit.do"
+				modelAttribute="administrator" role="form">
+				<form:hidden path="id" />
+				<form:hidden path="version" />
+				<form:hidden path="nationality" />
+				<form:hidden path="name" />
+				<form:hidden path="surname" />
+				<form:hidden path="userAccount" />
+				<fieldset>
+					<hr class="colorgraph">
+					<h3>
+						<spring:message code="register.personalInfoHeader" />
+					</h3>
+					<div class="form-group">
+						<div class="form-group">
+							<spring:message code="profile.administrator.email" var="email" />
+							<form:input path="email" type="email" name="email" id="email"
+								class="form-control input-lg" placeholder="${email}" />
+							<form:errors class="error" path="email" />
+						</div>
+					</div>
 
-			<div class="form-group">
-				<div class="col-md-offset-4 col-md-5">
-					<input type="submit" name="save" class="btn btn-default"
-						value="<spring:message code="profile.administrator.save" />" /> <a
-						href="welcome/index.do"><input type="button"
-						class="btn btn-default"
-						value="<spring:message code="profile.administrator.cancel"/>"
-						onclick="self.location.href = welcome/index.do" /></a>
-				</div>
-			</div>
-		</form:form>
-	</div>
+					<div class="form-group">
+						<spring:message code="profile.administrator.city" var="city" />
+						<form:input path="city" type="text" name="city" id="city"
+							class="form-control input-lg" placeholder="${city}" />
+						<form:errors class="error" path="city" />
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<input type="submit" name="save"
+								class="btn btn-lg btn-primary btn-block"
+								value="<spring:message code="profile.customer.save" />" />
+						</div>
+					</div>
+				</fieldset>
+			</form:form>
+			<form:form action="profile/administrator/edit.do"
+				modelAttribute="cpForm" role="form">
 
-	<div class="col-md-5">
-		<h2 class="text-center">
-			<spring:message code="profile.administrator.changePassword" />
-		</h2>
-		<br />
-		<form:form action="profile/administrator/edit.do"
-			modelAttribute="cpForm" role="form" class="form-horizontal">
-			<div class="form-group">
-				<form:label for="administratorCurrentPassword"
-					path="currentPassword"
-					class="col-md-3 col-md-offset-1 control-label">
-					<spring:message code="profile.administrator.currentPassword" />
-				</form:label>
-				<div class="col-md-4">
-					<form:input type="password" id="administratorCurrentPassword"
-						path="currentPassword" class="form-control" />
-				</div>
-				<form:errors path="currentPassword" cssClass="error" />
-			</div>
-			<div class="form-group">
-				<form:label for="administratorNewPassword" path="newPassword"
-					class="col-md-3 col-md-offset-1 control-label">
-					<spring:message code="profile.administrator.password" />
-				</form:label>
-				<div class="col-md-4">
-					<form:input type="password" id="administratorNewPassword"
-						path="newPassword" class="form-control" />
-				</div>
-				<form:errors path="newPassword" cssClass="error" />
-			</div>
-			<div class="form-group">
-				<form:label for="administratorNewPasswordConfirmation"
-					path="newPasswordConfirmation"
-					class="col-md-3 col-md-offset-1 control-label">
-					<spring:message code="profile.administrator.passwordRepeat" />
-				</form:label>
-				<div class="col-md-4">
-					<form:input type="password"
-						id="administratorNewPasswordConfirmation"
-						path="newPasswordConfirmation" class="form-control" />
-				</div>
-				<form:errors path="newPasswordConfirmation" cssClass="error" />
-			</div>
-			<div class="form-group">
-				<div class="col-md-offset-4 col-md-3">
-					<input type="submit" name="changePassword" class="btn btn-default"
-						value="<spring:message code="profile.administrator.changePassword" />" />
-				</div>
-			</div>
-		</form:form>
+				<fieldset>
+					<hr class="colorgraph">
+					<h3>
+						<spring:message code="profile.administrator.changePassword" />
+					</h3>
+					<div class="form-group">
+						<spring:message code="profile.administrator.currentPassword"
+							var="currentPassword" />
+						<form:input path="currentPassword" type="password"
+							name="currentPassword" id="currentPassword"
+							class="form-control input-lg" placeholder="${currentPassword}" />
+						<form:errors class="error" path="currentPassword" />
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-md-6">
+							<div class="form-group">
+								<spring:message code="profile.administrator.password"
+									var="newPassword" />
+								<form:input path="newPassword" type="password"
+									name="newPassword" id="newPassword"
+									class="form-control input-lg" placeholder="${newPassword}" />
+								<form:errors class="error" path="newPassword" />
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-6">
+							<div class="form-group">
+								<spring:message code="profile.administrator.passwordRepeat"
+									var="newPasswordConfirmation" />
+								<form:input path="newPasswordConfirmation" type="password"
+									name="newPasswordConfirmation" id="newPasswordConfirmation"
+									class="form-control input-lg"
+									placeholder="${newPasswordConfirmation}" />
+								<form:errors class="error" path="newPasswordConfirmation" />
+							</div>
+						</div>
+					</div>
+
+					<hr class="colorgraph">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<input type="submit" name="changePassword"
+								class="btn btn-lg btn-primary btn-block"
+								value="<spring:message code="profile.administrator.changePassword" />" />
+						</div>
+					</div>
+					<br />
+				</fieldset>
+			</form:form>
+		</div>
 	</div>
 
 </div>
+
+<br />
+<br />
+<br />
