@@ -63,16 +63,29 @@
 					<form:errors path="description" cssClass="error" />
 				</div>
 
+				<%-- 				<form:label path="image">
+					<spring:message code="exercise.image" />
+				</form:label>
+				<form:input path="image" id="image" type="file" />
+				<form:errors path="image" cssClass="error" />
+
+				<jstl:if test="${exercise.validImage }">
+					<img src="image/showExercise.do?exerciseId=${exercise.id }"
+						style="height: 100px" class="img-thumbnail" />
+				</jstl:if> --%>
+
 				<div class="form-group">
-					<form:label path="image" class="col-sm-2 control-label"
-						for="imageId">
-						<spring:message code="exercise.image" />
+					<form:label path="urlYoutube" class="col-sm-2 control-label"
+						for="urlId">
+						<spring:message code="exercise.urlYoutube" />
 					</form:label>
 					<div class="col-sm-5">
-						<form:input path="image" id="imageId" class="form-control"
-							type="file" />
+						<form:input path="urlYoutube" id="urlId" class="form-control" />
+						<a
+							href="http://www.youtube.com/results?search_query=${exercise.name }"
+							type="button" target="_blank">Add</a>
 					</div>
-					<form:errors path="image" cssClass="error" />
+					<form:errors path="urlYoutube" cssClass="error" />
 				</div>
 
 				<div class="form-group">

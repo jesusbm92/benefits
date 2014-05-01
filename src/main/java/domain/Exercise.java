@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -23,6 +24,7 @@ public class Exercise extends DomainEntity {
 	private Integer repetitions;
 	private Integer cycles;
 	private String description;
+	private String urlYoutube;
 	private byte[] image;
 
 	// Relationships
@@ -80,6 +82,11 @@ public class Exercise extends DomainEntity {
 		this.image = image;
 	}
 
+	@Transient
+	public boolean getValidImage() {
+		return !(this.getImage() == null || this.getImage().length == 0);
+	}
+
 	@Valid
 	@NotNull
 	@ManyToOne(optional = false)
@@ -89,6 +96,14 @@ public class Exercise extends DomainEntity {
 
 	public void setMuscle(Muscle muscle) {
 		this.muscle = muscle;
+	}
+
+	public String getUrlYoutube() {
+		return urlYoutube;
+	}
+
+	public void setUrlYoutube(String urlYoutube) {
+		this.urlYoutube = urlYoutube;
 	}
 
 	@Valid

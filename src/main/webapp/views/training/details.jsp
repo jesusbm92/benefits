@@ -17,7 +17,8 @@
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapseOne${first.id }"><spring:message code="training.day.${first.name}" /></a>
+								href="#collapseOne${first.id }"><spring:message
+									code="training.day.${first.name}" /></a>
 						</h4>
 					</div>
 					<div id="collapseOne${first.id}" class="panel-collapse collapse ">
@@ -40,13 +41,24 @@
 													<div class="panel-body">
 
 
-														<h4><spring:message code="training.exercises"/></h4>
+														<h4>
+															<spring:message code="training.exercises" />
+														</h4>
 														<jstl:forEach items="${second.exercises }" var="thirt">
 
-															<p><spring:message code="training.name"/>: ${thirt.name }</p>
+															<embed width="420" height="345"
+																src="${thirt.urlYoutube }"
+																type="application/x-shockwave-flash"></embed>
+
+															<p>
+																<spring:message code="training.name" />
+																: ${thirt.name }
+															</p>
 															<ul>
-																<li><spring:message code="training.repetition"/>: ${thirt.repetitions }</li>
-																<li><spring:message code="training.cycles"/>: ${thirt.cycles }</li>
+																<li><spring:message code="training.repetition" />:
+																	${thirt.repetitions }</li>
+																<li><spring:message code="training.cycles" />:
+																	${thirt.cycles }</li>
 															</ul>
 														</jstl:forEach>
 													</div>
@@ -65,7 +77,8 @@
 
 	</div>
 	<input type="button" class="btn btn-default"
-		value="<spring:message code="training.cancel"/>" onclick="history.back()" />
+		value="<spring:message code="training.cancel"/>"
+		onclick="history.back()" />
 </div>
 
 

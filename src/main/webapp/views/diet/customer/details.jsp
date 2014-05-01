@@ -47,7 +47,7 @@
 														<jstl:forEach items="${second.amounts }" var="thirt">
 
 															<jstl:if test="${thirt.food.image != null }">
-																<img src="image/show.do?foodId=${thirt.food.id }"
+																<img src="image/showFood.do?foodId=${thirt.food.id }"
 																	style="height: 50px" class="img-thumbnail" />
 															</jstl:if>
 															<p>

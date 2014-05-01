@@ -104,7 +104,7 @@
 	<bean id="food1" class="domain.Food">
 		<property name="name" value="Chicken Steak" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount1" />
@@ -116,7 +116,7 @@
 	<bean id="food2" class="domain.Food">
 		<property name="name" value="Orange Juice" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount2" />
@@ -128,7 +128,7 @@
 	<bean id="food3" class="domain.Food">
 		<property name="name" value="Salad" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount3" />
@@ -140,7 +140,7 @@
 	<bean id="food4" class="domain.Food">
 		<property name="name" value="Beef Steak" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount5" />
@@ -152,7 +152,7 @@
 	<bean id="food5" class="domain.Food">
 		<property name="name" value="Milk" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount4" />
@@ -164,7 +164,7 @@
 	<bean id="food6" class="domain.Food">
 		<property name="name" value="Turkey breast" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount6" />
@@ -187,7 +187,7 @@
 	<bean id="food8" class="domain.Food">
 		<property name="name" value="Yogurt" />
 		<property name="description" value="Lore ipsum" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="amounts">
 			<list>
 				<ref bean="amount8" />
@@ -843,7 +843,8 @@
 	<bean id="exercise1" class="domain.Exercise">
 		<property name="name" value="Thigh Adductor" />
 		<property name="description" value="This is a exercise to adductor" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle5" />
@@ -857,7 +858,8 @@
 	<bean id="exercise2" class="domain.Exercise">
 		<property name="name" value="Donkey Calf Raise" />
 		<property name="description" value="This is a exercise to calf" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle4" />
@@ -871,7 +873,8 @@
 	<bean id="exercise3" class="domain.Exercise">
 		<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
 		<property name="description" value="This is a exercise to neck" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="12" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle9" />
@@ -886,7 +889,8 @@
 	<bean id="exercise4" class="domain.Exercise">
 		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="description" value="This is a exercise to neck" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="5" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle9" />
@@ -900,7 +904,7 @@
 	<bean id="exercise5" class="domain.Exercise">
 		<property name="name" value="Barbell incline bench press with bar" />
 		<property name="description" value="This is a exercise to bench" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -916,7 +920,8 @@
 	<bean id="exercise6" class="domain.Exercise">
 		<property name="name" value="Barbell Bench Press" />
 		<property name="description" value="This is a exercise to bench" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -932,7 +937,8 @@
 	<bean id="exercise7" class="domain.Exercise">
 		<property name="name" value="Dumbbell Shoulder Press" />
 		<property name="description" value="This is a exercise to shoulder" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -948,7 +954,8 @@
 	<bean id="exercise8" class="domain.Exercise">
 		<property name="name" value="Front Dumbbell Raise" />
 		<property name="description" value="This is a exercise to shoulder" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -964,7 +971,8 @@
 	<bean id="exercise9" class="domain.Exercise">
 		<property name="name" value="Triceps Pushdown" />
 		<property name="description" value="This is a exercise to triceps" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="2" />
 		<property name="cycles" value="10" />
 		<property name="muscle" ref="muscle8" />
@@ -980,7 +988,8 @@
 	<bean id="exercise10" class="domain.Exercise">
 		<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
 		<property name="description" value="This is a exercise to triceps" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle8" />
@@ -996,7 +1005,8 @@
 	<bean id="exercise11" class="domain.Exercise">
 		<property name="name" value="Crunches" />
 		<property name="description" value="This is a exercise to crunches" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -1012,7 +1022,8 @@
 	<bean id="exercise12" class="domain.Exercise">
 		<property name="name" value="Upright Barbell Row" />
 		<property name="description" value="This is a exercise to arm" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle10" />
@@ -1026,7 +1037,8 @@
 	<bean id="exercisetest" class="domain.Exercise">
 		<property name="name" value="Exercise Test" />
 		<property name="description" value="This is a exercise to test" />
-		<property name="image" value=""/>
+		<property name="image" value="" />
+		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />

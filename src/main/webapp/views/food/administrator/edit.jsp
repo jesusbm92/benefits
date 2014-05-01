@@ -35,7 +35,7 @@
 	<form:errors path="image" cssClass="error" />
 
 	<jstl:if test="${food.validImage }">
-		<img src="image/show.do?foodId=${food.id }" style="height: 100px"
+		<img src="image/showFood.do?foodId=${food.id }" style="height: 100px"
 			class="img-thumbnail" />
 	</jstl:if>
 
