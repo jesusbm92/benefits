@@ -8,6 +8,7 @@ import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
@@ -55,6 +56,11 @@ public class Food extends DomainEntity {
 
 	public void setImage(byte[] image) {
 		this.image = image;
+	}
+
+	@Transient
+	public boolean getValidImage() {
+		return !(this.getImage() == null || this.getImage().length == 0);
 	}
 
 	@Valid

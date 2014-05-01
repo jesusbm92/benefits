@@ -45,6 +45,10 @@
 															<spring:message code="diet.amounts" />
 														</h4>
 														<jstl:forEach items="${second.amounts }" var="thirt">
+															<jstl:if test="${thirt.food.image != null }">
+																<img src="image/show.do?foodId=${thirt.food.id }"
+																	style="height: 50px" class="img-thumbnail" />
+															</jstl:if>
 
 															<p>
 																<spring:message code="diet.food" />
@@ -77,8 +81,8 @@
 
 	</div>
 	<input type="button" class="btn btn-default"
-	value="<spring:message code="diet.back"/>" onclick="history.back()" />
-	
+		value="<spring:message code="diet.back"/>" onclick="history.back()" />
+
 </div>
 
 

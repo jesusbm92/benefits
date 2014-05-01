@@ -9,7 +9,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="food/administrator/edit.do" modelAttribute="food">
+<form:form action="food/administrator/edit.do" modelAttribute="food"
+	enctype="multipart/form-data">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
@@ -26,6 +27,17 @@
 
 	<acme:textarea path="description" code="food.description" />
 	<br>
+
+	<form:label path="image">
+		<spring:message code="food.image" />
+	</form:label>
+	<form:input path="image" id="image" type="file" />
+	<form:errors path="image" cssClass="error" />
+
+	<jstl:if test="${food.validImage }">
+		<img src="image/show.do?foodId=${food.id }" style="height: 100px"
+			class="img-thumbnail" />
+	</jstl:if>
 
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="food.save" />" />

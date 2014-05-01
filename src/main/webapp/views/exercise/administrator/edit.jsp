@@ -15,7 +15,8 @@
 		<div class="col-centered">
 
 			<form:form action="exercise/administrator/edit.do"
-				modelAttribute="exercise" role="form" class="form-horizontal">
+				modelAttribute="exercise" role="form" class="form-horizontal"
+				enctype="multipart/form-data">
 
 				<!-- Poner todos los atributos, los no usados en oculto -->
 
@@ -49,6 +50,31 @@
 					</div>
 					<form:errors path="name" cssClass="error" />
 				</div>
+
+				<div class="form-group">
+					<form:label path="description" class="col-sm-2 control-label"
+						for="descriptionId">
+						<spring:message code="exercise.description" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:textarea path="description" id="descriptionId"
+							class="form-control" />
+					</div>
+					<form:errors path="description" cssClass="error" />
+				</div>
+
+				<div class="form-group">
+					<form:label path="image" class="col-sm-2 control-label"
+						for="imageId">
+						<spring:message code="exercise.image" />
+					</form:label>
+					<div class="col-sm-5">
+						<form:input path="image" id="imageId" class="form-control"
+							type="file" />
+					</div>
+					<form:errors path="image" cssClass="error" />
+				</div>
+
 				<div class="form-group">
 					<form:label path="repetitions" class="col-sm-2 control-label"
 						for="repetitionsId">
