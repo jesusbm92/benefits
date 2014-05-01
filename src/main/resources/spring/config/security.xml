@@ -46,6 +46,8 @@
 		<security:intercept-url pattern="/security/loginFailure.do" access="permitAll" /> 
 
 		<security:intercept-url pattern="/welcome/index.do" access="permitAll" />
+		<security:intercept-url pattern="/about/**" access="permitAll" />
+		<security:intercept-url pattern="/tos/**" access="permitAll" />  
 		
 		<security:intercept-url pattern="/plan/list.do" access="isAuthenticated()" />  
 
