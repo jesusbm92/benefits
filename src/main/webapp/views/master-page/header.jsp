@@ -147,21 +147,33 @@
 
 <div class="container">
 	<div class="col-md-6 col-centered">
-		<jstl:if test="${message != null}">
+	<jstl:choose>
+		<jstl:when test="${message != null}">
 			<br />
+			<br/>
+			<br/>
 			<div class="alert alert-block alert-danger">
 			<a class="close" data-dismiss="alert">×</a>
 			<h4 class="alert-heading"><spring:message code="master.page.errorOperation" /></h4>
 			<spring:message
 					code="${message}" /></div>
-		</jstl:if>
-		<jstl:if test="${successMessage != null}">
+		</jstl:when>
+		<jstl:when test="${successMessage != null}">
 			<br />
+			<br/>
+			<br/>
 			<div class="alert alert-block alert-success">
 			<a class="close" data-dismiss="alert">×</a>
 			<h4 class="alert-heading"><spring:message code="master.page.successfulOperation" /></h4>
 			<spring:message
 					code="${successMessage}" /></div>
-		</jstl:if>
+		</jstl:when>
+		<jstl:otherwise>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+		</jstl:otherwise>
+	</jstl:choose>
 	</div>
 </div>

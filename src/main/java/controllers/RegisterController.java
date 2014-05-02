@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import security.Credentials;
 import services.AdministratorService;
 import services.CustomerService;
 import domain.Administrator;
@@ -118,7 +119,9 @@ public class RegisterController extends AbstractController {
 				Customer customer = this.customerService
 						.reconstruct(customerForm);
 				customerService.save(customer);
-				result = new ModelAndView("redirect:../welcome/index.do");
+				// result = new ModelAndView("redirect:../welcome/index.do");
+				result = createIndexModelAndView("welcome/index.do",
+						"welcome/index");
 			} catch (Throwable oops) {
 				if (oops.getMessage().equals("Passwords are different")) {
 					result = createEditModelAndViewCustomer(customerForm,
@@ -175,6 +178,17 @@ public class RegisterController extends AbstractController {
 		result = new ModelAndView("register/registerCustomer");
 		result.addObject("customerForm", customerForm);
 		result.addObject("message", message);
+		return result;
+	}
+
+	protected ModelAndView createIndexModelAndView(String requestURI, String uri) {
+		ModelAndView result;
+
+		result = new ModelAndView(uri);
+		result.addObject("requestURI", requestURI);
+		result.addObject("successMessage", "welcome.customer.success");
+		result.addObject("credentials", new Credentials());
+
 		return result;
 	}
 }
