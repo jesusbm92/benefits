@@ -94,9 +94,9 @@ public class CommentController extends AbstractController {
 					result = new ModelAndView("redirect:list.do?planId="
 							+ comment.getPlan().getId());
 				} else {
-					result = new ModelAndView(
-							"redirect:/plan/customer/list.do?planId="
-									+ comment.getPlan().getId());
+					result = createListModelAndView("plan/customer/list.do",
+							comment.getPlan(), "plan/customer/list", true,
+							new Comment());
 				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(comment, "comment.commit.error");
@@ -160,6 +160,21 @@ public class CommentController extends AbstractController {
 		result.addObject("comments", comments);
 		result.addObject("plan", plan);
 		result.addObject("requestURI", requestURI);
+
+		return result;
+	}
+
+	protected ModelAndView createListModelAndView(String requestURI, Plan plan,
+			String uri, Boolean res, Comment newComment) {
+		ModelAndView result;
+
+		result = new ModelAndView(uri);
+		result.addObject("plan", plan);
+		result.addObject("comments", plan.getComments());
+		result.addObject("requestURI", requestURI);
+		result.addObject("res", res);
+		result.addObject("newComment", newComment);
+		result.addObject("successMessage", "plan.comment.success");
 
 		return result;
 	}
