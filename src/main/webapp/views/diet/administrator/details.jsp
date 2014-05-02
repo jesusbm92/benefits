@@ -45,24 +45,35 @@
 															<spring:message code="diet.amounts" />
 														</h4>
 														<jstl:forEach items="${second.amounts }" var="thirt">
-															<jstl:if test="${thirt.food.image != null }">
-																<img src="image/showFood.do?foodId=${thirt.food.id }"
-																	style="height: 50px" class="img-thumbnail" />
-															</jstl:if>
+															<div class="panel panel-default">
+																<div class="panel-body">
+																	<div class="row">
+																		<div class="col-sm-5">
+																			<p>
+																				<spring:message code="diet.food" />
+																				: ${thirt.food.name }
+																			</p>
+																			<ul>
+																				<li><spring:message code="diet.description" />:
+																					${thirt.food.description }</li>
+																				<li><spring:message code="diet.quantity" />:
+																					${thirt.quantity }</li>
+																				<li><spring:message code="diet.measure" />:
+																					${thirt.measure }</li>
 
-															<p>
-																<spring:message code="diet.food" />
-																: ${thirt.food.name }
-															</p>
-															<ul>
-																<li><spring:message code="diet.description" />:
-																	${thirt.food.description }</li>
-																<li><spring:message code="diet.quantity" />:
-																	${thirt.quantity }</li>
-																<li><spring:message code="diet.measure" />:
-																	${thirt.measure }</li>
+																			</ul>
+																		</div>
+																		<jstl:if test="${thirt.food.validImage}">
+																			<div class="pull-right">
+																				<img
+																					src="image/showFood.do?foodId=${thirt.food.id }"
+																					style="height: 50px" class="img-thumbnail" />
+																			</div>
+																		</jstl:if>
+																	</div>
+																</div>
+															</div>
 
-															</ul>
 														</jstl:forEach>
 													</div>
 												</div>
