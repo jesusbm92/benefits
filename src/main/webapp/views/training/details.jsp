@@ -39,24 +39,33 @@
 												<div id="collapseOne${second.id}${first.id}"
 													class="panel-collapse collapse">
 													<div class="panel-body">
-
-
 														<h4>
 															<spring:message code="training.exercises" />
 														</h4>
 														<jstl:forEach items="${second.exercises }" var="thirt">
-															<iframe width="200" height="200"
-																src="http://www.youtube.com/embed/${thirt.urlYoutube}"></iframe>
-															<p>
-																<spring:message code="training.name" />
-																: ${thirt.name }
-															</p>
-															<ul>
-																<li><spring:message code="training.repetition" />:
-																	${thirt.repetitions }</li>
-																<li><spring:message code="training.cycles" />:
-																	${thirt.cycles }</li>
-															</ul>
+															<div class="panel panel-default">
+																<div class="panel-body">
+																	<div class="row">
+																		<div class="col-sm-5">
+																			<p>
+																				<spring:message code="training.name" />
+																				: ${thirt.name }
+																			</p>
+
+																			<ul>
+																				<li><spring:message code="training.repetition" />:
+																					${thirt.repetitions }</li>
+																				<li><spring:message code="training.cycles" />:
+																					${thirt.cycles }</li>
+																			</ul>
+																		</div>
+																		<div class="pull-right">
+																			<iframe width="200" height="200"
+																				src="http://www.youtube.com/embed/${thirt.urlYoutube}"></iframe>
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</jstl:forEach>
 													</div>
 												</div>

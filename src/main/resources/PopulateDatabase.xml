@@ -844,7 +844,7 @@
 		<property name="name" value="Thigh Adductor" />
 		<property name="description" value="This is a exercise to adductor" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="aB67P2N-iHE" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle5" />
@@ -859,7 +859,7 @@
 		<property name="name" value="Donkey Calf Raise" />
 		<property name="description" value="This is a exercise to calf" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="aHOudYjiB9A" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle4" />
@@ -874,7 +874,7 @@
 		<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
 		<property name="description" value="This is a exercise to neck" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="prmYGzw1Tds" />
 		<property name="repetitions" value="12" />
 		<property name="cycles" value="2" />
 		<property name="muscle" ref="muscle9" />
@@ -890,7 +890,7 @@
 		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="description" value="This is a exercise to neck" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="KR8onsa5jFQ" />
 		<property name="repetitions" value="5" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle9" />
@@ -905,6 +905,7 @@
 		<property name="name" value="Barbell incline bench press with bar" />
 		<property name="description" value="This is a exercise to bench" />
 		<property name="image" value="" />
+		<property name="urlYoutube" value="DbFgADa2PL8" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -921,7 +922,7 @@
 		<property name="name" value="Barbell Bench Press" />
 		<property name="description" value="This is a exercise to bench" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="rT7DgCr-3pg" />
 		<property name="repetitions" value="10" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -930,15 +931,13 @@
 				<ref bean="exercisegroup3" />
 			</list>
 		</property>
-
-
 	</bean>
 
 	<bean id="exercise7" class="domain.Exercise">
 		<property name="name" value="Dumbbell Shoulder Press" />
 		<property name="description" value="This is a exercise to shoulder" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="qEwKCR5JCog" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -947,15 +946,13 @@
 				<ref bean="exercisegroup4" />
 			</list>
 		</property>
-
-
 	</bean>
 
 	<bean id="exercise8" class="domain.Exercise">
 		<property name="name" value="Front Dumbbell Raise" />
 		<property name="description" value="This is a exercise to shoulder" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="2ZS1Ae5n90M" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -972,7 +969,7 @@
 		<property name="name" value="Triceps Pushdown" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="2-LAMcpzODU" />
 		<property name="repetitions" value="2" />
 		<property name="cycles" value="10" />
 		<property name="muscle" ref="muscle8" />
@@ -989,7 +986,7 @@
 		<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Ma_SNy-WjwU" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle8" />
@@ -1006,7 +1003,7 @@
 		<property name="name" value="Crunches" />
 		<property name="description" value="This is a exercise to crunches" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Xyd_fa5zoEU" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -1023,7 +1020,7 @@
 		<property name="name" value="Upright Barbell Row" />
 		<property name="description" value="This is a exercise to arm" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="amCU-ziHITM" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle10" />

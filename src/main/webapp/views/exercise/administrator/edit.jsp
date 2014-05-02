@@ -83,7 +83,8 @@
 						<form:input path="urlYoutube" id="urlId" class="form-control" />
 						<a
 							href="http://www.youtube.com/results?search_query=${exercise.name }"
-							type="button" target="_blank">Add</a>
+							type="button" target="_blank"><spring:message
+								code="exercise.addLink" /></a>
 					</div>
 					<form:errors path="urlYoutube" cssClass="error" />
 				</div>
