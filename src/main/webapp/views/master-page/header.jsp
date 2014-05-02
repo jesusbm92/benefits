@@ -154,7 +154,6 @@
 			<br/>
 			<div class="alert alert-block alert-danger">
 			<a class="close" data-dismiss="alert">×</a>
-			<h4 class="alert-heading"><spring:message code="master.page.errorOperation" /></h4>
 			<spring:message
 					code="${message}" /></div>
 		</jstl:when>
@@ -164,7 +163,6 @@
 			<br/>
 			<div class="alert alert-block alert-success">
 			<a class="close" data-dismiss="alert">×</a>
-			<h4 class="alert-heading"><spring:message code="master.page.successfulOperation" /></h4>
 			<spring:message
 					code="${successMessage}" /></div>
 		</jstl:when>
