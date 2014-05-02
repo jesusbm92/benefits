@@ -44,7 +44,7 @@ public class PopulateDatabase {
 			System.out.printf("Reading configuration file `%s'...%n",
 					"PopulateDatabase.xml");
 			populationContext = new ClassPathXmlApplicationContext(
-					"classpath:populateDatabase.xml");
+					"PopulateDatabase.xml");
 
 			System.out.printf("Persisting %d entities...%n%n",
 					populationContext.getBeanDefinitionCount());
