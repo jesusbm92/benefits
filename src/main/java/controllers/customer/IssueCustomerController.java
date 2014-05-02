@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import services.CustomerService;
 import services.IssueService;
 import services.PlanService;
 import controllers.AbstractController;
+import domain.Comment;
 import domain.Issue;
 import domain.Plan;
 
@@ -26,9 +26,6 @@ public class IssueCustomerController extends AbstractController {
 
 	@Autowired
 	private IssueService issueService;
-
-	@Autowired
-	private CustomerService customerService;
 
 	@Autowired
 	private PlanService planService;
@@ -91,9 +88,12 @@ public class IssueCustomerController extends AbstractController {
 		} else {
 			try {
 				issueService.save(issue);
-				result = new ModelAndView(
-						"redirect:/plan/customer/list.do?planId="
-								+ issue.getPlan().getId());
+				// result = new ModelAndView(
+				// "redirect:/plan/customer/list.do?planId="
+				// + issue.getPlan().getId());
+				result = createListModelAndView("plan/customer/list.do",
+						issue.getPlan(), "plan/customer/list", true,
+						new Comment());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(issue, "issue.commit.error");
 			}
@@ -154,6 +154,21 @@ public class IssueCustomerController extends AbstractController {
 		result.addObject("issues", issues);
 		result.addObject("plan", plan);
 		result.addObject("requestURI", requestURI);
+
+		return result;
+	}
+
+	protected ModelAndView createListModelAndView(String requestURI, Plan plan,
+			String uri, Boolean res, Comment newComment) {
+		ModelAndView result;
+
+		result = new ModelAndView(uri);
+		result.addObject("plan", plan);
+		result.addObject("comments", plan.getComments());
+		result.addObject("requestURI", requestURI);
+		result.addObject("res", res);
+		result.addObject("newComment", newComment);
+		result.addObject("successMessage", "plan.issue.success");
 
 		return result;
 	}
