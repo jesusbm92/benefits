@@ -26,8 +26,8 @@
 		<p>
 			Copyright &copy; <fmt:formatDate value="${date}"
 					pattern="yyyy" /> Benefits Co. Inc. by Infit Solutions
-			· <a href="#"><spring:message code="master.page.footer.about"/></a>
-			 · <a href="#"><spring:message code="master.page.footer.terms" /></a> 
+			· <a href="about/about.do"><spring:message code="master.page.footer.about"/></a>
+			 · <a href="tos/tos.do"><spring:message code="master.page.footer.terms" /></a> 
 		</p>
 		<%-- <p class="text-center"><b>Copyright &copy; <fmt:formatDate value="${date}" pattern="yyyy" /> Benefits Co. Inc. by Infit Solutions</b></p> --%>
 	</footer>

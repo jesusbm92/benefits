@@ -1,5 +1,6 @@
 package forms;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -121,6 +122,7 @@ public class CustomerForm {
 		this.version = version;
 	}
 
+	@NotNull
 	@NotBlank
 	public String getRepeatPassword() {
 		return repeatPassword;
@@ -130,6 +132,7 @@ public class CustomerForm {
 		this.repeatPassword = repeatPassword;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getWeight() {
 		return weight;
@@ -139,6 +142,7 @@ public class CustomerForm {
 		this.weight = weight;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getHeight() {
 		return height;
@@ -148,6 +152,7 @@ public class CustomerForm {
 		this.height = height;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getBodyfat() {
 		return bodyfat;
@@ -157,6 +162,7 @@ public class CustomerForm {
 		this.bodyfat = bodyfat;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getWaistlineMeasure() {
 		return waistlineMeasure;
@@ -166,6 +172,7 @@ public class CustomerForm {
 		this.waistlineMeasure = waistlineMeasure;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getHipMeasure() {
 		return hipMeasure;
@@ -175,6 +182,7 @@ public class CustomerForm {
 		this.hipMeasure = hipMeasure;
 	}
 
+	@NotNull
 	@Range(min = 0)
 	public Double getChestMeasure() {
 		return chestMeasure;

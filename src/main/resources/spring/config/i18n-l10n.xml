@@ -40,6 +40,8 @@
 		<value>/views/food/administrator/messages</value>
 		<value>/views/day/administrator/messages</value>
 		<value>/views/diet/customer/messages</value>
+		<value>/views/tos/messages</value>
+		<value>/views/about/messages</value>
 		
 
 	</util:list>

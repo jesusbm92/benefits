@@ -39,6 +39,8 @@
 		<value>/views/trainingDay/administrator/tiles.xml</value>
 		<value>/views/training/tiles.xml</value>
 		<value>/views/diet/customer/tiles.xml</value>
+		<value>/views/about/tiles.xml</value>
+		<value>/views/tos/tiles.xml</value>
 
 	</util:list>
 

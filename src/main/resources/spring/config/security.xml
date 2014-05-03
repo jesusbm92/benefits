@@ -22,6 +22,7 @@
 	<!-- Access control -->
 
 	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/**" requires-channel="https"/>
 		<security:intercept-url pattern="/" access="permitAll"
 			requires-channel="https" />
 
@@ -98,7 +99,7 @@
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/training/details.do"
 			access="isAuthenticated()" />
-		<security:intercept-url pattern="/image/show.do"
+		<security:intercept-url pattern="/image/**"
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/**"
 			access="hasRole('NONE')" />

@@ -19,12 +19,12 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 @Access(AccessType.PROPERTY)
 public class Customer extends User {
 
-	private double weight;
-	private double height;
-	private double bodyfat;
-	private double waistlineMeasure;
-	private double hipMeasure;
-	private double chestMeasure;
+	private Double weight;
+	private Double height;
+	private Double bodyfat;
+	private Double waistlineMeasure;
+	private Double hipMeasure;
+	private Double chestMeasure;
 
 	// RelationShip
 	private Plan plan;
@@ -36,8 +36,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getWeight() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getWeight() {
 		return weight;
 	}
 
@@ -46,8 +46,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getHeight() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getHeight() {
 		return height;
 	}
 
@@ -56,8 +56,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getBodyfat() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getBodyfat() {
 		return bodyfat;
 	}
 
@@ -66,8 +66,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getWaistlineMeasure() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getWaistlineMeasure() {
 		return waistlineMeasure;
 	}
 
@@ -76,8 +76,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getHipMeasure() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getHipMeasure() {
 		return hipMeasure;
 	}
 
@@ -86,8 +86,8 @@ public class Customer extends User {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
-	public double getChestMeasure() {
+	@Digits(integer = 3, fraction = 2)
+	public Double getChestMeasure() {
 		return chestMeasure;
 	}
 

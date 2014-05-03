@@ -43,7 +43,7 @@
 				</p>
 				<br />
 				<p>
-					<a class="btn btn-primary btn-lg" role="button"><spring:message
+					<a href="about/about.do" class="btn btn-primary btn-lg" role="button"><spring:message
 							code="welcome.button.whats" /></a>
 				</p>
 			</div>
