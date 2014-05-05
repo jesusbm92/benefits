@@ -29,6 +29,9 @@ public class CustomerService extends UserService {
 	// Supporting Services-----------------------
 	private Md5PasswordEncoder encoder;
 
+	@Autowired
+	private PlanService planService;
+
 	// Constructors --------------------------
 
 	public CustomerService() {
@@ -86,6 +89,14 @@ public class CustomerService extends UserService {
 		Assert.notNull(customer);
 
 		customerRepository.save(customer);
+
+		Plan plan = customer.getPlan();
+		if (plan.getMinBodyFat() > customer.getBodyfat()
+				|| plan.getMaxBodyFat() < customer.getBodyfat()
+				|| plan.getMinWeight() > customer.getWeight()
+				|| plan.getMaxWeight() < customer.getWeight()) {
+			planService.request(plan.getGoal(), customer);
+		}
 	}
 
 	public void savePassword(Customer customer, String password) {
