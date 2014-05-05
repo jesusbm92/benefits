@@ -20,6 +20,9 @@
 
 		<acme:textbox code="training.name" path="name" />
 		<br>
+		<acme:textarea code="training.description" path="description" />
+		<br>
+		
 		<acme:textbox code="training.duration" path="duration" />
 		<br>
 

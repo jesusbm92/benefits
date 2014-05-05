@@ -20,6 +20,9 @@
 					sortable="true" />
 				<display:column property="duration" titleKey="training.duration"
 					sortable="true" />
+				<display:column property="description" titleKey="training.description"
+					sortable="true" />
+
 				<display:column property="sponsor.name" titleKey="training.sponsor"
 					sortable="true" />
 				<display:column>
