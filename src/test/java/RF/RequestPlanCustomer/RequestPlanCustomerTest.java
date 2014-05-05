@@ -41,10 +41,8 @@ public class RequestPlanCustomerTest extends GlobalTest {
 		authenticate("felix");
 
 		Plan plan = planService.findOne(68);
-
-		planService.request(plan.getGoal());
-
 		Customer customer = customerService.findByPrincipal();
+		planService.request(plan.getGoal(), customer);
 
 		Assert.isTrue(!(customer.getPlan() == null));
 
@@ -57,9 +55,9 @@ public class RequestPlanCustomerTest extends GlobalTest {
 
 		Plan plan = planService.findOne(68);
 
-		planService.request(plan.getGoal());
-
 		Customer customer = customerService.findByPrincipal();
+
+		planService.request(plan.getGoal(), customer);
 
 		Assert.isTrue((customer.getPlan() == null));
 
@@ -71,9 +69,9 @@ public class RequestPlanCustomerTest extends GlobalTest {
 
 		Plan plan = planService.findOne(68);
 
-		planService.request(plan.getGoal());
-
 		Customer customer = customerService.findByPrincipal();
+
+		planService.request(plan.getGoal(), customer);
 
 		Assert.isTrue((customer.getPlan() == null));
 

@@ -1482,9 +1482,9 @@
 			</list>
 		</property>
 		<property name="userAccount" ref="userAccount8" />
-		<property name="weight" value="100" />
+		<property name="weight" value="80" />
 		<property name="height" value="180" />
-		<property name="bodyfat" value="40" />
+		<property name="bodyfat" value="50" />
 		<property name="waistlineMeasure" value="180" />
 		<property name="hipMeasure" value="130" />
 		<property name="chestMeasure" value="130" />

@@ -131,7 +131,7 @@ public class PlanService {
 		return plans;
 	}
 
-	public void request(Goals goal) {
+	public void request(Goals goal, Customer customer) {
 
 		// Se comprueba que el goal que se pasa como parámetro está
 		// dentro
@@ -140,7 +140,7 @@ public class PlanService {
 				|| Goals.KEEP_FIT.equals(goal)
 				|| Goals.LOSE_WEIGHT.equals(goal));
 
-		Collection<Plan> plansForGoal = planRepository.findPlansByGoal(goal);
+		Collection<Plan> plansForGoal = planRepository.findPlansByGoal(goal, customer.getBodyfat(), customer.getWeight());
 		ArrayList<Plan> planList = new ArrayList<Plan>(plansForGoal);
 		Plan selectedPlan = planList.get((int) Math.random() * planList.size());
 		customerService.changeCustomerPlan(selectedPlan);

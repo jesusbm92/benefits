@@ -136,8 +136,9 @@ public class CustomerPlanController extends AbstractController {
 		} else {
 
 			try {
+				Customer customer = customerService.findByPrincipal();
 				Goals goal = plan.getGoal();
-				planService.request(goal);
+				planService.request(goal, customer);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				result = new ModelAndView("redirect:request.do");
