@@ -63,7 +63,7 @@
 					<form:errors path="description" cssClass="error" />
 				</div>
 
-				<%-- 				<form:label path="image">
+				<form:label path="image">
 					<spring:message code="exercise.image" />
 				</form:label>
 				<form:input path="image" id="image" type="file" />
@@ -72,7 +72,7 @@
 				<jstl:if test="${exercise.validImage }">
 					<img src="image/showExercise.do?exerciseId=${exercise.id }"
 						style="height: 100px" class="img-thumbnail" />
-				</jstl:if> --%>
+				</jstl:if> 
 
 				<div class="form-group">
 					<form:label path="urlYoutube" class="col-sm-2 control-label"
