@@ -7,6 +7,7 @@
 <%@taglib prefix="security"
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
+<%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@page import="domain.Plan"%>
 <%@page import="domain.Comment"%>
 <%@page import="java.util.Collection"%>
@@ -61,6 +62,8 @@ body {
 	border-top-right-radius: 0px;
 }
 </style>
+
+<h1 class="text-center"><spring:message code="plan.myplan" /></h1>
 
 <div class="container">
 

@@ -76,9 +76,9 @@
 		<tiles:insertAttribute name="header" />
 	</div>
 	<div>
-		<h1 class="text-center">
-			<tiles:insertAttribute name="title" />
-		</h1>
+<!-- 		<h1 class="text-center"> -->
+<%-- 			<tiles:insertAttribute name="title" /> --%>
+<!-- 		</h1> -->
 		<tiles:insertAttribute name="body" />
 	</div>
 	<div>
