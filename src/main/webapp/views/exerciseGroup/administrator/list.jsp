@@ -16,6 +16,9 @@
 
 		<display:column property="name" titleKey="exerciseGroup.name"
 			sortable="true" />
+		<display:column property="description"
+					titleKey="exerciseGroup.description" sortable="true" />
+				
 		<display:column>
 			<a
 				href="exerciseGroup/administrator/edit.do?exerciseGroupId=${row.id}">

@@ -31,6 +31,9 @@
 	</form:select>
 	<form:errors path="name" cssClass="error" />
 	<br>
+	<acme:textbox code="meal.description" path="description" />
+	<br>
+	
 
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="meal.save" />" />
