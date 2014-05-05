@@ -29,6 +29,8 @@
 }
 </style>
 
+<h1 class="text-center"><spring:message code="profile.customer.edit" /></h1>
+
 <div class="container">
 
 	<div class="row" style="margin-top: 20px">
