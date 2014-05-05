@@ -123,14 +123,14 @@ public class AdministratorFoodController {
 	}
 
 	// Other bussiness method
-	
+
 	@InitBinder
 	protected void initBinder(HttpServletRequest request,
 			ServletRequestDataBinder binder) throws ServletException {
 		binder.registerCustomEditor(byte[].class,
 				new ByteArrayMultipartFileEditor());
 	}
-	
+
 	protected ModelAndView createEditModelAndView(Food food) {
 		assert food != null;
 
