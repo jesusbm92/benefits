@@ -81,9 +81,9 @@ public class RegisterController extends AbstractController {
 				Administrator administrator = this.administratorService
 						.reconstruct(administratorForm);
 				administratorService.save(administrator);
-
-				result = new ModelAndView("redirect:../welcome/index.do");
-
+				// result = new ModelAndView("redirect:../welcome/index.do");
+				result = createIndexModelAndView("welcome/index.do",
+						"welcome/index", "welcome.administrator.success");
 			} catch (Throwable oops) {
 				if (oops.getMessage() == "Passwords are different") {
 					result = createEditModelAndViewAdministrator(
@@ -93,8 +93,7 @@ public class RegisterController extends AbstractController {
 							administratorForm, "register.tos.error");
 				} else if (oops instanceof DataIntegrityViolationException) {
 					result = createEditModelAndViewAdministrator(
-							administratorForm,
-							"register.duplicated.customername");
+							administratorForm, "register.duplicated.username");
 				} else {
 					result = createEditModelAndViewAdministrator(
 							administratorForm, "register.commit.error");
@@ -121,7 +120,7 @@ public class RegisterController extends AbstractController {
 				customerService.save(customer);
 				// result = new ModelAndView("redirect:../welcome/index.do");
 				result = createIndexModelAndView("welcome/index.do",
-						"welcome/index");
+						"welcome/index", "welcome.customer.success");
 			} catch (Throwable oops) {
 				if (oops.getMessage().equals("Passwords are different")) {
 					result = createEditModelAndViewCustomer(customerForm,
@@ -131,7 +130,7 @@ public class RegisterController extends AbstractController {
 							"register.tos.error");
 				} else if (oops instanceof DataIntegrityViolationException) {
 					result = createEditModelAndViewCustomer(customerForm,
-							"register.duplicated.customername");
+							"register.duplicated.username");
 				} else {
 					result = createEditModelAndViewCustomer(customerForm,
 							"register.commit.error");
@@ -181,12 +180,13 @@ public class RegisterController extends AbstractController {
 		return result;
 	}
 
-	protected ModelAndView createIndexModelAndView(String requestURI, String uri) {
+	protected ModelAndView createIndexModelAndView(String requestURI,
+			String uri, String successMessage) {
 		ModelAndView result;
 
 		result = new ModelAndView(uri);
 		result.addObject("requestURI", requestURI);
-		result.addObject("successMessage", "welcome.customer.success");
+		result.addObject("successMessage", successMessage);
 		result.addObject("credentials", new Credentials());
 
 		return result;
