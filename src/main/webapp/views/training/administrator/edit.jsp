@@ -9,6 +9,10 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
+
+<h1 class="text-center"><spring:message code="training.details" /></h1>
+<br/>
+
 <div class="container">
 	<form:form action="training/administrator/edit.do"
 		modelAttribute="training">
