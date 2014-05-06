@@ -49,6 +49,8 @@
 						<li class="arrow"></li>
 						<li><a href="plan/administrator/list.do"><spring:message
 									code="master.page.admin.plansAll" /></a></li>
+						<li><a href="sponsor/administrator/list.do"><spring:message
+									code="master.page.admin.sponsors" /></a></li>
 						<li><a href="plan/administrator/create.do"><spring:message
 									code="plan.create" /></a></li>
 					</ul></li>
@@ -147,31 +149,31 @@
 
 <div class="container">
 	<div class="col-md-6 col-centered">
-	<jstl:choose>
-		<jstl:when test="${message != null}">
-			<br />
-			<br/>
-			<br/>
-			<div class="alert alert-block alert-danger">
-			<a class="close" data-dismiss="alert">×</a>
-			<spring:message
-					code="${message}" /></div>
-		</jstl:when>
-		<jstl:when test="${successMessage != null}">
-			<br />
-			<br/>
-			<br/>
-			<div class="alert alert-block alert-success">
-			<a class="close" data-dismiss="alert">×</a>
-			<spring:message
-					code="${successMessage}" /></div>
-		</jstl:when>
-		<jstl:otherwise>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-		</jstl:otherwise>
-	</jstl:choose>
+		<jstl:choose>
+			<jstl:when test="${message != null}">
+				<br />
+				<br />
+				<br />
+				<div class="alert alert-block alert-danger">
+					<a class="close" data-dismiss="alert">×</a>
+					<spring:message code="${message}" />
+				</div>
+			</jstl:when>
+			<jstl:when test="${successMessage != null}">
+				<br />
+				<br />
+				<br />
+				<div class="alert alert-block alert-success">
+					<a class="close" data-dismiss="alert">×</a>
+					<spring:message code="${successMessage}" />
+				</div>
+			</jstl:when>
+			<jstl:otherwise>
+				<br />
+				<br />
+				<br />
+				<br />
+			</jstl:otherwise>
+		</jstl:choose>
 	</div>
 </div>

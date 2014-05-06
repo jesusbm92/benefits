@@ -42,7 +42,8 @@
 		<value>/views/diet/customer/messages</value>
 		<value>/views/tos/messages</value>
 		<value>/views/about/messages</value>
-		
+		<value>/views/sponsor/administrator/messages</value>
+
 
 	</util:list>
 

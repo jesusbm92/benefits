@@ -22,7 +22,7 @@
 	<!-- Access control -->
 
 	<security:http auto-config="true" use-expressions="true">
-		<security:intercept-url pattern="/" access="permitAll"/>
+		<security:intercept-url pattern="/" access="permitAll" />
 
 		<security:intercept-url pattern="/favicon.ico"
 			access="permitAll" />
@@ -79,7 +79,8 @@
 			access="hasRole('ADMIN')" />
 		<security:intercept-url pattern="/trainingDay/administrator/**"
 			access="hasRole('ADMIN')" />
-
+		<security:intercept-url pattern="/sponsor/administrator/**"
+			access="hasRole('ADMIN')" />
 
 		<security:intercept-url pattern="/issue/customer/**"
 			access="hasRole('CUSTOMER')" />
@@ -101,10 +102,10 @@
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/**"
 			access="hasRole('NONE')" />
-			
+
 		<security:intercept-url pattern="/about/**"
 			access="permitAll" />
-			
+
 		<security:intercept-url pattern="/tos/**"
 			access="permitAll" />
 
