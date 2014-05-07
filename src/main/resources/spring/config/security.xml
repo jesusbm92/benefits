@@ -98,6 +98,8 @@
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/training/details.do"
 			access="isAuthenticated()" />
+		<security:intercept-url pattern="/training/export.do"
+			access="isAuthenticated()" />
 		<security:intercept-url pattern="/image/**"
 			access="isAuthenticated()" />
 		<security:intercept-url pattern="/**"

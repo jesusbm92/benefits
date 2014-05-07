@@ -88,15 +88,6 @@ public class TrainingService {
 
 	// Other business methods ----------------
 
-	public Collection<Training> findAllTrainingAsigned() {
-		Assert.isTrue(administratorService.IAmAnAdmin());
-		return this.trainingRepository.findTrainingAsigned();
-	}
-
-	public Collection<Training> findAllNotTrainingAsigned() {
-		Assert.isTrue(administratorService.IAmAnAdmin());
-		return trainingRepository.findTrainingNotAsigned();
-	}
 	// Assertions
 
 }

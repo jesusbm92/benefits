@@ -84,7 +84,12 @@
 	</div>
 	<input type="button" class="btn btn-default"
 		value="<spring:message code="training.cancel"/>"
-		onclick="history.back()" />
+		onclick="history.back()" /> <a
+		href="training/export.do?trainingId=${training.id}"><input
+		type="image" class="btn btn-default pull-right" id="export" name="export"
+		src="images/pdf_icon.gif"
+		onclick="self.location.href = training/export.do?trainingId=${training.id}" /></a>
+
 </div>
 
 

@@ -61,11 +61,6 @@
 						<li class="arrow"></li>
 						<li><a href="training/administrator/list.do"><spring:message
 									code="master.page.admin.trainingAll" /></a></li>
-						<li><a href="training/administrator/listAsignTraining.do"><spring:message
-									code="master.page.admin.trainingAsigned" /></a></li>
-						<li><a
-							href="training/administrator/listNotTrainingAsigned.do"><spring:message
-									code="master.page.admin.trainingFree" /></a></li>
 						<li><a href="exercise/administrator/list.do"><spring:message
 									code="master.page.admin.listExercise" /></a></li>
 						<li><a href="exerciseGroup/administrator/list.do"><spring:message

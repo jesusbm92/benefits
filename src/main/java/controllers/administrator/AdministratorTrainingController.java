@@ -48,30 +48,6 @@ public class AdministratorTrainingController extends AbstractController {
 	// Listing
 	// -------------------------------------------------------------------
 
-	@RequestMapping("/listAsignTraining")
-	public ModelAndView listAsignTraining() {
-		ModelAndView result;
-		String uri = "training/administrator/listAsignTraining";
-		String requestURI = "training/administrator/listAsignTraining.do";
-		Collection<Training> trainings = trainingService
-				.findAllTrainingAsigned();
-		result = createListModelAndView(requestURI, trainings, uri);
-
-		return result;
-	}
-
-	@RequestMapping("/listNotTrainingAsigned")
-	public ModelAndView listNotTrainingAsigned() {
-		ModelAndView result;
-		String uri = "training/administrator/listNotTrainingAsigned";
-		String requestURI = "training/administrator/listNotTrainingAsigned.do";
-		Collection<Training> trainings = trainingService
-				.findAllNotTrainingAsigned();
-		result = createListModelAndView(requestURI, trainings, uri);
-
-		return result;
-	}
-
 	@RequestMapping("/list")
 	public ModelAndView list() {
 		ModelAndView result;
