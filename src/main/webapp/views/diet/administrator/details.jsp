@@ -84,18 +84,16 @@
 							</jstl:forEach>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</jstl:forEach>
-
-
 	</div>
+	
 	<input type="button" class="btn btn-default"
 		value="<spring:message code="diet.back"/>" onclick="history.back()" />
 
 	<a href="diet/administrator/export.do?dietId=${diet.id}"><input
-		type="image" class="btn btn-default pull-right" id="export"
+		type="image" class="pull-right" id="export"
 		name="export" src="images/pdf_icon.gif"
 		onclick="self.location.href = diet/administrator/export.do?dietId=${diet.id}" /></a>
 
