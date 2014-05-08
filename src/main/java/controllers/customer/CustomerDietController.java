@@ -82,10 +82,9 @@ public class CustomerDietController extends AbstractController {
 
 	private void exportToPdf(Diet diet) {
 		try {
-			OutputStream file = new FileOutputStream(
-					new File(
-							"C://Documents and Settings/Student/My Documents/diet.pdf"),
-					true);
+			OutputStream file = new FileOutputStream(new File(
+					"C://Documents and Settings/Student/My Documents/diet"
+							+ diet.getName() + ".pdf"), true);
 
 			Document document = new Document();
 			PdfWriter.getInstance(document, file);

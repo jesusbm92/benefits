@@ -95,16 +95,6 @@ public class DietService {
 
 	// Other business methods ----------------
 
-	public Collection<Diet> findAssigned() {
-		Assert.isTrue(userService.IAmAnAdmin());
-		return dietRepository.dietsAssigned();
-	}
-
-	public Collection<Diet> findFree() {
-		Assert.isTrue(userService.IAmAnAdmin());
-		return dietRepository.dietsFree();
-	}
-
 	public Collection<Diet> findDietsByDay(int dayId) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return dietRepository.findDietsByDay(dayId);

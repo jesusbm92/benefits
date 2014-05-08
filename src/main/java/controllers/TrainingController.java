@@ -87,10 +87,9 @@ public class TrainingController extends AbstractController {
 
 	private void exportToPdf(Training training) {
 		try {
-			OutputStream file = new FileOutputStream(
-					new File(
-							"C://Documents and Settings/Student/My Documents/training.pdf"),
-					true);
+			OutputStream file = new FileOutputStream(new File(
+					"C://Documents and Settings/Student/My Documents/diet"
+							+ training.getName() + ".pdf"), true);
 
 			Document document = new Document();
 			PdfWriter.getInstance(document, file);

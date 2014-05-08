@@ -77,28 +77,6 @@ public class AdministratorDietController extends AbstractController {
 		return result;
 	}
 
-	@RequestMapping("/listAssigned")
-	public ModelAndView listAssigned() {
-		ModelAndView result;
-		String uri = "diet/administrator/listAssigned";
-		String requestURI = "diet/administrator/listAssigned.do";
-		Collection<Diet> diets = dietService.findAssigned();
-		result = createListModelAndView(requestURI, diets, uri);
-
-		return result;
-	}
-
-	@RequestMapping("/listFree")
-	public ModelAndView listFree() {
-		ModelAndView result;
-		String uri = "diet/administrator/listFree";
-		String requestURI = "diet/administrator/listFree.do";
-		Collection<Diet> diets = dietService.findFree();
-		result = createListModelAndView(requestURI, diets, uri);
-
-		return result;
-	}
-
 	@RequestMapping("/listDietsByDay")
 	public ModelAndView listDietsByDay(@RequestParam int dayId) {
 		ModelAndView result;
@@ -126,10 +104,9 @@ public class AdministratorDietController extends AbstractController {
 
 	private void exportToPdf(Diet diet) {
 		try {
-			OutputStream file = new FileOutputStream(
-					new File(
-							"C://Documents and Settings/Student/My Documents/diet.pdf"),
-					true);
+			OutputStream file = new FileOutputStream(new File(
+					"C://Documents and Settings/Student/My Documents/diet"
+							+ diet.getName() + ".pdf"), true);
 
 			Document document = new Document();
 			PdfWriter.getInstance(document, file);
