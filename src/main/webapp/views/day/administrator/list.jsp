@@ -9,6 +9,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@page import="domain.Days"%>
 
+<h1 class="text-center"><spring:message code="day.days" /></h1>
+
 <div class="container">
 	<display:table uid="dayListTable" keepStatus="false" name="days"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"

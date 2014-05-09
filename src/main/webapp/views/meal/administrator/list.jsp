@@ -9,6 +9,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@page import="domain.Meals"%>
 
+<h1 class="text-center"><spring:message code="meal.meals" /></h1>
+
 <div class="container">
 	<display:table uid="mealListTable" keepStatus="false" name="meals"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
