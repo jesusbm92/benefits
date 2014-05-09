@@ -19,6 +19,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 public class Day extends DomainEntity {
 
 	private Days name;
+	private String descriptiveName;
 
 	// relationship
 	private Collection<Diet> diets;
@@ -36,6 +37,16 @@ public class Day extends DomainEntity {
 
 	public void setName(Days name) {
 		this.name = name;
+	}
+
+	@Valid
+	@NotNull
+	public String getDescriptiveName() {
+		return descriptiveName;
+	}
+
+	public void setDescriptiveName(String descriptiveName) {
+		this.descriptiveName = descriptiveName;
 	}
 
 	@Valid

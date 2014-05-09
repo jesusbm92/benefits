@@ -29,6 +29,9 @@
 	</form:select>
 	<form:errors path="name" cssClass="error" />
 	<br>
+	
+	<acme:textbox code="day.descName" path="descriptiveName" />
+		<br>
 
 	<form:label path="meals">
 		<spring:message code="day.meals.edit" />

@@ -19,6 +19,11 @@
 			<spring:message code="day.name.${row.name}" />
 		</display:column>
 
+		<display:column property="descriptiveName" titleKey="day.descName"
+			sortable="true">
+			<spring:message code="day.descName" />
+		</display:column>
+
 		<display:column>
 			<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <input
 				class="btn btn-default" type="button"

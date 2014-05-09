@@ -37,7 +37,7 @@
 			<spring:message code="training.trainingDays" />
 		</form:label>
 		<form:select multiple="${trainingDays.size()}" items="${trainingDays}"
-			itemLabel="name" id="id" code="training.trainingDays"
+			itemLabel="descriptiveName" id="id" code="training.trainingDays"
 			path="trainingDays" />
 		<form:errors path="trainingDays" cssClass="error" />
 		<br>
