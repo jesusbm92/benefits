@@ -57,7 +57,7 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 		Exercise exercise = exerciseService.create();
 		exercise.setCycles(2);
 		exercise.setName("Test");
-		exercise.setRepetitions(2);
+		exercise.setRepetitions("2");
 		exercise.setMuscle(muscleService.findOne(61));
 		exerciseService.save(exercise);
 
@@ -78,7 +78,7 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 		Exercise exercise = exerciseService.create();
 		exercise.setCycles(2);
 		exercise.setName("Test");
-		exercise.setRepetitions(2);
+		exercise.setRepetitions("2");
 		exercise.setMuscle(muscleService.findOne(61));
 		exerciseService.save(exercise);
 
@@ -96,7 +96,7 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 		Exercise exercise = exerciseService.create();
 		exercise.setCycles(2);
 		exercise.setName("Test");
-		exercise.setRepetitions(2);
+		exercise.setRepetitions("2");
 		exercise.setMuscle(muscleService.findOne(61));
 		exerciseService.save(exercise);
 
@@ -112,12 +112,12 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 		authenticate("admin");
 
 		Exercise exerciseToModify = exerciseService.findOne(74);
-		exerciseToModify.setRepetitions(1);
+		exerciseToModify.setRepetitions("1");
 		exerciseToModify.setName("name modified");
 		exerciseToModify.setCycles(1);
 		exerciseService.save(exerciseToModify);
 		Exercise exerciseAfter = exerciseService.findOne(74);
-		Assert.isTrue(exerciseAfter.getRepetitions() == (1));
+		Assert.isTrue(exerciseAfter.getRepetitions() == ("1"));
 		Assert.isTrue(exerciseAfter.getName().equals("name modified"));
 		Assert.isTrue(exerciseAfter.getCycles() == (1));
 
@@ -129,12 +129,12 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 		authenticate("customer1");
 
 		Exercise exerciseToModify = exerciseService.findOne(74);
-		exerciseToModify.setRepetitions(1);
+		exerciseToModify.setRepetitions("1");
 		exerciseToModify.setName("name modified");
 		exerciseToModify.setCycles(1);
 		exerciseService.save(exerciseToModify);
 		Exercise exerciseAfter = exerciseService.findOne(74);
-		Assert.isTrue(exerciseAfter.getRepetitions() == (1));
+		Assert.isTrue(exerciseAfter.getRepetitions() == ("1"));
 		Assert.isTrue(exerciseAfter.getName().equals("name modified"));
 		Assert.isTrue(exerciseAfter.getCycles() == (1));
 	}
@@ -143,12 +143,12 @@ public class CreateModifyDeleteExerciseTest extends GlobalTest {
 	public void nonRegisteredCantModifyExerciseTest() {
 
 		Exercise exerciseToModify = exerciseService.findOne(74);
-		exerciseToModify.setRepetitions(1);
+		exerciseToModify.setRepetitions("1");
 		exerciseToModify.setName("name modified");
 		exerciseToModify.setCycles(1);
 		exerciseService.save(exerciseToModify);
 		Exercise exerciseAfter = exerciseService.findOne(74);
-		Assert.isTrue(exerciseAfter.getRepetitions() == (1));
+		Assert.isTrue(exerciseAfter.getRepetitions() == ("1"));
 		Assert.isTrue(exerciseAfter.getName().equals("name modified"));
 		Assert.isTrue(exerciseAfter.getCycles() == (1));
 	}

@@ -12,6 +12,7 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
@@ -21,7 +22,7 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Exercise extends DomainEntity {
 
 	private String name;
-	private Integer repetitions;
+	private String repetitions;
 	private Integer cycles;
 	private String description;
 	private String urlYoutube;
@@ -45,12 +46,12 @@ public class Exercise extends DomainEntity {
 	}
 
 	@NotNull
-	@Min(1)
-	public Integer getRepetitions() {
+	@Pattern(regexp = "(\\d+,)*\\d+", message = "Error. Ejemplo: 12,10,8")
+	public String getRepetitions() {
 		return repetitions;
 	}
 
-	public void setRepetitions(Integer repetitions) {
+	public void setRepetitions(String repetitions) {
 		this.repetitions = repetitions;
 	}
 
