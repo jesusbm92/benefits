@@ -18,6 +18,9 @@
 		<display:column titleKey="meal.name" sortable="true">
 			<spring:message code="meal.name.${row.name}" />
 		</display:column>
+		<display:column property="description"
+					titleKey="meal.description" sortable="true" />
+	
 
 		<display:column>
 			<a href="amount/administrator/listDetails.do?mealId=${row.id}"> <input

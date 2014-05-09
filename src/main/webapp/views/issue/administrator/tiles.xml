@@ -20,6 +20,10 @@
 		<put-attribute name="title" value="List issue of plan" />
 		<put-attribute name="body" value="/views/issue/administrator/list.jsp" />
 	</definition>
+	<definition name="issue/administrator/listAll" extends="master.page">	
+		<put-attribute name="title" value="List issues by clients" />
+		<put-attribute name="body" value="/views/issue/administrator/list.jsp" />
+	</definition>
 	
 </tiles-definitions>
 

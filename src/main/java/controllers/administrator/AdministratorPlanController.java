@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import services.CustomerService;
 import services.DietService;
 import services.PlanService;
 import services.TrainingService;
 import controllers.AbstractController;
+import domain.Customer;
 import domain.Diet;
 import domain.Goals;
 import domain.Plan;
@@ -34,6 +36,8 @@ public class AdministratorPlanController extends AbstractController {
 	private DietService dietService;
 	@Autowired
 	private TrainingService trainingService;
+	@Autowired
+	private CustomerService customerService;
 
 	// Constructor
 	// ---------------------------------------------------------------
@@ -78,6 +82,48 @@ public class AdministratorPlanController extends AbstractController {
 
 		result = createEditModelAndView(plan);
 		result.addObject("create", true);
+
+		return result;
+	}
+
+	@RequestMapping(value = "/change", method = RequestMethod.GET)
+	public ModelAndView change(@RequestParam int customerId) {
+		ModelAndView result;
+		Customer customer = customerService.findOne(customerId);
+		Goals goal = customer.getPlan().getGoal();
+		Collection<Plan> plans = planService.findByGoal(goal);
+
+		result = new ModelAndView("plan/administrator/change");
+		result.addObject("customer", customer);
+		result.addObject("plans", plans);
+
+		return result;
+	}
+
+	@RequestMapping(value = "/change", method = RequestMethod.POST, params = "saveChange")
+	public ModelAndView saveChange(@Valid Customer customer,
+			BindingResult binding) {
+		ModelAndView result;
+
+		if (binding.hasErrors()) {
+			result = new ModelAndView("plan/administrator/change");
+			Collection<Plan> plans = planService.findAll();
+			result.addObject("plans", plans);
+			result.addObject("customer", customer);
+		} else {
+			try {
+				customerService.save(customer);
+				result = new ModelAndView(
+						"redirect:../../issue/administrator/listAll.do");
+				result.addObject("successMessage", "plan.cambiado");
+
+			} catch (Throwable oops) {
+				result = new ModelAndView("plan/administrator/change");
+				Collection<Plan> plans = planService.findAll();
+				result.addObject("plans", plans);
+				result.addObject("customer", customer);
+			}
+		}
 
 		return result;
 	}

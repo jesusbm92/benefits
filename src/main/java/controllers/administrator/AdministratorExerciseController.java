@@ -3,15 +3,20 @@ package controllers.administrator;
 import java.util.Collection;
 import java.util.Map;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.ServletRequestDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.ExerciseGroupService;
@@ -92,6 +97,13 @@ public class AdministratorExerciseController extends AbstractController {
 		result = createEditModelAndView(exercise);
 
 		return result;
+	}
+
+	@InitBinder
+	protected void initBinder(HttpServletRequest request,
+			ServletRequestDataBinder binder) throws ServletException {
+		binder.registerCustomEditor(byte[].class,
+				new ByteArrayMultipartFileEditor());
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")

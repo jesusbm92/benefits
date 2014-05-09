@@ -67,7 +67,7 @@
 			access="hasRole('ADMIN')" />
 		<security:intercept-url pattern="/day/administrator/**"
 			access="hasRole('ADMIN')" />
-		<security:intercept-url pattern="/issue/administrator/list.do"
+		<security:intercept-url pattern="/issue/administrator/**"
 			access="hasRole('ADMIN')" />
 		<security:intercept-url pattern="/register/**"
 			access="hasRole('ADMIN')" />

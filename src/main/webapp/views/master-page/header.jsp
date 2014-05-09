@@ -54,6 +54,14 @@
 						<li><a href="plan/administrator/create.do"><spring:message
 									code="plan.create" /></a></li>
 					</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown"><spring:message
+							code="master.page.administrator.issues" /><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="arrow"></li>
+						<li><a href="issue/administrator/listAll.do"><spring:message
+									code="master.page.administrator.issues.all" /></a></li>
+					</ul></li>
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown"><spring:message
 							code="master.page.administrator.training" /><b class="caret"></b></a>

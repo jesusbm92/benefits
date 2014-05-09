@@ -70,6 +70,13 @@ body {
 		%>
 		<div class="row">
 			<h2 class="text-center">
+				<spring:message code="plan.name" />
+				:
+				${plan.name }
+			</h2>
+		</div>
+		<div class="row">
+			<h2 class="text-center">
 				<spring:message code="plan.yourgoal" />
 				:
 				<spring:message code="plan.goal.${plan.getGoal()}" />

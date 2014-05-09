@@ -19,6 +19,8 @@
 
 	<acme:textbox code="exerciseGroup.name" path="name" />
 	<br>
+	<acme:textbox code="exerciseGroup.description" path="description" />
+	<br>
 
 	<form:label path="exercises">
 		<spring:message code="exerciseGroup.exercises" />
