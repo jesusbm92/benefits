@@ -9,13 +9,14 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="trainingDay/administrator/edit.do" modelAttribute="trainingDay">
+<form:form action="trainingDay/administrator/edit.do"
+	modelAttribute="trainingDay">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-	
+
 	<form:label path="name">
 		<spring:message code="trainingDay.name" />
 	</form:label>
@@ -23,10 +24,18 @@
 		<form:options items="${days}" />
 	</form:select>
 	<form:errors path="name" cssClass="error" />
-	<br>	
-	
-	<form:label path="exerciseGroups"><spring:message code="trainingDay.exerciseGroups" /></form:label>
-	<form:select multiple="${exerciseGroups.size()}" items="${exerciseGroups}" itemLabel="name" id="id" code="trainingDay.exerciseGroups" path="exerciseGroups"/>
+	<br>
+
+	<acme:textbox code="trainingDay.descName" path="descriptiveName" />
+	<br>
+
+
+	<form:label path="exerciseGroups">
+		<spring:message code="trainingDay.exerciseGroups" />
+	</form:label>
+	<form:select multiple="${exerciseGroups.size()}"
+		items="${exerciseGroups}" itemLabel="name" id="id"
+		code="trainingDay.exerciseGroups" path="exerciseGroups" />
 	<form:errors path="exerciseGroups" cssClass="error" />
 	<br>
 	<br>
@@ -35,7 +44,8 @@
 
 	<jstl:if test="${trainingDay.id!=0}">
 		<a class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal"><spring:message code="trainingDay.delete" /></a>
+			data-target="#basicModal"><spring:message
+				code="trainingDay.delete" /></a>
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
 			aria-labelledby="basicModal" aria-hidden="true">
@@ -65,12 +75,13 @@
 				</div>
 			</div>
 		</div>
-			
+
 
 	</jstl:if>
 
 	<input type="button" class="btn btn-default"
-		value="<spring:message code="trainingDay.cancel"/>" onclick="history.back()" />
+		value="<spring:message code="trainingDay.cancel"/>"
+		onclick="history.back()" />
 
 
 </form:form>

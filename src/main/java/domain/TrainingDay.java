@@ -10,6 +10,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -19,6 +20,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class TrainingDay extends DomainEntity {
 
 	private Days name;
+	private String descriptiveName;
 
 	// Relationships
 	private Collection<Training> trainings;
@@ -36,6 +38,16 @@ public class TrainingDay extends DomainEntity {
 
 	public void setName(Days name) {
 		this.name = name;
+	}
+
+	@Valid
+	@NotNull
+	public String getDescriptiveName() {
+		return descriptiveName;
+	}
+
+	public void setDescriptiveName(String descriptiveName) {
+		this.descriptiveName = descriptiveName;
 	}
 
 	@Valid

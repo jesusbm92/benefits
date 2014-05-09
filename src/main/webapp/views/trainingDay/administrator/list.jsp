@@ -17,6 +17,12 @@
 		<display:column titleKey="trainingDay.name" sortable="true">
 			<spring:message code="trainingDay.name.${row.name}" />
 		</display:column>
+
+		<display:column property="descriptiveName"
+			titleKey="trainingDay.descName" sortable="true">
+			<spring:message code="trainingDay.descName" />
+		</display:column>
+
 		<display:column titleKey="trainingDay.edit">
 			<a href="trainingDay/administrator/edit.do?trainingDayId=${row.id}"><input
 				type="button" class="btn btn-default"

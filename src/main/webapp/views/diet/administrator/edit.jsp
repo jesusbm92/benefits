@@ -39,7 +39,7 @@
 	<form:label path="days">
 		<spring:message code="diet.days.edit" />
 	</form:label>
-	<form:select multiple="${days.size()}" items="${days}" itemLabel="name"
+	<form:select multiple="${days.size()}" items="${days}" itemLabel="descriptiveName"
 		id="id" code="diet.day" path="days" />
 		<form:errors path="days" cssClass="error" />
 	<br>
