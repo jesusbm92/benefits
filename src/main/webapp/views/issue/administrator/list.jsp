@@ -16,13 +16,13 @@
 
 		<display:column property="description" titleKey="issue.description"
 			sortable="true" />
-		<display:column property="plan.id" titleKey="issue.plan"
+		<display:column property="plan.name" titleKey="issue.plan"
 			sortable="true" />
 		<display:column property="customer.name" titleKey="issue.user"
 			sortable="true" />
 		<jstl:if test="${all }">
 		<display:column>
-		<a href="plan/administrator/change.do"><input type="button"
+		<a href="plan/administrator/change.do?customerId=${row.customer.id }"><input type="button"
 		class="btn btn-default" value="<spring:message code="issue.change"/>"/></a>
 		</display:column>
 		</jstl:if>

@@ -145,6 +145,12 @@ public class PlanService {
 		Plan selectedPlan = planList.get((int) Math.random() * planList.size());
 		customerService.changeCustomerPlan(selectedPlan);
 	}
+
 	// Assertions
+
+	public Collection<Plan> findByGoal(Goals goal) {
+		// TODO Auto-generated method stub
+		return planRepository.findPlansByGoal(goal);
+	}
 
 }
