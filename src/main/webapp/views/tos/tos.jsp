@@ -19,4 +19,130 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
-Estos son los terms of service
+<style>
+html,body {
+	position: relative;
+	height: 100%;
+}
+
+.login-container {
+	position: relative;
+	width: 800px;
+	margin: 25px auto;
+	padding: 20px 40px 40px;
+	text-align: center;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+#output {
+	position: absolute;
+	width: 300px;
+	top: -75px;
+	left: 0;
+	color: #fff;
+}
+
+.login-container::before,.login-container::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 3.5px;
+	left: 0;
+	background: #fff;
+	z-index: -1;
+	-webkit-transform: rotateZ(4deg);
+	-moz-transform: rotateZ(4deg);
+	-ms-transform: rotateZ(4deg);
+	border: 1px solid #ccc;
+}
+
+.login-container::after {
+	top: 5px;
+	z-index: -2;
+	-webkit-transform: rotateZ(-2deg);
+	-moz-transform: rotateZ(-2deg);
+	-ms-transform: rotateZ(-2deg);
+}
+
+p {
+	font-size: 15px;
+}
+</style>
+
+<div class="container">
+	<div class="login-container">
+		<div id="output"></div>
+		<div class="form-box">
+			<h1>
+				<spring:message code="tos.tos" />
+			</h1>
+			<br/>
+			<p>
+				<spring:message code="tos.1" />
+			</p>
+
+			<h3>
+				<spring:message code="tos.title1" />
+			</h3>
+			<p>
+				<spring:message code="tos.2" />
+			</p>
+
+			<h3>
+				<spring:message code="tos.title2" />
+			</h3>
+			<p>
+				<spring:message code="tos.2" />
+			</p>
+			<p>
+				<spring:message code="tos.3" />
+			</p>
+			<p>
+				<spring:message code="tos.4" />
+			</p>
+			<p>
+				<spring:message code="tos.5" />
+			</p>
+			<p>
+				<spring:message code="tos.6" />
+			</p>
+			<p>
+				<spring:message code="tos.7" />
+			</p>
+			<p>
+				<spring:message code="tos.8" />
+			</p>
+			<p>
+				<spring:message code="tos.9" />
+			</p>
+			<p>
+				<spring:message code="tos.10" />
+			</p>
+			<p>
+				<spring:message code="tos.11" />
+			</p>
+			<p>
+				<spring:message code="tos.12" />
+			</p>
+			<p>
+				<spring:message code="tos.13" />
+			</p>
+
+			<h3>
+				<spring:message code="tos.title3" />
+			</h3>
+			<p>
+				<spring:message code="tos.14" />
+			</p>
+			<p>
+				<spring:message code="tos.15" />
+			</p>
+			<p>
+				<spring:message code="tos.16" />
+			</p>
+		</div>
+	</div>
+</div>
+			<br/>

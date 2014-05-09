@@ -15,6 +15,9 @@
 }
 </style>
 
+<h1 class="text-center"><spring:message code="plan.plans" /></h1>
+<br/>
+
 <div class="container">
 	<div class="row">
 		<div class="table-responsive">

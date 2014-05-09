@@ -9,6 +9,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@page import="domain.Meals"%>
 
+<h1 class="text-center"><spring:message code="meal.meals" /></h1>
+
 <div class="container">
 	<display:table uid="mealListTable" keepStatus="false" name="meals"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
@@ -18,9 +20,6 @@
 		<display:column titleKey="meal.name" sortable="true">
 			<spring:message code="meal.name.${row.name}" />
 		</display:column>
-		<display:column property="description"
-					titleKey="meal.description" sortable="true" />
-	
 
 		<display:column>
 			<a href="amount/administrator/listDetails.do?mealId=${row.id}"> <input
@@ -50,5 +49,3 @@
 		onclick="self.location.href = day/administrator/list.do" /></a>
 
 </div>
-
-

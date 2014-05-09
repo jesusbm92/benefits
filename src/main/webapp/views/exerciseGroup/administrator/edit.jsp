@@ -9,72 +9,75 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="exerciseGroup/administrator/edit.do"
-	modelAttribute="exerciseGroup">
+<h1 class="text-center"><spring:message code="exerciseGroup.details" /></h1>
+<br/>
 
-	<!-- Poner todos los atributos, los no usados en oculto -->
+<div class="container">
+	<form:form action="exerciseGroup/administrator/edit.do"
+		modelAttribute="exerciseGroup">
 
-	<form:hidden path="id" />
-	<form:hidden path="version" />
+		<!-- Poner todos los atributos, los no usados en oculto -->
 
-	<acme:textbox code="exerciseGroup.name" path="name" />
-	<br>
-	<acme:textbox code="exerciseGroup.description" path="description" />
-	<br>
+		<form:hidden path="id" />
+		<form:hidden path="version" />
 
-	<form:label path="exercises">
-		<spring:message code="exerciseGroup.exercises" />
-	</form:label>
-	<form:select multiple="${exercises.size()}" items="${exercises}"
-		itemLabel="name" id="id" code="exerciseGroup.exercises"
-		path="exercises" />
-	<form:errors path="exercises" cssClass="error" />
-	<br>
-	<br>
-	<input type="submit" name="save" class="btn btn-default"
-		value="<spring:message code="exerciseGroup.save" />" />
+		<acme:textbox code="exerciseGroup.name" path="name" />
+		<br>
 
-	<jstl:if test="${exerciseGroup.id!=0}">
+		<form:label path="exercises">
+			<spring:message code="exerciseGroup.exercises" />
+		</form:label>
+		<form:select multiple="${exercises.size()}" items="${exercises}"
+			itemLabel="name" id="id" code="exerciseGroup.exercises"
+			path="exercises" />
+		<form:errors path="exercises" cssClass="error" />
+		<br>
+		<br>
+		<input type="submit" name="save" class="btn btn-default"
+			value="<spring:message code="exerciseGroup.save" />" />
 
-		<a class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal"><spring:message
-				code="exerciseGroup.delete" /></a>
+		<jstl:if test="${exerciseGroup.id!=0}">
 
-		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
-			aria-labelledby="basicModal" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<spring:message code="exerciseGroup.confirm.title" />
-						</h4>
-					</div>
-					<div class="modal-body">
-						<h3>
-							<spring:message code="exerciseGroup.confirm.body" />
-						</h3>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" name="delete" class="btn btn-default"
-							onclick="history.back()">
-							<spring:message code="exerciseGroup.confirm.yes" />
-						</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal">
-							<spring:message code="exerciseGroup.confirm.no" />
-						</button>
+			<a class="btn btn-default" data-toggle="modal"
+				data-target="#basicModal"><spring:message
+					code="exerciseGroup.delete" /></a>
+
+			<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
+				aria-labelledby="basicModal" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">
+								<spring:message code="exerciseGroup.confirm.title" />
+							</h4>
+						</div>
+						<div class="modal-body">
+							<h3>
+								<spring:message code="exerciseGroup.confirm.body" />
+							</h3>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" name="delete" class="btn btn-default"
+								onclick="history.back()">
+								<spring:message code="exerciseGroup.confirm.yes" />
+							</button>
+							<button type="button" class="btn btn-primary"
+								data-dismiss="modal">
+								<spring:message code="exerciseGroup.confirm.no" />
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-	</jstl:if>
+		</jstl:if>
 
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="exerciseGroup.cancel"/>"
-		onclick="history.back()" />
+		<input type="button" class="btn btn-default"
+			value="<spring:message code="exerciseGroup.cancel"/>"
+			onclick="history.back()" />
 
 
-</form:form>
-
+	</form:form>
+</div>

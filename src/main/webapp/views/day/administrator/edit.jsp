@@ -10,6 +10,8 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Days"%>
 
+<h1 class="text-center"><spring:message code="day.create.day" /></h1>
+
 <form:form action="day/administrator/edit.do" modelAttribute="day">
 
 	<!-- Poner todos los atributos, los no usados en oculto -->

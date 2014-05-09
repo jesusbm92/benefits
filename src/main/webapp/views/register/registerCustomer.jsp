@@ -28,6 +28,10 @@
 }
 </style>
 
+<h1 class="text-center">
+	<spring:message code="register.create" />
+</h1>
+
 <div class="container">
 
 	<div class="row" style="margin-top: 20px">
@@ -42,8 +46,9 @@
 					</h3>
 					<div class="form-group">
 						<spring:message code="register.username" var="username" />
-						<form:input path="username" type="text" name="username" id="username"
-							class="form-control input-lg" placeholder="${username}" />
+						<form:input path="username" type="text" name="username"
+							id="username" class="form-control input-lg"
+							placeholder="${username}" />
 						<form:errors class="error" path="username" />
 					</div>
 					<div class="row">
@@ -89,8 +94,9 @@
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
 								<spring:message code="register.surname" var="surname" />
-								<form:input path="surname" type="text" name="surname" id="surname"
-									class="form-control input-lg" placeholder="${surname}" />
+								<form:input path="surname" type="text" name="surname"
+									id="surname" class="form-control input-lg"
+									placeholder="${surname}" />
 								<form:errors class="error" path="surname" />
 							</div>
 						</div>
@@ -121,17 +127,25 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.weight" var="weight" />
-								<form:input path="weight" name="weight" id="weight"
-									class="form-control input-lg" placeholder="${weight}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.weight" /></span>
+									<form:input path="weight" name="weight" id="weight"
+										class="form-control input-lg" />
+									<span class="input-group-addon">kg</span>
+								</div>
 								<form:errors class="error" path="weight" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.height" var="height" />
-								<form:input path="height" name="height" id="height"
-									class="form-control input-lg" placeholder="${height}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.height" /></span>
+									<form:input path="height" name="height" id="height"
+										class="form-control input-lg" placeholder="${height}" />
+									<span class="input-group-addon">m</span>
+								</div>
 								<form:errors class="error" path="height" />
 							</div>
 						</div>
@@ -139,19 +153,25 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.bodyFat" var="bodyfat" />
-								<form:input path="bodyfat" name="bodyfat" id="bodyfat"
-									class="form-control input-lg" placeholder="${bodyfat}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.bodyFat" /></span>
+									<form:input path="bodyfat" name="bodyfat" id="bodyfat"
+										class="form-control input-lg" />
+									<span class="input-group-addon">kg</span>
+								</div>
 								<form:errors class="error" path="bodyfat" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.waistlineMeasure"
-									var="waistlineMeasure" />
-								<form:input path="waistlineMeasure" name="waistlineMeasure"
-									id="waistlineMeasure" class="form-control input-lg"
-									placeholder="${waistlineMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.waistlineMeasure" /></span>
+									<form:input path="waistlineMeasure" name="waistlineMeasure"
+										id="waistlineMeasure" class="form-control input-lg" />
+									<span class="input-group-addon">cm</span>
+								</div>
 								<form:errors class="error" path="waistlineMeasure" />
 							</div>
 						</div>
@@ -159,34 +179,35 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.hipMeasure" var="hipMeasure" />
-								<form:input path="hipMeasure" name="hipMeasure" id="hipMeasure"
-									class="form-control input-lg" placeholder="${hipMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.hipMeasure" /></span>
+									<form:input path="hipMeasure" name="hipMeasure" id="hipMeasure"
+										class="form-control input-lg" />
+									<span class="input-group-addon">kg</span>
+								</div>
 								<form:errors class="error" path="hipMeasure" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="register.chestMeasure" var="chestMeasure" />
-								<form:input path="chestMeasure" name="chestMeasure" id="chestMeasure"
-									class="form-control input-lg" placeholder="${chestMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="register.chestMeasure" /></span>
+									<form:input path="chestMeasure" name="chestMeasure"
+										id="chestMeasure" class="form-control input-lg"
+										placeholder="${chestMeasure}" />
+									<span class="input-group-addon">cm</span>
+								</div>
 								<form:errors class="error" path="chestMeasure" />
 							</div>
 						</div>
 					</div>
 					<hr class="colorgraph">
-					<h3>
-						<spring:message code="register.condition" />
-					</h3>
-
-					<textarea rows="8" cols="0" style="width: 555px; height: 150px"
-						readonly="true" class="form-control">
-	 					<spring:message code="register.condition.path" />
-					</textarea>
-					<br /> <span class="button-checkbox"> <label
-						class="checkbox"> <form:checkbox
-								code="register.TOSAccepted" path="TOSAccepted" /> <spring:message
-								code="register.TOSAccepted" />
+					<span class="button-checkbox"> <label class="checkbox">
+							<form:checkbox code="register.TOSAccepted" path="TOSAccepted" />
+							<spring:message code="register.TOSAccepted" /> <a
+							href="tos/tos.do"><spring:message code="register.tos" /></a>
 					</label>
 					</span> <br />
 					<div class="row">

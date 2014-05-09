@@ -28,6 +28,8 @@
 }
 </style>
 
+<h1 class="text-center"><spring:message code="register.admin.create" /></h1>
+
 <div class="container">
 
 	<div class="row" style="margin-top: 20px">

@@ -10,6 +10,9 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
+<h1 class="text-center"><spring:message code="exercise.details" /></h1>
+<br/>
+
 <div class="container">
 	<div class="row">
 		<div class="col-centered">

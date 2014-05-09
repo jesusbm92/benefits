@@ -8,6 +8,9 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<h1 class="text-center"><spring:message code="diet.mydiet" /></h1>
+<br/>
+
 <div class="container">
 	<div class="row">
 

@@ -9,6 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<h1 class="text-center"><spring:message code="issue.title" /></h1>
 
 <div class="container">
 	<form:form action="issue/customer/edit.do" modelAttribute="issue"
