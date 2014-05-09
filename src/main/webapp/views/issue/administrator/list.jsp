@@ -20,10 +20,18 @@
 			sortable="true" />
 		<display:column property="customer.name" titleKey="issue.user"
 			sortable="true" />
-
+		<jstl:if test="${all }">
+		<display:column>
+		<a href="plan/administrator/change.do"><input type="button"
+		class="btn btn-default" value="<spring:message code="issue.change"/>"/></a>
+		</display:column>
+		</jstl:if>
+	
 
 	</display:table>
+	<jstl:if test="${!all }">
 	<br /> <a href="plan/administrator/list.do"><input type="button"
 		class="btn btn-default" value="<spring:message code="issue.cancel"/>"
 		onclick="self.location.href = plan/administrator/list.do" /></a>
+	</jstl:if>
 </div>

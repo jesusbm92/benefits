@@ -45,6 +45,20 @@ public class IssueAdministradorController extends AbstractController {
 		return result;
 	}
 
+	@RequestMapping("/listAll")
+	public ModelAndView listAll() {
+		ModelAndView result;
+
+		Collection<Issue> issues = issueService.findAll();
+
+		String uri = "issue/administrator/listAll";
+		String requestURI = "issue/administrator/listAll.do";
+		result = createListModelAndView(requestURI, issues, uri, null);
+		Boolean all = true;
+		result.addObject("all", all);
+		return result;
+	}
+
 	protected ModelAndView createListModelAndView(String requestURI,
 			Collection<Issue> issues, String uri, Plan plan) {
 		ModelAndView result;
