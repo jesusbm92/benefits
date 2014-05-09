@@ -204,18 +204,10 @@
 						</div>
 					</div>
 					<hr class="colorgraph">
-					<h3>
-						<spring:message code="register.condition" />
-					</h3>
-
-					<textarea rows="8" cols="0" style="width: 555px; height: 150px"
-						readonly="true" class="form-control">
-	 					<spring:message code="register.condition.path" />
-					</textarea>
-					<br /> <span class="button-checkbox"> <label
-						class="checkbox"> <form:checkbox
-								code="register.TOSAccepted" path="TOSAccepted" /> <spring:message
-								code="register.TOSAccepted" />
+					<span class="button-checkbox"> <label class="checkbox">
+							<form:checkbox code="register.TOSAccepted" path="TOSAccepted" />
+							<spring:message code="register.TOSAccepted" /> <a
+							href="tos/tos.do"><spring:message code="register.tos" /></a>
 					</label>
 					</span> <br />
 					<div class="row">
