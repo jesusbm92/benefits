@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.CustomerService;
 import services.DietService;
@@ -102,7 +103,7 @@ public class AdministratorPlanController extends AbstractController {
 
 	@RequestMapping(value = "/change", method = RequestMethod.POST, params = "saveChange")
 	public ModelAndView saveChange(@Valid Customer customer,
-			BindingResult binding) {
+			BindingResult binding, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -115,7 +116,7 @@ public class AdministratorPlanController extends AbstractController {
 				customerService.save(customer);
 				result = new ModelAndView(
 						"redirect:../../issue/administrator/listAll.do");
-				result.addObject("successMessage", "plan.cambiado");
+				redirect.addFlashAttribute("successMessage", "plan.cambiado");
 
 			} catch (Throwable oops) {
 				result = new ModelAndView("plan/administrator/change");
