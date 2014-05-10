@@ -5,6 +5,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -27,6 +29,7 @@ public class Exercise extends DomainEntity {
 	private String description;
 	private String urlYoutube;
 	private byte[] image;
+	private Language language;
 
 	// Relationships
 	private Muscle muscle;
@@ -43,6 +46,15 @@ public class Exercise extends DomainEntity {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 	@NotNull

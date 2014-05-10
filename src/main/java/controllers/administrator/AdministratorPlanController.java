@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -53,7 +54,8 @@ public class AdministratorPlanController extends AbstractController {
 		ModelAndView result;
 		String uri = "plan/administrator/list";
 		String requestURI = "plan/administrator/list.do";
-		Collection<Plan> plans = planService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Plan> plans = planService.findAllLanguage(language);
 		result = createListModelAndView(requestURI, plans, uri);
 
 		return result;
@@ -107,7 +109,9 @@ public class AdministratorPlanController extends AbstractController {
 
 		if (binding.hasErrors()) {
 			result = new ModelAndView("plan/administrator/change");
-			Collection<Plan> plans = planService.findAll();
+			String language = LocaleContextHolder.getLocale()
+					.getDisplayLanguage();
+			Collection<Plan> plans = planService.findAllLanguage(language);
 			result.addObject("plans", plans);
 			result.addObject("customer", customer);
 		} else {
@@ -119,7 +123,9 @@ public class AdministratorPlanController extends AbstractController {
 
 			} catch (Throwable oops) {
 				result = new ModelAndView("plan/administrator/change");
-				Collection<Plan> plans = planService.findAll();
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Collection<Plan> plans = planService.findAllLanguage(language);
 				result.addObject("plans", plans);
 				result.addObject("customer", customer);
 			}
@@ -192,8 +198,10 @@ public class AdministratorPlanController extends AbstractController {
 
 	protected ModelAndView createEditModelAndView(Plan plan, String message) {
 		assert plan != null;
-		Collection<Training> trainings = trainingService.findAll();
-		Collection<Diet> diets = dietService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Training> trainings = trainingService
+				.findAllLanguage(language);
+		Collection<Diet> diets = dietService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("plan/administrator/edit");

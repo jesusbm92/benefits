@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -45,8 +46,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		ModelAndView result;
 		String uri = "exerciseGroup/administrator/list";
 		String requestURI = "exerciseGroup/administrator/list.do";
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAll();
+				.findAllLanguage(language);
 		result = createListModelAndView(requestURI, exerciseGroups, uri);
 
 		return result;
@@ -160,7 +162,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 	protected ModelAndView createEditModelAndView(ExerciseGroup exerciseGroup,
 			String message) {
 		assert exerciseGroup != null;
-		Collection<Exercise> exercises = exerciseService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Exercise> exercises = exerciseService
+				.findAllLanguage(language);
 		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
 		if (exerciseGroup.getId() != 0) {
 			exerciseSelected = exerciseService
@@ -181,7 +185,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 	protected ModelAndView createCreateModelAndView(
 			ExerciseGroup exerciseGroup, String message) {
 		assert exerciseGroup != null;
-		Collection<Exercise> exercises = exerciseService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Exercise> exercises = exerciseService
+				.findAllLanguage(language);
 		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
 		if (exerciseGroup.getId() != 0) {
 			exerciseSelected = exerciseService

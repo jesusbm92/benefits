@@ -6,6 +6,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -24,6 +26,7 @@ public class Training extends DomainEntity {
 	private String name;
 	private int duration;
 	private String description;
+	private Language language;
 
 	// Relationship
 	private Collection<Plan> plans;
@@ -97,4 +100,14 @@ public class Training extends DomainEntity {
 	public void setSponsor(Sponsor sponsor) {
 		this.sponsor = sponsor;
 	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
+	}
+
 }

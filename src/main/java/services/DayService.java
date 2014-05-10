@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 
 import repositories.DayRepository;
 import domain.Day;
+import domain.Language;
 
 @Transactional
 @Service
@@ -48,6 +49,18 @@ public class DayService {
 	public Collection<Day> findAll() {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return dayRepository.findAll();
+	}
+
+	public Collection<Day> findAllLanguage(String language) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Day> result;
+		int dev;
+		if (language == Language.English.toString()) {
+			result = dayRepository.findAllLanguage(Language.English);
+		} else {
+			result = dayRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**

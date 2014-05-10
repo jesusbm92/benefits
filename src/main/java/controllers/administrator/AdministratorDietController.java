@@ -8,6 +8,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -71,7 +72,8 @@ public class AdministratorDietController extends AbstractController {
 		ModelAndView result;
 		String uri = "diet/administrator/list";
 		String requestURI = "diet/administrator/list.do";
-		Collection<Diet> diets = dietService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Diet> diets = dietService.findAllLanguage(language);
 		result = createListModelAndView(requestURI, diets, uri);
 
 		return result;
@@ -129,8 +131,8 @@ public class AdministratorDietController extends AbstractController {
 								+ SANGRIA + "Quantity : "
 								+ amount.getQuantity(), text));
 						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Measure : "
-								+ amount.getMeasure(), text));
+								+ SANGRIA + "Measure : " + amount.getMeasure(),
+								text));
 						document.add(new Paragraph(" "));
 						document.add(new Paragraph(" "));
 					}
@@ -250,9 +252,10 @@ public class AdministratorDietController extends AbstractController {
 
 	protected ModelAndView createEditModelAndView(Diet diet, String message) {
 		assert diet != null;
-		Collection<Plan> plans = planService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Plan> plans = planService.findAllLanguage(language);
 		Collection<Sponsor> sponsors = sponsorService.findAll();
-		Collection<Day> days = dayService.findAll();
+		Collection<Day> days = dayService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/edit");
@@ -268,9 +271,10 @@ public class AdministratorDietController extends AbstractController {
 
 	protected ModelAndView createCreateModelAndView(Diet diet, String message) {
 		assert diet != null;
-		Collection<Plan> plans = planService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Plan> plans = planService.findAllLanguage(language);
 		Collection<Sponsor> sponsors = sponsorService.findAll();
-		Collection<Day> days = dayService.findAll();
+		Collection<Day> days = dayService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/create");

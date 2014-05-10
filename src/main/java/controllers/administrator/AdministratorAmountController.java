@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -85,7 +86,7 @@ public class AdministratorAmountController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Amount amount,BindingResult binding) {
+	public ModelAndView save(@Valid Amount amount, BindingResult binding) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -115,7 +116,8 @@ public class AdministratorAmountController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
-	public ModelAndView delete(@ModelAttribute Amount amount, BindingResult bindingResult) {
+	public ModelAndView delete(@ModelAttribute Amount amount,
+			BindingResult bindingResult) {
 		ModelAndView result;
 
 		try {
@@ -143,7 +145,8 @@ public class AdministratorAmountController {
 		return result;
 	}
 
-	protected ModelAndView createCreateMealModelAndView(Amount amount,String message) {
+	protected ModelAndView createCreateMealModelAndView(Amount amount,
+			String message) {
 		assert amount != null;
 
 		ModelAndView result;
@@ -157,7 +160,9 @@ public class AdministratorAmountController {
 
 	protected ModelAndView createEditModelAndView(Amount amount, String message) {
 		assert amount != null;
-		Collection<Food> foods = foodService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
+		Collection<Food> foods = foodService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/edit");
@@ -172,7 +177,9 @@ public class AdministratorAmountController {
 	protected ModelAndView createCreateModelAndView(Amount amount,
 			String message) {
 		assert amount != null;
-		Collection<Food> foods = foodService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
+		Collection<Food> foods = foodService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/create");

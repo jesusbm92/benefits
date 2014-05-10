@@ -6,6 +6,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
@@ -21,6 +23,7 @@ public class Food extends DomainEntity {
 	private String name;
 	private String description;
 	private byte[] image;
+	private Language language;
 
 	// relationShip
 
@@ -72,6 +75,15 @@ public class Food extends DomainEntity {
 
 	public void setAmounts(Collection<Amount> amounts) {
 		this.amounts = amounts;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 }

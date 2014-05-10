@@ -20,6 +20,7 @@ public class Day extends DomainEntity {
 
 	private Days name;
 	private String descriptiveName;
+	private Language language;
 
 	// relationship
 	private Collection<Diet> diets;
@@ -69,6 +70,15 @@ public class Day extends DomainEntity {
 
 	public void setMeals(Collection<Meal> meals) {
 		this.meals = meals;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 }

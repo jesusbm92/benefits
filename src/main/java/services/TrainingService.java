@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import repositories.TrainingRepository;
+import domain.Language;
 import domain.Training;
 
 @Transactional
@@ -49,6 +50,17 @@ public class TrainingService {
 	public Collection<Training> findAll() {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		return trainingRepository.findAll();
+	}
+
+	public Collection<Training> findAllLanguage(String language) {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		Collection<Training> result;
+		if (language == Language.English.toString()) {
+			result = trainingRepository.findAllLanguage(Language.English);
+		} else {
+			result = trainingRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**

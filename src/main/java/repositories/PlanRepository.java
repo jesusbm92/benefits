@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import domain.Customer;
 import domain.Goals;
+import domain.Language;
 import domain.Plan;
 
 @Repository
@@ -30,5 +31,8 @@ public interface PlanRepository extends JpaRepository<Plan, Integer> {
 
 	@Query("select p from Plan p where p.diet.id= ?1")
 	Collection<Plan> findPlansByDiet(int dietId);
+
+	@Query("select p from Plan p where p.language= ?1")
+	Collection<Plan> findAllLanguage(Language language);
 
 }

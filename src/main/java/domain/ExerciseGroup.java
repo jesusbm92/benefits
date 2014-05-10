@@ -6,6 +6,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.validation.Valid;
 
@@ -19,6 +21,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	private String name;
 	private String description;
+	private Language language;
 
 	// Relationships
 	private Collection<Exercise> exercises;
@@ -46,6 +49,15 @@ public class ExerciseGroup extends DomainEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 	@Valid

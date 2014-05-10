@@ -10,6 +10,7 @@ import org.springframework.util.Assert;
 import repositories.FoodRepository;
 import domain.Amount;
 import domain.Food;
+import domain.Language;
 
 @Transactional
 @Service
@@ -53,6 +54,17 @@ public class FoodService {
 	public Collection<Food> findAll() {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return foodRepository.findAll();
+	}
+
+	public Collection<Food> findAllLanguage(String language) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Food> result;
+		if (language == Language.English.toString()) {
+			result = foodRepository.findAllLanguage(Language.English);
+		} else {
+			result = foodRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**

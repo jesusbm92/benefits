@@ -29,6 +29,7 @@ public class Plan extends DomainEntity {
 	private Double maxWeight;
 	private Double minBodyFat;
 	private Double maxBodyFat;
+	private Language language;
 
 	// RelationShip
 	private Collection<Issue> issues;
@@ -72,7 +73,7 @@ public class Plan extends DomainEntity {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
+	@Digits(integer = 3, fraction = 2)
 	public Double getMinWeight() {
 		return minWeight;
 	}
@@ -80,20 +81,19 @@ public class Plan extends DomainEntity {
 	public void setMinWeight(Double minWeight) {
 		this.minWeight = minWeight;
 	}
-	
+
 	@Min(0)
-	@Digits(integer=3, fraction=2)
+	@Digits(integer = 3, fraction = 2)
 	public Double getMaxWeight() {
 		return maxWeight;
 	}
 
-	
 	public void setMaxWeight(Double maxWeight) {
 		this.maxWeight = maxWeight;
 	}
-	
+
 	@Min(0)
-	@Digits(integer=3, fraction=2)
+	@Digits(integer = 3, fraction = 2)
 	public Double getMinBodyFat() {
 		return minBodyFat;
 	}
@@ -103,7 +103,7 @@ public class Plan extends DomainEntity {
 	}
 
 	@Min(0)
-	@Digits(integer=3, fraction=2)
+	@Digits(integer = 3, fraction = 2)
 	public Double getMaxBodyFat() {
 		return maxBodyFat;
 	}
@@ -168,6 +168,15 @@ public class Plan extends DomainEntity {
 
 	public void setComments(Collection<Comment> comments) {
 		this.comments = comments;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 }

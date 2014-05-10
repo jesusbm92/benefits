@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -66,7 +67,8 @@ public class AdministratorDayController extends AbstractController {
 		ModelAndView result;
 		String uri = "day/administrator/list";
 		String requestURI = "day/administrator/list.do";
-		Collection<Day> days = dayService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Day> days = dayService.findAllLanguage(language);
 		result = createListModelAndView(requestURI, days, uri);
 
 		return result;
@@ -167,8 +169,8 @@ public class AdministratorDayController extends AbstractController {
 
 	protected ModelAndView createEditModelAndView(Day day, String message) {
 		assert day != null;
-
-		Collection<Meal> meals = mealService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Meal> meals = mealService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("day/administrator/edit");
@@ -182,8 +184,8 @@ public class AdministratorDayController extends AbstractController {
 
 	protected ModelAndView createCreateModelAndView(Day day, String message) {
 		assert day != null;
-
-		Collection<Meal> meals = mealService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Meal> meals = mealService.findAllLanguage(language);
 
 		ModelAndView result;
 		result = new ModelAndView("day/administrator/create");

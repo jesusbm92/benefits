@@ -6,6 +6,8 @@ import java.util.Collection;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -21,6 +23,7 @@ public class Diet extends DomainEntity {
 
 	private String name;
 	private String description;
+	private Language language;
 
 	// Relationship
 
@@ -85,6 +88,15 @@ public class Diet extends DomainEntity {
 
 	public void setSponsor(Sponsor sponsor) {
 		this.sponsor = sponsor;
+	}
+
+	@Enumerated(EnumType.STRING)
+	public Language getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(Language language) {
+		this.language = language;
 	}
 
 }

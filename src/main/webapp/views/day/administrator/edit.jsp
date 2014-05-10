@@ -9,6 +9,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Days"%>
+<%@page import="domain.Language"%>
 
 <h1 class="text-center"><spring:message code="day.create.day" /></h1>
 

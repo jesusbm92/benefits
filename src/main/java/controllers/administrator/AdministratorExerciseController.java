@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -52,7 +53,9 @@ public class AdministratorExerciseController extends AbstractController {
 		ModelAndView result;
 		String uri = "exercise/administrator/list";
 		String requestURI = "exercise/administrator/list.do";
-		Collection<Exercise> exercises = exerciseService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Exercise> exercises = exerciseService
+				.findAllLanguage(language);
 		result = createListModelAndView(requestURI, exercises, uri);
 
 		return result;
@@ -170,6 +173,7 @@ public class AdministratorExerciseController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Exercise exercise,
 			String message) {
 		assert exercise != null;
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 		Map<String, Integer> map = muscleService.findAllIdName();
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");

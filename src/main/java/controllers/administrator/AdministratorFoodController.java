@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -42,7 +43,8 @@ public class AdministratorFoodController {
 	public ModelAndView list() {
 		ModelAndView result;
 
-		Collection<Food> foods = foodService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Food> foods = foodService.findAllLanguage(language);
 		String uri = "food/administrator/list";
 		String requestURI = "food/administrator/list.do";
 		result = createListModelAndView(requestURI, foods, uri);

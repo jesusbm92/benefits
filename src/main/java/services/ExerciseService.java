@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 
 import repositories.ExerciseRepository;
 import domain.Exercise;
+import domain.Language;
 
 @Transactional
 @Service
@@ -53,6 +54,17 @@ public class ExerciseService {
 	public Collection<Exercise> findAll() {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		return exerciseRepository.findAll();
+	}
+
+	public Collection<Exercise> findAllLanguage(String language) {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		Collection<Exercise> result;
+		if (language == Language.English.toString()) {
+			result = exerciseRepository.findAllLanguage(Language.English);
+		} else {
+			result = exerciseRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**

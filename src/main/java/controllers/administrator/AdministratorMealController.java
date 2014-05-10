@@ -6,6 +6,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -37,8 +38,8 @@ public class AdministratorMealController {
 	@RequestMapping("/list")
 	public ModelAndView list() {
 		ModelAndView result;
-
-		Collection<Meal> meals = mealService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Meal> meals = mealService.findAllLanguage(language);
 		String uri = "meal/administrator/list";
 		String requestURI = "meal/administrator/list.do";
 		result = createListModelAndView(requestURI, meals, uri);

@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import domain.Diet;
+import domain.Language;
 
 @Repository
 public interface DietRepository extends JpaRepository<Diet, Integer> {
@@ -16,4 +17,7 @@ public interface DietRepository extends JpaRepository<Diet, Integer> {
 
 	@Query("select d from Diet d JOIN d.days s where s.id=?1")
 	Collection<Diet> findDietsByDay(int dayId);
+
+	@Query("select d from Diet d where d.language=?1")
+	Collection<Diet> findAllLanguage(Language language);
 }

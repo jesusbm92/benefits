@@ -5,11 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import repositories.MuscleRepository;
+import domain.Language;
 import domain.Muscle;
 
 @Transactional
@@ -53,11 +55,22 @@ public class MuscleService {
 		return muscleRepository.findAll();
 	}
 
+	public Collection<Muscle> findAllLanguage(String language) {
+		Assert.isTrue(administratorService.IAmAnAdmin());
+		Collection<Muscle> result;
+		if (language == Language.English.toString()) {
+			result = muscleRepository.findAllLanguage(Language.English);
+		} else {
+			result = muscleRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
+	}
+
 	public Map<String, Integer> findAllIdName() {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Map<String, Integer> map = new HashMap<String, Integer>();
-
-		Collection<Muscle> muscles = muscleRepository.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Muscle> muscles = findAllLanguage(language);
 
 		for (Muscle aux : muscles) {
 			map.put(aux.getName(), aux.getId());

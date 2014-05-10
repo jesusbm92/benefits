@@ -1,12 +1,14 @@
 package controllers.administrator;
 
 import java.util.Collection;
+import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -53,7 +55,9 @@ public class AdministratorTrainingController extends AbstractController {
 		ModelAndView result;
 		String uri = "training/administrator/list";
 		String requestURI = "training/administrator/list.do";
-		Collection<Training> trainings = trainingService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Training> trainings = trainingService
+				.findAllLanguage(language);
 		result = createListModelAndView(requestURI, trainings, uri);
 		Boolean prin = true;
 		result.addObject("prin", prin);
@@ -160,7 +164,9 @@ public class AdministratorTrainingController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Training training,
 			String message) {
 		assert training != null;
-		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<TrainingDay> trainingDays = trainingDayService
+				.findAllLanguage(language);
 		Collection<Sponsor> sponsors = sponsorService.findAll();
 
 		ModelAndView result;
@@ -177,7 +183,10 @@ public class AdministratorTrainingController extends AbstractController {
 	protected ModelAndView createCreateModelAndView(Training training,
 			String message) {
 		assert training != null;
-		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
+
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<TrainingDay> trainingDays = trainingDayService
+				.findAllLanguage(language);
 		Collection<Sponsor> sponsors = sponsorService.findAll();
 
 		ModelAndView result;

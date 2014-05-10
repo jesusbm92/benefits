@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 
 import repositories.MealRepository;
 import domain.Amount;
+import domain.Language;
 import domain.Meal;
 
 @Transactional
@@ -52,6 +53,17 @@ public class MealService {
 	public Collection<Meal> findAll() {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return mealRepository.findAll();
+	}
+
+	public Collection<Meal> findAllLanguage(String language) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Meal> result;
+		if (language == Language.English.toString()) {
+			result = mealRepository.findAllLanguage(Language.English);
+		} else {
+			result = mealRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**

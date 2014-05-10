@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -48,7 +49,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 		ModelAndView result;
 		String uri = "trainingDay/administrator/list";
 		String requestURI = "trainingDay/administrator/list.do";
-		Collection<TrainingDay> trainingDays = trainingDayService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<TrainingDay> trainingDays = trainingDayService
+				.findAllLanguage(language);
 		result = createListModelAndView(requestURI, trainingDays, uri);
 
 		return result;
@@ -161,8 +164,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 	protected ModelAndView createEditModelAndView(TrainingDay trainingDay,
 			String message) {
 		assert trainingDay != null;
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAll();
+				.findAllLanguage(language);
 
 		// Collection<Days> days = new ArrayList<Days>();
 		// days.add("MONDAY");
@@ -186,8 +190,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 	protected ModelAndView createCreateModelAndView(TrainingDay trainingDay,
 			String message) {
 		assert trainingDay != null;
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAll();
+				.findAllLanguage(language);
 
 		// Collection<Days> days = new ArrayList<Days>();
 		// days.add("MONDAY");

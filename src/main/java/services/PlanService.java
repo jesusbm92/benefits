@@ -11,6 +11,7 @@ import org.springframework.util.Assert;
 import repositories.PlanRepository;
 import domain.Customer;
 import domain.Goals;
+import domain.Language;
 import domain.Plan;
 
 @Transactional
@@ -59,6 +60,17 @@ public class PlanService {
 	public Collection<Plan> findAll() {
 		Assert.isTrue(userService.IAmAnAdmin());
 		return planRepository.findAll();
+	}
+
+	public Collection<Plan> findAllLanguage(String language) {
+		Assert.isTrue(userService.IAmAnAdmin());
+		Collection<Plan> result;
+		if (language == Language.English.toString()) {
+			result = planRepository.findAllLanguage(Language.English);
+		} else {
+			result = planRepository.findAllLanguage(Language.Spanish);
+		}
+		return result;
 	}
 
 	/**
@@ -140,7 +152,8 @@ public class PlanService {
 				|| Goals.KEEP_FIT.equals(goal)
 				|| Goals.LOSE_WEIGHT.equals(goal));
 
-		Collection<Plan> plansForGoal = planRepository.findPlansByGoal(goal, customer.getBodyfat(), customer.getWeight());
+		Collection<Plan> plansForGoal = planRepository.findPlansByGoal(goal,
+				customer.getBodyfat(), customer.getWeight());
 		ArrayList<Plan> planList = new ArrayList<Plan>(plansForGoal);
 		Plan selectedPlan = planList.get((int) Math.random() * planList.size());
 		customerService.changeCustomerPlan(selectedPlan);
