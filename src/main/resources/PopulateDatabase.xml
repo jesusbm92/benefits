@@ -1157,10 +1157,10 @@
 		<property name="name" value="Plan to keep fit" />
 		<property name="goal" value="KEEP_FIT" />
 		<property name="description" value="This is a plan to keep fit" />
-		<property name="minWeight" value="65.5" />
-		<property name="maxWeight" value="75.5" />
-		<property name="minBodyFat" value="20.5" />
-		<property name="maxBodyFat" value="25.5" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="150.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="150.5" />
 		<property name="customers">
 			<list>
 				<ref bean="customer1" />
@@ -1176,10 +1176,10 @@
 		<property name="name" value="Plan to lose weight" />
 		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="description" value="This is a plan to lose weight" />
-		<property name="minWeight" value="75.5" />
-		<property name="maxWeight" value="105.5" />
-		<property name="minBodyFat" value="40.5" />
-		<property name="maxBodyFat" value="70.5" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="150.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="150.5" />
 		<property name="customers">
 			<list>
 				<ref bean="customer2" />
@@ -1197,10 +1197,10 @@
 		<property name="name" value="Plan to gain muscle mass" />
 		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="description" value="This is a plan to gain muscle mass" />
-		<property name="minWeight" value="70.5" />
-		<property name="maxWeight" value="95.5" />
-		<property name="minBodyFat" value="20.5" />
-		<property name="maxBodyFat" value="25.5" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="150.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="150.5" />
 		<property name="customers">
 			<list></list>
 		</property>
