@@ -94,9 +94,11 @@ public class CommentController extends AbstractController {
 					result = new ModelAndView("redirect:list.do?planId="
 							+ comment.getPlan().getId());
 				} else {
-					result = createListModelAndView("plan/customer/list.do",
-							comment.getPlan(), "plan/customer/list", true,
-							new Comment());
+					// result = createListModelAndView("plan/customer/list.do",
+					// comment.getPlan(), "plan/customer/list", true,
+					// new Comment());
+					result = new ModelAndView(
+							"redirect:../plan/customer/list.do");
 				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(comment, "comment.commit.error");

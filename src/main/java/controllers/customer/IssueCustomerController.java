@@ -88,12 +88,12 @@ public class IssueCustomerController extends AbstractController {
 		} else {
 			try {
 				issueService.save(issue);
-				// result = new ModelAndView(
-				// "redirect:/plan/customer/list.do?planId="
-				// + issue.getPlan().getId());
-				result = createListModelAndView("plan/customer/list.do",
-						issue.getPlan(), "plan/customer/list", true,
-						new Comment());
+				result = new ModelAndView(
+						"redirect:/plan/customer/list.do?planId="
+								+ issue.getPlan().getId());
+				// result = createListModelAndView("plan/customer/list.do",
+				// issue.getPlan(), "plan/customer/list", true,
+				// new Comment());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(issue, "issue.commit.error");
 			}
@@ -109,8 +109,7 @@ public class IssueCustomerController extends AbstractController {
 
 		try {
 			issueService.delete(issue);
-			result = new ModelAndView("redirect:list.do?planId="
-					+ issue.getPlan().getId());
+			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
 				result = createEditModelAndView(issue, "issue.error");
