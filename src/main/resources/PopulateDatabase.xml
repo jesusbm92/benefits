@@ -1174,7 +1174,7 @@
 	</bean>
 	<bean id="plan2" class="domain.Plan">
 		<property name="name" value="Plan to lose weight" />
-		<property name="goal" value="KEEP_FIT" />
+		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="description" value="This is a plan to lose weight" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />
@@ -1195,7 +1195,7 @@
 	</bean>
 	<bean id="plan3" class="domain.Plan">
 		<property name="name" value="Plan to gain muscle mass" />
-		<property name="goal" value="KEEP_FIT" />
+		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="description" value="This is a plan to gain muscle mass" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />
