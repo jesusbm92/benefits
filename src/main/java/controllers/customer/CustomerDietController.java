@@ -107,7 +107,7 @@ public class CustomerDietController extends AbstractController {
 								+ SANGRIA + "Quantity : "
 								+ amount.getQuantity(), text));
 						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Repetitions : "
+								+ SANGRIA + "Measure : "
 								+ amount.getMeasure(), text));
 						document.add(new Paragraph(" "));
 						document.add(new Paragraph(" "));

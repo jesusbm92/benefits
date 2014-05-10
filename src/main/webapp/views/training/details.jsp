@@ -60,6 +60,8 @@
 																					${thirt.repetitions }</li>
 																				<li><spring:message code="training.cycles" />:
 																					${thirt.cycles }</li>
+																				<li><spring:message code="training.muscle" />:
+																					${thirt.muscle.name }</li>
 																			</ul>
 																		</div>
 																		<div class="pull-right">
