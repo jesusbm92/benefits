@@ -9,8 +9,10 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<h1 class="text-center"><spring:message code="exerciseGroup.details" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="exerciseGroup.details" />
+</h1>
+<br />
 
 <div class="container">
 	<form:form action="exerciseGroup/administrator/edit.do"
@@ -22,6 +24,8 @@
 		<form:hidden path="version" />
 
 		<acme:textbox code="exerciseGroup.name" path="name" />
+		<br>
+		<acme:textbox code="exerciseGroup.description" path="description" />
 		<br>
 
 		<form:label path="exercises">

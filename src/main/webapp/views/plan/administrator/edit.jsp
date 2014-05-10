@@ -27,6 +27,14 @@
 				<form:hidden path="comments" />
 				<form:hidden path="issues" />
 
+				<acme:textbox path="name" code="plan.name" />
+				<acme:textarea path="description" code="plan.description" />
+				<acme:textbox path="minWeight" code="plan.minWeight" />
+				<acme:textbox path="minBodyFat" code="plan.minBodyFat" />
+				<acme:textbox path="maxWeight" code="plan.maxWeight" />
+				<acme:textbox path="maxBodyFat" code="plan.maxBodyFat" />
+				
+	
 				<div class="form-group">
 					<form:label path="goal" class="col-md-4 control-label">
 						<spring:message code="plan.goal" />
