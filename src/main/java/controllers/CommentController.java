@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.CommentService;
 import services.PlanService;
@@ -82,7 +83,8 @@ public class CommentController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Comment comment, BindingResult binding) {
+	public ModelAndView save(@Valid Comment comment, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -94,11 +96,9 @@ public class CommentController extends AbstractController {
 					result = new ModelAndView("redirect:list.do?planId="
 							+ comment.getPlan().getId());
 				} else {
-					// result = createListModelAndView("plan/customer/list.do",
-					// comment.getPlan(), "plan/customer/list", true,
-					// new Comment());
-					result = new ModelAndView(
-							"redirect:../plan/customer/list.do");
+					redirect.addFlashAttribute("successMessage",
+							"plan.comment.success");
+					result = new ModelAndView("redirect:/plan/customer/list.do");
 				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(comment, "comment.commit.error");
@@ -162,21 +162,6 @@ public class CommentController extends AbstractController {
 		result.addObject("comments", comments);
 		result.addObject("plan", plan);
 		result.addObject("requestURI", requestURI);
-
-		return result;
-	}
-
-	protected ModelAndView createListModelAndView(String requestURI, Plan plan,
-			String uri, Boolean res, Comment newComment) {
-		ModelAndView result;
-
-		result = new ModelAndView(uri);
-		result.addObject("plan", plan);
-		result.addObject("comments", plan.getComments());
-		result.addObject("requestURI", requestURI);
-		result.addObject("res", res);
-		result.addObject("newComment", newComment);
-		result.addObject("successMessage", "plan.comment.success");
 
 		return result;
 	}

@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.IssueService;
 import services.PlanService;
 import controllers.AbstractController;
-import domain.Comment;
 import domain.Issue;
 import domain.Plan;
 
@@ -80,7 +80,8 @@ public class IssueCustomerController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Issue issue, BindingResult binding) {
+	public ModelAndView save(@Valid Issue issue, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -88,12 +89,11 @@ public class IssueCustomerController extends AbstractController {
 		} else {
 			try {
 				issueService.save(issue);
+				redirect.addFlashAttribute("successMessage",
+						"plan.issue.success");
 				result = new ModelAndView(
 						"redirect:/plan/customer/list.do?planId="
 								+ issue.getPlan().getId());
-				// result = createListModelAndView("plan/customer/list.do",
-				// issue.getPlan(), "plan/customer/list", true,
-				// new Comment());
 			} catch (Throwable oops) {
 				result = createEditModelAndView(issue, "issue.commit.error");
 			}
@@ -156,20 +156,4 @@ public class IssueCustomerController extends AbstractController {
 
 		return result;
 	}
-
-	protected ModelAndView createListModelAndView(String requestURI, Plan plan,
-			String uri, Boolean res, Comment newComment) {
-		ModelAndView result;
-
-		result = new ModelAndView(uri);
-		result.addObject("plan", plan);
-		result.addObject("comments", plan.getComments());
-		result.addObject("requestURI", requestURI);
-		result.addObject("res", res);
-		result.addObject("newComment", newComment);
-		result.addObject("successMessage", "plan.issue.success");
-
-		return result;
-	}
-
 }

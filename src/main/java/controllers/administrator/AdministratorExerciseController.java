@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
 
-import services.ExerciseGroupService;
 import services.ExerciseService;
 import services.MuscleService;
 import controllers.AbstractController;
@@ -34,8 +33,6 @@ public class AdministratorExerciseController extends AbstractController {
 
 	@Autowired
 	private ExerciseService exerciseService;
-	@Autowired
-	private ExerciseGroupService exerciseGroupService;
 	@Autowired
 	private MuscleService muscleService;
 
@@ -173,7 +170,6 @@ public class AdministratorExerciseController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Exercise exercise,
 			String message) {
 		assert exercise != null;
-		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 		Map<String, Integer> map = muscleService.findAllIdName();
 		ModelAndView result;
 		result = new ModelAndView("exercise/administrator/edit");
