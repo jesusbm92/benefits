@@ -10,8 +10,10 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
-<h1 class="text-center"><spring:message code="plan.createnew" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="plan.createnew" />
+</h1>
+<br />
 
 <div class="container">
 	<div class="row">
@@ -33,8 +35,8 @@
 				<acme:textbox path="minBodyFat" code="plan.minBodyFat" />
 				<acme:textbox path="maxWeight" code="plan.maxWeight" />
 				<acme:textbox path="maxBodyFat" code="plan.maxBodyFat" />
-				
-	
+
+
 				<div class="form-group">
 					<form:label path="goal" class="col-md-4 control-label">
 						<spring:message code="plan.goal" />
@@ -51,6 +53,24 @@
 						<br>
 					</div>
 				</div>
+
+				<div class="form-group">
+					<form:label path="language" class="col-md-4 control-label">
+						<spring:message code="plan.language" />
+					</form:label>
+					<div class="col-md-7">
+						<form:select path="language" class="form-control">
+							<jstl:forEach var="language" items="${languages}">
+								<form:option value="${language}">
+									<spring:message code="plan.language.${language}" />
+								</form:option>
+							</jstl:forEach>
+						</form:select>
+						<form:errors cssClass="error" path="language"></form:errors>
+						<br>
+					</div>
+				</div>
+
 				<div class="form-group">
 					<form:label path="diet" for="dietId" class="col-md-4 control-label">
 						<spring:message code="plan.diet" />

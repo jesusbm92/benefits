@@ -8,7 +8,9 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<h1 class="text-center"><spring:message code="exercise.exercises" /></h1>
+<h1 class="text-center">
+	<spring:message code="exercise.exercises" />
+</h1>
 
 <div class="container">
 	<div class="row">
@@ -25,6 +27,9 @@
 					titleKey="exercise.repetitions" sortable="true" />
 				<display:column property="cycles" titleKey="exercise.cycles"
 					sortable="true" />
+
+				<display:column property="languageExercise"
+					titleKey="exercise.language" sortable="true" />
 				<display:column property="muscle.name" titleKey="exercise.muscle"
 					sortable="true" />
 

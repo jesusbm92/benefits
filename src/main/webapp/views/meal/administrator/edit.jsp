@@ -33,7 +33,24 @@
 	<br>
 	<acme:textbox code="meal.description" path="description" />
 	<br>
-	
+
+	<div class="form-group">
+		<form:label path="language" class="col-md-4 control-label">
+			<spring:message code="meal.language" />
+		</form:label>
+		<div class="col-md-7">
+			<form:select path="language" class="form-control">
+				<jstl:forEach var="language" items="${languages}">
+					<form:option value="${language}">
+						<spring:message code="meal.language.${language}" />
+					</form:option>
+				</jstl:forEach>
+			</form:select>
+			<form:errors cssClass="error" path="language"></form:errors>
+			<br>
+		</div>
+	</div>
+
 
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="meal.save" />" />

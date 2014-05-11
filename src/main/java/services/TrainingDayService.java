@@ -55,10 +55,10 @@ public class TrainingDayService {
 	public Collection<TrainingDay> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<TrainingDay> result;
-		if (language == Language.English.toString()) {
-			result = trainingDayRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = trainingDayRepository.findAllLanguage(Language.english);
 		} else {
-			result = trainingDayRepository.findAllLanguage(Language.Spanish);
+			result = trainingDayRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

@@ -10,8 +10,10 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
-<h1 class="text-center"><spring:message code="training.details" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="training.details" />
+</h1>
+<br />
 
 <div class="container">
 	<form:form action="training/administrator/edit.do"
@@ -26,9 +28,26 @@
 		<br>
 		<acme:textarea code="training.description" path="description" />
 		<br>
-		
+
 		<acme:textbox code="training.duration" path="duration" />
 		<br>
+
+			<div class="form-group">
+		<form:label path="language" class="col-md-4 control-label">
+			<spring:message code="training.language" />
+		</form:label>
+		<div class="col-md-7">
+			<form:select path="language" class="form-control">
+				<jstl:forEach var="language" items="${languages}">
+					<form:option value="${language}">
+						<spring:message code="training.language.${language}" />
+					</form:option>
+				</jstl:forEach>
+			</form:select>
+			<form:errors cssClass="error" path="language"></form:errors>
+			<br>
+		</div>
+	</div>
 
 		<form:label path="sponsor">
 			<spring:message code="training.sponsor" />

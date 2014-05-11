@@ -55,10 +55,10 @@ public class DietService {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Diet> result;
 		int dev;
-		if (language == Language.English.toString()) {
-			result = dietRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = dietRepository.findAllLanguage(Language.english);
 		} else {
-			result = dietRepository.findAllLanguage(Language.Spanish);
+			result = dietRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

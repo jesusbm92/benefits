@@ -24,6 +24,7 @@ import services.ExerciseService;
 import services.MuscleService;
 import controllers.AbstractController;
 import domain.Exercise;
+import domain.Language;
 
 @Controller
 @RequestMapping("/exercise/administrator")
@@ -51,8 +52,9 @@ public class AdministratorExerciseController extends AbstractController {
 		String uri = "exercise/administrator/list";
 		String requestURI = "exercise/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<Exercise> exercises = exerciseService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, exercises, uri);
 
 		return result;
@@ -176,6 +178,7 @@ public class AdministratorExerciseController extends AbstractController {
 		result.addObject("exercise", exercise);
 		result.addObject("message", message);
 		result.addObject("create", false);
+		result.addObject("languages", Language.values());
 		result.addObject("map", map);
 
 		return result;
@@ -190,6 +193,7 @@ public class AdministratorExerciseController extends AbstractController {
 		result.addObject("exercise", exercise);
 		result.addObject("map", map);
 		result.addObject("message", message);
+		result.addObject("languages", Language.values());
 		result.addObject("create", true);
 
 		return result;

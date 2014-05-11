@@ -1,7 +1,6 @@
 package controllers.administrator;
 
 import java.util.Collection;
-import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +23,7 @@ import services.SponsorService;
 import services.TrainingDayService;
 import services.TrainingService;
 import controllers.AbstractController;
+import domain.Language;
 import domain.Sponsor;
 import domain.Training;
 import domain.TrainingDay;
@@ -56,8 +56,9 @@ public class AdministratorTrainingController extends AbstractController {
 		String uri = "training/administrator/list";
 		String requestURI = "training/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<Training> trainings = trainingService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, trainings, uri);
 		Boolean prin = true;
 		result.addObject("prin", prin);
@@ -165,8 +166,9 @@ public class AdministratorTrainingController extends AbstractController {
 			String message) {
 		assert training != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<TrainingDay> trainingDays = trainingDayService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		Collection<Sponsor> sponsors = sponsorService.findAll();
 
 		ModelAndView result;
@@ -175,6 +177,7 @@ public class AdministratorTrainingController extends AbstractController {
 		result.addObject("message", message);
 		result.addObject("trainingDays", trainingDays);
 		result.addObject("create", false);
+		result.addObject("languages", Language.values());
 		result.addObject("sponsors", sponsors);
 
 		return result;
@@ -185,8 +188,9 @@ public class AdministratorTrainingController extends AbstractController {
 		assert training != null;
 
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<TrainingDay> trainingDays = trainingDayService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		Collection<Sponsor> sponsors = sponsorService.findAll();
 
 		ModelAndView result;
@@ -195,6 +199,7 @@ public class AdministratorTrainingController extends AbstractController {
 		result.addObject("trainingDays", trainingDays);
 		result.addObject("sponsors", sponsors);
 		result.addObject("create", true);
+		result.addObject("languages", Language.values());
 		result.addObject("message", message);
 
 		return result;

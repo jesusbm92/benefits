@@ -10,8 +10,10 @@
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@page import="domain.Goals"%>
 
-<h1 class="text-center"><spring:message code="exercise.details" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="exercise.details" />
+</h1>
+<br />
 
 <div class="container">
 	<div class="row">
@@ -66,6 +68,23 @@
 					<form:errors path="description" cssClass="error" />
 				</div>
 
+				<div class="form-group">
+					<form:label path="languageExercise" class="col-md-4 control-label">
+						<spring:message code="exercise.language" />
+					</form:label>
+					<div class="col-md-7">
+						<form:select path="languageExercise" class="form-control">
+							<jstl:forEach var="languageExercise" items="${languages}">
+								<form:option value="${languageExercise}">
+									<spring:message code="exercise.language.${languageExercise}" />
+								</form:option>
+							</jstl:forEach>
+						</form:select>
+						<form:errors cssClass="error" path="languageExercise"></form:errors>
+						<br>
+					</div>
+				</div>
+
 				<form:label path="image">
 					<spring:message code="exercise.image" />
 				</form:label>
@@ -75,7 +94,7 @@
 				<jstl:if test="${exercise.validImage }">
 					<img src="image/showExercise.do?exerciseId=${exercise.id }"
 						style="height: 100px" class="img-thumbnail" />
-				</jstl:if> 
+				</jstl:if>
 
 				<div class="form-group">
 					<form:label path="urlYoutube" class="col-sm-2 control-label"

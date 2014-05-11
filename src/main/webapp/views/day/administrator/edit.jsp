@@ -11,7 +11,9 @@
 <%@page import="domain.Days"%>
 <%@page import="domain.Language"%>
 
-<h1 class="text-center"><spring:message code="day.create.day" /></h1>
+<h1 class="text-center">
+	<spring:message code="day.create.day" />
+</h1>
 
 <form:form action="day/administrator/edit.do" modelAttribute="day">
 
@@ -32,16 +34,34 @@
 	</form:select>
 	<form:errors path="name" cssClass="error" />
 	<br>
-	
+
 	<acme:textbox code="day.descName" path="descriptiveName" />
-		<br>
+	<br>
+
+	<div class="form-group">
+		<form:label path="language" class="col-md-4 control-label">
+			<spring:message code="day.language" />
+		</form:label>
+		<div class="col-md-7">
+			<form:select path="language" class="form-control">
+				<jstl:forEach var="language" items="${languages}">
+					<form:option value="${language}">
+						<spring:message code="day.language.${language}" />
+					</form:option>
+				</jstl:forEach>
+			</form:select>
+			<form:errors cssClass="error" path="language"></form:errors>
+			<br>
+		</div>
+	</div>
+
 
 	<form:label path="meals">
 		<spring:message code="day.meals.edit" />
 	</form:label>
-	<form:select multiple="${meals.size()}" items="${meals}" itemLabel="name"
-		id="id" code="day.meal" path="meals" />
-		<form:errors path="meals" cssClass="error" />
+	<form:select multiple="${meals.size()}" items="${meals}"
+		itemLabel="name" id="id" code="day.meal" path="meals" />
+	<form:errors path="meals" cssClass="error" />
 	<br>
 
 	<input type="submit" name="save" class="btn btn-default"
@@ -49,7 +69,7 @@
 
 	<jstl:if test="${!create}">
 
-					<a class="btn btn-default" data-toggle="modal"
+		<a class="btn btn-default" data-toggle="modal"
 			data-target="#basicModal"><spring:message code="day.delete" /></a>
 
 		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"

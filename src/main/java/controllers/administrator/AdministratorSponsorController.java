@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import services.SponsorService;
 import controllers.AbstractController;
-import domain.Plan;
 import domain.Sponsor;
 
 @Controller

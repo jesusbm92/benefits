@@ -57,10 +57,10 @@ public class ExerciseGroupService {
 	public Collection<ExerciseGroup> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<ExerciseGroup> result;
-		if (language == Language.English.toString()) {
-			result = exerciseGroupRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = exerciseGroupRepository.findAllLanguage(Language.english);
 		} else {
-			result = exerciseGroupRepository.findAllLanguage(Language.Spanish);
+			result = exerciseGroupRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

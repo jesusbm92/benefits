@@ -24,10 +24,6 @@ public class ExerciseService {
 
 	@Autowired
 	private AdministratorService administratorService;
-	@Autowired
-	private ExerciseGroupService exerciseGroupService;
-	@Autowired
-	private MuscleService muscleService;
 
 	// Constructors --------------------------
 	public ExerciseService() {
@@ -59,10 +55,10 @@ public class ExerciseService {
 	public Collection<Exercise> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<Exercise> result;
-		if (language == Language.English.toString()) {
-			result = exerciseRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = exerciseRepository.findAllLanguage(Language.english);
 		} else {
-			result = exerciseRepository.findAllLanguage(Language.Spanish);
+			result = exerciseRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

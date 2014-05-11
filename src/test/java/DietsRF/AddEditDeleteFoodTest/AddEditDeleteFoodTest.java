@@ -6,14 +6,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
 
 import services.AmountService;
 import services.DayService;
 import services.FoodService;
 import services.SponsorService;
 import utilities.PopulateDatabase;
-import domain.Amount;
 import domain.Food;
 import funcionalRequirement.GlobalTest;
 

@@ -65,10 +65,10 @@ public class PlanService {
 	public Collection<Plan> findAllLanguage(String language) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Plan> result;
-		if (language == Language.English.toString()) {
-			result = planRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = planRepository.findAllLanguage(Language.english);
 		} else {
-			result = planRepository.findAllLanguage(Language.Spanish);
+			result = planRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

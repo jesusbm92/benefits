@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 import services.FoodService;
 import domain.Amount;
 import domain.Food;
+import domain.Language;
 
 @Controller
 @RequestMapping("/food/administrator")
@@ -44,7 +45,8 @@ public class AdministratorFoodController {
 		ModelAndView result;
 
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Food> foods = foodService.findAllLanguage(language);
+
+		Collection<Food> foods = foodService.findAllLanguage(language.toLowerCase());
 		String uri = "food/administrator/list";
 		String requestURI = "food/administrator/list.do";
 		result = createListModelAndView(requestURI, foods, uri);
@@ -161,6 +163,7 @@ public class AdministratorFoodController {
 		result = new ModelAndView("food/administrator/edit");
 		result.addObject("food", food);
 		result.addObject("amounts", amounts);
+		result.addObject("languages", Language.values());
 		result.addObject("create", false);
 
 		return result;
@@ -174,6 +177,7 @@ public class AdministratorFoodController {
 		result = new ModelAndView("food/administrator/create");
 		result.addObject("food", food);
 		result.addObject("amounts", amounts);
+		result.addObject("languages", Language.values());
 		result.addObject("create", true);
 
 		return result;

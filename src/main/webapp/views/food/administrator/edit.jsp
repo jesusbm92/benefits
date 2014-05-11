@@ -28,6 +28,23 @@
 	<acme:textarea path="description" code="food.description" />
 	<br>
 
+	<div class="form-group">
+		<form:label path="language" class="col-md-4 control-label">
+			<spring:message code="food.language" />
+		</form:label>
+		<div class="col-md-7">
+			<form:select path="language" class="form-control">
+				<jstl:forEach var="language" items="${languages}">
+					<form:option value="${language}">
+						<spring:message code="food.language.${language}" />
+					</form:option>
+				</jstl:forEach>
+			</form:select>
+			<form:errors cssClass="error" path="language"></form:errors>
+			<br>
+		</div>
+	</div>
+
 	<form:label path="image">
 		<spring:message code="food.image" />
 	</form:label>

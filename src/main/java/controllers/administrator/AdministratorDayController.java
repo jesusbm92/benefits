@@ -19,6 +19,7 @@ import services.MealService;
 import controllers.AbstractController;
 import domain.Day;
 import domain.Days;
+import domain.Language;
 import domain.Meal;
 
 @Controller
@@ -68,7 +69,8 @@ public class AdministratorDayController extends AbstractController {
 		String uri = "day/administrator/list";
 		String requestURI = "day/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Day> days = dayService.findAllLanguage(language);
+		
+		Collection<Day> days = dayService.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, days, uri);
 
 		return result;
@@ -170,7 +172,8 @@ public class AdministratorDayController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Day day, String message) {
 		assert day != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Meal> meals = mealService.findAllLanguage(language);
+
+		Collection<Meal> meals = mealService.findAllLanguage(language.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("day/administrator/edit");
@@ -178,6 +181,7 @@ public class AdministratorDayController extends AbstractController {
 		result.addObject("names", Days.values());
 		result.addObject("message", message);
 		result.addObject("meals", meals);
+		result.addObject("languages", Language.values());
 		result.addObject("create", false);
 		return result;
 	}
@@ -185,13 +189,15 @@ public class AdministratorDayController extends AbstractController {
 	protected ModelAndView createCreateModelAndView(Day day, String message) {
 		assert day != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Meal> meals = mealService.findAllLanguage(language);
+
+		Collection<Meal> meals = mealService.findAllLanguage(language.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("day/administrator/create");
 		result.addObject("day", day);
 		result.addObject("names", Days.values());
 		result.addObject("message", message);
+		result.addObject("languages", Language.values());
 		result.addObject("create", true);
 		result.addObject("meals", meals);
 		return result;

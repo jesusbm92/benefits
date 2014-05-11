@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.ExerciseGroupService;
-import services.MuscleService;
 import services.TrainingDayService;
 import controllers.AbstractController;
 import domain.Days;
 import domain.ExerciseGroup;
+import domain.Language;
 import domain.TrainingDay;
 
 @Controller
@@ -30,8 +30,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 
 	@Autowired
 	private TrainingDayService trainingDayService;
-	@Autowired
-	private MuscleService muscleService;
+
 	@Autowired
 	private ExerciseGroupService exerciseGroupService;
 
@@ -50,8 +49,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 		String uri = "trainingDay/administrator/list";
 		String requestURI = "trainingDay/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<TrainingDay> trainingDays = trainingDayService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, trainingDays, uri);
 
 		return result;
@@ -165,8 +165,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 			String message) {
 		assert trainingDay != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 
 		// Collection<Days> days = new ArrayList<Days>();
 		// days.add("MONDAY");
@@ -182,6 +183,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 		result.addObject("message", message);
 		result.addObject("create", false);
 		result.addObject("exerciseGroups", exerciseGroups);
+		result.addObject("languages", Language.values());
 		result.addObject("days", Days.values());
 
 		return result;
@@ -191,8 +193,9 @@ public class AdministratorTrainingDayController extends AbstractController {
 			String message) {
 		assert trainingDay != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 
 		// Collection<Days> days = new ArrayList<Days>();
 		// days.add("MONDAY");
@@ -208,6 +211,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 		result.addObject("trainingDay", trainingDay);
 		result.addObject("exerciseGroups", exerciseGroups);
 		result.addObject("days", Days.values());
+		result.addObject("languages", Language.values());
 		result.addObject("message", message);
 
 		return result;

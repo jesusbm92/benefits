@@ -55,10 +55,10 @@ public class DayService {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Day> result;
 		int dev;
-		if (language == Language.English.toString()) {
-			result = dayRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = dayRepository.findAllLanguage(Language.english);
 		} else {
-			result = dayRepository.findAllLanguage(Language.Spanish);
+			result = dayRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

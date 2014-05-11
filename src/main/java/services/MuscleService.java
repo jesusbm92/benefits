@@ -58,10 +58,10 @@ public class MuscleService {
 	public Collection<Muscle> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<Muscle> result;
-		if (language == Language.English.toString()) {
-			result = muscleRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = muscleRepository.findAllLanguage(Language.english);
 		} else {
-			result = muscleRepository.findAllLanguage(Language.Spanish);
+			result = muscleRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

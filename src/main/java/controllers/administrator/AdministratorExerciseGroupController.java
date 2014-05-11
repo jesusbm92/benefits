@@ -20,6 +20,7 @@ import services.ExerciseService;
 import controllers.AbstractController;
 import domain.Exercise;
 import domain.ExerciseGroup;
+import domain.Language;
 
 @Controller
 @RequestMapping("/exerciseGroup/administrator")
@@ -47,8 +48,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		String uri = "exerciseGroup/administrator/list";
 		String requestURI = "exerciseGroup/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<ExerciseGroup> exerciseGroups = exerciseGroupService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, exerciseGroups, uri);
 
 		return result;
@@ -163,8 +165,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 			String message) {
 		assert exerciseGroup != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<Exercise> exercises = exerciseService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
 		if (exerciseGroup.getId() != 0) {
 			exerciseSelected = exerciseService
@@ -177,6 +180,7 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		result.addObject("message", message);
 		result.addObject("create", false);
 		result.addObject("exercises", exercises);
+		result.addObject("languages", Language.values());
 		result.addObject("exerciseSelected", exerciseSelected);
 
 		return result;
@@ -186,8 +190,9 @@ public class AdministratorExerciseGroupController extends AbstractController {
 			ExerciseGroup exerciseGroup, String message) {
 		assert exerciseGroup != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<Exercise> exercises = exerciseService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		Collection<Exercise> exerciseSelected = new ArrayList<Exercise>();
 		if (exerciseGroup.getId() != 0) {
 			exerciseSelected = exerciseService
@@ -200,6 +205,7 @@ public class AdministratorExerciseGroupController extends AbstractController {
 		result.addObject("exercises", exercises);
 		result.addObject("exerciseSelected", exerciseSelected);
 		result.addObject("create", true);
+		result.addObject("languages", Language.values());
 		result.addObject("message", message);
 
 		return result;

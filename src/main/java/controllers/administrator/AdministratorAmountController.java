@@ -162,7 +162,8 @@ public class AdministratorAmountController {
 		assert amount != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Food> foods = foodService.findAllLanguage(language);
+		Collection<Food> foods = foodService.findAllLanguage(language
+				.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/edit");
@@ -179,7 +180,8 @@ public class AdministratorAmountController {
 		assert amount != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Food> foods = foodService.findAllLanguage(language);
+		Collection<Food> foods = foodService.findAllLanguage(language
+				.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("amount/administrator/create");

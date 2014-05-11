@@ -21,10 +21,27 @@
 	</form:label>
 	<form:input path="name" type="text" />
 	<form:errors path="name" cssClass="error" />
-	<br>
+	<br />
 
 	<acme:textarea path="description" code="diet.description" />
-	<br>
+	<br />
+
+	<div class="form-group">
+		<form:label path="language" class="col-md-4 control-label">
+			<spring:message code="diet.language" />
+		</form:label>
+		<div class="col-md-7">
+			<form:select path="language" class="form-control">
+				<jstl:forEach var="language" items="${languages}">
+					<form:option value="${language}">
+						<spring:message code="diet.language.${language}" />
+					</form:option>
+				</jstl:forEach>
+			</form:select>
+			<form:errors cssClass="error" path="language"></form:errors>
+			<br>
+		</div>
+	</div>
 
 	<form:label path="sponsor">
 		<spring:message code="diet.sponsor" />
@@ -34,15 +51,15 @@
 		<form:options items="${sponsors }" itemValue="id" itemLabel="name" />
 	</form:select>
 	<form:errors path="sponsor" cssClass="error" />
-	<br>
+	<br />
 
 	<form:label path="days">
 		<spring:message code="diet.days.edit" />
 	</form:label>
-	<form:select multiple="${days.size()}" items="${days}" itemLabel="descriptiveName"
-		id="id" code="diet.day" path="days" />
-		<form:errors path="days" cssClass="error" />
-	<br>
+	<form:select multiple="${days.size()}" items="${days}"
+		itemLabel="descriptiveName" id="id" code="diet.day" path="days" />
+	<form:errors path="days" cssClass="error" />
+	<br />
 
 	<input type="submit" name="save" class="btn btn-default"
 		value="<spring:message code="diet.save" />" />

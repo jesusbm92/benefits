@@ -59,10 +59,10 @@ public class FoodService {
 	public Collection<Food> findAllLanguage(String language) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Food> result;
-		if (language == Language.English.toString()) {
-			result = foodRepository.findAllLanguage(Language.English);
+		if (language == Language.english.toString()) {
+			result = foodRepository.findAllLanguage(Language.english);
 		} else {
-			result = foodRepository.findAllLanguage(Language.Spanish);
+			result = foodRepository.findAllLanguage(Language.spanish);
 		}
 		return result;
 	}

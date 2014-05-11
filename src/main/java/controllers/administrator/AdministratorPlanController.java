@@ -23,6 +23,7 @@ import controllers.AbstractController;
 import domain.Customer;
 import domain.Diet;
 import domain.Goals;
+import domain.Language;
 import domain.Plan;
 import domain.Training;
 
@@ -56,7 +57,8 @@ public class AdministratorPlanController extends AbstractController {
 		String uri = "plan/administrator/list";
 		String requestURI = "plan/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Plan> plans = planService.findAllLanguage(language);
+
+		Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
 		result = createListModelAndView(requestURI, plans, uri);
 
 		return result;
@@ -112,7 +114,8 @@ public class AdministratorPlanController extends AbstractController {
 			result = new ModelAndView("plan/administrator/change");
 			String language = LocaleContextHolder.getLocale()
 					.getDisplayLanguage();
-			Collection<Plan> plans = planService.findAllLanguage(language);
+
+			Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
 			result.addObject("plans", plans);
 			result.addObject("customer", customer);
 		} else {
@@ -126,7 +129,8 @@ public class AdministratorPlanController extends AbstractController {
 				result = new ModelAndView("plan/administrator/change");
 				String language = LocaleContextHolder.getLocale()
 						.getDisplayLanguage();
-				Collection<Plan> plans = planService.findAllLanguage(language);
+
+				Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
 				result.addObject("plans", plans);
 				result.addObject("customer", customer);
 			}
@@ -200,8 +204,9 @@ public class AdministratorPlanController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Plan plan, String message) {
 		assert plan != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+
 		Collection<Training> trainings = trainingService
-				.findAllLanguage(language);
+				.findAllLanguage(language.toLowerCase());
 		Collection<Diet> diets = dietService.findAllLanguage(language);
 
 		ModelAndView result;
@@ -209,6 +214,7 @@ public class AdministratorPlanController extends AbstractController {
 		result.addObject("plan", plan);
 		result.addObject("message", message);
 		result.addObject("goals", Goals.values());
+		result.addObject("languages", Language.values());
 		result.addObject("diets", diets);
 		result.addObject("trainings", trainings);
 
