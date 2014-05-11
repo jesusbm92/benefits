@@ -184,7 +184,7 @@
 											code="register.hipMeasure" /></span>
 									<form:input path="hipMeasure" name="hipMeasure" id="hipMeasure"
 										class="form-control input-lg" />
-									<span class="input-group-addon">kg</span>
+									<span class="input-group-addon">cm</span>
 								</div>
 								<form:errors class="error" path="hipMeasure" />
 							</div>
