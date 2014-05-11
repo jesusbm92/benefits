@@ -28,6 +28,12 @@
 	color: white;
 	text-shadow: black 0.3em 0.3em 0.3em;
 }
+.shared {
+    background-color:transparent;
+    color: white;
+    border:1px solid;
+	border-radius:25px;
+	}
 </style>
 
 <div class="arriba">
@@ -123,12 +129,23 @@
 					<h2>
 						<spring:message code="welcome.hello" />
 						<security:authentication property="principal.username" />
-						!
+						
 					</h2>
 					<br />
 					<a class="btn btn-primary btn-lg" role="button"
 						href="plan/customer/list.do"><spring:message
 							code="welcome.button.myplan" /></a>
+					<br><br><br><br><br><br><br>
+					
+					<div class="shared" align="center">
+
+						<label><spring:message code="welcome.shared1" /></label><br>
+						<label><spring:message code="welcome.shared2" /></label><br>
+						<a href = "http://twitter.com/intent/tweet?text=He perdido peso gracias a Benefits!, pruebala!!"><img src="images/twitter.png" /></a>	
+						<a href = "https://www.facebook.com/sharer/sharer.php?u=benefits.whelastic.net"><img src="images/facebook.png" /></a>	
+						<a href = "http://plus.google.com/share?url=benefits.whelastic.net"><img src="images/googleplus.png"  /></a>	
+						</div>
+
 				</security:authorize>
 			</div>
 		</div>
