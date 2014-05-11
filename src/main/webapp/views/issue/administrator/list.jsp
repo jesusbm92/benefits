@@ -8,6 +8,8 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
+<h1 class="text-center"><spring:message code="issue.issues" /></h1>
+
 <div class="container">
 	<display:table uid="issueListTable" keepStatus="false" name="issues"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"

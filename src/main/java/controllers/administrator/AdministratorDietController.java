@@ -1,14 +1,16 @@
 package controllers.administrator;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.util.Collection;
 
 import javax.validation.Valid;
 
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,18 +23,11 @@ import services.DayService;
 import services.DietService;
 import services.PlanService;
 import services.SponsorService;
-
-import com.lowagie.text.Document;
-import com.lowagie.text.Font;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
-
+import utilities.PdfUtils;
 import controllers.AbstractController;
-import domain.Amount;
 import domain.Day;
 import domain.Diet;
 import domain.Language;
-import domain.Meal;
 import domain.Plan;
 import domain.Sponsor;
 
@@ -42,11 +37,6 @@ public class AdministratorDietController extends AbstractController {
 
 	// Attributes
 	// ----------------------------------------------------------------
-	private static Font catFont = new Font(Font.TIMES_ROMAN, 20, Font.BOLD);
-	private static Font subFont = new Font(Font.TIMES_ROMAN, 18, Font.BOLD);
-	private static Font smallBold = new Font(Font.TIMES_ROMAN, 16, Font.BOLD);
-	private static Font text = new Font(Font.TIMES_ROMAN, 12);
-	private final static String SANGRIA = "    ";
 
 	// Services ----------------------------------------------------------------
 
@@ -75,7 +65,8 @@ public class AdministratorDietController extends AbstractController {
 		String requestURI = "diet/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Diet> diets = dietService.findAllLanguage(language.toLowerCase());
+		Collection<Diet> diets = dietService.findAllLanguage(language
+				.toLowerCase());
 		result = createListModelAndView(requestURI, diets, uri);
 
 		return result;
@@ -93,60 +84,18 @@ public class AdministratorDietController extends AbstractController {
 	}
 
 	@RequestMapping("/export")
-	public ModelAndView export(@RequestParam int dietId) {
-
-		ModelAndView result;
-		String uri = "diet/administrator/details";
-		String requestURI = "diet/administrator/details.do";
+	public ResponseEntity<byte[]> export(@RequestParam int dietId) {
 		Diet diet = dietService.findOne(dietId);
+		ByteArrayOutputStream document = PdfUtils.exportDietToPdf(diet);
 
-		exportToPdf(diet);
-
-		result = createListModelAndView(requestURI, diet, uri);
-		return result;
-	}
-
-	private void exportToPdf(Diet diet) {
-		try {
-			OutputStream file = new FileOutputStream(new File(
-					"C://Documents and Settings/Student/My Documents/diet"
-							+ diet.getName() + ".pdf"), true);
-
-			Document document = new Document();
-			PdfWriter.getInstance(document, file);
-			document.open();
-
-			document.add(new Paragraph(diet.getName(), catFont));
-			for (Day day : diet.getDays()) {
-				document.add(new Paragraph(SANGRIA + day.getName(), subFont));
-				for (Meal meal : day.getMeals()) {
-					document.add(new Paragraph(SANGRIA + SANGRIA
-							+ meal.getName(), smallBold));
-					for (Amount amount : meal.getAmounts()) {
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ "Food Name: " + amount.getFood().getName(),
-								text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Food Description: "
-								+ amount.getFood().getDescription(), text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Quantity : "
-								+ amount.getQuantity(), text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Measure : " + amount.getMeasure(),
-								text));
-						document.add(new Paragraph(" "));
-						document.add(new Paragraph(" "));
-					}
-				}
-			}
-
-			document.close();
-			file.close();
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.parseMediaType("application/pdf"));
+		String filename = diet.getName() + ".pdf";
+		headers.setContentDispositionFormData(filename, filename);
+		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+		ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(
+				document.toByteArray(), headers, HttpStatus.OK);
+		return response;
 	}
 
 	@RequestMapping("/details")
@@ -255,10 +204,12 @@ public class AdministratorDietController extends AbstractController {
 	protected ModelAndView createEditModelAndView(Diet diet, String message) {
 		assert diet != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		
-		Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
+
+		Collection<Plan> plans = planService.findAllLanguage(language
+				.toLowerCase());
 		Collection<Sponsor> sponsors = sponsorService.findAll();
-		Collection<Day> days = dayService.findAllLanguage(language.toLowerCase());
+		Collection<Day> days = dayService.findAllLanguage(language
+				.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/edit");
@@ -277,9 +228,11 @@ public class AdministratorDietController extends AbstractController {
 		assert diet != null;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
+		Collection<Plan> plans = planService.findAllLanguage(language
+				.toLowerCase());
 		Collection<Sponsor> sponsors = sponsorService.findAll();
-		Collection<Day> days = dayService.findAllLanguage(language.toLowerCase());
+		Collection<Day> days = dayService.findAllLanguage(language
+				.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("diet/administrator/create");

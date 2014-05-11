@@ -15,6 +15,11 @@
 }
 </style>
 
+<h1 class="text-center">
+	<spring:message code="sponsor.sponsors" />
+</h1>
+<br/>
+
 <div class="container">
 	<div class="row">
 		<div class="table-responsive">

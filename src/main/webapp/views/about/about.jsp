@@ -65,7 +65,7 @@ html,body {
 	-ms-transform: rotateZ(-2deg);
 }
 
-p {
+.about-text {
 font-size:17px
 }
 </style>
@@ -79,11 +79,11 @@ font-size:17px
 				<spring:message code="about.why" />
 			</h2>
 			<br />
-			<p>
+			<p class="about-text">
 				<spring:message code="about.first" />
 			</p>
 			<br />
-			<p>
+			<p class="about-text">
 				<spring:message code="about.second" />
 			</p>
 			<br /> <a href="register/registerCustomer.do"><input

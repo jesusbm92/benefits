@@ -98,17 +98,25 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.weight" var="weight" />
-								<form:input path="weight" name="weight" id="weight"
-									class="form-control input-lg" placeholder="${weight}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.weight" /></span>
+									<form:input path="weight" name="weight" id="weight"
+										class="form-control input-lg" />
+									<span class="input-group-addon">kg</span>
+								</div>
 								<form:errors class="error" path="weight" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.height" var="height" />
-								<form:input path="height" name="height" id="height"
-									class="form-control input-lg" placeholder="${height}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.height" /></span>
+									<form:input path="height" name="height" id="height"
+										class="form-control input-lg" placeholder="${height}" />
+									<span class="input-group-addon">m</span>
+								</div>
 								<form:errors class="error" path="height" />
 							</div>
 						</div>
@@ -116,19 +124,25 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.bodyFat" var="bodyfat" />
-								<form:input path="bodyfat" name="bodyfat" id="bodyfat"
-									class="form-control input-lg" placeholder="${bodyfat}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.bodyFat" /></span>
+									<form:input path="bodyfat" name="bodyfat" id="bodyfat"
+										class="form-control input-lg" />
+									<span class="input-group-addon">kg</span>
+								</div>
 								<form:errors class="error" path="bodyfat" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.waistlineMeasure"
-									var="waistlineMeasure" />
-								<form:input path="waistlineMeasure" name="waistlineMeasure"
-									id="waistlineMeasure" class="form-control input-lg"
-									placeholder="${waistlineMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.waistlineMeasure" /></span>
+									<form:input path="waistlineMeasure" name="waistlineMeasure"
+										id="waistlineMeasure" class="form-control input-lg" />
+									<span class="input-group-addon">cm</span>
+								</div>
 								<form:errors class="error" path="waistlineMeasure" />
 							</div>
 						</div>
@@ -136,20 +150,26 @@
 					<div class="row">
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.hipMeasure"
-									var="hipMeasure" />
-								<form:input path="hipMeasure" name="hipMeasure" id="hipMeasure"
-									class="form-control input-lg" placeholder="${hipMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.hipMeasure" /></span>
+									<form:input path="hipMeasure" name="hipMeasure" id="hipMeasure"
+										class="form-control input-lg" />
+									<span class="input-group-addon">cm</span>
+								</div>
 								<form:errors class="error" path="hipMeasure" />
 							</div>
 						</div>
 						<div class="col-xs-6 col-md-6">
 							<div class="form-group">
-								<spring:message code="profile.customer.chestMeasure"
-									var="chestMeasure" />
-								<form:input path="chestMeasure" name="chestMeasure"
-									id="chestMeasure" class="form-control input-lg"
-									placeholder="${chestMeasure}" />
+								<div class="input-group">
+									<span class="input-group-addon"><spring:message
+											code="profile.customer.chestMeasure" /></span>
+									<form:input path="chestMeasure" name="chestMeasure"
+										id="chestMeasure" class="form-control input-lg"
+										placeholder="${chestMeasure}" />
+									<span class="input-group-addon">cm</span>
+								</div>
 								<form:errors class="error" path="chestMeasure" />
 							</div>
 						</div>

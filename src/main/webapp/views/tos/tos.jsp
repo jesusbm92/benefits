@@ -66,7 +66,7 @@ html,body {
 	-ms-transform: rotateZ(-2deg);
 }
 
-p {
+.tos-text {
 	font-size: 15px;
 }
 </style>
@@ -79,67 +79,67 @@ p {
 				<spring:message code="tos.tos" />
 			</h1>
 			<br/>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.1" />
 			</p>
 
 			<h3>
 				<spring:message code="tos.title1" />
 			</h3>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.2" />
 			</p>
 
 			<h3>
 				<spring:message code="tos.title2" />
 			</h3>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.2" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.3" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.4" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.5" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.6" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.7" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.8" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.9" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.10" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.11" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.12" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.13" />
 			</p>
 
 			<h3>
 				<spring:message code="tos.title3" />
 			</h3>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.14" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.15" />
 			</p>
-			<p>
+			<p class="tos-text">
 				<spring:message code="tos.16" />
 			</p>
 		</div>
