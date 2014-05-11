@@ -54,8 +54,7 @@ public class DayService {
 	public Collection<Day> findAllLanguage(String language) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Day> result;
-		int dev;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = dayRepository.findAllLanguage(Language.english);
 		} else {
 			result = dayRepository.findAllLanguage(Language.spanish);

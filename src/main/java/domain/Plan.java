@@ -29,7 +29,7 @@ public class Plan extends DomainEntity {
 	private Double maxWeight;
 	private Double minBodyFat;
 	private Double maxBodyFat;
-	private Language language;
+	private Language entityLanguage;
 
 	// RelationShip
 	private Collection<Issue> issues;
@@ -171,12 +171,12 @@ public class Plan extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguage() {
-		return language;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 }

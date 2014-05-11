@@ -21,7 +21,7 @@ public class ExerciseGroup extends DomainEntity {
 
 	private String name;
 	private String description;
-	private Language language;
+	private Language entityLanguage;
 
 	// Relationships
 	private Collection<Exercise> exercises;
@@ -52,12 +52,12 @@ public class ExerciseGroup extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguage() {
-		return language;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 	@Valid

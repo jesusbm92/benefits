@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Muscle extends DomainEntity {
 
 	private String name;
-	private Language language;
+	private Language entityLanguage;
 
 	public Muscle() {
 		super();
@@ -29,12 +29,12 @@ public class Muscle extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguage() {
-		return language;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 }

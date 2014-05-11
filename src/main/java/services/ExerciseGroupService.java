@@ -57,7 +57,7 @@ public class ExerciseGroupService {
 	public Collection<ExerciseGroup> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<ExerciseGroup> result;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = exerciseGroupRepository.findAllLanguage(Language.english);
 		} else {
 			result = exerciseGroupRepository.findAllLanguage(Language.spanish);

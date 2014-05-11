@@ -87,7 +87,7 @@
 		<property name="name" value="Chicken Steak" />
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount1" />
@@ -97,7 +97,7 @@
 	<bean id="food2" class="domain.Food">
 		<property name="name" value="Orange Juice" />
 		<property name="description" value="Lore ipsum" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="image" value="" />
 		<property name="amounts">
 			<list>
@@ -107,7 +107,7 @@
 	</bean>
 	<bean id="food3" class="domain.Food">
 		<property name="name" value="Salad" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
 		<property name="amounts">
@@ -118,7 +118,7 @@
 	</bean>
 	<bean id="food4" class="domain.Food">
 		<property name="name" value="Beef Steak" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
 		<property name="amounts">
@@ -129,7 +129,7 @@
 	</bean>
 	<bean id="food5" class="domain.Food">
 		<property name="name" value="Milk" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
 		<property name="amounts">
@@ -142,7 +142,7 @@
 		<property name="name" value="Turkey breast" />
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount6" />
@@ -152,7 +152,7 @@
 	<bean id="food7" class="domain.Food">
 		<property name="name" value="Lentils" />
 		<property name="description" value="Lore ipsum" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="amounts">
 			<list>
 				<ref bean="amount7" />
@@ -161,7 +161,7 @@
 	</bean>
 	<bean id="food8" class="domain.Food">
 		<property name="name" value="Yogurt" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="Lore ipsum" />
 		<property name="image" value="" />
 		<property name="amounts">
@@ -173,7 +173,7 @@
 	<!-- MEALS -->
 	<bean id="meal1" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
@@ -189,7 +189,7 @@
 	</bean>
 	<bean id="meal2" class="domain.Meal">
 		<property name="name" value="TEA_TIME" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
@@ -204,7 +204,7 @@
 	</bean>
 	<bean id="meal3" class="domain.Meal">
 		<property name="name" value="BREAKFAST" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
@@ -220,7 +220,7 @@
 	</bean>
 	<bean id="meal4" class="domain.Meal">
 		<property name="name" value="MID_MORNING" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This meal contains several food to mid morning" />
 		<property name="days">
@@ -236,7 +236,7 @@
 	</bean>
 	<bean id="meal5" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
@@ -252,7 +252,7 @@
 	</bean>
 	<bean id="meal6" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This meal contains several food to dinner" />
 		<property name="days">
 			<list>
@@ -267,7 +267,7 @@
 	</bean>
 	<bean id="meal7" class="domain.Meal">
 		<property name="name" value="BREAKFAST" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
@@ -283,7 +283,7 @@
 	</bean>
 	<bean id="meal8" class="domain.Meal">
 		<property name="name" value="MID_MORNING" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This meal contains several food to mid morning" />
 		<property name="days">
@@ -299,7 +299,7 @@
 	</bean>
 	<bean id="meal9" class="domain.Meal">
 		<property name="name" value="TEA_TIME" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
@@ -315,7 +315,7 @@
 	</bean>
 	<bean id="meal10" class="domain.Meal">
 		<property name="name" value="DINNER" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This meal contains several food to dinner" />
 		<property name="days">
 			<list>
@@ -330,7 +330,7 @@
 	</bean>
 	<bean id="meal11" class="domain.Meal">
 		<property name="name" value="BREAKFAST" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to breakfast" />
 		<property name="days">
 			<list>
@@ -346,7 +346,7 @@
 	</bean>
 	<bean id="meal12" class="domain.Meal">
 		<property name="name" value="MID_MORNING" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This meal contains several food to mid morning" />
 		<property name="days">
@@ -362,7 +362,7 @@
 	</bean>
 	<bean id="meal13" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This meal contains several food to lunch" />
 		<property name="days">
 			<list>
@@ -378,7 +378,7 @@
 	</bean>
 	<bean id="meal14" class="domain.Meal">
 		<property name="name" value="TEA_TIME" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This meal contains several food to tea time" />
 		<property name="days">
 			<list>
@@ -521,7 +521,7 @@
 	<!-- DAYS -->
 	<bean id="day1" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Day 1" />
 
 		<property name="diets">
@@ -538,7 +538,7 @@
 	</bean>
 	<bean id="day2" class="domain.Day">
 		<property name="name" value="TUESDAY" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="descriptiveName" value="Day 2"/>
 		<property name="diets">
 			<list>
@@ -554,7 +554,7 @@
 	</bean>
 	<bean id="day3" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Day 3"/>
 		<property name="diets">
 			<list>
@@ -570,7 +570,7 @@
 	</bean>
 	<bean id="day4" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="descriptiveName" value="Day 4"/>
 		<property name="diets">
 			<list>
@@ -586,7 +586,7 @@
 	</bean>
 	<bean id="day5" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Day 5"/>
 		<property name="diets">
 			<list>
@@ -602,7 +602,7 @@
 	</bean>
 	<bean id="day6" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="descriptiveName" value="Day 6"/>
 		<property name="diets">
 			<list>
@@ -618,7 +618,7 @@
 	</bean>
 	<bean id="day7" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Day 7"/>
 		<property name="diets">
 			<list>
@@ -635,7 +635,7 @@
 	<!-- DIETS -->
 	<bean id="diet1" class="domain.Diet">
 		<property name="name" value="Diet 1" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="Lore ipsum" />
 		<property name="plans">
 			<list>
@@ -654,7 +654,7 @@
 	</bean>
 	<bean id="diet2" class="domain.Diet">
 		<property name="name" value="Diet 2" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="Lore ipsum 2" />
 		<property name="plans">
 			<list>
@@ -672,7 +672,7 @@
 	</bean>
 	<bean id="diet3" class="domain.Diet">
 		<property name="name" value="Diet 3" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="Lore ipsum 3" />
 		<property name="plans">
 			<list></list>
@@ -690,67 +690,67 @@
 	<!-- Cuadriceps -->
 	<bean id="muscle1" class="domain.Muscle">
 		<property name="name" value="Quadriceps" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Femoral -->
 	<bean id="muscle2" class="domain.Muscle">
 		<property name="name" value="Femoral" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- Gluteos -->
 	<bean id="muscle3" class="domain.Muscle">
 		<property name="name" value="Buttocks" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Gemelos -->
 	<bean id="muscle4" class="domain.Muscle">
 		<property name="name" value="Calf" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- Abductores -->
 	<bean id="muscle5" class="domain.Muscle">
 		<property name="name" value="Adductor" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Pectorales -->
 	<bean id="muscle6" class="domain.Muscle">
 		<property name="name" value="Pectoral" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- Biceps -->
 	<bean id="muscle7" class="domain.Muscle">
 		<property name="name" value="Biceps" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Triceps -->
 	<bean id="muscle8" class="domain.Muscle">
 		<property name="name" value="Triceps" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- Dorsal -->
 	<bean id="muscle9" class="domain.Muscle">
 		<property name="name" value="Dorsal" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Trapecio -->
 	<bean id="muscle10" class="domain.Muscle">
 		<property name="name" value="Trapezius" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- Deltoides -->
 	<bean id="muscle11" class="domain.Muscle">
 		<property name="name" value="Deltoid" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 	</bean>
 	<!-- Abdominales -->
 	<bean id="muscle12" class="domain.Muscle">
 		<property name="name" value="Abs" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 	</bean>
 	<!-- EXERCISES -->
 	<bean id="exercise1" class="domain.Exercise">
 		<property name="name" value="Thigh Adductor" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to adductor" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="aB67P2N-iHE" />
@@ -765,7 +765,7 @@
 	</bean>
 	<bean id="exercise2" class="domain.Exercise">
 		<property name="name" value="Donkey Calf Raise" />
-		<property name="languageExercise" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a exercise to calf" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="aHOudYjiB9A" />
@@ -780,7 +780,7 @@
 	</bean>
 	<bean id="exercise3" class="domain.Exercise">
 		<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to neck" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="prmYGzw1Tds" />
@@ -795,7 +795,7 @@
 	</bean>
 	<bean id="exercise4" class="domain.Exercise">
 		<property name="name" value="One-Arm Dumbbell Row" />
-		<property name="languageExercise" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a exercise to neck" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="KR8onsa5jFQ" />
@@ -811,7 +811,7 @@
 	<bean id="exercise5" class="domain.Exercise">
 		<property name="name" value="Barbell incline bench press with bar" />
 		<property name="description" value="This is a exercise to bench" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="image" value="" />
 		<property name="urlYoutube" value="DbFgADa2PL8" />
 		<property name="repetitions" value="15" />
@@ -825,7 +825,7 @@
 	</bean>
 	<bean id="exercise6" class="domain.Exercise">
 		<property name="name" value="Barbell Bench Press" />
-		<property name="languageExercise" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a exercise to bench" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="rT7DgCr-3pg" />
@@ -840,7 +840,7 @@
 	</bean>
 	<bean id="exercise7" class="domain.Exercise">
 		<property name="name" value="Dumbbell Shoulder Press" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to shoulder" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="qEwKCR5JCog" />
@@ -855,7 +855,7 @@
 	</bean>
 	<bean id="exercise8" class="domain.Exercise">
 		<property name="name" value="Front Dumbbell Raise" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to shoulder" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="2ZS1Ae5n90M" />
@@ -870,7 +870,7 @@
 	</bean>
 	<bean id="exercise9" class="domain.Exercise">
 		<property name="name" value="Triceps Pushdown" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="2-LAMcpzODU" />
@@ -885,7 +885,7 @@
 	</bean>
 	<bean id="exercise10" class="domain.Exercise">
 		<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
-		<property name="languageExercise" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="Ma_SNy-WjwU" />
@@ -901,7 +901,7 @@
 	<bean id="exercise11" class="domain.Exercise">
 		<property name="name" value="Crunches" />
 		<property name="description" value="This is a exercise to crunches" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="image" value="" />
 		<property name="urlYoutube" value="Xyd_fa5zoEU" />
 		<property name="repetitions" value="15" />
@@ -915,7 +915,7 @@
 	</bean>
 	<bean id="exercise12" class="domain.Exercise">
 		<property name="name" value="Upright Barbell Row" />
-		<property name="languageExercise" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a exercise to arm" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="amCU-ziHITM" />
@@ -930,7 +930,7 @@
 	</bean>
 	<bean id="exercisetest" class="domain.Exercise">
 		<property name="name" value="Exercise Test" />
-		<property name="languageExercise" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a exercise to test" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="" />
@@ -944,7 +944,7 @@
 	<!-- EXERCISE GROUPS -->
 	<bean id="exercisegroup1" class="domain.ExerciseGroup">
 		<property name="name" value="Legs" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description"
 			value="This exercise group contains several legs exercises" />
 		<property name="exercises">
@@ -961,7 +961,7 @@
 	</bean>
 	<bean id="exercisegroup2" class="domain.ExerciseGroup">
 		<property name="name" value="Back" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This exercise group contains several back exercises" />
 		<property name="exercises">
@@ -978,7 +978,7 @@
 	</bean>
 	<bean id="exercisegroup3" class="domain.ExerciseGroup">
 		<property name="name" value="Chest" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description"
 			value="This exercise group contains several chest exercises" />
 		<property name="exercises">
@@ -995,7 +995,7 @@
 	</bean>
 	<bean id="exercisegroup4" class="domain.ExerciseGroup">
 		<property name="name" value="Shoulder" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This exercise group contains several shoulder exercises" />
 		<property name="exercises">
@@ -1012,7 +1012,7 @@
 	</bean>
 	<bean id="exercisegroup5" class="domain.ExerciseGroup">
 		<property name="name" value="Arm" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description"
 			value="This exercise group contains several arm exercises" />
 		<property name="exercises">
@@ -1029,7 +1029,7 @@
 	</bean>
 	<bean id="exercisegroup6" class="domain.ExerciseGroup">
 		<property name="name" value="Abs" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description"
 			value="This exercise group contains several abs exercises" />
 		<property name="exercises">
@@ -1046,7 +1046,7 @@
 	</bean>
 	<bean id="exercisegrouptest" class="domain.ExerciseGroup">
 		<property name="name" value="Exercise Group Test" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description"
 			value="This exercise group contains several test exercises" />
 		<property name="exercises">
@@ -1062,7 +1062,7 @@
 	<!-- TRAINING DAYS -->
 	<bean id="trainingday1" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Training Day 1" />
 		<property name="trainings">
 			<list>
@@ -1078,7 +1078,7 @@
 	</bean>
 	<bean id="trainingday2" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="descriptiveName" value="Training Day 2" />
 
 		<property name="trainings">
@@ -1094,7 +1094,7 @@
 	</bean>
 	<bean id="trainingday3" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="descriptiveName" value="Training Day 3" />
 
 		<property name="trainings">
@@ -1110,7 +1110,7 @@
 	</bean>
 	<bean id="trainingday4" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Training Day 4" />
 
 		<property name="trainings">
@@ -1126,7 +1126,7 @@
 	</bean>
 	<bean id="trainingday5" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Training Day 5" />
 
 		<property name="trainings">
@@ -1142,7 +1142,7 @@
 	</bean>
 	<bean id="trainingday6" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Training Day 6" />
 
 		<property name="trainings">
@@ -1158,7 +1158,7 @@
 	</bean>
 	<bean id="trainingdaytest" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="descriptiveName" value="Training Day 7" />
 
 		<property name="trainings">
@@ -1175,7 +1175,7 @@
 		<property name="name" value="Training 1" />
 		<property name="description"
 			value="This training has serveral exercises to keep fit" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="plans">
 			<list>
 				<ref bean="plan1" />
@@ -1192,7 +1192,7 @@
 	</bean>
 	<bean id="training2" class="domain.Training">
 		<property name="name" value="Training 2" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This training has several exercises to gain muscle mass" />
 		<property name="plans">
@@ -1211,7 +1211,7 @@
 	</bean>
 	<bean id="training3" class="domain.Training">
 		<property name="name" value="Trainig delete test" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description"
 			value="This training has several exercises to lose weight" />
 		<property name="plans">
@@ -1230,7 +1230,7 @@
 	<bean id="plan1" class="domain.Plan">
 		<property name="name" value="Plan to keep fit" />
 		<property name="goal" value="KEEP_FIT" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a plan to keep fit" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />
@@ -1250,7 +1250,7 @@
 	<bean id="plan2" class="domain.Plan">
 		<property name="name" value="Plan to lose weight" />
 		<property name="goal" value="LOSE_WEIGHT" />
-		<property name="language" value="spanish"/>
+		<property name="entityLanguage" value="spanish"/>
 		<property name="description" value="This is a plan to lose weight" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />
@@ -1272,7 +1272,7 @@
 	<bean id="plan3" class="domain.Plan">
 		<property name="name" value="Plan to gain muscle mass" />
 		<property name="goal" value="LOSE_WEIGHT" />
-		<property name="language" value="english"/>
+		<property name="entityLanguage" value="english"/>
 		<property name="description" value="This is a plan to gain muscle mass" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />

@@ -28,7 +28,7 @@
 				<display:column property="cycles" titleKey="exercise.cycles"
 					sortable="true" />
 
-				<display:column property="languageExercise"
+				<display:column property="entityLanguage"
 					titleKey="exercise.language" sortable="true" />
 				<display:column property="muscle.name" titleKey="exercise.muscle"
 					sortable="true" />

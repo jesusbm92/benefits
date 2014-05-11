@@ -58,7 +58,7 @@ public class MuscleService {
 	public Collection<Muscle> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<Muscle> result;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = muscleRepository.findAllLanguage(Language.english);
 		} else {
 			result = muscleRepository.findAllLanguage(Language.spanish);

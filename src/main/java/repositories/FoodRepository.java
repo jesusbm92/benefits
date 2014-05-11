@@ -15,6 +15,6 @@ public interface FoodRepository extends JpaRepository<Food, Integer> {
 	@Query("select f from Food f JOIN f.amounts a where a.id =?1")
 	Food findFoodByAmount(int amountId);
 
-	@Query("select e from Food e where e.language= ?1")
+	@Query("select e from Food e where e.entityLanguage= ?1")
 	Collection<Food> findAllLanguage(Language language);
 }

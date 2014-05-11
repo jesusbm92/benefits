@@ -16,7 +16,7 @@ public interface ExerciseGroupRepository extends
 	@Query("select t from ExerciseGroup t inner join t.trainingDays g where g.id= ?1")
 	Collection<ExerciseGroup> findByTrainingDay(int trainingDayId);
 
-	@Query("select t from ExerciseGroup t where t.language= ?1")
+	@Query("select t from ExerciseGroup t where t.entityLanguage= ?1")
 	Collection<ExerciseGroup> findAllLanguage(Language language);
 
 }

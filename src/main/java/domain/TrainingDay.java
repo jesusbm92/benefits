@@ -21,7 +21,7 @@ public class TrainingDay extends DomainEntity {
 
 	private Days name;
 	private String descriptiveName;
-	private Language language;
+	private Language entityLanguage;
 
 	// Relationships
 	private Collection<Training> trainings;
@@ -74,12 +74,12 @@ public class TrainingDay extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguage() {
-		return language;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 }

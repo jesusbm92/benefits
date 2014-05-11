@@ -35,18 +35,18 @@
 		<br/>
 		
 			<div class="form-group">
-		<form:label path="language" class="col-md-4 control-label">
+		<form:label path="entityLanguage" class="col-md-4 control-label">
 			<spring:message code="trainingDay.language" />
 		</form:label>
 		<div class="col-md-7">
-			<form:select path="language" class="form-control">
-				<jstl:forEach var="language" items="${languages}">
-					<form:option value="${language}">
-						<spring:message code="trainingDay.language.${language}" />
+			<form:select path="entityLanguage" class="form-control">
+				<jstl:forEach var="entityLanguage" items="${languages}">
+					<form:option value="${entityLanguage}">
+						<spring:message code="trainingDay.language.${entityLanguage}" />
 					</form:option>
 				</jstl:forEach>
 			</form:select>
-			<form:errors cssClass="error" path="language"></form:errors>
+			<form:errors cssClass="error" path="entityLanguage"></form:errors>
 			<br>
 		</div>
 	</div>

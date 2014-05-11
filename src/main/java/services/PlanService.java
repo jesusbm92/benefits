@@ -65,7 +65,7 @@ public class PlanService {
 	public Collection<Plan> findAllLanguage(String language) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Plan> result;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = planRepository.findAllLanguage(Language.english);
 		} else {
 			result = planRepository.findAllLanguage(Language.spanish);

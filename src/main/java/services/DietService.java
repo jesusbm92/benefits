@@ -54,8 +54,7 @@ public class DietService {
 	public Collection<Diet> findAllLanguage(String language) {
 		Assert.isTrue(userService.IAmAnAdmin());
 		Collection<Diet> result;
-		int dev;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = dietRepository.findAllLanguage(Language.english);
 		} else {
 			result = dietRepository.findAllLanguage(Language.spanish);

@@ -23,7 +23,7 @@ public class Food extends DomainEntity {
 	private String name;
 	private String description;
 	private byte[] image;
-	private Language language;
+	private Language entityLanguage;
 
 	// relationShip
 
@@ -78,12 +78,12 @@ public class Food extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguage() {
-		return language;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 }

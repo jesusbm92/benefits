@@ -55,7 +55,7 @@ public class TrainingDayService {
 	public Collection<TrainingDay> findAllLanguage(String language) {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Collection<TrainingDay> result;
-		if (language == Language.english.toString()) {
+		if (language.equals(Language.english.toString())) {
 			result = trainingDayRepository.findAllLanguage(Language.english);
 		} else {
 			result = trainingDayRepository.findAllLanguage(Language.spanish);

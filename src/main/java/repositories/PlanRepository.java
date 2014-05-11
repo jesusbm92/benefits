@@ -32,7 +32,7 @@ public interface PlanRepository extends JpaRepository<Plan, Integer> {
 	@Query("select p from Plan p where p.diet.id= ?1")
 	Collection<Plan> findPlansByDiet(int dietId);
 
-	@Query("select p from Plan p where p.language= ?1")
+	@Query("select p from Plan p where p.entityLanguage= ?1")
 	Collection<Plan> findAllLanguage(Language language);
 
 }

@@ -15,6 +15,6 @@ public interface MealRepository extends JpaRepository<Meal, Integer> {
 	@Query("select m from Meal m JOIN m.days d where d.id=?1")
 	Collection<Meal> findMealsByDay(int dayId);
 
-	@Query("select m from Meal m where m.language=?1")
+	@Query("select m from Meal m where m.entityLanguage=?1")
 	Collection<Meal> findAllLanguage(Language language);
 }

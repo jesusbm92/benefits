@@ -29,7 +29,7 @@ public class Exercise extends DomainEntity {
 	private String description;
 	private String urlYoutube;
 	private byte[] image;
-	private Language languageExercise;
+	private Language entityLanguage;
 
 	// Relationships
 	private Muscle muscle;
@@ -49,12 +49,12 @@ public class Exercise extends DomainEntity {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public Language getLanguageExercise() {
-		return languageExercise;
+	public Language getEntityLanguage() {
+		return entityLanguage;
 	}
 
-	public void setLanguageExercise(Language languageExercise) {
-		this.languageExercise = languageExercise;
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 	@NotNull

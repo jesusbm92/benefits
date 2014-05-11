@@ -12,7 +12,7 @@ import domain.Muscle;
 @Repository
 public interface MuscleRepository extends JpaRepository<Muscle, Integer> {
 
-	@Query("select e from Muscle e where e.language= ?1")
+	@Query("select e from Muscle e where e.entityLanguage= ?1")
 	Collection<Muscle> findAllLanguage(Language language);
 
 }
