@@ -21,16 +21,8 @@ import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.TrainingService;
-
-import com.lowagie.text.Document;
-import com.lowagie.text.Font;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.pdf.PdfWriter;
-
-import domain.Exercise;
-import domain.ExerciseGroup;
+import utilities.PdfUtils;
 import domain.Training;
-import domain.TrainingDay;
 
 @Controller
 @RequestMapping("/training")
@@ -38,11 +30,6 @@ public class TrainingController extends AbstractController {
 
 	// Attributes
 	// ----------------------------------------------------------------
-	private static Font catFont = new Font(Font.TIMES_ROMAN, 20, Font.BOLD);
-	private static Font subFont = new Font(Font.TIMES_ROMAN, 18, Font.BOLD);
-	private static Font smallBold = new Font(Font.TIMES_ROMAN, 16, Font.BOLD);
-	private static Font text = new Font(Font.TIMES_ROMAN, 12);
-	private final static String SANGRIA = "    ";
 
 	// Services ----------------------------------------------------------------
 
@@ -75,7 +62,7 @@ public class TrainingController extends AbstractController {
 	@RequestMapping("/export")
 	public ResponseEntity<byte[]> export(@RequestParam int trainingId) {
 		Training training = trainingService.findOne(trainingId);
-		ByteArrayOutputStream document = exportToPdf(training);
+		ByteArrayOutputStream document = PdfUtils.exportTrainingToPdf(training);
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.parseMediaType("application/pdf"));
@@ -85,47 +72,6 @@ public class TrainingController extends AbstractController {
 		ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(
 				document.toByteArray(), headers, HttpStatus.OK);
 		return response;
-	}
-
-	private ByteArrayOutputStream exportToPdf(Training training) {
-		Document document = new Document();
-		ByteArrayOutputStream file = new ByteArrayOutputStream();
-		try {
-
-			PdfWriter.getInstance(document, file);
-			document.open();
-
-			document.add(new Paragraph(training.getName(), catFont));
-			for (TrainingDay day : training.getTrainingDays()) {
-				document.add(new Paragraph(SANGRIA + day.getName(), subFont));
-				for (ExerciseGroup exerciseGroup : day.getExerciseGroups()) {
-					document.add(new Paragraph(SANGRIA + SANGRIA
-							+ exerciseGroup.getName(), smallBold));
-					for (Exercise exercise : exerciseGroup.getExercises()) {
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ "Exercise : " + exercise.getName(), text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Cycles : " + exercise.getCycles(),
-								text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Repetitions : "
-								+ exercise.getRepetitions(), text));
-						document.add(new Paragraph(SANGRIA + SANGRIA + SANGRIA
-								+ SANGRIA + "Muscle : "
-								+ exercise.getMuscle().getName(), text));
-						document.add(new Paragraph(" "));
-						document.add(new Paragraph(" "));
-					}
-				}
-			}
-
-			document.close();
-			file.close();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return file;
 	}
 
 	// Creation
