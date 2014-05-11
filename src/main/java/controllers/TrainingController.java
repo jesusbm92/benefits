@@ -1,14 +1,15 @@
 package controllers;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -72,26 +73,25 @@ public class TrainingController extends AbstractController {
 	// -------------------------------------------------------------------
 
 	@RequestMapping("/export")
-	public ModelAndView export(@RequestParam int trainingId) {
-
-		ModelAndView result;
-		String uri = "training/details";
-		String requestURI = "training/details.do";
+	public ResponseEntity<byte[]> export(@RequestParam int trainingId) {
 		Training training = trainingService.findOne(trainingId);
+		ByteArrayOutputStream document = exportToPdf(training);
 
-		exportToPdf(training);
-
-		result = createListModelAndView(requestURI, training, uri);
-		return result;
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.parseMediaType("application/pdf"));
+		String filename = training.getName() + ".pdf";
+		headers.setContentDispositionFormData(filename, filename);
+		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+		ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(
+				document.toByteArray(), headers, HttpStatus.OK);
+		return response;
 	}
 
-	private void exportToPdf(Training training) {
+	private ByteArrayOutputStream exportToPdf(Training training) {
+		Document document = new Document();
+		ByteArrayOutputStream file = new ByteArrayOutputStream();
 		try {
-			OutputStream file = new FileOutputStream(new File(
-					"C://Documents and Settings/Student/My Documents/diet"
-							+ training.getName() + ".pdf"), true);
 
-			Document document = new Document();
 			PdfWriter.getInstance(document, file);
 			document.open();
 
@@ -121,10 +121,11 @@ public class TrainingController extends AbstractController {
 
 			document.close();
 			file.close();
-		} catch (Exception e) {
 
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return file;
 	}
 
 	// Creation
