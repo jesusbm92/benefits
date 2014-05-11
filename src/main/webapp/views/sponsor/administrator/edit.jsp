@@ -9,6 +9,11 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<h1 class="text-center">
+	<spring:message code="sponsor.details" />
+</h1>
+<br />
+
 <div class="container">
 	<div class="row">
 		<div class="col-centered">

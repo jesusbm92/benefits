@@ -9,11 +9,16 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<h1 class="text-center">
+	<spring:message code="plan.change" />
+</h1>
+<br/>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-4 col-centered">
-			<form:form action="plan/administrator/change.do" modelAttribute="customer"
-				role="form" class="form-horizontal">
+			<form:form action="plan/administrator/change.do"
+				modelAttribute="customer" role="form" class="form-horizontal">
 
 				<!-- Poner todos los atributos, los no usados en oculto -->
 
@@ -40,24 +45,23 @@
 						<spring:message code="plan.plan" />
 					</form:label>
 					<div class="col-md-7">
-						<form:select  path="plan" class="form-control">
-							<form:options items="${plans}" itemValue="id"
-								itemLabel="name" />
+						<form:select path="plan" class="form-control">
+							<form:options items="${plans}" itemValue="id" itemLabel="name" />
 						</form:select>
 						<form:errors path="plan" cssClass="error" />
 					</div>
 				</div>
-				
-					<input type="submit" name="saveChange" class="btn btn-default"
-						value="<spring:message code="plan.save" />" />
 
-					
-					<a href="issue/administrator/listAll.do"><input type="button"
-						class="btn btn-default"
-						value="<spring:message code="plan.cancel"/>" id="cancelar"
-						name="cancelar"
-						onclick="self.location.href = issue/administrator/listAll.do" /></a>
-				
+				<input type="submit" name="saveChange" class="btn btn-default"
+					value="<spring:message code="plan.save" />" />
+
+
+				<a href="issue/administrator/listAll.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="plan.cancel"/>" id="cancelar"
+					name="cancelar"
+					onclick="self.location.href = issue/administrator/listAll.do" /></a>
+
 			</form:form>
 
 		</div>
