@@ -17,6 +17,7 @@
 
 <div class="container">
 	<div class="row">
+	<div class="col-md-10">
 		<div class="col-centered">
 
 			<form:form action="exercise/administrator/edit.do"
@@ -165,4 +166,5 @@
 			</form:form>
 		</div>
 	</div>
+</div>
 </div>

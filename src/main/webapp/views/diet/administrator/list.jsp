@@ -11,7 +11,8 @@
 <h1 class="text-center"><spring:message code="diet.diets" /></h1>
 
 <div class="container">
-	<div class="row">
+<div class="row">
+<div class="col-md-10">
 		<div class="table-responsive">
 			<display:table uid="dietListTable" keepStatus="false" name="diets"
 				pagesize="5" class="table table-hover" requestURI="${requestURI}"
@@ -60,4 +61,5 @@
 
 		</div>
 	</div>
+</div>
 </div>

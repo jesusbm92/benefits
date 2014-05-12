@@ -75,11 +75,25 @@
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
-	<div>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<tiles:insertAttribute name="body" />
+		</div>
+		<div class="col-md-2">
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+			    <img class="media-object img-rounded img-responsive"  src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
+		</div>	
+	</div> 
+	
 <!-- 		<h1 class="text-center"> -->
 <%-- 			<tiles:insertAttribute name="title" /> --%>
 <!-- 		</h1> -->
-		<tiles:insertAttribute name="body" />
+
 	</div>
 	<div>
 		<tiles:insertAttribute name="footer" />

@@ -9,6 +9,10 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <div class="container">
+<div class="row">
+	<div class="col-md-10">
+
+
 	<display:table uid="commentListTable" keepStatus="false"
 		name="comments" pagesize="5" class="table table-hover"
 		requestURI="${requestURI}" id="row">
@@ -43,6 +47,8 @@
 			value="<spring:message code="comment.cancel"/>"
 			onclick="self.location.href = plan/administrator/list.do" /></a>
 	</security:authorize>
+</div>
+</div>
 </div>
 
 

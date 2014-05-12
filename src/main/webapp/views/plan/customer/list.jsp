@@ -63,9 +63,13 @@ body {
 }
 </style>
 
+
+
 <h1 class="text-center"><spring:message code="plan.myplan" /></h1>
 
 <div class="container">
+<div class="row">
+<div class="col-md-10">
 
 	<jstl:if test="${res}">
 		<%
@@ -220,4 +224,6 @@ body {
 	</jstl:if>
 
 
+</div>
+</div>
 </div>

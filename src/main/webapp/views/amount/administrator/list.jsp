@@ -9,6 +9,8 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <div class="container">
+<div class="row">
+<div class="col-md-10">
 	<display:table uid="amountListTable" keepStatus="false" name="amounts"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">
@@ -45,5 +47,6 @@
 		onclick="self.location.href = meal/administrator/list.do" /></a>
 
 </div>
-
+</div>
+</div>
 

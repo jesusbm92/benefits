@@ -15,6 +15,8 @@
 <br />
 
 <div class="container">
+<div class="row">
+<div class="col-md-10">
 	<form:form action="trainingDay/administrator/edit.do"
 		modelAttribute="trainingDay">
 
@@ -89,4 +91,6 @@
 			value="<spring:message code="trainingDay.cancel"/>"
 			onclick="history.back()" />
 	</form:form>
+</div>
+</div>
 </div>

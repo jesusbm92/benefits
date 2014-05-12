@@ -12,6 +12,8 @@
 <h1 class="text-center"><spring:message code="day.days" /></h1>
 
 <div class="container">
+<div class="row">
+<div class="col-md-10">
 	<display:table uid="dayListTable" keepStatus="false" name="days"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">
@@ -51,6 +53,8 @@
 		class="btn btn-default" value="<spring:message code="diet.back"/>"
 		onclick="self.location.href = diet/administrator/list.do" /></a>
 
+</div>
+</div>
 </div>
 <!--  Quitar los siguientes comentarios si es necesario crear un dia a partir de la lista de dias de una dieta -->
 

@@ -14,6 +14,7 @@
 
 <div class="container">
 	<div class="row">
+		<div class="col-md-10">
 		<div class="table-responsive">
 
 			<display:table uid="exercisesListTable" keepStatus="false"
@@ -63,4 +64,5 @@
 
 		</div>
 	</div>
+</div>
 </div>

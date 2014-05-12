@@ -13,7 +13,7 @@
 
 <div class="container">
 	<div class="row">
-
+		<div class="col-md-10">
 		<jstl:forEach items="${training.trainingDays }" var="first">
 			<div class="panel-group" id="accordion">
 				<div class="panel panel-default">
@@ -86,7 +86,6 @@
 			</div>
 		</jstl:forEach>
 
-	</div>
 	<input type="button" class="btn btn-default"
 		value="<spring:message code="training.cancel"/>"
 		onclick="history.back()" /> <a
@@ -94,7 +93,6 @@
 		type="image" class="pull-right" id="export" name="export"
 		src="images/pdf_icon.gif"
 		onclick="self.location.href = training/export.do?trainingId=${training.id}" /></a>
-
+			</div>
+	</div>
 </div>
-
-
