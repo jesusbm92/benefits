@@ -12,7 +12,7 @@
 <h1 class="text-center">
 	<spring:message code="trainingDay.details" />
 </h1>
-<br/>
+<br />
 
 <div class="container">
 	<form:form action="trainingDay/administrator/edit.do"
@@ -22,6 +22,7 @@
 
 		<form:hidden path="id" />
 		<form:hidden path="version" />
+		<form:hidden path="entityLanguage" />
 
 		<form:label path="name">
 			<spring:message code="trainingDay.name" />
@@ -30,27 +31,10 @@
 			<form:options items="${days}" />
 		</form:select>
 		<form:errors path="name" cssClass="error" />
-		<br/>
+		<br />
 		<acme:textbox code="trainingDay.descName" path="descriptiveName" />
-		<br/>
-		
-			<div class="form-group">
-		<form:label path="entityLanguage" class="col-md-4 control-label">
-			<spring:message code="trainingDay.language" />
-		</form:label>
-		<div class="col-md-7">
-			<form:select path="entityLanguage" class="form-control">
-				<jstl:forEach var="entityLanguage" items="${languages}">
-					<form:option value="${entityLanguage}">
-						<spring:message code="trainingDay.language.${entityLanguage}" />
-					</form:option>
-				</jstl:forEach>
-			</form:select>
-			<form:errors cssClass="error" path="entityLanguage"></form:errors>
-			<br>
-		</div>
-	</div>
-	
+		<br />
+
 		<form:label path="exerciseGroups">
 			<spring:message code="trainingDay.exerciseGroups" />
 		</form:label>
@@ -58,8 +42,8 @@
 			items="${exerciseGroups}" itemLabel="name" id="id"
 			code="trainingDay.exerciseGroups" path="exerciseGroups" />
 		<form:errors path="exerciseGroups" cssClass="error" />
-		<br/>
-		<br/>
+		<br />
+		<br />
 		<input type="submit" name="save" class="btn btn-default"
 			value="<spring:message code="trainingDay.save" />" />
 

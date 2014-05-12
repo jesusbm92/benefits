@@ -9,7 +9,9 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<h1 class="text-center"><spring:message code="issue.title" /></h1>
+<h1 class="text-center">
+	<spring:message code="issue.title" />
+</h1>
 
 <div class="container">
 	<form:form action="issue/customer/edit.do" modelAttribute="issue"
@@ -21,6 +23,8 @@
 		<form:hidden path="customer" />
 		<form:hidden path="plan" />
 		<form:hidden path="version" />
+		<form:hidden path="entityLanguage" />
+
 		<div class="col-md-6 col-md-offset-3">
 			<div class="row">
 				<br /> <br />

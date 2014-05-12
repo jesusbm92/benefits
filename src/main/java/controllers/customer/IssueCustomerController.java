@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,6 +19,7 @@ import services.IssueService;
 import services.PlanService;
 import controllers.AbstractController;
 import domain.Issue;
+import domain.Language;
 import domain.Plan;
 
 @Controller
@@ -88,6 +90,10 @@ public class IssueCustomerController extends AbstractController {
 			result = createEditModelAndView(issue);
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				issue.setEntityLanguage(lang);
 				issueService.save(issue);
 				redirect.addFlashAttribute("successMessage",
 						"plan.issue.success");

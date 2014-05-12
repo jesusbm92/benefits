@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 
 import repositories.IssueRepository;
 import domain.Issue;
+import domain.Language;
 
 @Transactional
 @Service
@@ -53,6 +54,16 @@ public class IssueService {
 	 */
 	public Collection<Issue> findAll() {
 		return issueRepository.findAll();
+	}
+
+	public Collection<Issue> findAllLanguage(String language) {
+		Collection<Issue> result;
+		if (language.equals(Language.english.toString())) {
+			result = issueRepository.findAllLanguage(Language.english);
+		} else {
+			result = issueRepository.findAllLanguage(Language.spanish);
+		}
+		return result;
 	}
 
 	/**

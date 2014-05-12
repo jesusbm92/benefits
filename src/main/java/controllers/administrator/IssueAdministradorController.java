@@ -3,6 +3,7 @@ package controllers.administrator;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -48,8 +49,8 @@ public class IssueAdministradorController extends AbstractController {
 	@RequestMapping("/listAll")
 	public ModelAndView listAll() {
 		ModelAndView result;
-
-		Collection<Issue> issues = issueService.findAll();
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		Collection<Issue> issues = issueService.findAllLanguage(language.toLowerCase());
 
 		String uri = "issue/administrator/listAll";
 		String requestURI = "issue/administrator/listAll.do";

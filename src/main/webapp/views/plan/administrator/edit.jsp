@@ -55,23 +55,6 @@
 				</div>
 
 				<div class="form-group">
-					<form:label path="entityLanguage" class="col-md-4 control-label">
-						<spring:message code="plan.language" />
-					</form:label>
-					<div class="col-md-7">
-						<form:select path="entityLanguage" class="form-control">
-							<jstl:forEach var="language" items="${languages}">
-								<form:option value="${language}">
-									<spring:message code="plan.language.${language}" />
-								</form:option>
-							</jstl:forEach>
-						</form:select>
-						<form:errors cssClass="error" path="entityLanguage"></form:errors>
-						<br>
-					</div>
-				</div>
-
-				<div class="form-group">
 					<form:label path="diet" for="dietId" class="col-md-4 control-label">
 						<spring:message code="plan.diet" />
 					</form:label>

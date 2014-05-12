@@ -16,6 +16,8 @@ public class Issue extends DomainEntity {
 
 	private String description;
 
+	private Language entityLanguage;
+
 	// RelationShip
 	private Customer customer;
 	private Plan plan;
@@ -31,6 +33,14 @@ public class Issue extends DomainEntity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Language getEntityLanguage() {
+		return entityLanguage;
+	}
+
+	public void setEntityLanguage(Language entityLanguage) {
+		this.entityLanguage = entityLanguage;
 	}
 
 	@Valid

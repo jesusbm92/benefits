@@ -21,7 +21,8 @@
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
-
+	<form:hidden path="entityLanguage" />
+	
 	<form:label path="name">
 		<spring:message code="day.name" />
 	</form:label>
@@ -37,24 +38,6 @@
 
 	<acme:textbox code="day.descName" path="descriptiveName" />
 	<br>
-
-	<div class="form-group">
-		<form:label path="entityLanguage" class="col-md-4 control-label">
-			<spring:message code="day.language" />
-		</form:label>
-		<div class="col-md-7">
-			<form:select path="entityLanguage" class="form-control">
-				<jstl:forEach var="language" items="${languages}">
-					<form:option value="${language}">
-						<spring:message code="day.language.${language}" />
-					</form:option>
-				</jstl:forEach>
-			</form:select>
-			<form:errors cssClass="error" path="entityLanguage"></form:errors>
-			<br>
-		</div>
-	</div>
-
 
 	<form:label path="meals">
 		<spring:message code="day.meals.edit" />

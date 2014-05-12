@@ -17,6 +17,7 @@
 	<form:hidden path="id" />
 	<form:hidden path="version" />
 	<form:hidden path="amounts" />
+	<form:hidden path="entityLanguage" />
 
 	<form:label path="name">
 		<spring:message code="food.name" />
@@ -28,22 +29,6 @@
 	<acme:textarea path="description" code="food.description" />
 	<br>
 
-	<div class="form-group">
-		<form:label path="entityLanguage" class="col-md-4 control-label">
-			<spring:message code="food.language" />
-		</form:label>
-		<div class="col-md-7">
-			<form:select path="entityLanguage" class="form-control">
-				<jstl:forEach var="language" items="${languages}">
-					<form:option value="${language}">
-						<spring:message code="food.language.${language}" />
-					</form:option>
-				</jstl:forEach>
-			</form:select>
-			<form:errors cssClass="error" path="entityLanguage"></form:errors>
-			<br>
-		</div>
-	</div>
 
 	<form:label path="image">
 		<spring:message code="food.image" />

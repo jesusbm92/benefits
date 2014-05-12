@@ -28,23 +28,6 @@
 		<acme:textbox code="exerciseGroup.description" path="description" />
 		<br>
 
-		<div class="form-group">
-			<form:label path="entityLanguage" class="col-md-4 control-label">
-				<spring:message code="exerciseGroup.language" />
-			</form:label>
-			<div class="col-md-7">
-				<form:select path="entityLanguage" class="form-control">
-					<jstl:forEach var="language" items="${languages}">
-						<form:option value="${language}">
-							<spring:message code="exerciseGroup.language.${language}" />
-						</form:option>
-					</jstl:forEach>
-				</form:select>
-				<form:errors cssClass="error" path="entityLanguage"></form:errors>
-				<br>
-			</div>
-		</div>
-
 		<form:label path="exercises">
 			<spring:message code="exerciseGroup.exercises" />
 		</form:label>
