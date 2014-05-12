@@ -113,6 +113,10 @@ public class AdministratorTrainingDayController extends AbstractController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				trainingDay.setEntityLanguage(lang);
 				trainingDayService.save(trainingDay);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {

@@ -122,6 +122,10 @@ public class AdministratorExerciseController extends AbstractController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				exercise.setEntityLanguage(lang);
 				exerciseService.save(exercise);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {

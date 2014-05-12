@@ -114,6 +114,10 @@ public class AdministratorDayController extends AbstractController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				day.setEntityLanguage(lang);
 				dayService.save(day);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {

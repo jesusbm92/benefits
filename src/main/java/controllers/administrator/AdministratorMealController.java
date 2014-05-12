@@ -41,7 +41,8 @@ public class AdministratorMealController {
 		ModelAndView result;
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Meal> meals = mealService.findAllLanguage(language.toLowerCase());
+		Collection<Meal> meals = mealService.findAllLanguage(language
+				.toLowerCase());
 		String uri = "meal/administrator/list";
 		String requestURI = "meal/administrator/list.do";
 		result = createListModelAndView(requestURI, meals, uri);
@@ -98,6 +99,10 @@ public class AdministratorMealController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				meal.setEntityLanguage(lang);
 				Meal mealinsert = mealService.save(meal);
 				result = new ModelAndView(
 						"redirect:/amount/administrator/listDetails.do?mealId="

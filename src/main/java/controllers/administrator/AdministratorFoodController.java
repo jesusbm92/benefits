@@ -46,7 +46,8 @@ public class AdministratorFoodController {
 
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Food> foods = foodService.findAllLanguage(language.toLowerCase());
+		Collection<Food> foods = foodService.findAllLanguage(language
+				.toLowerCase());
 		String uri = "food/administrator/list";
 		String requestURI = "food/administrator/list.do";
 		result = createListModelAndView(requestURI, foods, uri);
@@ -92,6 +93,10 @@ public class AdministratorFoodController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				food.setEntityLanguage(lang);
 				foodService.save(food);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {

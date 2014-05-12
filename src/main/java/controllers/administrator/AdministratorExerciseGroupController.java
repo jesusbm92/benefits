@@ -104,6 +104,10 @@ public class AdministratorExerciseGroupController extends AbstractController {
 			result = createEditModelAndView(exerciseGroup);
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				exerciseGroup.setEntityLanguage(lang);
 				exerciseGroupService.save(exerciseGroup);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {

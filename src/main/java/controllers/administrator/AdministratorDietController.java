@@ -146,6 +146,10 @@ public class AdministratorDietController extends AbstractController {
 			}
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				diet.setEntityLanguage(lang);
 				dietService.save(diet);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
