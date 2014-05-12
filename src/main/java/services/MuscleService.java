@@ -70,7 +70,7 @@ public class MuscleService {
 		Assert.isTrue(administratorService.IAmAnAdmin());
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
-		Collection<Muscle> muscles = findAllLanguage(language);
+		Collection<Muscle> muscles = findAllLanguage(language.toLowerCase());
 
 		for (Muscle aux : muscles) {
 			map.put(aux.getName(), aux.getId());

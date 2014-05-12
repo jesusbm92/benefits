@@ -58,7 +58,8 @@ public class AdministratorPlanController extends AbstractController {
 		String requestURI = "plan/administrator/list.do";
 		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
 
-		Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
+		Collection<Plan> plans = planService.findAllLanguage(language
+				.toLowerCase());
 		result = createListModelAndView(requestURI, plans, uri);
 
 		return result;
@@ -115,7 +116,8 @@ public class AdministratorPlanController extends AbstractController {
 			String language = LocaleContextHolder.getLocale()
 					.getDisplayLanguage();
 
-			Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
+			Collection<Plan> plans = planService.findAllLanguage(language
+					.toLowerCase());
 			result.addObject("plans", plans);
 			result.addObject("customer", customer);
 		} else {
@@ -130,7 +132,8 @@ public class AdministratorPlanController extends AbstractController {
 				String language = LocaleContextHolder.getLocale()
 						.getDisplayLanguage();
 
-				Collection<Plan> plans = planService.findAllLanguage(language.toLowerCase());
+				Collection<Plan> plans = planService.findAllLanguage(language
+						.toLowerCase());
 				result.addObject("plans", plans);
 				result.addObject("customer", customer);
 			}
@@ -161,6 +164,10 @@ public class AdministratorPlanController extends AbstractController {
 			result = createEditModelAndView(plan);
 		} else {
 			try {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				Language lang = Language.valueOf(language.toLowerCase());
+				plan.setEntityLanguage(lang);
 				planService.save(plan);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
@@ -207,7 +214,8 @@ public class AdministratorPlanController extends AbstractController {
 
 		Collection<Training> trainings = trainingService
 				.findAllLanguage(language.toLowerCase());
-		Collection<Diet> diets = dietService.findAllLanguage(language);
+		Collection<Diet> diets = dietService.findAllLanguage(language
+				.toLowerCase());
 
 		ModelAndView result;
 		result = new ModelAndView("plan/administrator/edit");
