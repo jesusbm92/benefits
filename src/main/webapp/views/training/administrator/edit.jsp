@@ -16,6 +16,8 @@
 <br />
 
 <div class="container">
+	<div class="row">
+	<div class="col-md-10">
 	<form:form action="training/administrator/edit.do"
 		modelAttribute="training">
 
@@ -114,4 +116,6 @@
 			name="cancelar"
 			onclick="self.location.href = training/administrator/list.do" /></a>
 	</form:form>
+</div>
+</div>
 </div>

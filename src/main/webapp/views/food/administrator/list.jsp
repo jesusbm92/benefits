@@ -11,7 +11,8 @@
 <h1 class="text-center"><spring:message code="food.foods" /></h1>
 
 <div class="container">
-
+<div class="row">
+<div class="col-md-10">
 	<display:table uid="foodListTable" keepStatus="false" name="foods"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">
@@ -41,5 +42,6 @@
 		onclick="self.location.href = meal/administrator/list.do" /></a>
 
 </div>
-
+</div>
+</div>
 

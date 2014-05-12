@@ -13,6 +13,7 @@
 
 <div class="container">
 	<div class="row">
+		<div class="col-md-10">
 
 		<jstl:forEach items="${diet.days }" var="first">
 			<div class="panel-group" id="accordion">
@@ -92,7 +93,6 @@
 				</div>
 			</div>
 		</jstl:forEach>
-	</div>
 	
 	<input type="button" class="btn btn-default"
 		value="<spring:message code="diet.back"/>" onclick="history.back()" />
@@ -102,4 +102,6 @@
 		type="image" class="pull-right" id="export"
 		name="export" src="images/pdf_icon.gif"
 		onclick="self.location.href = diet/customer/export.do?dietId=${diet.id}" /></a>
+</div>
+</div>
 </div>

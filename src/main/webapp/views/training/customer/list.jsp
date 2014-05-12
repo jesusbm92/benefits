@@ -9,6 +9,9 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 
+<div class="container">
+<div class="row">
+	<div class="col-md-10">
 
 <jstl:if test="${res}">
 
@@ -58,6 +61,11 @@
 	value="<spring:message code="plan.cancel"/>"
 	onclick="self.location.href = welcome/index.do" /></a>
 
-
+</div>
+	<div class="col-md-2">
+	
+	</div>
+</div>
+</div>
 
 

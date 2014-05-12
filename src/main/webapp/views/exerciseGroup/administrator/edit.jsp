@@ -15,6 +15,8 @@
 <br />
 
 <div class="container">
+<div class="row">
+<div class="col-md-10">
 	<form:form action="exerciseGroup/administrator/edit.do"
 		modelAttribute="exerciseGroup">
 
@@ -101,4 +103,6 @@
 
 
 	</form:form>
+</div>
+</div>
 </div>
