@@ -15,7 +15,7 @@
 
 <style>
 body {
-	padding-top: 20px; .
+	padding-top: 20px; 
 	multiselect-container {position: absolute;
 	list-style-type: none;
 	margin: 0;
