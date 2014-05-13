@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.Assert;
@@ -42,7 +43,8 @@ public class RequestPlanCustomerTest extends GlobalTest {
 
 		Plan plan = planService.findOne(68);
 		Customer customer = customerService.findByPrincipal();
-		planService.request(plan.getGoal(), customer);
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		planService.request(plan.getGoal(), customer, language.toLowerCase());
 
 		Assert.isTrue(!(customer.getPlan() == null));
 
@@ -56,8 +58,8 @@ public class RequestPlanCustomerTest extends GlobalTest {
 		Plan plan = planService.findOne(68);
 
 		Customer customer = customerService.findByPrincipal();
-
-		planService.request(plan.getGoal(), customer);
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		planService.request(plan.getGoal(), customer, language.toLowerCase());
 
 		Assert.isTrue((customer.getPlan() == null));
 
@@ -70,8 +72,8 @@ public class RequestPlanCustomerTest extends GlobalTest {
 		Plan plan = planService.findOne(68);
 
 		Customer customer = customerService.findByPrincipal();
-
-		planService.request(plan.getGoal(), customer);
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		planService.request(plan.getGoal(), customer, language.toLowerCase());
 
 		Assert.isTrue((customer.getPlan() == null));
 
