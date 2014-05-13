@@ -12,7 +12,6 @@
 
 <div class="container">
 	<div class="row">
-	<div class="col-md-10">
 		<div class="table-responsive">
 			<display:table uid="trainingListTable" keepStatus="false"
 				name="trainings" pagesize="5" class="table table-hover"
@@ -54,6 +53,5 @@
 				onclick="self.location.href = plan/administrator/list.do" /></a>
 		</div>
 	</div>
-</div>
 </div>
 

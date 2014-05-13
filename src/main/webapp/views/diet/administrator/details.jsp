@@ -8,12 +8,13 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
-<h1 class="text-center"><spring:message code="diet.diet" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="diet.diet" />
+</h1>
+<br />
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-10">
 		<jstl:forEach items="${diet.days }" var="first">
 			<div class="panel-group" id="accordion">
 				<div class="panel panel-default">
@@ -90,16 +91,15 @@
 				</div>
 			</div>
 		</jstl:forEach>
-	
-	
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="diet.back"/>" onclick="history.back()" />
 
-	<a href="diet/administrator/export.do?dietId=${diet.id}"><input
-		type="image" class="pull-right" id="export"
-		name="export" src="images/pdf_icon.gif"
-		onclick="self.location.href = diet/administrator/export.do?dietId=${diet.id}" /></a>
-			</div>
+
+		<input type="button" class="btn btn-default"
+			value="<spring:message code="diet.back"/>" onclick="history.back()" />
+
+		<a href="diet/administrator/export.do?dietId=${diet.id}"><input
+			type="image" class="pull-right" id="export" name="export"
+			src="images/pdf_icon.gif"
+			onclick="self.location.href = diet/administrator/export.do?dietId=${diet.id}" /></a>
 	</div>
 </div>
 

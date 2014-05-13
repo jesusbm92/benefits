@@ -11,8 +11,6 @@
 <h1 class="text-center"><spring:message code="exerciseGroup.exerciseGroups" /></h1>
 
 <div class="container">
-<div class="row">
-<div class="col-md-10">
 	<display:table uid="exerciseGroupListTable" keepStatus="false"
 		name="exerciseGroups" pagesize="5" class="table table-hover"
 		requestURI="${requestURI}" id="row">
@@ -50,6 +48,4 @@
 		value="<spring:message code="exerciseGroup.cancel"/>"
 		onclick="self.location.href = trainingDay/administrator/list.do" /></a>
 
-</div>
-</div>
 </div>

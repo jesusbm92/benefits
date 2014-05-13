@@ -20,7 +20,6 @@
 
 <div class="container">
 	<div class="row">
-			<div class="col-md-10">
 	
 		<div class="table-responsive">
 			<display:table uid="planListTable" keepStatus="false" name="plans"
@@ -79,6 +78,5 @@
 		</div>
 	</div>
 
-</div>
 </div>
 

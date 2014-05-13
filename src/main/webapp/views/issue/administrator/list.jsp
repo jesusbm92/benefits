@@ -11,8 +11,6 @@
 <h1 class="text-center"><spring:message code="issue.issues" /></h1>
 
 <div class="container">
-<div class="row">
-<div class="col-md-10">
 
 	<display:table uid="issueListTable" keepStatus="false" name="issues"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
@@ -39,6 +37,4 @@
 		class="btn btn-default" value="<spring:message code="issue.cancel"/>"
 		onclick="self.location.href = plan/administrator/list.do" /></a>
 	</jstl:if>
-</div>
-</div>
 </div>

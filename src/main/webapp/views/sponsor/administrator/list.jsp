@@ -22,7 +22,6 @@
 
 <div class="container">
 	<div class="row">
-	<div class="col-md-10">
 		<div class="table-responsive">
 			<display:table uid="sponsorListTable" keepStatus="false"
 				name="sponsors" pagesize="5" requestURI="${requestURI}" id="row">
@@ -60,7 +59,5 @@
 				onclick="self.location.href = welcome/index.do" /></a>
 		</div>
 	</div>
-
-</div>
 
 </div>

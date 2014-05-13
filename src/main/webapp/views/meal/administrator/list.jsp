@@ -15,8 +15,6 @@
 <br/>
 
 <div class="container">
-<div class="row">
-<div class="col-md-10">
 	<display:table uid="mealListTable" keepStatus="false" name="meals"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">
@@ -56,6 +54,4 @@
 		class="btn btn-default" value="<spring:message code="meal.back"/>"
 		onclick="self.location.href = day/administrator/list.do" /></a>
 
-</div>
-</div>
 </div>

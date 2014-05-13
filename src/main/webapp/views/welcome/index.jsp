@@ -62,8 +62,8 @@
 						role="button"><spring:message code="welcome.button.whats" /></a>
 				</p>
 			</div>
-			<div class="col-md-4 col-md-offset-1">
-				<br /> <br /> <br /> <br />
+			<div class="col-md-3 col-md-offset-1">
+				<br /> <br /> <br />
 				<security:authorize access="isAnonymous()">
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -118,8 +118,7 @@
 							</h3>
 						</div>
 						<div class="panel-body">
-
-							<br /> <br />
+							<br /> 
 							<div class="col-xs-10 col-xs-offset-1">
 								<div class="row">
 									<a class="btn btn-primary btn-lg btn-block" role="button"
@@ -138,6 +137,7 @@
 										href="diet/administrator/list.do"><spring:message
 											code="master.page.admin.dietAll" /></a>
 								</div>
+								<br/>
 							</div>
 						</div>
 					</div>
@@ -154,8 +154,8 @@
 						<div class="panel-body">
 							<br />
 							<div class="row">
-								<div class="col-xs-10 col-xs-offset-3">
-									<a class="btn btn-primary btn-lg" role="button"
+								<div class="col-xs-10 col-xs-offset-1">
+									<a class="btn btn-primary btn-lg btn-block" role="button"
 										href="plan/customer/list.do"><spring:message
 											code="welcome.button.myplan" /></a>
 								</div>

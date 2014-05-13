@@ -11,8 +11,6 @@
 <h1 class="text-center"><spring:message code="trainingDay.trainingDays" /></h1>
 
 <div class="container">
-<div class="row">
-<div class="col-md-10">
 	<display:table uid="trainingDayListTable" keepStatus="false"
 		name="trainingDays" pagesize="5" class="table table-hover"
 		requestURI="${requestURI}" id="row">
@@ -51,6 +49,4 @@
 		class="btn btn-default"
 		value="<spring:message code="trainingDay.cancel"/>"
 		onclick="self.location.href = training/administrator/list.do" /></a>
-</div>
-</div>
 </div>

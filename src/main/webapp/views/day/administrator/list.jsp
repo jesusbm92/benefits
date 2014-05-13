@@ -9,25 +9,21 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@page import="domain.Days"%>
 
-<h1 class="text-center"><spring:message code="day.days" /></h1>
+<h1 class="text-center">
+	<spring:message code="day.days" />
+</h1>
 
 <div class="container">
-<div class="row">
-<div class="col-md-10">
 	<display:table uid="dayListTable" keepStatus="false" name="days"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">
-
-
 		<display:column titleKey="day.name" sortable="true">
 			<spring:message code="day.name.${row.name}" />
 		</display:column>
-
 		<display:column property="descriptiveName" titleKey="day.descName"
 			sortable="true">
 			<spring:message code="day.descName" />
 		</display:column>
-
 		<display:column>
 			<a href="meal/administrator/listMealsByDay.do?dayId=${row.id}"> <input
 				class="btn btn-default" type="button"
@@ -35,16 +31,13 @@
 				onclick="self.location.href = meal/administrator/listMealsByDay.do?dayId=${row.id}" />
 			</a>
 		</display:column>
-
 		<display:column>
 			<a href="day/administrator/edit.do?dayId=${row.id}"><input
 				class="btn btn-default" type="button"
 				value="<spring:message code="day.edit"/>"
 				onclick="self.location.href = day/administrator/edit.do?dayId=${row.id}" /></a>
 		</display:column>
-
 	</display:table>
-
 	<a href="day/administrator/create.do"><input
 		class="btn btn-default" type="button"
 		value="<spring:message code="day.create"/>"
@@ -52,9 +45,6 @@
 		href="diet/administrator/list.do"><input type="button"
 		class="btn btn-default" value="<spring:message code="diet.back"/>"
 		onclick="self.location.href = diet/administrator/list.do" /></a>
-
-</div>
-</div>
 </div>
 <!--  Quitar los siguientes comentarios si es necesario crear un dia a partir de la lista de dias de una dieta -->
 
