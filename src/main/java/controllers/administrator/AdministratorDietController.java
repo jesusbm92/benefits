@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.DayService;
 import services.DietService;
@@ -136,7 +137,8 @@ public class AdministratorDietController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Diet diet, BindingResult binding) {
+	public ModelAndView save(@Valid Diet diet, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 		if (binding.hasErrors()) {
 			if (diet.getId() == 0) {
@@ -151,6 +153,7 @@ public class AdministratorDietController extends AbstractController {
 				Language lang = Language.valueOf(language.toLowerCase());
 				diet.setEntityLanguage(lang);
 				dietService.save(diet);
+				redirect.addFlashAttribute("successMessage", "diet.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				if (diet.getId() == 0) {
@@ -168,9 +171,10 @@ public class AdministratorDietController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Diet diet,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 		try {
+			redirect.addFlashAttribute("successMessage", "diet.deleteSuccess");
 			dietService.delete(diet);
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
