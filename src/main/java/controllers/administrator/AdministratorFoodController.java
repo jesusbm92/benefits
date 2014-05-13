@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.FoodService;
 import domain.Amount;
@@ -82,7 +83,8 @@ public class AdministratorFoodController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Food food, BindingResult binding) {
+	public ModelAndView save(@Valid Food food, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -97,6 +99,7 @@ public class AdministratorFoodController {
 						.getDisplayLanguage();
 				Language lang = Language.valueOf(language.toLowerCase());
 				food.setEntityLanguage(lang);
+				redirect.addFlashAttribute("successMessage", "food.editSuccess");
 				foodService.save(food);
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
@@ -115,10 +118,11 @@ public class AdministratorFoodController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Food food,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
+			redirect.addFlashAttribute("successMessage", "food.deleteSuccess");
 			foodService.delete(food);
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
