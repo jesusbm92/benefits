@@ -99,6 +99,11 @@ public class CustomerService extends UserService {
 		}
 	}
 
+	public void saveCustomerForPlanChange(Customer customer) {
+		Assert.notNull(customer);
+		customerRepository.save(customer);
+	}
+
 	public void savePassword(Customer customer, String password) {
 		Assert.notNull(customer);
 

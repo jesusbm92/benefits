@@ -122,7 +122,7 @@ public class AdministratorPlanController extends AbstractController {
 			result.addObject("customer", customer);
 		} else {
 			try {
-				customerService.save(customer);
+				customerService.saveCustomerForPlanChange(customer);
 				result = new ModelAndView(
 						"redirect:../../issue/administrator/listAll.do");
 				redirect.addFlashAttribute("successMessage", "plan.cambiado");
