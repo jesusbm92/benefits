@@ -28,12 +28,21 @@
 	color: white;
 	text-shadow: black 0.3em 0.3em 0.3em;
 }
+
+.panel {
+	text-shadow: black 0.0em 0.0em 0.0em;
+}
+
+.checkbox {
+	color: #4F4F4F;
+}
+
 .shared {
-    background-color:transparent;
-    color: white;
-    border:1px solid;
-	border-radius:25px;
-	}
+	background-color: transparent;
+	color: black;
+	border: 1px solid;
+	border-radius: 25px;
+}
 </style>
 
 <div class="arriba">
@@ -49,103 +58,124 @@
 				</p>
 				<br />
 				<p>
-					<a href="about/about.do" class="btn btn-primary btn-lg" role="button"><spring:message
-							code="welcome.button.whats" /></a>
+					<a href="about/about.do" class="btn btn-primary btn-lg"
+						role="button"><spring:message code="welcome.button.whats" /></a>
 				</p>
 			</div>
-			<div class="col-md-3 col-md-offset-1">
+			<div class="col-md-4 col-md-offset-1">
+				<br /> <br /> <br /> <br />
 				<security:authorize access="isAnonymous()">
-					<h2 class="text-center">
-						<spring:message code="welcome.signin" />
-					</h2>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<spring:message code="welcome.signin" />
+							</h3>
+						</div>
+						<div class="panel-body">
+							<form:form action="j_spring_security_check"
+								modelAttribute="credentials" class="form-signin" role="form">
+								<fieldset>
+									<spring:message code="security.username" var="username" />
+									<form:input path="username" class="form-control"
+										placeholder="${username}" required="" autofocus="" />
+									<form:errors class="error" path="username" />
+									<br />
+									<spring:message code="security.password" var="password" />
+									<form:password path="password" class="form-control"
+										placeholder="${password}" required="" />
+									<form:errors class="error" path="password" />
+									<label class="checkbox"> <input type="checkbox"
+										name="_spring_security_remember_me" /> <spring:message
+											code="security.rememberMe" />
+									</label> <br />
+
+									<jstl:if test="${showError == true}">
+										<div class="error">
+											<spring:message code="security.login.failed" />
+										</div>
+									</jstl:if>
+
+									<input type="submit" class="btn btn-lg btn-success btn-block"
+										value="<spring:message code="security.login" />" /> <br /> <a
+										href="register/registerCustomer.do"><input type="button"
+										class="btn btn-lg btn-primary btn-block"
+										value="<spring:message code="master.page.guest.register"/>"
+										onclick="self.location.href = register/registerCustomer.do" /></a>
+
+								</fieldset>
+							</form:form>
+						</div>
+					</div>
 					<br />
-					<form:form action="j_spring_security_check"
-						modelAttribute="credentials" class="form-signin" role="form">
-						<br />
-
-						<spring:message code="security.username" var="username" />
-						<form:input path="username" class="form-control"
-							placeholder="${username}" required="" autofocus="" />
-						<form:errors class="error" path="username" />
-						<br />
-						<spring:message code="security.password" var="password" />
-						<form:password path="password" class="form-control"
-							placeholder="${password}" required="" />
-						<form:errors class="error" path="password" />
-						<label class="checkbox"> <input type="checkbox"
-							name="_spring_security_remember_me" /> <spring:message
-								code="security.rememberMe" />
-						</label>
-						<br />
-
-						<jstl:if test="${showError == true}">
-							<div class="error">
-								<spring:message code="security.login.failed" />
-							</div>
-						</jstl:if>
-
-						<input type="submit" class="btn btn-lg btn-success btn-block"
-							value="<spring:message code="security.login" />" />
-						<br/>
-						<a
-							href="register/registerCustomer.do"><input
-							type="button" class="btn btn-lg btn-primary btn-block"
-							value="<spring:message code="master.page.guest.register"/>"
-							onclick="self.location.href = register/registerCustomer.do" /></a>
-
-
-					</form:form>
 				</security:authorize>
 				<security:authorize access="hasRole('ADMIN')">
-					<br />
-					<br />
-					<h2>
-						<spring:message code="welcome.hello" />
-						<security:authentication property="principal.username" />
-						!
-					</h2>
-					<br />
-					<div class="row">
-						<a class="btn btn-primary btn-lg" role="button"
-							href="plan/administrator/list.do"><spring:message
-								code="master.page.admin.plansAll" /></a>
-					</div>
-					<br />
-					<div class="row">
-						<a class="btn btn-primary btn-lg" role="button"
-							href="training/administrator/list.do"><spring:message
-								code="master.page.admin.trainingAll" /></a>
-					</div>
-					<br />
-					<div class="row">
-						<a class="btn btn-primary btn-lg" role="button"
-							href="diet/administrator/list.do"><spring:message
-								code="master.page.admin.dietAll" /></a>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<spring:message code="welcome.hello" />
+								<security:authentication property="principal.username" />
+								!
+							</h3>
+						</div>
+						<div class="panel-body">
+
+							<br /> <br />
+							<div class="col-xs-10 col-xs-offset-1">
+								<div class="row">
+									<a class="btn btn-primary btn-lg btn-block" role="button"
+										href="plan/administrator/list.do"><spring:message
+											code="master.page.admin.plansAll" /></a>
+								</div>
+								<br />
+								<div class="row">
+									<a class="btn btn-primary btn-lg btn-block" role="button"
+										href="training/administrator/list.do"><spring:message
+											code="master.page.admin.trainingAll" /></a>
+								</div>
+								<br />
+								<div class="row">
+									<a class="btn btn-primary btn-lg btn-block" role="button"
+										href="diet/administrator/list.do"><spring:message
+											code="master.page.admin.dietAll" /></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</security:authorize>
 				<security:authorize access="hasRole('CUSTOMER')">
-					<br />
-					<br />
-					<h2>
-						<spring:message code="welcome.hello" />
-						<security:authentication property="principal.username" />
-						
-					</h2>
-					<br />
-					<a class="btn btn-primary btn-lg" role="button"
-						href="plan/customer/list.do"><spring:message
-							code="welcome.button.myplan" /></a>
-					<br><br><br><br><br><br><br>
-					
-					<div class="shared" align="center">
-
-						<label><spring:message code="welcome.shared1" /></label><br>
-						<label><spring:message code="welcome.shared2" /></label><br>
-						<a href = "http://twitter.com/intent/tweet?text=He perdido peso gracias a Benefits!, pruebala!!"><img src="images/twitter.png" /></a>	
-						<a href = "https://www.facebook.com/sharer/sharer.php?u=benefits.whelastic.net"><img src="images/facebook.png" /></a>	
-						<a href = "http://plus.google.com/share?url=benefits.whelastic.net"><img src="images/googleplus.png"  /></a>	
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<spring:message code="welcome.hello" />
+								<security:authentication property="principal.username" />
+								!
+							</h3>
 						</div>
+						<div class="panel-body">
+							<br />
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-3">
+									<a class="btn btn-primary btn-lg" role="button"
+										href="plan/customer/list.do"><spring:message
+											code="welcome.button.myplan" /></a>
+								</div>
+							</div>
+							<br /> <br />
+							<div class="shared" align="center">
 
+								<label><spring:message code="welcome.shared1" /></label><br>
+								<label><spring:message code="welcome.shared2" /></label><br>
+								<a
+									href="http://twitter.com/intent/tweet?text=He perdido peso gracias a Benefits!, pruebala!!"><img
+									src="images/twitter.png" /></a> <a
+									href="https://www.facebook.com/sharer/sharer.php?u=benefits.whelastic.net"><img
+									src="images/facebook.png" /></a> <a
+									href="http://plus.google.com/share?url=benefits.whelastic.net"><img
+									src="images/googleplus.png" /></a>
+							</div>
+							<br/>
+						</div>
+					</div>
 				</security:authorize>
 			</div>
 		</div>
