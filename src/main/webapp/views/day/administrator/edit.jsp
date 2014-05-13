@@ -18,10 +18,6 @@ body {
 }
 </style>
 
-<h1 class="text-center">
-	<spring:message code="day.create.day" />
-</h1>
-
 
 <div class="container">
 	<div class="row">
