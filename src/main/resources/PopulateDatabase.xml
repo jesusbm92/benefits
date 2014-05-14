@@ -75,565 +75,1174 @@
 		</property>
 		<property name="diets">
 			<list>
-				<ref bean="diet2" />
 			</list>
 		</property>
 	</bean>
 	<!-- FOODS -->
-	<bean id="food1" class="domain.Food">
-		<property name="name" value="Chicken Steak" />
-		<property name="description" value="Lore ipsum" />
-		<property name="image" value="" />
-		<property name="entityLanguage" value="english" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount1" />
-			</list>
-		</property>
-	</bean>
-	<bean id="food2" class="domain.Food">
-		<property name="name" value="Orange Juice" />
-		<property name="description" value="Lore ipsum" />
-		<property name="entityLanguage" value="spanish" />
-		<property name="image" value="" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount2" />
-			</list>
-		</property>
-	</bean>
-	<bean id="food3" class="domain.Food">
-		<property name="name" value="Salad" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="Lore ipsum" />
-		<property name="image" value="" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount3" />
-			</list>
-		</property>
-	</bean>
-	<bean id="food4" class="domain.Food">
-		<property name="name" value="Beef Steak" />
-		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="Lore ipsum" />
-		<property name="image" value="" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount5" />
-			</list>
-		</property>
-	</bean>
-	<bean id="food5" class="domain.Food">
-		<property name="name" value="Milk" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="Lore ipsum" />
-		<property name="image" value="" />
-		<property name="amounts">
-			<list>
-				<ref bean="amount4" />
-			</list>
-		</property>
-	</bean>
-	<bean id="food6" class="domain.Food">
-		<property name="name" value="Turkey breast" />
-		<property name="description" value="Lore ipsum" />
+
+	<!-- Lunes Desayuno -->
+	<bean id="food1ES" class="domain.Food">
+		<property name="name" value="Leche con cacao" />
+		<property name="description" value="Un vaso de leche con cacao" />
 		<property name="image" value="" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
 			<list>
-				<ref bean="amount6" />
+				<ref bean="amount1ES" />
+				<ref bean="amount11ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="food7" class="domain.Food">
-		<property name="name" value="Lentils" />
-		<property name="description" value="Lore ipsum" />
+
+	<bean id="food2ES" class="domain.Food">
+		<property name="name" value="Tostada" />
+		<property name="description" value="Una tostada con aceite o mantequilla" />
+		<property name="image" value="" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
 			<list>
-				<ref bean="amount7" />
+				<ref bean="amount2ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="food8" class="domain.Food">
+
+	<bean id="food3ES" class="domain.Food">
+		<property name="name" value="Vaso de agua" />
+		<property name="description" value="Un vaso de agua" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount3ES" />
+				<ref bean="amount5ES" />
+				<ref bean="amount10ES" />
+				
+				<ref bean="amount12ES" />
+				<ref bean="amount16ES" />
+				<ref bean="amount20ES" />
+				<ref bean="amount23ES" />
+				<ref bean="amount27ES" />
+				<ref bean="amount30ES" />
+				<ref bean="amount34ES" />
+				<ref bean="amount37ES" />
+				<ref bean="amount41ES" />
+				<ref bean="amount44ES" />
+				<ref bean="amount47ES" />
+				<ref bean="amount50ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Lunes Media MaÃ±ana -->
+
+	<bean id="food4ES" class="domain.Food">
+		<property name="name" value="Fruta" />
+		<property name="description" value="Una pieza de fruta a tu elecciÃ³n" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount4ES" />
+				<ref bean="amount9ES" />
+				<ref bean="amount13ES" />
+				<ref bean="amount15ES" />
+				<ref bean="amount19ES" />
+				<ref bean="amount22ES" />
+				<ref bean="amount26ES" />
+				<ref bean="amount28ES" />
+				<ref bean="amount33ES" />
+				<ref bean="amount36ES" />
+				<ref bean="amount40ES" />
+				<ref bean="amount43ES" />
+				<ref bean="amount46ES" />
+				<ref bean="amount49ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Lunes Almuerzo -->
+
+	<bean id="food5ES" class="domain.Food">
+		<property name="name" value="Ensalada" />
+		<property name="description" value="Una ensalada de lechuga y aceite" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount6ES" />
+				<ref bean="amount17ES" />
+				<ref bean="amount24ES" />
+				<ref bean="amount31ES" />
+				<ref bean="amount38ES" />
+				<ref bean="amount48ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food6ES" class="domain.Food">
+		<property name="name" value="Judias verdes con huevo" />
+		<property name="description" value="Judias verdes con huevos" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount7ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food7ES" class="domain.Food">
+		<property name="name" value="Tomate frito" />
+		<property name="description" value="Un plato de tomate frito" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount8ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food8ES" class="domain.Food">
+		<property name="name" value="Filete de pollo" />
+		<property name="description" value="Dos filetes de pollo pequeÃ±os" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount14ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food9ES" class="domain.Food">
+		<property name="name" value="Pescado" />
+		<property name="description" value="Varias piezas de pescado a la plancha" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food10ES" class="domain.Food">
+		<property name="name" value="Sopa de fideos con jamon" />
+		<property name="description"
+			value="Una sopa caliente de fideos con pequeÃ±os trozos de jamÃ³n" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount21ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food11ES" class="domain.Food">
+		<property name="name" value="Legumbres" />
+		<property name="description" value="Un plato de legumbres" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount25ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food12ES" class="domain.Food">
 		<property name="name" value="Yogurt" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="Lore ipsum" />
+		<property name="description" value="Un yogurt" />
 		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
 			<list>
-				<ref bean="amount8" />
+				<ref bean="amount29ES" />
 			</list>
 		</property>
 	</bean>
+
+	<bean id="food13ES" class="domain.Food">
+		<property name="name" value="Arroz" />
+		<property name="description" value="Un plato de arroz" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount32ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food14ES" class="domain.Food">
+		<property name="name" value="Queso blanco" />
+		<property name="description" value="Una porcion de queso blanco" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount35ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food15ES" class="domain.Food">
+		<property name="name" value="Pollo al horno" />
+		<property name="description"
+			value="Un plato de pollo al horno. TambiÃ©n se puede hacer en salsa." />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount39ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food16ES" class="domain.Food">
+		<property name="name" value="Tortilla francesa con chopped" />
+		<property name="description"
+			value="Un plato de toritalla a la francesa con chopped." />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount42ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="food17ES" class="domain.Food">
+		<property name="name" value="Libre" />
+		<property name="description"
+			value="Libertad para poder comer lo que el usuario desee" />
+		<property name="image" value="" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="amounts">
+			<list>
+				<ref bean="amount45ES" />
+				<ref bean="amount51ES" />
+			</list>
+		</property>
+	</bean>
+
+
 	<!-- MEALS -->
-	<bean id="meal1" class="domain.Meal">
-		<property name="name" value="LUNCH" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to lunch" />
-		<property name="days">
-			<list>
-				<ref bean="day1" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount1" />
-				<ref bean="amount2" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal2" class="domain.Meal">
-		<property name="name" value="TEA_TIME" />
-		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This meal contains several food to tea time" />
-		<property name="days">
-			<list>
-				<ref bean="day1" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount3" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal3" class="domain.Meal">
+
+	<bean id="meal1ES" class="domain.Meal">
 		<property name="name" value="BREAKFAST" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to breakfast" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el desayuno" />
 		<property name="days">
 			<list>
-				<ref bean="day1" />
+				<ref bean="day1ES" />
+				<ref bean="day2ES" />
+				<ref bean="day3ES" />
+				<ref bean="day4ES" />
+				<ref bean="day5ES" />
+				<ref bean="day6ES" />
+				<ref bean="day7ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount4" />
-				<ref bean="amount5" />
+				<ref bean="amount1ES" />
+				<ref bean="amount2ES" />
+				<ref bean="amount3ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal4" class="domain.Meal">
+
+	<bean id="meal2ES" class="domain.Meal">
 		<property name="name" value="MID_MORNING" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="This meal contains several food to mid morning" />
+			value="Este momento del dia contiene algunas comidas para la media maÃ±ana" />
 		<property name="days">
 			<list>
-				<ref bean="day1" />
+				<ref bean="day1ES" />
+				<ref bean="day2ES" />
+				<ref bean="day3ES" />
+				<ref bean="day4ES" />
+				<ref bean="day5ES" />
+				<ref bean="day6ES" />
+				<ref bean="day7ES" />
+
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount6" />
+				<ref bean="amount4ES" />
+				<ref bean="amount5ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal5" class="domain.Meal">
+	<bean id="meal3ES" class="domain.Meal">
 		<property name="name" value="LUNCH" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to lunch" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
 		<property name="days">
 			<list>
-				<ref bean="day1" />
+				<ref bean="day1ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount7" />
-				<ref bean="amount8" />
+				<ref bean="amount6ES" />
+				<ref bean="amount7ES" />
+				<ref bean="amount8ES" />
+				<ref bean="amount9ES" />
+				<ref bean="amount10ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal6" class="domain.Meal">
+
+	<bean id="meal4ES" class="domain.Meal">
+		<property name="name" value="TEA_TIME" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la merienda" />
+		<property name="days">
+			<list>
+				<ref bean="day1ES" />
+				<ref bean="day2ES" />
+				<ref bean="day3ES" />
+				<ref bean="day4ES" />
+				<ref bean="day5ES" />
+				<ref bean="day6ES" />
+				<ref bean="day7ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount11ES" />
+				<ref bean="amount12ES" />
+				<ref bean="amount13ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="meal5ES" class="domain.Meal">
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This meal contains several food to dinner" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
 		<property name="days">
 			<list>
-				<ref bean="day2" />
+				<ref bean="day1ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount9" />
+				<ref bean="amount14ES" />
+				<ref bean="amount15ES" />
+				<ref bean="amount16ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal7" class="domain.Meal">
-		<property name="name" value="BREAKFAST" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to breakfast" />
-		<property name="days">
-			<list>
-				<ref bean="day2" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount10" />
-				<ref bean="amount11" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal8" class="domain.Meal">
-		<property name="name" value="MID_MORNING" />
+
+	<!-- Almuerzo Martes -->
+
+	<bean id="meal6ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="This meal contains several food to mid morning" />
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
 		<property name="days">
 			<list>
-				<ref bean="day2" />
+				<ref bean="day2ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount12" />
+				<ref bean="amount17ES" />
+				<ref bean="amount18ES" />
+				<ref bean="amount19ES" />
+				<ref bean="amount20ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal9" class="domain.Meal">
-		<property name="name" value="TEA_TIME" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to tea time" />
-		<property name="days">
-			<list>
-				<ref bean="day2" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount13" />
-				<ref bean="amount14" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal10" class="domain.Meal">
+
+	<!-- Cena Martes -->
+
+	<bean id="meal7ES" class="domain.Meal">
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This meal contains several food to dinner" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
 		<property name="days">
 			<list>
-				<ref bean="day2" />
+				<ref bean="day2ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount15" />
+				<ref bean="amount21ES" />
+				<ref bean="amount22ES" />
+				<ref bean="amount23ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal11" class="domain.Meal">
-		<property name="name" value="BREAKFAST" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to breakfast" />
-		<property name="days">
-			<list>
-				<ref bean="day3" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount16" />
-				<ref bean="amount17" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal12" class="domain.Meal">
-		<property name="name" value="MID_MORNING" />
+
+	<!-- Almuerzo Miercoles -->
+
+	<bean id="meal8ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="This meal contains several food to mid morning" />
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
 		<property name="days">
 			<list>
-				<ref bean="day3" />
+				<ref bean="day3ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount18" />
+				<ref bean="amount24ES" />
+				<ref bean="amount25ES" />
+				<ref bean="amount26ES" />
+				<ref bean="amount27ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="meal13" class="domain.Meal">
-		<property name="name" value="LUNCH" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This meal contains several food to lunch" />
-		<property name="days">
-			<list>
-				<ref bean="day3" />
-			</list>
-		</property>
-		<property name="amounts">
-			<list>
-				<ref bean="amount19" />
-				<ref bean="amount20" />
-			</list>
-		</property>
-	</bean>
-	<bean id="meal14" class="domain.Meal">
-		<property name="name" value="TEA_TIME" />
+
+	<!-- Cena Miercoles -->
+
+	<bean id="meal9ES" class="domain.Meal">
+		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This meal contains several food to tea time" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
 		<property name="days">
 			<list>
-				<ref bean="day3" />
+				<ref bean="day3ES" />
 			</list>
 		</property>
 		<property name="amounts">
 			<list>
-				<ref bean="amount21" />
+				<ref bean="amount28ES" />
+				<ref bean="amount29ES" />
+				<ref bean="amount30ES" />
 			</list>
 		</property>
 	</bean>
+
+	<bean id="meal10ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
+		<property name="days">
+			<list>
+				<ref bean="day4ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount31ES" />
+				<ref bean="amount32ES" />
+				<ref bean="amount33ES" />
+				<ref bean="amount34ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="meal11ES" class="domain.Meal">
+		<property name="name" value="DINNER" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
+		<property name="days">
+			<list>
+				<ref bean="day4ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount35ES" />
+				<ref bean="amount36ES" />
+				<ref bean="amount37ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="meal12ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
+		<property name="days">
+			<list>
+				<ref bean="day5ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount38ES" />
+				<ref bean="amount39ES" />
+				<ref bean="amount40ES" />
+				<ref bean="amount41ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Cena del viernes -->
+
+	<bean id="meal13ES" class="domain.Meal">
+		<property name="name" value="DINNER" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
+		<property name="days">
+			<list>
+				<ref bean="day5ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount42ES" />
+				<ref bean="amount43ES" />
+				<ref bean="amount44ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Almuerzo del sÃ¡bado -->
+
+	<bean id="meal14ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
+		<property name="days">
+			<list>
+				<ref bean="day6ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount45ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Cena del sÃ¡bado -->
+
+	<bean id="meal15ES" class="domain.Meal">
+		<property name="name" value="DINNER" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
+		<property name="days">
+			<list>
+				<ref bean="day6ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount46ES" />
+				<ref bean="amount47ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Almuerzo del domingo -->
+
+	<bean id="meal16ES" class="domain.Meal">
+		<property name="name" value="LUNCH" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para el almuerzo" />
+		<property name="days">
+			<list>
+				<ref bean="day7ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount48ES" />
+				<ref bean="amount49ES" />
+				<ref bean="amount50ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="meal17ES" class="domain.Meal">
+		<property name="name" value="DINNER" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este momento del dia contiene algunas comidas para la cena" />
+		<property name="days">
+			<list>
+				<ref bean="day7ES" />
+			</list>
+		</property>
+		<property name="amounts">
+			<list>
+				<ref bean="amount51ES" />
+			</list>
+		</property>
+	</bean>
+
 	<!-- AMOUNTS -->
-	<bean id="amount1" class="domain.Amount">
+
+
+	<!-- Lunes Desayuno -->
+
+	<bean id="amount1ES" class="domain.Amount">
+		<property name="quantity" value="25" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal1ES" />
+		<property name="food" ref="food1ES" />
+	</bean>
+
+	<bean id="amount2ES" class="domain.Amount">
+		<property name="quantity" value="20" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal1ES" />
+		<property name="food" ref="food2ES" />
+	</bean>
+
+	<bean id="amount3ES" class="domain.Amount">
+		<property name="quantity" value="25" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal1ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Lunes Media MaÃ±ana -->
+
+	<bean id="amount4ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal2ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount5ES" class="domain.Amount">
+		<property name="quantity" value="25" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal2ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Lunes Almuerzo -->
+
+	<bean id="amount6ES" class="domain.Amount">
+		<property name="quantity" value="125" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal3ES" />
+		<property name="food" ref="food5ES" />
+	</bean>
+
+	<bean id="amount7ES" class="domain.Amount">
+		<property name="quantity" value="125" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal3ES" />
+		<property name="food" ref="food6ES" />
+	</bean>
+
+	<bean id="amount8ES" class="domain.Amount">
 		<property name="quantity" value="250" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal1" />
-		<property name="food" ref="food1" />
+		<property name="meal" ref="meal3ES" />
+		<property name="food" ref="food7ES" />
 	</bean>
-	<bean id="amount2" class="domain.Amount">
+
+	<bean id="amount9ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal3ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount10ES" class="domain.Amount">
+		<property name="quantity" value="25" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal3ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Lunes Merienda -->
+	<bean id="amount11ES" class="domain.Amount">
+		<property name="quantity" value="50" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal4ES" />
+		<property name="food" ref="food1ES" />
+	</bean>
+
+	<bean id="amount12ES" class="domain.Amount">
+		<property name="quantity" value="25" />
+		<property name="measure" value="cl" />
+		<property name="meal" ref="meal4ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<bean id="amount13ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal4ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<!-- Lunes Cena -->
+
+	<bean id="amount14ES" class="domain.Amount">
+		<property name="quantity" value="300" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal5ES" />
+		<property name="food" ref="food8ES" />
+	</bean>
+
+	<bean id="amount15ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal5ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount16ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal5ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Martes Almuerzo -->
+
+	<bean id="amount17ES" class="domain.Amount">
+		<property name="quantity" value="125" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal6ES" />
+		<property name="food" ref="food5ES" />
+	</bean>
+
+	<bean id="amount18ES" class="domain.Amount">
+		<property name="quantity" value="300" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal6ES" />
+		<property name="food" ref="food9ES" />
+	</bean>
+
+	<bean id="amount19ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal6ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount20ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal6ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Martes Cena -->
+
+	<bean id="amount21ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="plato" />
+		<property name="meal" ref="meal7ES" />
+		<property name="food" ref="food10ES" />
+	</bean>
+
+	<bean id="amount22ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal7ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount23ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal7ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Almuerzo miÃ©rcoles -->
+
+	<bean id="amount24ES" class="domain.Amount">
+		<property name="quantity" value="125" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal8ES" />
+		<property name="food" ref="food5ES" />
+	</bean>
+
+	<bean id="amount25ES" class="domain.Amount">
+		<property name="quantity" value="300" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal8ES" />
+		<property name="food" ref="food11ES" />
+	</bean>
+
+	<bean id="amount26ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal8ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount27ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal8ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Cena mÃ­ercoles -->
+
+	<bean id="amount28ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal9ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount29ES" class="domain.Amount">
 		<property name="quantity" value="250" />
-		<property name="measure" value="ml" />
-		<property name="meal" ref="meal1" />
-		<property name="food" ref="food2" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal9ES" />
+		<property name="food" ref="food12ES" />
 	</bean>
-	<bean id="amount3" class="domain.Amount">
+
+	<bean id="amount30ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal9ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Almuerzo jueves -->
+	<bean id="amount31ES" class="domain.Amount">
+		<property name="quantity" value="125" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal10ES" />
+		<property name="food" ref="food5ES" />
+	</bean>
+
+	<bean id="amount32ES" class="domain.Amount">
+		<property name="quantity" value="60" />
+		<property name="measure" value="g" />
+		<property name="meal" ref="meal10ES" />
+		<property name="food" ref="food13ES" />
+	</bean>
+
+	<bean id="amount33ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal10ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount34ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal10ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Cena jueves -->
+	<bean id="amount35ES" class="domain.Amount">
 		<property name="quantity" value="100" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal2" />
-		<property name="food" ref="food3" />
+		<property name="meal" ref="meal11ES" />
+		<property name="food" ref="food14ES" />
 	</bean>
-	<bean id="amount4" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="ml" />
-		<property name="meal" ref="meal3" />
-		<property name="food" ref="food4" />
+
+	<bean id="amount36ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal11ES" />
+		<property name="food" ref="food4ES" />
 	</bean>
-	<bean id="amount5" class="domain.Amount">
-		<property name="quantity" value="250" />
+
+	<bean id="amount37ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal11ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Almuerzo viernes -->
+	<bean id="amount38ES" class="domain.Amount">
+		<property name="quantity" value="125" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal3" />
-		<property name="food" ref="food5" />
+		<property name="meal" ref="meal12ES" />
+		<property name="food" ref="food5ES" />
 	</bean>
-	<bean id="amount6" class="domain.Amount">
-		<property name="quantity" value="250" />
+
+	<bean id="amount39ES" class="domain.Amount">
+		<property name="quantity" value="300" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal4" />
-		<property name="food" ref="food6" />
+		<property name="meal" ref="meal12ES" />
+		<property name="food" ref="food15ES" />
 	</bean>
-	<bean id="amount7" class="domain.Amount">
-		<property name="quantity" value="250" />
+
+	<bean id="amount40ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal12ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount41ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal12ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Cena del viernes -->
+	<bean id="amount42ES" class="domain.Amount">
+		<property name="quantity" value="150" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal5" />
-		<property name="food" ref="food7" />
+		<property name="meal" ref="meal13ES" />
+		<property name="food" ref="food16ES" />
 	</bean>
-	<bean id="amount8" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="ml" />
-		<property name="meal" ref="meal5" />
-		<property name="food" ref="food8" />
+
+	<bean id="amount43ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal13ES" />
+		<property name="food" ref="food4ES" />
 	</bean>
-	<bean id="amount9" class="domain.Amount">
-		<property name="quantity" value="250" />
+
+	<bean id="amount44ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal13ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Almuerzo del sÃ¡bado -->
+
+	<bean id="amount45ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="libre" />
+		<property name="meal" ref="meal14ES" />
+		<property name="food" ref="food17ES" />
+	</bean>
+
+	<!-- Cena del sÃ¡bado -->
+
+	<bean id="amount46ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal15ES" />
+		<property name="food" ref="food4ES" />
+	</bean>
+
+	<bean id="amount47ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal15ES" />
+		<property name="food" ref="food3ES" />
+	</bean>
+
+	<!-- Domingo almuerzo -->
+	<bean id="amount48ES" class="domain.Amount">
+		<property name="quantity" value="300" />
 		<property name="measure" value="g" />
-		<property name="meal" ref="meal6" />
-		<property name="food" ref="food1" />
+		<property name="meal" ref="meal16ES" />
+		<property name="food" ref="food5ES" />
 	</bean>
-	<bean id="amount10" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal7" />
-		<property name="food" ref="food1" />
+
+	<bean id="amount49ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="pieza" />
+		<property name="meal" ref="meal16ES" />
+		<property name="food" ref="food4ES" />
 	</bean>
-	<bean id="amount11" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="ml" />
-		<property name="meal" ref="meal7" />
-		<property name="food" ref="food8" />
+
+	<bean id="amount50ES" class="domain.Amount">
+		<property name="quantity" value="2" />
+		<property name="measure" value="vasos" />
+		<property name="meal" ref="meal16ES" />
+		<property name="food" ref="food3ES" />
 	</bean>
-	<bean id="amount12" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal8" />
-		<property name="food" ref="food3" />
+
+	<!-- Domingo cena -->
+
+	<bean id="amount51ES" class="domain.Amount">
+		<property name="quantity" value="1" />
+		<property name="measure" value="libre" />
+		<property name="meal" ref="meal17ES" />
+		<property name="food" ref="food17ES" />
 	</bean>
-	<bean id="amount13" class="domain.Amount">
-		<property name="quantity" value="100" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal9" />
-		<property name="food" ref="food4" />
-	</bean>
-	<bean id="amount14" class="domain.Amount">
-		<property name="quantity" value="100" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal9" />
-		<property name="food" ref="food1" />
-	</bean>
-	<bean id="amount15" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal10" />
-		<property name="food" ref="food3" />
-	</bean>
-	<bean id="amount16" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal11" />
-		<property name="food" ref="food1" />
-	</bean>
-	<bean id="amount17" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="ml" />
-		<property name="meal" ref="meal11" />
-		<property name="food" ref="food2" />
-	</bean>
-	<bean id="amount18" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal12" />
-		<property name="food" ref="food1" />
-	</bean>
-	<bean id="amount19" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal13" />
-		<property name="food" ref="food3" />
-	</bean>
-	<bean id="amount20" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal13" />
-		<property name="food" ref="food4" />
-	</bean>
-	<bean id="amount21" class="domain.Amount">
-		<property name="quantity" value="250" />
-		<property name="measure" value="g" />
-		<property name="meal" ref="meal14" />
-		<property name="food" ref="food1" />
-	</bean>
+
 	<!-- DAYS -->
-	<bean id="day1" class="domain.Day">
+
+
+	<!-- Luness -->
+	<bean id="day1ES" class="domain.Day">
 		<property name="name" value="MONDAY" />
-		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Day 1" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia 1" />
 
 		<property name="diets">
 			<list>
-				<ref bean="diet1" />
+				<ref bean="diet1ES" />
 			</list>
 		</property>
 		<property name="meals">
 			<list>
-				<ref bean="meal1" />
-				<ref bean="meal2" />
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal3ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal5ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="day2" class="domain.Day">
+
+	<!-- Martes -->
+	<bean id="day2ES" class="domain.Day">
+		<property name="name" value="THURSDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia 2" />
+
+		<property name="diets">
+			<list>
+				<ref bean="diet1ES" />
+			</list>
+		</property>
+		<property name="meals">
+			<list>
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal6ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal7ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Miercoles -->
+
+	<bean id="day3ES" class="domain.Day">
+		<property name="name" value="WEDNESDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia 3" />
+
+		<property name="diets">
+			<list>
+				<ref bean="diet1ES" />
+			</list>
+		</property>
+		<property name="meals">
+			<list>
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal8ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal9ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Jueves -->
+	<bean id="day4ES" class="domain.Day">
 		<property name="name" value="TUESDAY" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="descriptiveName" value="Day 2" />
+		<property name="descriptiveName" value="Dia 4" />
+
 		<property name="diets">
 			<list>
-				<ref bean="diet1" />
+				<ref bean="diet1ES" />
 			</list>
 		</property>
 		<property name="meals">
 			<list>
-				<ref bean="meal3" />
-				<ref bean="meal4" />
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal10ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal11ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="day3" class="domain.Day">
-		<property name="name" value="MONDAY" />
-		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Day 3" />
-		<property name="diets">
-			<list>
-				<ref bean="diet1" />
-			</list>
-		</property>
-		<property name="meals">
-			<list>
-				<ref bean="meal5" />
-				<ref bean="meal6" />
-			</list>
-		</property>
-	</bean>
-	<bean id="day4" class="domain.Day">
-		<property name="name" value="MONDAY" />
+
+	<!-- Viernes -->
+
+	<bean id="day5ES" class="domain.Day">
+		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="descriptiveName" value="Day 4" />
+		<property name="descriptiveName" value="Dia 5" />
+
 		<property name="diets">
 			<list>
-				<ref bean="diet1" />
+				<ref bean="diet1ES" />
 			</list>
 		</property>
 		<property name="meals">
 			<list>
-				<ref bean="meal7" />
-				<ref bean="meal8" />
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal12ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal13ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="day5" class="domain.Day">
-		<property name="name" value="MONDAY" />
-		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Day 5" />
-		<property name="diets">
-			<list>
-				<ref bean="diet2" />
-			</list>
-		</property>
-		<property name="meals">
-			<list>
-				<ref bean="meal9" />
-				<ref bean="meal10" />
-			</list>
-		</property>
-	</bean>
-	<bean id="day6" class="domain.Day">
-		<property name="name" value="MONDAY" />
+
+	<!-- SÃ¡bado -->
+
+	<bean id="day6ES" class="domain.Day">
+		<property name="name" value="SATURDAY" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="descriptiveName" value="Day 6" />
+		<property name="descriptiveName" value="Dia 6" />
+
 		<property name="diets">
 			<list>
-				<ref bean="diet2" />
+				<ref bean="diet1ES" />
 			</list>
 		</property>
 		<property name="meals">
 			<list>
-				<ref bean="meal11" />
-				<ref bean="meal12" />
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal14ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal15ES" />
 			</list>
 		</property>
 	</bean>
-	<bean id="day7" class="domain.Day">
-		<property name="name" value="MONDAY" />
-		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Day 7" />
+
+	<!-- Domingo -->
+
+	<bean id="day7ES" class="domain.Day">
+		<property name="name" value="SUNDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia 7" />
+
 		<property name="diets">
 			<list>
-				<ref bean="diet2" />
+				<ref bean="diet1ES" />
 			</list>
 		</property>
 		<property name="meals">
 			<list>
-				<ref bean="meal13" />
-				<ref bean="meal14" />
+				<ref bean="meal1ES" />
+				<ref bean="meal2ES" />
+				<ref bean="meal16ES" />
+				<ref bean="meal4ES" />
+				<ref bean="meal17ES" />
 			</list>
 		</property>
 	</bean>
+
 	<!-- DIETS -->
-	<bean id="diet1" class="domain.Diet">
-		<property name="name" value="Diet 1" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="Lore ipsum" />
+	<bean id="diet1ES" class="domain.Diet">
+		<property name="name" value="Dieta para mantenerse 1" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Esta dieta tiene como objetivo mantener el peso del usuario." />
 		<property name="plans">
 			<list>
 				<ref bean="plan1" />
@@ -641,48 +1250,18 @@
 		</property>
 		<property name="days">
 			<list>
-				<ref bean="day1" />
-				<ref bean="day2" />
-				<ref bean="day3" />
-				<ref bean="day4" />
+				<ref bean="day1ES" />
+				<ref bean="day2ES" />
+				<ref bean="day3ES" />
+				<ref bean="day4ES" />
+				<ref bean="day5ES" />
+				<ref bean="day6ES" />
+				<ref bean="day7ES" />
 			</list>
 		</property>
 		<property name="sponsor" ref="sponsor1" />
 	</bean>
-	<bean id="diet2" class="domain.Diet">
-		<property name="name" value="Diet 2" />
-		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="Lore ipsum 2" />
-		<property name="plans">
-			<list>
-				<ref bean="plan2" />
-			</list>
-		</property>
-		<property name="days">
-			<list>
-				<ref bean="day5" />
-				<ref bean="day6" />
-				<ref bean="day7" />
-			</list>
-		</property>
-		<property name="sponsor" ref="sponsor2" />
-	</bean>
-	<bean id="diet3" class="domain.Diet">
-		<property name="name" value="Diet 3" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="Lore ipsum 3" />
-		<property name="plans">
-			<list></list>
-		</property>
-		<property name="days">
-			<list>
-				<ref bean="day5" />
-				<ref bean="day6" />
-				<ref bean="day7" />
-			</list>
-		</property>
-		<property name="sponsor" ref="sponsor2" />
-	</bean>
+
 	<!-- MUSCLES -->
 	<!-- Cuadriceps -->
 	<bean id="muscle1" class="domain.Muscle">
@@ -824,6 +1403,466 @@
 		<property name="entityLanguage" value="spanish" />
 	</bean>
 	<!-- EXERCISES -->
+	<!-- Juanmi -->
+	<!-- Exercises de mantenerse 1 -->
+	<!-- Ejercicio de espaldas mantenerse 1 -->
+	<bean id="exercise1ES" class="domain.Exercise">
+		<property name="name" value="Polea Trasnuca" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise2ES" class="domain.Exercise">
+		<property name="name" value="Polea al pecho" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise3ES" class="domain.Exercise">
+		<property name="name" value="Remo a una mano con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise4ES" class="domain.Exercise">
+		<property name="name"
+			value="Remo en polea baja, agarre estrecho, manos en semipronaciÃ³n" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise5ES" class="domain.Exercise">
+		<property name="name" value="Peso muerto con barra" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Ejercicio de piernas mantenerse 1 -->
+
+	<bean id="exercise6ES" class="domain.Exercise">
+		<property name="name" value="Prensa" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise7ES" class="domain.Exercise">
+		<property name="name" value="Sentadilla Hack" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise8ES" class="domain.Exercise">
+		<property name="name" value="Zancadas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise9ES" class="domain.Exercise">
+		<property name="name" value="ExtensiÃ³n de piernas en mÃ¡quina" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise10ES" class="domain.Exercise">
+		<property name="name" value="Curl de piernas femoral tumbado" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle4" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Ejercicios de pecho mantenerse 1 -->
+
+	<bean id="exercise11ES" class="domain.Exercise">
+		<property name="name" value="Press de banco plano con barra" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise12ES" class="domain.Exercise">
+		<property name="name" value="Press de banco inclinado con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise13ES" class="domain.Exercise">
+		<property name="name" value="Pull-over con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise14ES" class="domain.Exercise">
+		<property name="name" value="Aperturas con mancuernas en banco inclinado" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise15ES" class="domain.Exercise">
+		<property name="name" value="Fondo en mÃ¡quina" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Ejercicios de hombros mantenerse 1 -->
+
+	<bean id="exercise16ES" class="domain.Exercise">
+		<property name="name" value="Press militar" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="exercise17ES" class="domain.Exercise">
+		<property name="name" value="Elevaciones frontales con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise18ES" class="domain.Exercise">
+		<property name="name" value="Sentado con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise19ES" class="domain.Exercise">
+		<property name="name" value="Pajaro" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="exercise20ES" class="domain.Exercise">
+		<property name="name" value="Encogimiento de hombros con barra" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle20" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise21ES" class="domain.Exercise">
+		<property name="name" value="Curl de bÃ­ceps alterno" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise22ES" class="domain.Exercise">
+		<property name="name" value="Martillo" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise23ES" class="domain.Exercise">
+		<property name="name" value="Curl de bÃ­ceps concentrado" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise24ES" class="domain.Exercise">
+		<property name="name"
+			value="ExtensiÃ³n alternada de los antebrazos con mancuerna inclinado" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="exercise25ES" class="domain.Exercise">
+		<property name="name"
+			value="ExtensiÃ³n de los antebrazos sentado con mancuerna" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="exercise26ES" class="domain.Exercise">
+		<property name="name" value="Fondo en paralelas agarre interior " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15" />
+		<property name="cycles" value="3" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Felix -->
 	<!-- EXERCISES DE GRUPO ESPALDA LUNES PERDER PESO 1 -->
 	<bean id="exercise61en" class="domain.Exercise">
 		<property name="name" value="Polea trasnuca en inglés" />
@@ -1673,6 +2712,117 @@
 	</bean>
 
 	<!-- EXERCISE GROUPS -->
+	<!-- Juanmi -->
+	<bean id="exercisegroup1ES" class="domain.ExerciseGroup">
+		<property name="name" value="Espalda" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer la espalda." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise1ES" />
+				<ref bean="exercise2ES" />
+				<ref bean="exercise3ES" />
+				<ref bean="exercise4ES" />
+				<ref bean="exercise5ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup2ES" class="domain.ExerciseGroup">
+		<property name="name" value="Piernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer las piernas." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise6ES" />
+				<ref bean="exercise7ES" />
+				<ref bean="exercise8ES" />
+				<ref bean="exercise9ES" />
+				<ref bean="exercise10ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday2ES" />
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="exercisegroup3ES" class="domain.ExerciseGroup">
+		<property name="name" value="Pecho" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer el pecho." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise11ES" />
+				<ref bean="exercise12ES" />
+				<ref bean="exercise13ES" />
+				<ref bean="exercise14ES" />
+				<ref bean="exercise15ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup4ES" class="domain.ExerciseGroup">
+		<property name="name" value="Hombros" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise16ES" />
+				<ref bean="exercise17ES" />
+				<ref bean="exercise18ES" />
+				<ref bean="exercise19ES" />
+				<ref bean="exercise20ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday4ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup5ES" class="domain.ExerciseGroup">
+		<property name="name" value="Brazos" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise21ES" />
+				<ref bean="exercise22ES" />
+				<ref bean="exercise23ES" />
+				<ref bean="exercise24ES" />
+				<ref bean="exercise25ES" />
+				<ref bean="exercise26ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday5ES" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Felix -->
 	<!-- Grupo de ejercicios Espalda -->
 	<bean id="exercisegroup11en" class="domain.ExerciseGroup">
 		<property name="name" value="Back" />
@@ -1891,6 +3041,91 @@
 	</bean>
 
 	<!-- TRAINING DAYS -->
+	<!-- Juanmi -->
+	<bean id="trainingday1ES" class="domain.TrainingDay">
+		<property name="name" value="MONDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 1" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup1ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday2ES" class="domain.TrainingDay">
+		<property name="name" value="TUESDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 2" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup2ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday3ES" class="domain.TrainingDay">
+		<property name="name" value="WEDNESDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 3" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup3ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday4ES" class="domain.TrainingDay">
+		<property name="name" value="THURSDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 4" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup4ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday5ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 5" />
+		<property name="trainings">
+			<list>
+				<ref bean="training1ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup5ES" />
+			</list>
+		</property>
+	</bean>
+
+
+
+
+	<!-- Felix -->
 	<!-- LUNES -->
 	<bean id="trainingday11en" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
@@ -2056,6 +3291,34 @@
 		</property>
 	</bean>
 	<!-- Trainings -->
+	<!-- Juanmi -->
+
+	<bean id="training1ES" class="domain.Training">
+		<property name="name" value="Entrenamiento 1" />
+		<property name="description"
+			value="ESte entrenamiento contiene algunos ejercicios para mantenerse." />
+		<property name="entityLanguage" value="spanish" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday1ES" />
+				<ref bean="trainingday2ES" />
+				<ref bean="trainingday3ES" />
+				<ref bean="trainingday4ES" />
+				<ref bean="trainingday5ES" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor1" />
+	</bean>
+
+
+
+
+	<!-- Felix -->
 	<!-- Trainings -->
 	<bean id="training3en" class="domain.Training">
 		<property name="name" value="Training 3" />
@@ -2100,7 +3363,7 @@
 	<bean id="plan1" class="domain.Plan">
 		<property name="name" value="Plan to keep fit" />
 		<property name="goal" value="KEEP_FIT" />
-		<property name="entityLanguage" value="english" />
+		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="This is a plan to keep fit" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="150.5" />
@@ -2111,8 +3374,8 @@
 				<ref bean="customer1" />
 			</list>
 		</property>
-		<property name="diet" ref="diet1" />
-		<property name="training" ref="training3en" />
+		<property name="diet" ref="diet1ES" />
+		<property name="training" ref="training1ES" />
 		<property name="comments">
 			<list></list>
 		</property>
@@ -2131,7 +3394,7 @@
 				<ref bean="customer2" />
 			</list>
 		</property>
-		<property name="diet" ref="diet1" />
+		<property name="diet" ref="diet1ES" />
 		<property name="training" ref="training3es" />
 		<property name="comments">
 			<list>
@@ -2151,7 +3414,7 @@
 		<property name="customers">
 			<list></list>
 		</property>
-		<property name="diet" ref="diet2" />
+		<property name="diet" ref="diet1ES" />
 		<property name="training" ref="training3en" />
 		<property name="comments">
 			<list></list>
