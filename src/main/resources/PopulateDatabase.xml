@@ -2025,7 +2025,7 @@
 
 	<!-- Viernes -->
 	<bean id="trainingday15en" class="domain.TrainingDay">
-		<property name="name" value="THURSDAY" />
+		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Training Day 15" />
 		<property name="trainings">
@@ -2041,7 +2041,7 @@
 	</bean>
 
 	<bean id="trainingday15es" class="domain.TrainingDay">
-		<property name="name" value="THURSDAY" />
+		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Día de entrenamiento 15" />
 		<property name="trainings">
