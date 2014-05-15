@@ -116,7 +116,7 @@
 				<ref bean="amount3ES" />
 				<ref bean="amount5ES" />
 				<ref bean="amount10ES" />
-				
+
 				<ref bean="amount12ES" />
 				<ref bean="amount16ES" />
 				<ref bean="amount20ES" />
@@ -2710,8 +2710,1029 @@
 			</list>
 		</property>
 	</bean>
-	
-	<!--  EXERCISES ENTRENAMIENTOS FELIPE -->
+
+
+	<bean id="exercise91ES" class="domain.Exercise">
+		<property name="name" value="Polea Trasnuca" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,20,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise91EN" class="domain.Exercise">
+		<property name="name" value="Polea Trasnuca" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio hay que realizarlo con poco peso. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,20,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle17" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise92ES" class="domain.Exercise">
+		<property name="name" value="Polea al pecho con agarre estrecho" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise92EN" class="domain.Exercise">
+		<property name="name" value="Polea al pecho con agarre estrecho (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle17" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise93ES" class="domain.Exercise">
+		<property name="name" value="Remo a una mano con mancuernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise93EN" class="domain.Exercise">
+		<property name="name" value="Remo a una mano con mancuernas (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle17" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise94ES" class="domain.Exercise">
+		<property name="name" value="Remo horizontal en barra" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle18" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise94EN" class="domain.Exercise">
+		<property name="name" value="Remo horizontal en barra (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle17" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise95ES" class="domain.Exercise">
+		<property name="name" value="Peso muerto con barra" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,15,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle20" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise95EN" class="domain.Exercise">
+		<property name="name" value="Peso muerto con barra (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,15,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle19" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise96ES" class="domain.Exercise">
+		<property name="name" value="Prensa" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise96EN" class="domain.Exercise">
+		<property name="name" value="Prensa (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle5" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise97ES" class="domain.Exercise">
+		<property name="name" value="Sentadilla Hack" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Para proteger la espalda, es importante contraer la banda abdominal lo cual evitará cualquier movimiento lateral de la pelvis y la columna vertebral." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise97EN" class="domain.Exercise">
+		<property name="name" value="Sentadilla Hack (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Para proteger la espalda, es importante contraer la banda abdominal lo cual evitará cualquier movimiento lateral de la pelvis y la columna vertebral. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise98ES" class="domain.Exercise">
+		<property name="name" value="Extensión de piernas en máquina" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio es el mejor movimiento de aislamiento de los cuádriceps. Cabe señalar que cuanto más inclinado esté el respaldo, mayor será la retroversión de la pelvis." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle2" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise98EN" class="domain.Exercise">
+		<property name="name" value="Extensión de piernas en máquina (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio es el mejor movimiento de aislamiento de los cuádriceps. Cabe señalar que cuanto más inclinado esté el respaldo, mayor será la retroversión de la pelvis. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle1" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise99ES" class="domain.Exercise">
+		<property name="name" value="Curl de bíceps femoral sentado " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. Se recomienda calentar bien los músculos y utilizar cargas moderadas al principio." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle4" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise99EN" class="domain.Exercise">
+		<property name="name" value="Curl de bíceps femoral sentado (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. Se recomienda calentar bien los músculos y utilizar cargas moderadas al principio. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle3" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise100ES" class="domain.Exercise">
+		<property name="name" value="Aductores en máquina " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="25,20,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle6" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise100EN" class="domain.Exercise">
+		<property name="name" value="Aductores en máquina (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="25,20,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle5" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise101ES" class="domain.Exercise">
+		<property name="name" value="Gemelos en escalera a una pierna " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,20,20,20" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle8" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise101EN" class="domain.Exercise">
+		<property name="name" value="Gemelos en escalera a una pierna (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,20,20,20" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle7" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise102ES" class="domain.Exercise">
+		<property name="name" value="Press con mancuerna en banco
+			plano " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Cuando hayas terminado, no dejes caer las pesas a tu lado ya que esto es peligroso para el manguito rotador de los hombros y para otras personas que trabajan a tu alrededor." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise102EN" class="domain.Exercise">
+		<property name="name"
+			value="Press con mancuerna en banco
+			plano (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Cuando hayas terminado, no dejes caer las pesas a tu lado ya que esto es peligroso para el manguito rotador de los hombros y para otras personas que trabajan a tu alrededor.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise103ES" class="domain.Exercise">
+		<property name="name" value="Press con barra en banco
+			declinado " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise103EN" class="domain.Exercise">
+		<property name="name"
+			value="Press con barra en banco
+			declinado (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise104ES" class="domain.Exercise">
+		<property name="name" value="Pull-over con mancuernas " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise104EN" class="domain.Exercise">
+		<property name="name" value="Pull-over con mancuernas (Ingles) " />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,12,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise105ES" class="domain.Exercise">
+		<property name="name"
+			value="Aperturas con mancuernas en
+			banco inclinado " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise105EN" class="domain.Exercise">
+		<property name="name"
+			value="Aperturas con mancuernas en
+			banco inclinado (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise106ES" class="domain.Exercise">
+		<property name="name" value="Cruces en polea " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle12" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise106EN" class="domain.Exercise">
+		<property name="name" value="Cruces en polea (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle11" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise107ES" class="domain.Exercise">
+		<property name="name"
+			value="Elevaciones laterales alternadas
+			con polea baja " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise107EN" class="domain.Exercise">
+		<property name="name"
+			value="Elevaciones laterales alternadas
+			con polea baja (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle21" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise108ES" class="domain.Exercise">
+		<property name="name"
+			value="Elevación frontal con barra
+			plana agarre abierto " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio puede realizarse también con mancuernas." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise108EN" class="domain.Exercise">
+		<property name="name"
+			value="Elevación frontal con barra
+			plana agarre abierto (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio puede realizarse también con mancuernas.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle21" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise109ES" class="domain.Exercise">
+		<property name="name" value="Press sentado en máquina " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,20,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise109EN" class="domain.Exercise">
+		<property name="name" value="Press sentado en máquina (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,20,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle21" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise110ES" class="domain.Exercise">
+		<property name="name" value="Posterior en máquina " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Mantenga los brazos ligeramente doblados durante todo el movimiento." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle22" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise110EN" class="domain.Exercise">
+		<property name="name" value="Posterior en máquina (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Mantenga los brazos ligeramente doblados durante todo el movimiento.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle21" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise111ES" class="domain.Exercise">
+		<property name="name" value="Remo al cuello con barra " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle20" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise111EN" class="domain.Exercise">
+		<property name="name" value="Remo al cuello con barra (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,12,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle19" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise112ES" class="domain.Exercise">
+		<property name="name" value="Curl de bíceps " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise112EN" class="domain.Exercise">
+		<property name="name" value="Curl de bíceps (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle13" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise113ES" class="domain.Exercise">
+		<property name="name" value="Martillo " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial)." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise113EN" class="domain.Exercise">
+		<property name="name" value="Martillo (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial). (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle13" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise114ES" class="domain.Exercise">
+		<property name="name" value="Curl de biceps en el banco scott " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise114EN" class="domain.Exercise">
+		<property name="name" value="Curl de biceps en el banco scott (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle13" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise115ES" class="domain.Exercise">
+		<property name="name" value="Curl de biceps en el banco " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este ejercicio de aislamiento permite el control del movimiento en amplitud, velocidad y rectitud. Trabaja, principalmente, el bíceps y el braquial anterior." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,20,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle14" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise115EN" class="domain.Exercise">
+		<property name="name" value="Curl de biceps en el banco (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este ejercicio de aislamiento permite el control del movimiento en amplitud, velocidad y rectitud. Trabaja, principalmente, el bíceps y el braquial anterior.(Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,20,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle13" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise116ES" class="domain.Exercise">
+		<property name="name"
+			value="Extensión alternada de los
+			antebrazos con mancuerna inclinado " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise116EN" class="domain.Exercise">
+		<property name="name"
+			value="Extensión alternada de los
+			antebrazos con mancuerna inclinado (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle15" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise117ES" class="domain.Exercise">
+		<property name="name"
+			value="Extensión de los antebrazos
+			sentado con mancuerna " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="La posición vertical del brazo estira con fuerza la porción larga del músculo favoreciendo una buena solicitación de esta región durante su contracción." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise117EN" class="domain.Exercise">
+		<property name="name"
+			value="Extensión de los antebrazos
+			sentado con mancuerna (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="La posición vertical del brazo estira con fuerza la porción larga del músculo favoreciendo una buena solicitación de esta región durante su contracción. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle15" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise118ES" class="domain.Exercise">
+		<property name="name"
+			value="Extensiones de triceps en polea
+			alta , manos en pronación " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise118EN" class="domain.Exercise">
+		<property name="name"
+			value="Extensiones de triceps en polea
+			alta , manos en pronación (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="15,15,12,10" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle15" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise119ES" class="domain.Exercise">
+		<property name="name"
+			value="Extensiones de tríceps en polea
+			alta con agarre invertido " />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos." />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle16" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercise119EN" class="domain.Exercise">
+		<property name="name"
+			value="Extensiones de tríceps en polea
+			alta con agarre invertido (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos. (Ingles)" />
+		<property name="image" value="" />
+		<property name="urlYoutube" value=" " />
+		<property name="repetitions" value="20,15,15,12" />
+		<property name="cycles" value="4" />
+		<property name="muscle" ref="muscle15" />
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- EXERCISES ENTRENAMIENTOS FELIPE -->
 	<!-- EJERCICIO GANAR MASA MUSCULAR 1 -->
 
 	<!-- EXERCISES -->
@@ -2911,7 +3932,7 @@
 		</property>
 	</bean>
 
-	
+
 
 	<bean id="exercise127en" class="domain.Exercise">
 		<property name="name" value="Zancadas en inglés" />
@@ -3008,7 +4029,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="exercise130en" class="domain.Exercise">
 		<property name="name" value="Curl de bíceps femoral sentado en inglés" />
 		<property name="entityLanguage" value="english" />
@@ -3040,7 +4061,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<bean id="exercise131en" class="domain.Exercise">
 		<property name="name" value="Aductores y gemelos en inglés" />
 		<property name="entityLanguage" value="english" />
@@ -3075,7 +4096,8 @@
 
 	<!-- EXERCISES DE GRUPO PECHO MIÉRCOLES GANAR MASA MUSCULAR 1 -->
 	<bean id="exercise132en" class="domain.Exercise">
-		<property name="name" value="Press de banco plano con barra militar en inglés" />
+		<property name="name"
+			value="Press de banco plano con barra militar en inglés" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -3235,7 +4257,7 @@
 		</property>
 	</bean>
 
-	<!-- EXERCISES DE GRUPO HOMBROS  -->
+	<!-- EXERCISES DE GRUPO HOMBROS -->
 	<bean id="exercise137en" class="domain.Exercise">
 		<property name="name"
 			value="Elevaciones laterales con mancuernas en inglés" />
@@ -3340,7 +4362,7 @@
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="" />
-		<property name="repetitions" value="12,10,8,8"/>
+		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
 		<property name="exerciseGroups">
@@ -3928,8 +4950,228 @@
 		</property>
 	</bean>
 	
-<!--  GRUPOS DE ENTERENMIANTO FELIPE -->
-<!-- EXERCISE GROUPS -->
+	<bean id="exercisegroup16ES" class="domain.ExerciseGroup">
+		<property name="name" value="Espalda" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer la espalda." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise91ES" />
+				<ref bean="exercise92ES" />
+				<ref bean="exercise93ES" />
+				<ref bean="exercise94ES" />
+				<ref bean="exercise95ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday16ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="exercisegroup16EN" class="domain.ExerciseGroup">
+		<property name="name" value="Espalda (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer la espalda. (Ingles)" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise91EN" />
+				<ref bean="exercise92EN" />
+				<ref bean="exercise93EN" />
+				<ref bean="exercise94EN" />
+				<ref bean="exercise95EN" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup17ES" class="domain.ExerciseGroup">
+		<property name="name" value="Piernas" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer las piernas." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise96ES" />
+				<ref bean="exercise97ES" />
+				<ref bean="exercise98ES" />
+				<ref bean="exercise99ES" />
+				<ref bean="exercise100ES" />
+				<ref bean="exercise101ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday17ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="exercisegroup17EN" class="domain.ExerciseGroup">
+		<property name="name" value="Piernas (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer las piernas.(Ingles)" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise96EN" />
+				<ref bean="exercise97EN" />
+				<ref bean="exercise98EN" />
+				<ref bean="exercise99EN" />
+				<ref bean="exercise100EN" />
+				<ref bean="exercise101EN" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup18ES" class="domain.ExerciseGroup">
+		<property name="name" value="Pecho" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer el pecho." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise102ES" />
+				<ref bean="exercise103ES" />
+				<ref bean="exercise104ES" />
+				<ref bean="exercise105ES" />
+				<ref bean="exercise106ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday18ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="exercisegroup18EN" class="domain.ExerciseGroup">
+		<property name="name" value="Pecho (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer el pecho. (Ingles)" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise102EN" />
+				<ref bean="exercise103EN" />
+				<ref bean="exercise104EN" />
+				<ref bean="exercise105EN" />
+				<ref bean="exercise106EN" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup19ES" class="domain.ExerciseGroup">
+		<property name="name" value="Hombros" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros." />
+		<property name="exercises">
+			<list>
+
+				<ref bean="exercise107ES" />
+				<ref bean="exercise108ES" />
+				<ref bean="exercise109ES" />
+				<ref bean="exercise110ES" />
+				<ref bean="exercise111ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday19ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="exercisegroup19EN" class="domain.ExerciseGroup">
+		<property name="name" value="Hombros (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros. (Ingles)" />
+		<property name="exercises">
+			<list>
+
+				<ref bean="exercise107EN" />
+				<ref bean="exercise108EN" />
+				<ref bean="exercise109EN" />
+				<ref bean="exercise110EN" />
+				<ref bean="exercise111EN" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="exercisegroup20ES" class="domain.ExerciseGroup">
+		<property name="name" value="Brazos" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los brazos." />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise112ES" />
+				<ref bean="exercise113ES" />
+				<ref bean="exercise114ES" />
+				<ref bean="exercise115ES" />
+				<ref bean="exercise116ES" />
+				<ref bean="exercise117ES" />
+				<ref bean="exercise118ES" />
+				<ref bean="exercise119ES" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday20ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="exercisegroup20EN" class="domain.ExerciseGroup">
+		<property name="name" value="Brazos (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los brazos. (Ingles)" />
+		<property name="exercises">
+			<list>
+				<ref bean="exercise112EN" />
+				<ref bean="exercise113EN" />
+				<ref bean="exercise114EN" />
+				<ref bean="exercise115EN" />
+				<ref bean="exercise116EN" />
+				<ref bean="exercise117EN" />
+				<ref bean="exercise118EN" />
+				<ref bean="exercise119EN" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- GRUPOS DE ENTERENMIANTO FELIPE -->
+	<!-- EXERCISE GROUPS -->
 	<!-- Grupo de ejercicios Espalda -->
 	<bean id="exercisegroup23en" class="domain.ExerciseGroup">
 		<property name="name" value="Back" />
@@ -4400,9 +5642,169 @@
 		</property>
 	</bean>
 	
-	<!-- TRAINING DAY FELIPE -->
-	<!--  GANAR MASA MUSCULAR 1 -->
+	<bean id="trainingday16ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 1" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16ES" />
+			</list>
+		</property>
+	</bean>
 	
+	<bean id="trainingday16EN" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="english" />
+		<property name="descriptiveName" value="Dia de entrenamiento 1 (Ingles)" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4EN" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup16EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday17ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 2" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="trainingday17EN" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="english" />
+		<property name="descriptiveName" value="Dia de entrenamiento 2 (Ingles)" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4EN" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup17EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday18ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 3" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="trainingday18EN" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="english" />
+		<property name="descriptiveName" value="Dia de entrenamiento 3 (Ingles)" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4EN" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup18EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday19ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 4" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="trainingday19EN" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="english" />
+		<property name="descriptiveName" value="Dia de entrenamiento 4 (Ingles)" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4EN" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup19EN" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="trainingday20ES" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="descriptiveName" value="Dia de entrenamiento 5" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4ES" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20ES" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="trainingday20EN" class="domain.TrainingDay">
+		<property name="name" value="FRIDAY" />
+		<property name="entityLanguage" value="english" />
+		<property name="descriptiveName" value="Dia de entrenamiento 5 (Ingles)" />
+		<property name="trainings">
+			<list>
+				<ref bean="training4EN" />
+			</list>
+		</property>
+		<property name="exerciseGroups">
+			<list>
+				<ref bean="exercisegroup20EN" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- TRAINING DAY FELIPE -->
+	<!-- GANAR MASA MUSCULAR 1 -->
+
 	<!-- LUNES -->
 	<bean id="trainingday25en" class="domain.TrainingDay">
 		<property name="name" value="MONDAY" />
@@ -4567,9 +5969,9 @@
 			</list>
 		</property>
 	</bean>
-	
-	
-	
+
+
+
 	<!-- Trainings -->
 	<!-- Juanmi -->
 
@@ -4640,7 +6042,51 @@
 		</property>
 	</bean>
 	
-	<!-- tRainng  ganar masa muscular 1 felipe -->
+	<bean id="training4ES" class="domain.Training">
+		<property name="name" value="Entrenamiento 3" />
+		<property name="description"
+			value="Este entrenamiento contiene ejercicios para perder peso" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday16ES" />
+				<ref bean="trainingday17ES" />
+				<ref bean="trainingday18ES" />
+				<ref bean="trainingday19ES" />
+				<ref bean="trainingday20ES" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor1" />
+	</bean>
+	
+	<bean id="training4EN" class="domain.Training">
+		<property name="name" value="Entrenamiento 3 (Ingles)" />
+		<property name="description"
+			value="Este entrenamiento contiene ejercicios para perder peso (Ingles)" />
+		<property name="entityLanguage" value="english" />
+		<property name="plans">
+			<list>
+				<ref bean="plan1" />
+			</list>
+		</property>
+		<property name="trainingDays">
+			<list>
+				<ref bean="trainingday16EN" />
+				<ref bean="trainingday17EN" />
+				<ref bean="trainingday18EN" />
+				<ref bean="trainingday19EN" />
+				<ref bean="trainingday20EN" />
+			</list>
+		</property>
+		<property name="sponsor" ref="sponsor1" />
+	</bean>
+
+	<!-- tRainng ganar masa muscular 1 felipe -->
 	<bean id="training8en" class="domain.Training">
 		<property name="name" value="Entrenamiento 3" />
 		<property name="description" value="Este entrenamiento es para perder peso" />
@@ -4679,8 +6125,8 @@
 			</list>
 		</property>
 	</bean>
-	
-	
+
+
 	<!-- PLANS -->
 	<bean id="plan1" class="domain.Plan">
 		<property name="name" value="Plan to keep fit" />
