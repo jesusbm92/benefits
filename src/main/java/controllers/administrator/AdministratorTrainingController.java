@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.SponsorService;
 import services.TrainingDayService;
@@ -94,7 +95,8 @@ public class AdministratorTrainingController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Training training, BindingResult binding) {
+	public ModelAndView save(@Valid Training training, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -112,6 +114,8 @@ public class AdministratorTrainingController extends AbstractController {
 				Language lang = Language.valueOf(language.toLowerCase());
 				training.setEntityLanguage(lang);
 				trainingService.save(training);
+				redirect.addFlashAttribute("successMessage",
+						"training.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				if (training.getId() == 0) {
@@ -130,11 +134,13 @@ public class AdministratorTrainingController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Training training,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
 			trainingService.delete(training);
+			redirect.addFlashAttribute("successMessage",
+					"training.deleteSuccess");
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
