@@ -209,15 +209,17 @@ body {
 					<br /> <br /> <br />
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-md-offset-5">
-						<a href="plan/customer/request.do"><input type="button"
-							class="btn btn-default"
-							value="<spring:message code="plan.request"/>"
-							onclick="self.location.href = plan/customer/request.do" /></a><a
-							href="welcome/index.do"> <input type="button"
-							class="btn btn-default"
-							value="<spring:message code="plan.cancel"/>"
-							onclick="self.location.href = welcome/index.do" /></a>
+					<div class="text-center">
+						<div class="btn-group">
+							<a href="plan/customer/request.do"><input type="button"
+								class="btn btn-default"
+								value="<spring:message code="plan.request"/>"
+								onclick="self.location.href = plan/customer/request.do" /></a><a
+								href="welcome/index.do"> <input type="button"
+								class="btn btn-default"
+								value="<spring:message code="plan.cancel"/>"
+								onclick="self.location.href = welcome/index.do" /></a>
+						</div>
 					</div>
 				</div>
 			</jstl:if>
