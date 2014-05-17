@@ -27,7 +27,7 @@ html,body {
 
 .login-container {
 	position: relative;
-	width: 800px;
+	/* 	width: 800px; */
 	margin: 25px auto;
 	padding: 20px 40px 40px;
 	text-align: center;
@@ -72,77 +72,79 @@ html,body {
 </style>
 
 <div class="container">
-	<div class="login-container">
-		<div id="output"></div>
-		<div class="form-box">
-			<h1>
-				<spring:message code="tos.tos" />
-			</h1>
-			<br/>
-			<p class="tos-text">
-				<spring:message code="tos.1" />
-			</p>
+	<div class="col-md-10 col-md-offset-1">
+		<div class="login-container">
+			<div id="output"></div>
+			<div class="form-box">
+				<h1>
+					<spring:message code="tos.tos" />
+				</h1>
+				<br />
+				<p class="tos-text">
+					<spring:message code="tos.1" />
+				</p>
 
-			<h3>
-				<spring:message code="tos.title1" />
-			</h3>
-			<p class="tos-text">
-				<spring:message code="tos.2" />
-			</p>
+				<h3>
+					<spring:message code="tos.title1" />
+				</h3>
+				<p class="tos-text">
+					<spring:message code="tos.2" />
+				</p>
 
-			<h3>
-				<spring:message code="tos.title2" />
-			</h3>
-			<p class="tos-text">
-				<spring:message code="tos.2" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.3" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.4" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.5" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.6" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.7" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.8" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.9" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.10" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.11" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.12" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.13" />
-			</p>
+				<h3>
+					<spring:message code="tos.title2" />
+				</h3>
+				<p class="tos-text">
+					<spring:message code="tos.2" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.3" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.4" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.5" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.6" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.7" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.8" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.9" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.10" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.11" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.12" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.13" />
+				</p>
 
-			<h3>
-				<spring:message code="tos.title3" />
-			</h3>
-			<p class="tos-text">
-				<spring:message code="tos.14" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.15" />
-			</p>
-			<p class="tos-text">
-				<spring:message code="tos.16" />
-			</p>
+				<h3>
+					<spring:message code="tos.title3" />
+				</h3>
+				<p class="tos-text">
+					<spring:message code="tos.14" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.15" />
+				</p>
+				<p class="tos-text">
+					<spring:message code="tos.16" />
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
-			<br/>
+<br />

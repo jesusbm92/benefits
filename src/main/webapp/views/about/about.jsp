@@ -26,7 +26,7 @@ html,body {
 
 .login-container {
 	position: relative;
-	width: 500px;
+	/* 	width: 500px; */
 	margin: 25px auto;
 	padding: 20px 40px 40px;
 	text-align: center;
@@ -66,32 +66,31 @@ html,body {
 }
 
 .about-text {
-font-size:17px
+	font-size: 17px
 }
 </style>
 
 <div class="container">
-	<div class="login-container">
-		<div id="output"></div>
-		<div class="form-box">
-
-			<h2>
-				<spring:message code="about.why" />
-			</h2>
-			<br />
-			<p class="about-text">
-				<spring:message code="about.first" />
-			</p>
-			<br />
-			<p class="about-text">
-				<spring:message code="about.second" />
-			</p>
-			<br /> <a href="register/registerCustomer.do"><input
-				type="button" class="btn btn-lg btn-primary btn-block"
-				value="<spring:message code="master.page.guest.register"/>"
-				onclick="self.location.href = register/registerCustomer.do" /></a>
-
+	<div class="col-md-6 col-md-offset-3">
+		<div class="login-container">
+			<div id="output"></div>
+			<div class="form-box">
+				<h2>
+					<spring:message code="about.why" />
+				</h2>
+				<br />
+				<p class="about-text">
+					<spring:message code="about.first" />
+				</p>
+				<br />
+				<p class="about-text">
+					<spring:message code="about.second" />
+				</p>
+				<br /> <a href="register/registerCustomer.do"><input
+					type="button" class="btn btn-lg btn-primary btn-block"
+					value="<spring:message code="master.page.guest.register"/>"
+					onclick="self.location.href = register/registerCustomer.do" /></a>
+			</div>
 		</div>
 	</div>
-
 </div>
