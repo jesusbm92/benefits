@@ -9,6 +9,11 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 
 <div class="container">
+
+	<h1 class="text-center">
+		<spring:message code="amount.food" />
+	</h1>
+	<br/>
 	<display:table uid="amountListTable" keepStatus="false" name="amounts"
 		pagesize="5" class="table table-hover" requestURI="${requestURI}"
 		id="row">

@@ -18,7 +18,7 @@
 <h1 class="text-center">
 	<spring:message code="sponsor.sponsors" />
 </h1>
-<br/>
+<br />
 
 <div class="container">
 	<div class="row">
@@ -45,18 +45,20 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-3 col-centered">
-			<security:authorize access="hasRole('ADMIN')">
-				<a href="sponsor/administrator/create.do"><input type="button"
-					class="btn btn-default"
-					value="<spring:message code="sponsor.create"/>"
-					onclick="self.location.href = sponsor/administrator/create.do" /></a>
-			</security:authorize>
+		<div class="text-center">
+			<div class="btn-group">
+				<security:authorize access="hasRole('ADMIN')">
+					<a href="sponsor/administrator/create.do"><input type="button"
+						class="btn btn-default"
+						value="<spring:message code="sponsor.create"/>"
+						onclick="self.location.href = sponsor/administrator/create.do" /></a>
+				</security:authorize>
 
-			<a href="welcome/index.do"><input type="button"
-				class="btn btn-default"
-				value="<spring:message code="sponsor.cancel"/>"
-				onclick="self.location.href = welcome/index.do" /></a>
+				<a href="welcome/index.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="sponsor.cancel"/>"
+					onclick="self.location.href = welcome/index.do" /></a>
+			</div>
 		</div>
 	</div>
 

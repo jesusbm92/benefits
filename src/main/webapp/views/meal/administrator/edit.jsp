@@ -19,7 +19,7 @@ body {
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-7 col-md-offset-2">
+		<div class="col-md-8 col-md-offset-2">
 			<div class="well well-sm">
 				<form:form class="form-horizontal"
 					action="meal/administrator/edit.do" modelAttribute="meal">

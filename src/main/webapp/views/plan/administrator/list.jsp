@@ -15,17 +15,18 @@
 }
 </style>
 
-<h1 class="text-center"><spring:message code="plan.plans" /></h1>
-<br/>
+<h1 class="text-center">
+	<spring:message code="plan.plans" />
+</h1>
+<br />
 
 <div class="container">
 	<div class="row">
-	
+
 		<div class="table-responsive">
 			<display:table uid="planListTable" keepStatus="false" name="plans"
 				pagesize="5" requestURI="${requestURI}" id="row">
-				<display:column property="name" titleKey="plan.name"
-				sortable="true" />
+				<display:column property="name" titleKey="plan.name" sortable="true" />
 				<display:column titleKey="plan.goal" sortable="true">
 					<spring:message code="plan.goal.${row.goal}" />
 				</display:column>
@@ -64,17 +65,20 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-3 col-centered">
-			<security:authorize access="hasRole('ADMIN')">
-				<a href="plan/administrator/create.do"><input type="button"
-					class="btn btn-default"
-					value="<spring:message code="plan.create"/>"
-					onclick="self.location.href = plan/administrator/create.do" /></a>
-			</security:authorize>
+		<div class="text-center">
+			<div class="btn-group">
+				<security:authorize access="hasRole('ADMIN')">
+					<a href="plan/administrator/create.do"><input type="button"
+						class="btn btn-default"
+						value="<spring:message code="plan.create"/>"
+						onclick="self.location.href = plan/administrator/create.do" /></a>
+				</security:authorize>
 
-			<a href="welcome/index.do"><input type="button"
-				class="btn btn-default" value="<spring:message code="plan.cancel"/>"
-				onclick="self.location.href = welcome/index.do" /></a>
+				<a href="welcome/index.do"><input type="button"
+					class="btn btn-default"
+					value="<spring:message code="plan.cancel"/>"
+					onclick="self.location.href = welcome/index.do" /></a>
+			</div>
 		</div>
 	</div>
 

@@ -18,7 +18,7 @@ body {
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-7 col-md-offset-2">
+		<div class="col-md-8 col-md-offset-2">
 			<div class="well well-sm">
 				<form:form class="form-horizontal"
 					action="amount/administrator/edit.do" modelAttribute="amount">
@@ -28,7 +28,7 @@ body {
 
 					<fieldset>
 						<h1 class="text-center">
-							<%-- <spring:message code="plan.createnew" /> --%>
+							<spring:message code="amount.details" />
 						</h1>
 						<br />
 
