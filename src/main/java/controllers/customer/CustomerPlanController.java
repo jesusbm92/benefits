@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -138,7 +139,9 @@ public class CustomerPlanController extends AbstractController {
 			try {
 				Customer customer = customerService.findByPrincipal();
 				Goals goal = plan.getGoal();
-				planService.request(goal, customer);
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+				planService.request(goal, customer, language.toLowerCase());
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				result = new ModelAndView("redirect:request.do");

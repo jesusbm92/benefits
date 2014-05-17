@@ -9,81 +9,127 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<form:form action="food/administrator/edit.do" modelAttribute="food"
-	enctype="multipart/form-data">
-
-	<!-- Poner todos los atributos, los no usados en oculto -->
-
-	<form:hidden path="id" />
-	<form:hidden path="version" />
-	<form:hidden path="amounts" />
-	<form:hidden path="entityLanguage" />
-
-	<form:label path="name">
-		<spring:message code="food.name" />
-	</form:label>
-	<form:input path="name" type="text" />
-	<form:errors path="name" cssClass="error" />
-	<br>
-
-	<acme:textarea path="description" code="food.description" />
-	<br>
 
 
-	<form:label path="image">
-		<spring:message code="food.image" />
-	</form:label>
-	<form:input path="image" id="image" type="file" />
-	<form:errors path="image" cssClass="error" />
+<style>
+body {
+	padding-top: 20px;
+}
+</style>
 
-	<jstl:if test="${food.validImage }">
-		<img src="image/showFood.do?foodId=${food.id }" style="height: 100px"
-			class="img-thumbnail" />
-	</jstl:if>
+<div class="container">
+	<div class="row">
+		<div class="col-md-7 col-md-offset-2">
+			<div class="well well-sm">
+				<form:form class="form-horizontal"
+					action="food/administrator/edit.do" modelAttribute="food"
+					enctype="multipart/form-data">
 
-	<input type="submit" name="save" class="btn btn-default"
-		value="<spring:message code="food.save" />" />
+					<form:hidden path="id" />
+					<form:hidden path="version" />
+					<form:hidden path="amounts" />
+					<form:hidden path="entityLanguage" />
 
-	<jstl:if test="${!create}">
+					<fieldset>
+						<h1 class="text-center">
+							<%-- <spring:message code="plan.createnew" /> --%>
+						</h1>
+						<br />
 
 
-		<a class="btn btn-default" data-toggle="modal"
-			data-target="#basicModal"><spring:message code="food.delete" /></a>
+						<!-- Name -->
+						<div class="form-group">
+							<form:label path="name" class="col-md-3 control-label" for="name">
+								<spring:message code="food.name" />
+							</form:label>
+							<div class="col-md-6">
+								<form:input path="name" id="name" name="name" type="text"
+									class="form-control" />
+							</div>
+							<form:errors path="name" cssClass="error" />
+						</div>
 
-		<div class="modal fade" id="basicModal" tabindex="-1" role="dialog"
-			aria-labelledby="basicModal" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<spring:message code="food.confirm.title" />
-						</h4>
-					</div>
-					<div class="modal-body">
-						<h3>
-							<spring:message code="food.confirm.body" />
-						</h3>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" name="delete" class="btn btn-default"
-							onclick="history.back()">
-							<spring:message code="food.confirm.yes" />
-						</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal">
-							<spring:message code="food.confirm.no" />
-						</button>
-					</div>
-				</div>
+						<!-- Description -->
+						<div class="form-group">
+							<form:label path="description" class="col-md-3 control-label"
+								for="description">
+								<spring:message code="food.description" />
+							</form:label>
+							<div class="col-md-6">
+								<form:textarea path="description" class="form-control"
+									id="description" name="description" rows="5"></form:textarea>
+							</div>
+							<form:errors path="description" cssClass="error" />
+						</div>
+
+						<!-- Image -->
+						<div class="form-group">
+							<form:label path="image" class="col-md-3 control-label"
+								for="image">
+								<spring:message code="exercise.image" />
+							</form:label>
+							<div class="col-md-6">
+								<form:input path="image" id="image" type="file" />
+							</div>
+							<form:errors path="image" cssClass="error" />
+
+						</div>
+						<div class="form-group text-center">
+							<jstl:if test="${food.validImage }">
+								<img src="image/showFood.do?foodId=${food.id}"
+									style="height: 100px" class="img-thumbnail" />
+							</jstl:if>
+						</div>
+
+						<!-- Form actions -->
+						<div class="form-group">
+							<div class="col-md-12 text-center">
+								<input type="submit" name="save" class="btn btn-primary btn-lg"
+									value="<spring:message code="food.save" />" />
+								<jstl:if test="${!create}">
+									<a class="btn btn-primary btn-lg" data-toggle="modal"
+										data-target="#basicModal"><spring:message
+											code="food.delete" /></a>
+									<div class="modal fade" id="basicModal" tabindex="-1"
+										role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal"
+														aria-hidden="true">&times;</button>
+													<h4 class="modal-title" id="myModalLabel">
+														<spring:message code="food.confirm.title" />
+													</h4>
+												</div>
+												<div class="modal-body">
+													<h3>
+														<spring:message code="food.confirm.body" />
+													</h3>
+												</div>
+												<div class="modal-footer">
+													<button type="submit" name="delete" class="btn btn-default"
+														onclick="history.back()">
+														<spring:message code="food.confirm.yes" />
+													</button>
+													<button type="button" class="btn btn-primary"
+														data-dismiss="modal">
+														<spring:message code="food.confirm.no" />
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</jstl:if>
+								<a href="food/administrator/list.do"><input type="button"
+									class="btn btn-primary btn-lg"
+									value="<spring:message code="food.cancel"/>" id="cancelar"
+									name="cancelar"
+									onclick="self.location.href = food/administrator/list.do" /></a>
+							</div>
+						</div>
+					</fieldset>
+				</form:form>
 			</div>
 		</div>
-
-	</jstl:if>
-
-	<input type="button" class="btn btn-default"
-		value="<spring:message code="food.cancel"/>" onclick="history.back()" />
-
-
-</form:form>
-
+	</div>
+</div>

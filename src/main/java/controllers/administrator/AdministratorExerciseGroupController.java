@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.ExerciseGroupService;
 import services.ExerciseService;
@@ -97,7 +98,7 @@ public class AdministratorExerciseGroupController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
 	public ModelAndView save(@Valid ExerciseGroup exerciseGroup,
-			BindingResult binding) {
+			BindingResult binding, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -109,6 +110,8 @@ public class AdministratorExerciseGroupController extends AbstractController {
 				Language lang = Language.valueOf(language.toLowerCase());
 				exerciseGroup.setEntityLanguage(lang);
 				exerciseGroupService.save(exerciseGroup);
+				redirect.addFlashAttribute("successMessage",
+						"exerciseGroup.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				if (exerciseGroup.getId() == 0) {
@@ -137,10 +140,12 @@ public class AdministratorExerciseGroupController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute ExerciseGroup exerciseGroup,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
+			redirect.addFlashAttribute("successMessage",
+					"exerciseGroup.deleteSuccess");
 			exerciseGroupService.delete(exerciseGroup);
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {

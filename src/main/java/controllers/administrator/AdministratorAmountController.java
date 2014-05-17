@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.AmountService;
 import services.FoodService;
@@ -86,7 +87,7 @@ public class AdministratorAmountController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Amount amount, BindingResult binding) {
+	public ModelAndView save(@Valid Amount amount, BindingResult binding, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -98,6 +99,7 @@ public class AdministratorAmountController {
 		} else {
 			try {
 				amountService.save(amount);
+				redirect.addFlashAttribute("successMessage", "amount.editSuccess");
 				result = new ModelAndView("redirect:listDetails.do?mealId="
 						+ amount.getMeal().getId());
 			} catch (Throwable oops) {
@@ -117,11 +119,12 @@ public class AdministratorAmountController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Amount amount,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
 			amountService.delete(amount);
+			redirect.addFlashAttribute("successMessage", "amount.deleteSuccess");
 			result = new ModelAndView("redirect:listDetails.do?mealId="
 					+ amount.getMeal().getId());
 		} catch (Throwable oops) {

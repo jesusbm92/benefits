@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -95,7 +96,11 @@ public class CustomerService extends UserService {
 				|| plan.getMaxBodyFat() < customer.getBodyfat()
 				|| plan.getMinWeight() > customer.getWeight()
 				|| plan.getMaxWeight() < customer.getWeight()) {
-			planService.request(plan.getGoal(), customer);
+			String language = LocaleContextHolder.getLocale()
+					.getDisplayLanguage();
+
+			planService.request(plan.getGoal(), customer,
+					language.toLowerCase());
 		}
 	}
 
