@@ -14898,7 +14898,9 @@
   <property name="entityLanguage" value="spanish" /> 
   <property name="description" value="Esta dieta tiene como objetivo obtener masa muscular." /> 
    <property name="plans">
-  <list /> 
+   <list>
+   <ref bean="plan11ES" />
+   </list>
   </property>
    <property name="days">
    <list>
@@ -14920,7 +14922,9 @@
   <property name="entityLanguage" value="english" /> 
   <property name="description" value="The goal of the diet is gass muscle." /> 
    <property name="plans">
-  <list /> 
+   <list>
+   <ref bean="plan11EN" />
+   </list>
   </property>
    <property name="days">
    <list>
@@ -15145,6 +15149,7 @@
 			value="Esta dieta tiene como objetivo obtener masa muscular." />
 		<property name="plans">
 			<list>
+			<ref bean="plan10ES" />
 			</list>
 		</property>
 		<property name="days">
@@ -15167,6 +15172,7 @@
 			value="This diet aims to gain muscle mass." />
 		<property name="plans">
 			<list>
+			<ref bean="plan10EN" />
 			</list>
 		</property>
 		<property name="days">
@@ -15324,6 +15330,985 @@
 		<property name="entityLanguage" value="spanish" />
 	</bean>
 	<!-- EXERCISES -->
+	<!-- felipe coger musculos 2 -->
+	
+	<!-- Exercise -->
+
+<!-- Ganar Masa Muscular 2 -->
+
+<!-- Espalda -->
+<bean id="exercise150ES" class="domain.Exercise">
+	<property name="name" value="Polea Trasnuca" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle18" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise150EN" class="domain.Exercise">
+	<property name="name" value="Wide-Grip Pulldown Behind The Neck" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle17" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise151ES" class="domain.Exercise">
+	<property name="name" value="Polea al pecho con agarre estrecho" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle18" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise151EN" class="domain.Exercise">
+	<property name="name" value="V-Bar Pulldown" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,12,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle17" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise152ES" class="domain.Exercise">
+	<property name="name" value="Remo a una mano con mancuernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,12,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle18" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise152EN" class="domain.Exercise">
+	<property name="name" value="One-Arm Dumbbell Row" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,12,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle17" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise153ES" class="domain.Exercise">
+	<property name="name" value="Peso muerto con barra" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle18" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise153EN" class="domain.Exercise">
+	<property name="name" value="Barbell Deadlift" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle17" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean>
+
+
+ <bean id="exercise154ES" class="domain.Exercise">
+	<property name="name" value="Dominadas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="10,8,6,6" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle18" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise154EN" class="domain.Exercise">
+	<property name="name" value="Pullups" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="10,8,6,6" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle17" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean> 
+
+<!-- Pecho -->
+
+<bean id="exercise155ES" class="domain.Exercise">
+	<property name="name" value="Sentadilla Hack" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,6" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle2" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise155EN" class="domain.Exercise">
+	<property name="name" value="Hack Squat" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,6" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle1" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise156ES" class="domain.Exercise">
+	<property name="name" value="Extension de piernas en maquina" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle2" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise156EN" class="domain.Exercise">
+	<property name="name" value="Leg Extensions" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle1" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise157ES" class="domain.Exercise">
+	<property name="name" value="Curl de piernas femoral tumbado" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle26" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise157EN" class="domain.Exercise">
+	<property name="name" value="Lying Leg Curls" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle25" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise158ES" class="domain.Exercise">
+	<property name="name" value="Zancadas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle6" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise158EN" class="domain.Exercise">
+	<property name="name" value="Barbell Lunge" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle5" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise159ES" class="domain.Exercise">
+	<property name="name" value="Aductores en máquina" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle10" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise159EN" class="domain.Exercise">
+	<property name="name" value="Thigh Adductor" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle9" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise160ES" class="domain.Exercise">
+	<property name="name" value="Gemelos" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="15,12,12,10,8" />
+	<property name="cycles" value="5" />
+	<property name="muscle" ref="muscle8" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise160EN" class="domain.Exercise">
+	<property name="name" value="Calf" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="15,12,12,10,8" />
+	<property name="cycles" value="5" />
+	<property name="muscle" ref="muscle7" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<!-- Pecho -->
+<bean id="exercise161ES" class="domain.Exercise">
+	<property name="name" value="Press con mancuerna en banco plano" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle12" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise161EN" class="domain.Exercise">
+	<property name="name" value="Dumbbell Bench Press" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle11" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise162ES" class="domain.Exercise">
+	<property name="name" value="Press con barra en banco inclinad" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle12" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise162EN" class="domain.Exercise">
+	<property name="name" value="Barbell Incline Bench Press" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle11" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise163ES" class="domain.Exercise">
+	<property name="name" value="Pull-over con mancuernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle12" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise163EN" class="domain.Exercise">
+	<property name="name" value="Dumbbell Pullover" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle11" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise164ES" class="domain.Exercise">
+	<property name="name" value="Aperturas con mancuernas en banco inclinado" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle12" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise164EN" class="domain.Exercise">
+	<property name="name" value="Incline Bench Flyes" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle11" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise165ES" class="domain.Exercise">
+	<property name="name" value="Fondo en maquina" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle12" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise165EN" class="domain.Exercise">
+	<property name="name" value="Machine Dips" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle11" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+<!-- Hombros -->
+<bean id="exercise166ES" class="domain.Exercise">
+	<property name="name" value="Elevacion lateral a una mano en polea baja" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle22" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise166EN" class="domain.Exercise">
+	<property name="name" value="Standing Low-Pulley Deltoid Raise" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle21" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise167ES" class="domain.Exercise">
+	<property name="name" value="Elevaciones frontales con mancuernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle22" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise167EN" class="domain.Exercise">
+	<property name="name" value="Front Dumbbell Raise" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle21" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise168ES" class="domain.Exercise">
+	<property name="name" value="Sentado con mancuernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8,8" />
+	<property name="cycles" value="5" />
+	<property name="muscle" ref="muscle22" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise168EN" class="domain.Exercise">
+	<property name="name" value="Dumbbell Shoulder Press" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8,8" />
+	<property name="cycles" value="5" />
+	<property name="muscle" ref="muscle21" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise169ES" class="domain.Exercise">
+	<property name="name" value="Pajaro agachado con mancuernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle22" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise169EN" class="domain.Exercise">
+	<property name="name" value="Cable Lateral Raise" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle21" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise170ES" class="domain.Exercise">
+	<property name="name" value="Remo al cuello con manos separadas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle22" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise170EN" class="domain.Exercise">
+	<property name="name" value="Upright Barbell Row" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle21" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+<!-- Brazos -->
+
+<bean id="exercise171ES" class="domain.Exercise">
+	<property name="name" value="Curl de biceps alterno" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle14" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise171EN" class="domain.Exercise">
+	<property name="name" value="Alternate Curl" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,12,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle13" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise172ES" class="domain.Exercise">
+	<property name="name" value="Martillo" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle14" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise172EN" class="domain.Exercise">
+	<property name="name" value="Alternate Hammer Curl" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle13" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise173ES" class="domain.Exercise">
+	<property name="name" value="Curl de biceps en banco scott" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle14" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise173EN" class="domain.Exercise">
+	<property name="name" value="Preacher Curl" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle13" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise174ES" class="domain.Exercise">
+	<property name="name" value="Curl de biceps concentrado" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,8,8,10" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle14" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise174EN" class="domain.Exercise">
+	<property name="name" value="Concentration Curls" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,8,8,10" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle13" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise175ES" class="domain.Exercise">
+	<property name="name" value="Press Frances con barra" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle16" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise175EN" class="domain.Exercise">
+	<property name="name" value="Lying Close-Grip Barbell Triceps Extension" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,8,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle15" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise176ES" class="domain.Exercise">
+	<property name="name"
+		value="Extension de los antebrazos sentado con mancuerna" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle16" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise176EN" class="domain.Exercise">
+	<property name="name" value="Seated Triceps Press" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle15" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="exercise177ES" class="domain.Exercise">
+	<property name="name" value="Extension de triceps en polea alta" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este ejercicio hay que realizarlo con el máximo peso posible." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle16" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercise177EN" class="domain.Exercise">
+	<property name="name" value="Triceps Pushdown" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise should be done with the maximum possible weight." />
+	<property name="image" value="" />
+	<property name="urlYoutube" value=" " />
+	<property name="repetitions" value="12,10,10,8" />
+	<property name="cycles" value="4" />
+	<property name="muscle" ref="muscle15" />
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
+	
+	
 	<!-- JESUS -->
 
 	<!-- EXERCISES DE GRUPO ESPALDA LUNES MANTENERSE 2 -->
@@ -19968,6 +20953,230 @@
 
 	<!-- EXERCISE GROUPS -->
 
+<!-- entrenamiento felipe 2 -->
+
+<!-- Exercise Groups -->
+
+<!-- Ganar Masa Muscular 2 -->
+
+<bean id="exercisegroup30ES" class="domain.ExerciseGroup">
+	<property name="name" value="Espalda" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer la espalda." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise150ES" />
+			<ref bean="exercise151ES" />
+			<ref bean="exercise152ES" />
+			<ref bean="exercise153ES" />
+			<ref bean="exercise154ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup30EN" class="domain.ExerciseGroup">
+	<property name="name" value="Back" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise group contains a series of exercises to strengthen the back." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise150EN" />
+			<ref bean="exercise151EN" />
+			<ref bean="exercise152EN" />
+			<ref bean="exercise153EN" />
+			<ref bean="exercise154EN" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday30EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup31ES" class="domain.ExerciseGroup">
+	<property name="name" value="Piernas" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer las piernas." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise155ES" />
+			<ref bean="exercise156ES" />
+			<ref bean="exercise157ES" />
+			<ref bean="exercise158ES" />
+			<ref bean="exercise159ES" />
+			<ref bean="exercise160ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup31EN" class="domain.ExerciseGroup">
+	<property name="name" value="Legs" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise group contains a series of exercises to strengthen the legs." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise155EN" />
+			<ref bean="exercise156EN" />
+			<ref bean="exercise157EN" />
+			<ref bean="exercise158EN" />
+			<ref bean="exercise159EN" />
+			<ref bean="exercise160EN" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup32ES" class="domain.ExerciseGroup">
+	<property name="name" value="Pecho" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer el pecho." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise161ES" />
+			<ref bean="exercise162ES" />
+			<ref bean="exercise163ES" />
+			<ref bean="exercise164ES" />
+			<ref bean="exercise165ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup32EN" class="domain.ExerciseGroup">
+	<property name="name" value="Chest" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise group contains a series of exercises to strengthen the chest." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise161EN" />
+			<ref bean="exercise162EN" />
+			<ref bean="exercise163EN" />
+			<ref bean="exercise164EN" />
+			<ref bean="exercise165EN" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday32EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup33ES" class="domain.ExerciseGroup">
+	<property name="name" value="Hombros" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise166ES" />
+			<ref bean="exercise167ES" />
+			<ref bean="exercise168ES" />
+			<ref bean="exercise169ES" />
+			<ref bean="exercise170ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup33EN" class="domain.ExerciseGroup">
+	<property name="name" value="Shoulders" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise group contains a series of exercises to strengthen the shoulder." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise166EN" />
+			<ref bean="exercise167EN" />
+			<ref bean="exercise168EN" />
+			<ref bean="exercise169EN" />
+			<ref bean="exercise170EN" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday33EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup34ES" class="domain.ExerciseGroup">
+	<property name="name" value="Brazos" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="description"
+		value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los brazos" />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise171ES" />
+			<ref bean="exercise172ES" />
+			<ref bean="exercise173ES" />
+			<ref bean="exercise174ES" />
+			<ref bean="exercise175ES" />
+			<ref bean="exercise176ES" />
+			<ref bean="exercise177ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="exercisegroup34EN" class="domain.ExerciseGroup">
+	<property name="name" value="Arm" />
+	<property name="entityLanguage" value="english" />
+	<property name="description"
+		value="This exercise group contains a series of exercises to strengthen the arms." />
+	<property name="exercises">
+		<list>
+			<ref bean="exercise171EN" />
+			<ref bean="exercise172EN" />
+			<ref bean="exercise173EN" />
+			<ref bean="exercise174EN" />
+			<ref bean="exercise175EN" />
+			<ref bean="exercise176EN" />
+			<ref bean="exercise177EN" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday34EN" />
+		</list>
+	</property>
+</bean>
+
+
+
 	<!-- Juanmi -->
 	<!-- Espalda mantenerse 1 -->
 	<bean id="exercisegroup1ES" class="domain.ExerciseGroup">
@@ -21075,6 +22284,177 @@
 	</bean>
 
 	<!-- TRAINING DAYS -->
+	
+	<!-- felipe e
+	ntreniamiento 2 -->
+	
+	
+	
+<!-- Training Day -->
+
+<!-- Ganar Masa Muscular 2 -->
+
+<bean id="trainingday30ES" class="domain.TrainingDay">
+	<property name="name" value="MONDAY" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="descriptiveName" value="Dia de entrenamiento 1 Masa Muscular 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9ES" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday30EN" class="domain.TrainingDay">
+	<property name="name" value="MONDAY" />
+	<property name="entityLanguage" value="english" />
+	<property name="descriptiveName" value="Training day 1 Gain Muscle Mass 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9EN" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup30EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday31ES" class="domain.TrainingDay">
+	<property name="name" value="TUESDAY" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="descriptiveName" value="Dia de entrenamiento 2 Ganar Masa Muscular 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9ES" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday31EN" class="domain.TrainingDay">
+	<property name="name" value="TUESDAY" />
+	<property name="entityLanguage" value="english" />
+	<property name="descriptiveName" value="Training day 2 Gain Muscle Mass 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9EN" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup31EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday32ES" class="domain.TrainingDay">
+	<property name="name" value="WEDNESDAY" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="descriptiveName" value="Dia de entrenamiento 3 Ganar Masa Muscular 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9ES" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday32EN" class="domain.TrainingDay">
+	<property name="name" value="WEDNESDAY" />
+	<property name="entityLanguage" value="english" />
+	<property name="descriptiveName" value="Training day 3 Gain Muscle Mass 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9EN" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup32EN" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday33ES" class="domain.TrainingDay">
+	<property name="name" value="THURSDAY" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="descriptiveName" value="Dia de entrenamiento 4 Ganar Masa Muscular 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9ES" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday33EN" class="domain.TrainingDay">
+	<property name="name" value="THURSDAY" />
+	<property name="entityLanguage" value="english" />
+	<property name="descriptiveName" value="Training day 4 Gain Muscle Mass 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9EN" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup33EN" />
+		</list>
+	</property>
+</bean>
+
+
+<bean id="trainingday34ES" class="domain.TrainingDay">
+	<property name="name" value="FRIDAY" />
+	<property name="entityLanguage" value="spanish" />
+	<property name="descriptiveName" value="Dia de entrenamiento 5 Ganar Masa Muscular 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9ES" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="trainingday34EN" class="domain.TrainingDay">
+	<property name="name" value="FRIDAY" />
+	<property name="entityLanguage" value="english" />
+	<property name="descriptiveName" value="Training day 5 Gain Muscle Mass 2" />
+	<property name="trainings">
+		<list>
+			<ref bean="training9EN" />
+		</list>
+	</property>
+	<property name="exerciseGroups">
+		<list>
+			<ref bean="exercisegroup34EN" />
+		</list>
+	</property>
+</bean>
+
 	<!-- Juanmi -->
 
 	<!-- Training day Lunes Mantenerse 1 -->
@@ -21910,6 +23290,52 @@
 
 
 	<!-- Trainings -->
+	
+	<!-- entrenamiento felipe 2 -->
+<bean id="training9ES" class="domain.Training">
+	<property name="name" value="Entrenamiento Ganar Masa Muscular 2" />
+	<property name="description"
+		value="Este entrenamiento contiene algunos ejercicios para ganar masa muscular." />
+	<property name="entityLanguage" value="spanish" />
+	<property name="plans">
+		<list>
+		<ref bean="plan11ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday30ES" />
+			<ref bean="trainingday31ES" />
+			<ref bean="trainingday32ES" />
+			<ref bean="trainingday33ES" />
+			<ref bean="trainingday34ES" />
+		</list>
+	</property>
+</bean>
+
+<bean id="training9EN" class="domain.Training">
+	<property name="name" value="Training Gain Muscle Mass 2" />
+	<property name="description"
+		value="This training has some exercises to gain muscle mass." />
+	<property name="entityLanguage" value="english" />
+	<property name="plans">
+		<list>
+		<ref bean="plan11ES" />
+		</list>
+	</property>
+	<property name="trainingDays">
+		<list>
+			<ref bean="trainingday30EN" />
+			<ref bean="trainingday31EN" />
+			<ref bean="trainingday32EN" />
+			<ref bean="trainingday33EN" />
+			<ref bean="trainingday34EN" />
+		</list>
+	</property>
+</bean>
+
+	
+	
 
 	<!-- Training Juanmi -->
 
@@ -22094,7 +23520,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="plans">
 			<list>
-
+			<ref bean="plan10EN" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -22113,7 +23539,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="plans">
 			<list>
-
+		<ref bean="plan10ES" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -22283,7 +23709,7 @@
 	</bean>
 
 <bean id="plan10ES" class="domain.Plan">
-		<property name="name" value="Plan para ganar masa muscular" />
+		<property name="name" value="Plan para ganar masa muscular 1" />
 		<property name="goal" value="GAIN_MUSCLE_MASS" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Este es un plan para ganar masa muscular" />
@@ -22304,9 +23730,9 @@
 	</bean>
 
 	<bean id="plan10EN" class="domain.Plan">
-		<property name="name" value="Plan to gass muscle" />
+		<property name="name" value="Plan to gass muscle 1" />
 		<property name="goal" value="GAIN_MUSCLE_MASS" />
-		<property name="entityLanguage" value="spanish" />
+		<property name="entityLanguage" value="english" />
 		<property name="description" value="Plan to gass muscle" />
 		<property name="minWeight" value="5.0" />
 		<property name="maxWeight" value="60.5" />
@@ -22318,6 +23744,47 @@
 		</property>
 		<property name="diet" ref="diet5ES" />
 		<property name="training" ref="training8en" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="plan11ES" class="domain.Plan">
+		<property name="name" value="Plan para ganar masa muscular 2" />
+		<property name="goal" value="GAIN_MUSCLE_MASS" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description" value="Este es un plan para ganar masa muscular" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="75.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="70.5" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet6ES" />
+		<property name="training" ref="training9ES" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="plan11EN" class="domain.Plan">
+		<property name="name" value="Plan to gass muscle 2" />
+		<property name="goal" value="GAIN_MUSCLE_MASS" />
+		<property name="entityLanguage" value="english" />
+		<property name="description" value="Plan to gass muscle" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="75.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="70.5" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet6ES" />
+		<property name="training" ref="training9EN" />
 		<property name="comments">
 			<list>
 			</list>
