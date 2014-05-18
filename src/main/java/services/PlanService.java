@@ -143,7 +143,7 @@ public class PlanService {
 		return plans;
 	}
 
-	public void request(Goals goal, Customer customer, String language) {
+	public boolean request(Goals goal, Customer customer, String language) {
 
 		// Se comprueba que el goal que se pasa como parámetro está
 		// dentro
@@ -164,8 +164,14 @@ public class PlanService {
 		}
 
 		ArrayList<Plan> planList = new ArrayList<Plan>(plansForGoal);
-		Plan selectedPlan = planList.get((int) Math.random() * planList.size());
-		customerService.changeCustomerPlan(selectedPlan);
+		if (planList.isEmpty()) {
+			return false;
+		} else {
+			Plan selectedPlan = planList.get((int) Math.random()
+					* planList.size());
+			customerService.changeCustomerPlan(selectedPlan);
+			return true;
+		}
 	}
 
 	// Assertions

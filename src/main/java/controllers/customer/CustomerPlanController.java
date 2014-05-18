@@ -141,8 +141,15 @@ public class CustomerPlanController extends AbstractController {
 				Goals goal = plan.getGoal();
 				String language = LocaleContextHolder.getLocale()
 						.getDisplayLanguage();
-				planService.request(goal, customer, language.toLowerCase());
-				result = new ModelAndView("redirect:list.do");
+				boolean valid = planService.request(goal, customer,
+						language.toLowerCase());
+				if (valid) {
+					result = new ModelAndView("redirect:list.do");
+				} else {
+					result = createEditModelAndView(new Plan(),
+							"plan.commit.error");
+					result.addObject("goals", Goals.values());
+				}
 			} catch (Throwable oops) {
 				result = new ModelAndView("redirect:request.do");
 			}
