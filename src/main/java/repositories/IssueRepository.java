@@ -15,7 +15,7 @@ public interface IssueRepository extends JpaRepository<Issue, Integer> {
 	@Query("select i from Issue i where i.plan.id= ?1")
 	Collection<Issue> findByPlan(int planId);
 
-	@Query("select i from Issue i where i.entityLanguage = ?1")
+	@Query("select i from Issue i inner join i.plan p where p.entityLanguage = ?1")
 	Collection<Issue> findAllLanguage(Language language);
 
 }
