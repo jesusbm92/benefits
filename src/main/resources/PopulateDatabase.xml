@@ -19083,14 +19083,14 @@
 	<!-- EXERCISES -->
 	<!-- EXERCISES DE GRUPO ESPALDA ganar masa muscular1 -->
 	<bean id="exercise121en" class="domain.Exercise">
-		<property name="name" value="Jalón al pecho con barra ancha (en inglés)" />
+		<property name="name" value="Wide-Grip Lat Pulldown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to back" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
-		<property name="muscle" ref="muscle15" /><!-- FELIPE -->
+		<property name="muscle" ref="muscle11" /><!-- FELIPE -->
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup23en" />
@@ -19106,7 +19106,7 @@
 		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
-		<property name="muscle" ref="muscle15" /><!-- FELIPE -->
+		<property name="muscle" ref="muscle12" /><!-- FELIPE -->
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup23es" />
@@ -19115,14 +19115,14 @@
 	</bean>
 
 	<bean id="exercise122en" class="domain.Exercise">
-		<property name="name" value="Dominadas transuca en barra fija inglés" />
+		<property name="name" value="Pullups" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to dorsal" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
-		<property name="muscle" ref="muscle15" /><!-- FELIPE -->
+		<property name="muscle" ref="muscle18" /><!-- FELIPE -->
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup23en" />
@@ -19138,7 +19138,7 @@
 		<property name="urlYoutube" value="" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
-		<property name="muscle" ref="muscle15" /><!-- FELIPE -->
+		<property name="muscle" ref="muscle17" /><!-- FELIPE -->
 		<property name="exerciseGroups">
 			<list>
 				<ref bean="exercisegroup23es" />
@@ -19147,7 +19147,7 @@
 	</bean>
 
 	<bean id="exercise123en" class="domain.Exercise">
-		<property name="name" value="Remo a una mano con mancuernas en inglés" />
+		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to dorsal" />
 		<property name="image" value="" />
@@ -19180,7 +19180,7 @@
 
 	<bean id="exercise124en" class="domain.Exercise">
 		<property name="name"
-			value="Remo en polea baja, agarre estrecho, manos en semipronación en inglés" />
+			value="Seated Cable Rows" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to dorsal" />
 		<property name="image" value="" />
@@ -19213,7 +19213,7 @@
 	</bean>
 
 	<bean id="exercise125en" class="domain.Exercise">
-		<property name="name" value="Lumbares en maquina en inglés" />
+		<property name="name" value="Hyperextensions (Back Extensions)" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to trapezious" />
 		<property name="image" value="" />
@@ -19246,7 +19246,7 @@
 
 	<!-- EXERCISES DE GRUPO PIERNAS MARTES GANAR MASA MUSCAULAR 1 -->
 	<bean id="exercise126en" class="domain.Exercise">
-		<property name="name" value="Prensa en inglés" />
+		<property name="name" value="Leg Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to quadriceps" />
 		<property name="image" value="" />
@@ -19280,7 +19280,7 @@
 
 
 	<bean id="exercise127en" class="domain.Exercise">
-		<property name="name" value="Zancadas en inglés" />
+		<property name="name" value="Barbell Lunge" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to Buttocks" />
 		<property name="image" value="" />
@@ -19312,7 +19312,7 @@
 	</bean>
 
 	<bean id="exercise128en" class="domain.Exercise">
-		<property name="name" value="Extensión de piernas en máquina en inglés" />
+		<property name="name" value="Leg Extensions" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to quadriceps" />
 		<property name="image" value="" />
@@ -19344,7 +19344,7 @@
 	</bean>
 
 	<bean id="exercise129en" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps femoral tumbado en inglés" />
+		<property name="name" value="Standing Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to femoral" />
 		<property name="image" value="" />
@@ -19376,7 +19376,7 @@
 	</bean>
 
 	<bean id="exercise130en" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps femoral sentado en inglés" />
+		<property name="name" value="Seated Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to femoral" />
 		<property name="image" value="" />
@@ -19408,7 +19408,7 @@
 	</bean>
 
 	<bean id="exercise131en" class="domain.Exercise">
-		<property name="name" value="Aductores y gemelos en inglés" />
+		<property name="name" value="Thigh Adductor" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to gemels" />
 		<property name="image" value="" />
@@ -19424,7 +19424,7 @@
 	</bean>
 
 	<bean id="exercise131es" class="domain.Exercise">
-		<property name="name" value="Aductores y gemelos en inglés" />
+		<property name="name" value="Aductores y gemelos" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="This is a exercise to gemels" />
 		<property name="image" value="" />
@@ -19442,7 +19442,7 @@
 	<!-- EXERCISES DE GRUPO PECHO MIÉRCOLES GANAR MASA MUSCULAR 1 -->
 	<bean id="exercise132en" class="domain.Exercise">
 		<property name="name"
-			value="Press de banco plano con barra militar en inglés" />
+			value="Barbell Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -19474,7 +19474,7 @@
 	</bean>
 
 	<bean id="exercise133en" class="domain.Exercise">
-		<property name="name" value="Press de banco inclinado en inglés" />
+		<property name="name" value="Barbell Incline Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -19506,7 +19506,7 @@
 	</bean>
 
 	<bean id="exercise134en" class="domain.Exercise">
-		<property name="name" value="Pull-over con mancuernas en inglés" />
+		<property name="name" value="Dumbbell Pullover" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -19539,7 +19539,7 @@
 
 	<bean id="exercise135en" class="domain.Exercise">
 		<property name="name"
-			value="Aperturas con mancuernas en banco plano en inglés" />
+			value="Dumbbell Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -19571,7 +19571,7 @@
 	</bean>
 
 	<bean id="exercise136en" class="domain.Exercise">
-		<property name="name" value="Fondo en paralelas con peso en inglés" />
+		<property name="name" value="Butterfly" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
@@ -19605,7 +19605,7 @@
 	<!-- EXERCISES DE GRUPO HOMBROS -->
 	<bean id="exercise137en" class="domain.Exercise">
 		<property name="name"
-			value="Elevaciones laterales con mancuernas en inglés" />
+			value="Side Lateral Raise" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
@@ -19638,7 +19638,7 @@
 
 	<bean id="exercise138en" class="domain.Exercise">
 		<property name="name"
-			value="Elevaciones frontales con mancuernas en inglés" />
+			value=" Front Dumbbell Raise" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
@@ -19670,7 +19670,7 @@
 	</bean>
 
 	<bean id="exercise139en" class="domain.Exercise">
-		<property name="name" value="Press sentado con mancuernas en inglés" />
+		<property name="name" value="Dumbbell Shoulder Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
@@ -19702,7 +19702,7 @@
 	</bean>
 
 	<bean id="exercise140en" class="domain.Exercise">
-		<property name="name" value="Pájaro posterior agachado en inglés" />
+		<property name="name" value="Cable Lateral Raise" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
@@ -19734,7 +19734,7 @@
 	</bean>
 
 	<bean id="exercise141en" class="domain.Exercise">
-		<property name="name" value="Encogimiento de hombros con barra en inglés" />
+		<property name="name" value="Upright Barbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to trapezius" />
 		<property name="image" value="" />
@@ -19767,7 +19767,7 @@
 
 	<!-- EXERCISES DE GRUPO BRAZOS VIERNES GANAR MASA MUSCULAR -->
 	<bean id="exercise142en" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps alterno en inglés" />
+		<property name="name" value=" Alternate Curls" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
@@ -19799,7 +19799,7 @@
 	</bean>
 
 	<bean id="exercise143en" class="domain.Exercise">
-		<property name="name" value="Martillo en inglés" />
+		<property name="name" value="Alternate Hammer Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
@@ -19831,7 +19831,7 @@
 	</bean>
 
 	<bean id="exercise144en" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps concentrado en inglés" />
+		<property name="name" value="Concentration Curls" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
@@ -19864,7 +19864,7 @@
 
 	<bean id="exercise145en" class="domain.Exercise">
 		<property name="name"
-			value="Extensión alternada de los antebrazos con mancuerna inclinado en inglés" />
+			value="Palms-Down Wrist Curl Over A Bench" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
@@ -19898,7 +19898,7 @@
 
 	<bean id="exercise146en" class="domain.Exercise">
 		<property name="name"
-			value="Extensión de los antebrazos sentado con mancuerna en inglés" />
+			value="Palms-Up Barbell Wrist Curl Over A Bench" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
@@ -19932,7 +19932,7 @@
 
 	<bean id="exercise147en" class="domain.Exercise">
 		<property name="name"
-			value="Extensiones de tríceps en polea alta con agarre invertido en inglés" />
+			value="Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
@@ -20969,7 +20969,7 @@
 		<property name="name" value="Pecho" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="Este grupo de ejercicios contiene ejercicios para la pecho" />
+			value="Este grupo de ejercicios contiene ejercicios para el pecho" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise132es" />
