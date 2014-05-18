@@ -13561,11 +13561,11 @@
 
 	<!-- EXERCISES DE GRUPO ESPALDA LUNES MANTENERSE 2 -->
 	<bean id="exercise31en" class="domain.Exercise">
-		<property name="name" value="Polea trasnuca en inglés" />
+		<property name="name" value="Polea tras nuca en inglés" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is an exercise to dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -13577,11 +13577,11 @@
 	</bean>
 
 	<bean id="exercise31es" class="domain.Exercise">
-		<property name="name" value="Polea Trasnuca" />
+		<property name="name" value="Polea Tras nuca" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -13593,11 +13593,11 @@
 	</bean>
 
 	<bean id="exercise32en" class="domain.Exercise">
-		<property name="name" value="Polea en pecho en inglés" />
+		<property name="name" value="Polea en pecho con agarre estrecho en inglés" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is an exercise to dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="sgyzfUGO7NA" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -13613,7 +13613,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="sgyzfUGO7NA" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -13661,7 +13661,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is an exercise to dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="02i92Xj3SsI" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -13677,7 +13677,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="02i92Xj3SsI" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -13693,7 +13693,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is an exercise to trapezious" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle19" />
@@ -13709,7 +13709,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de trapecio" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle20" />
@@ -13726,7 +13726,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is an exercise to gluteus" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle5" />
@@ -13742,7 +13742,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para gluteos" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle6" />
@@ -13790,7 +13790,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to Quadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="d2ucfROskeA" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle1" />
@@ -13806,7 +13806,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para cuadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="d2ucfROskeA" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -13822,7 +13822,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to femoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Tsdt4lpLYAc" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle3" />
@@ -13838,7 +13838,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de biceps femoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Tsdt4lpLYAc" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle4" />
@@ -13922,7 +13922,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="rIfrdmAS04c" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -13938,7 +13938,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="rIfrdmAS04c" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -14150,7 +14150,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -14167,7 +14167,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para deltoides" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -14215,7 +14215,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to trapezius" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_eq1w5gNG4Y" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle19" />
@@ -14231,7 +14231,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de trapecio" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_eq1w5gNG4Y" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle20" />
@@ -14282,7 +14282,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -14298,7 +14298,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -14314,7 +14314,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="ERtAmNchnFQ" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -14330,7 +14330,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="ERtAmNchnFQ" />
 		<property name="repetitions" value="12,12,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -14509,14 +14509,14 @@
 	<!-- Exercises de mantenerse 1 -->
 	<!-- Ejercicio de espaldas mantenerse 1 -->
 
-	<!-- Polea trasnuca Mantenerse 1 -->
+	<!-- Polea tras nuca Mantenerse 1 -->
 	<bean id="exercise1ES" class="domain.Exercise">
-		<property name="name" value="Polea Trasnuca" />
+		<property name="name" value="Polea tras nuca" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle18" />
@@ -14587,7 +14587,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle18" />
@@ -14604,7 +14604,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Yx0ixn8q2lUf" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle17" />
@@ -14659,7 +14659,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle18" />
@@ -14676,7 +14676,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle17" />
@@ -14697,7 +14697,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle6" />
@@ -14714,7 +14714,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle5" />
@@ -14732,7 +14732,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle2" />
@@ -14749,7 +14749,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle1" />
@@ -14803,7 +14803,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="d2ucfROskeA" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle2" />
@@ -14820,7 +14820,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="d2ucfROskeA" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle1" />
@@ -14947,7 +14947,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -14964,7 +14964,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -14982,7 +14982,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle12" />
@@ -14999,7 +14999,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle11" />
@@ -15232,7 +15232,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="ab9tQyuflWg" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle14" />
@@ -15249,7 +15249,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="ab9tQyuflWg" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle13" />
@@ -15267,7 +15267,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle14" />
@@ -15284,7 +15284,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle13" />
@@ -15302,7 +15302,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle14" />
@@ -15319,7 +15319,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle13" />
@@ -15339,7 +15339,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="U2YTi9egeuI" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle16" />
@@ -15356,7 +15356,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="U2YTi9egeuI" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle15" />
@@ -15375,7 +15375,7 @@
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle16" />
@@ -15392,7 +15392,7 @@
 		<property name="description"
 			value="This exercise should be done with little weight." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="15" />
 		<property name="cycles" value="3" />
 		<property name="muscle" ref="muscle15" />
@@ -15443,11 +15443,11 @@
 	<!-- Felix -->
 	<!-- EXERCISES DE GRUPO ESPALDA LUNES PERDER PESO 1 -->
 	<bean id="exercise61en" class="domain.Exercise">
-		<property name="name" value="Polea trasnuca en inglés" />
+		<property name="name" value="Polea tras nuca en inglés" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -15459,11 +15459,11 @@
 	</bean>
 
 	<bean id="exercise61es" class="domain.Exercise">
-		<property name="name" value="Polea Trasnuca" />
+		<property name="name" value="Polea tras nuca" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -15511,7 +15511,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to adductor" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -15527,7 +15527,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="This is a exercise to adductor" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -15577,7 +15577,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to trapezious" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="20,15,12,12,10" />
 		<property name="cycles" value="5" />
 		<property name="muscle" ref="muscle19" />
@@ -15593,7 +15593,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de trapecio" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="20,15,12,12,10" />
 		<property name="cycles" value="5" />
 		<property name="muscle" ref="muscle20" />
@@ -15610,7 +15610,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to quadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle1" />
@@ -15626,7 +15626,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para cuadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -15642,7 +15642,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to quadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="20,15,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle1" />
@@ -15658,7 +15658,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para cuadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="20,15,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -15835,7 +15835,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -15851,7 +15851,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -15868,7 +15868,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -15884,7 +15884,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -15934,7 +15934,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -15950,7 +15950,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para deltoides" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -16128,7 +16128,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -16144,7 +16144,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -16160,7 +16160,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="10,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -16176,7 +16176,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="10,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -16227,7 +16227,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -16244,7 +16244,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
@@ -16261,7 +16261,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="10,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -16278,7 +16278,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="10,12,12,15" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
@@ -16291,12 +16291,12 @@
 
 
 	<bean id="exercise91ES" class="domain.Exercise">
-		<property name="name" value="Polea Trasnuca" />
+		<property name="name" value="Polea tras nuca" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="20,20,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -16308,12 +16308,12 @@
 	</bean>
 
 	<bean id="exercise91EN" class="domain.Exercise">
-		<property name="name" value="Polea Trasnuca" />
+		<property name="name" value="Polea tras nuca" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="20,20,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -16330,7 +16330,7 @@
 		<property name="description"
 			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="sgyzfUGO7NA" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -16347,7 +16347,7 @@
 		<property name="description"
 			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="sgyzfUGO7NA" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -16364,7 +16364,7 @@
 		<property name="description"
 			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="20,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -16381,7 +16381,7 @@
 		<property name="description"
 			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="20,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -16398,7 +16398,7 @@
 		<property name="description"
 			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="02i92Xj3SsI" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -16415,7 +16415,7 @@
 		<property name="description"
 			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="02i92Xj3SsI" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -16432,7 +16432,7 @@
 		<property name="description"
 			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="15,12,15,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle20" />
@@ -16449,7 +16449,7 @@
 		<property name="description"
 			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="15,12,15,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle19" />
@@ -16466,7 +16466,7 @@
 		<property name="description"
 			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle6" />
@@ -16483,7 +16483,7 @@
 		<property name="description"
 			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle5" />
@@ -16500,7 +16500,7 @@
 		<property name="description"
 			value="Para proteger la espalda, es importante contraer la banda abdominal lo cual evitará cualquier movimiento lateral de la pelvis y la columna vertebral." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -16534,7 +16534,7 @@
 		<property name="description"
 			value="Este ejercicio es el mejor movimiento de aislamiento de los cuádriceps. Cabe señalar que cuanto más inclinado esté el respaldo, mayor será la retroversión de la pelvis." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="UGwJSxjnDmY" />
 		<property name="repetitions" value="15,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -16602,7 +16602,7 @@
 		<property name="description"
 			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="zd78y1E8xUE" />
 		<property name="repetitions" value="25,20,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle6" />
@@ -16619,7 +16619,7 @@
 		<property name="description"
 			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="zd78y1E8xUE" />
 		<property name="repetitions" value="25,20,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle5" />
@@ -16636,7 +16636,7 @@
 		<property name="description"
 			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="IYyP7xIsf1I" />
 		<property name="repetitions" value="20,20,20,20" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle8" />
@@ -16653,7 +16653,7 @@
 		<property name="description"
 			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="IYyP7xIsf1I" />
 		<property name="repetitions" value="20,20,20,20" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle7" />
@@ -16708,7 +16708,7 @@
 		<property name="description"
 			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="wjiZF5IFGlU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -16727,7 +16727,7 @@
 		<property name="description"
 			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="wjiZF5IFGlU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -16744,7 +16744,7 @@
 		<property name="description"
 			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -16761,7 +16761,7 @@
 		<property name="description"
 			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15,12,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -16780,7 +16780,7 @@
 		<property name="description"
 			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -16799,7 +16799,7 @@
 		<property name="description"
 			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -16816,7 +16816,7 @@
 		<property name="description"
 			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="0FgCyAdcfDw" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -16833,7 +16833,7 @@
 		<property name="description"
 			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="0FgCyAdcfDw" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -16852,7 +16852,7 @@
 		<property name="description"
 			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -16871,7 +16871,7 @@
 		<property name="description"
 			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -16890,7 +16890,7 @@
 		<property name="description"
 			value="Este ejercicio puede realizarse también con mancuernas." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="sbxcuplK0qU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -16909,7 +16909,7 @@
 		<property name="description"
 			value="Este ejercicio puede realizarse también con mancuernas.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="sbxcuplK0qU" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -16926,7 +16926,7 @@
 		<property name="description"
 			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="qalqaMzkBWc" />
 		<property name="repetitions" value="15,20,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -16943,7 +16943,7 @@
 		<property name="description"
 			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="qalqaMzkBWc" />
 		<property name="repetitions" value="15,20,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -16960,7 +16960,7 @@
 		<property name="description"
 			value="Mantenga los brazos ligeramente doblados durante todo el movimiento." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="0DSV92Uzko4" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -16977,7 +16977,7 @@
 		<property name="description"
 			value="Mantenga los brazos ligeramente doblados durante todo el movimiento.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="0DSV92Uzko4" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -16994,7 +16994,7 @@
 		<property name="description"
 			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_eq1w5gNG4Y" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle20" />
@@ -17011,7 +17011,7 @@
 		<property name="description"
 			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja.(Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="_eq1w5gNG4Y" />
 		<property name="repetitions" value="20,15,12,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle19" />
@@ -17062,7 +17062,7 @@
 		<property name="description"
 			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial)." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -17079,7 +17079,7 @@
 		<property name="description"
 			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial). (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -17096,7 +17096,7 @@
 		<property name="description"
 			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="ERtAmNchnFQ" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -17113,7 +17113,7 @@
 		<property name="description"
 			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="ERtAmNchnFQ" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -17242,7 +17242,7 @@
 		<property name="description"
 			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="RHIY0CU9XZk" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
@@ -17261,7 +17261,7 @@
 		<property name="description"
 			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="RHIY0CU9XZk" />
 		<property name="repetitions" value="15,15,12,10" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -17280,7 +17280,7 @@
 		<property name="description"
 			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos." />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="20,15,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
@@ -17299,7 +17299,7 @@
 		<property name="description"
 			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos. (Ingles)" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value=" " />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="20,15,15,12" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -17384,7 +17384,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle17" />
@@ -17400,7 +17400,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Este es un ejercicio de dorsal" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle18" />
@@ -17483,7 +17483,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to quadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle1" />
@@ -17499,7 +17499,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para cuadriceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle2" />
@@ -17743,7 +17743,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle11" />
@@ -17759,7 +17759,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para pectoral" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle12" />
@@ -17842,7 +17842,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="12,12,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -17858,7 +17858,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para deltoides" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="12,12,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -17907,7 +17907,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to deltoid" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="qalqaMzkBWc" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle21" />
@@ -17923,7 +17923,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para deltoides" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="qalqaMzkBWc" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle22" />
@@ -18036,7 +18036,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -18052,7 +18052,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -18068,7 +18068,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle13" />
@@ -18084,7 +18084,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Esto es un ejercicio para biceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="fiLgeWlBGTQ" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle14" />
@@ -18135,7 +18135,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -18152,7 +18152,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="o857Ab7jP8E" />
 		<property name="repetitions" value="12,10,8,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
@@ -18169,7 +18169,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a exercise to triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle15" />
@@ -18186,7 +18186,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Ejercicio de triceps" />
 		<property name="image" value="" />
-		<property name="urlYoutube" value="" />
+		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="12,10,10,8" />
 		<property name="cycles" value="4" />
 		<property name="muscle" ref="muscle16" />
