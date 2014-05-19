@@ -86,22 +86,29 @@ public class CustomerService extends UserService {
 		customerRepository.save(customer);
 	}
 
-	public void saveOnlyCustomer(Customer customer) {
+	public Boolean saveOnlyCustomer(Customer customer) {
 		Assert.notNull(customer);
 
 		customerRepository.save(customer);
 
-		Plan plan = customer.getPlan();
-		if (plan.getMinBodyFat() > customer.getBodyfat()
-				|| plan.getMaxBodyFat() < customer.getBodyfat()
-				|| plan.getMinWeight() > customer.getWeight()
-				|| plan.getMaxWeight() < customer.getWeight()) {
-			String language = LocaleContextHolder.getLocale()
-					.getDisplayLanguage();
+		Boolean aux = false;
 
-			planService.request(plan.getGoal(), customer,
-					language.toLowerCase());
+		if (customer.getPlan() != null) {
+
+			Plan plan = customer.getPlan();
+			if (plan.getMinBodyFat() > customer.getBodyfat()
+					|| plan.getMaxBodyFat() < customer.getBodyfat()
+					|| plan.getMinWeight() > customer.getWeight()
+					|| plan.getMaxWeight() < customer.getWeight()) {
+				String language = LocaleContextHolder.getLocale()
+						.getDisplayLanguage();
+
+				aux = true;
+				planService.request(plan.getGoal(), customer,
+						language.toLowerCase());
+			}
 		}
+		return aux;
 	}
 
 	public void saveCustomerForPlanChange(Customer customer) {

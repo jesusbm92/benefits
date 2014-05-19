@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.ExerciseGroupService;
 import services.TrainingDayService;
@@ -100,7 +101,7 @@ public class AdministratorTrainingDayController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
 	public ModelAndView save(@Valid TrainingDay trainingDay,
-			BindingResult binding) {
+			BindingResult binding, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -118,6 +119,8 @@ public class AdministratorTrainingDayController extends AbstractController {
 				Language lang = Language.valueOf(language.toLowerCase());
 				trainingDay.setEntityLanguage(lang);
 				trainingDayService.save(trainingDay);
+				redirect.addFlashAttribute("successMessage",
+						"trainingDay.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				if (trainingDay.getId() == 0) {
@@ -136,11 +139,13 @@ public class AdministratorTrainingDayController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute TrainingDay trainingDay,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
 			trainingDayService.delete(trainingDay);
+			redirect.addFlashAttribute("successMessage",
+					"trainingDay.deleteSuccess");
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {

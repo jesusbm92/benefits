@@ -157,7 +157,8 @@ public class AdministratorPlanController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Plan plan, BindingResult binding) {
+	public ModelAndView save(@Valid Plan plan, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -169,6 +170,7 @@ public class AdministratorPlanController extends AbstractController {
 				Language lang = Language.valueOf(language.toLowerCase());
 				plan.setEntityLanguage(lang);
 				planService.save(plan);
+				redirect.addFlashAttribute("successMessage", "plan.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(plan, "plan.commit.error");
@@ -181,11 +183,12 @@ public class AdministratorPlanController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Plan plan,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
 			planService.delete(plan);
+			redirect.addFlashAttribute("successMessage", "plan.deleteSuccess");
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {

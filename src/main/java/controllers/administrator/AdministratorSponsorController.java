@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import services.SponsorService;
 import controllers.AbstractController;
@@ -75,7 +76,8 @@ public class AdministratorSponsorController extends AbstractController {
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(@Valid Sponsor sponsor, BindingResult binding) {
+	public ModelAndView save(@Valid Sponsor sponsor, BindingResult binding,
+			RedirectAttributes redirect) {
 		ModelAndView result;
 
 		if (binding.hasErrors()) {
@@ -83,6 +85,8 @@ public class AdministratorSponsorController extends AbstractController {
 		} else {
 			try {
 				sponsorService.save(sponsor);
+				redirect.addFlashAttribute("successMessage",
+						"sponsor.editSuccess");
 				result = new ModelAndView("redirect:list.do");
 			} catch (Throwable oops) {
 				result = createEditModelAndView(sponsor, "sponsor.commit.error");
@@ -95,11 +99,13 @@ public class AdministratorSponsorController extends AbstractController {
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "delete")
 	public ModelAndView delete(@ModelAttribute Sponsor sponsor,
-			BindingResult bindingResult) {
+			BindingResult bindingResult, RedirectAttributes redirect) {
 		ModelAndView result;
 
 		try {
 			sponsorService.delete(sponsor);
+			redirect.addFlashAttribute("successMessage",
+					"sponsor.deleteSuccess");
 			result = new ModelAndView("redirect:list.do");
 		} catch (Throwable oops) {
 			if (oops.getMessage() == "Error") {
