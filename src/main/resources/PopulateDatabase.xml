@@ -22689,7 +22689,7 @@
 	</bean>
 
 	<bean id="trainingday16ES" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="MONDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia de entrenamiento 1" />
 		<property name="trainings">
@@ -22705,7 +22705,7 @@
 	</bean>
 
 	<bean id="trainingday16EN" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="MONDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Training day 1" />
 		<property name="trainings">
@@ -22721,7 +22721,7 @@
 	</bean>
 
 	<bean id="trainingday17ES" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="TUESDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia de entrenamiento 2" />
 		<property name="trainings">
@@ -22737,7 +22737,7 @@
 	</bean>
 
 	<bean id="trainingday17EN" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="TUESDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Training day 2" />
 		<property name="trainings">
@@ -22753,7 +22753,7 @@
 	</bean>
 
 	<bean id="trainingday18ES" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="WEDNESDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia de entrenamiento 3" />
 		<property name="trainings">
@@ -22769,7 +22769,7 @@
 	</bean>
 
 	<bean id="trainingday18EN" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="WEDNESDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Training day 3" />
 		<property name="trainings">
@@ -22785,7 +22785,7 @@
 	</bean>
 
 	<bean id="trainingday19ES" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="THURSDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia de entrenamiento 4" />
 		<property name="trainings">
@@ -22801,7 +22801,7 @@
 	</bean>
 
 	<bean id="trainingday19EN" class="domain.TrainingDay">
-		<property name="name" value="FRIDAY" />
+		<property name="name" value="THURSDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Training day 4" />
 		<property name="trainings">
