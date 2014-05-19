@@ -23554,7 +23554,7 @@
 <!-- plan de feliciano -->
 	<bean id="plan3ES" class="domain.Plan">
 		<property name="name" value="Plan para perder peso 1" />
-		<property name="goal" value="GAIN_MUSCLE_MASS" />
+		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Este es un plan para perder peso" />
 		<property name="minWeight" value="5.0" />
