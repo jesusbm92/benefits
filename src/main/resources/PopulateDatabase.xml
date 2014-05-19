@@ -18973,7 +18973,7 @@
 	</bean>
 
 	<bean id="exercise91EN" class="domain.Exercise">
-		<property name="name" value="Polea tras nuca" />
+		<property name="name" value="Pullups" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio hay que realizarlo con poco peso. (Ingles)" />
@@ -19007,7 +19007,7 @@
 	</bean>
 
 	<bean id="exercise92EN" class="domain.Exercise">
-		<property name="name" value="Polea al pecho con agarre estrecho (Ingles)" />
+		<property name="name" value="V-Bar Pulldown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio. (Ingles)" />
@@ -19041,7 +19041,7 @@
 	</bean>
 
 	<bean id="exercise93EN" class="domain.Exercise">
-		<property name="name" value="Remo a una mano con mancuernas (Ingles)" />
+		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.(Ingles)" />
@@ -19075,7 +19075,7 @@
 	</bean>
 
 	<bean id="exercise94EN" class="domain.Exercise">
-		<property name="name" value="Remo horizontal en barra (Ingles)" />
+		<property name="name" value="Bent Over Barbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento. (Ingles)" />
@@ -19109,7 +19109,7 @@
 	</bean>
 
 	<bean id="exercise95EN" class="domain.Exercise">
-		<property name="name" value="Peso muerto con barra (Ingles)" />
+		<property name="name" value="Barbell Deadlift" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar. (Ingles)" />
@@ -19143,7 +19143,7 @@
 	</bean>
 
 	<bean id="exercise96EN" class="domain.Exercise">
-		<property name="name" value="Prensa (Ingles)" />
+		<property name="name" value="Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares. (Ingles)" />
@@ -19177,7 +19177,7 @@
 	</bean>
 
 	<bean id="exercise97EN" class="domain.Exercise">
-		<property name="name" value="Sentadilla Hack (Ingles)" />
+		<property name="name" value="Hack Squat" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Para proteger la espalda, es importante contraer la banda abdominal lo cual evitará cualquier movimiento lateral de la pelvis y la columna vertebral. (Ingles)" />
@@ -19211,7 +19211,7 @@
 	</bean>
 
 	<bean id="exercise98EN" class="domain.Exercise">
-		<property name="name" value="Extensión de piernas en máquina (Ingles)" />
+		<property name="name" value="Standing Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio es el mejor movimiento de aislamiento de los cuádriceps. Cabe señalar que cuanto más inclinado esté el respaldo, mayor será la retroversión de la pelvis. (Ingles)" />
@@ -19245,7 +19245,7 @@
 	</bean>
 
 	<bean id="exercise99EN" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps femoral sentado (Ingles)" />
+		<property name="name" value="Seated Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. Se recomienda calentar bien los músculos y utilizar cargas moderadas al principio. (Ingles)" />
@@ -19279,7 +19279,7 @@
 	</bean>
 
 	<bean id="exercise100EN" class="domain.Exercise">
-		<property name="name" value="Aductores en máquina (Ingles)" />
+		<property name="name" value="Thigh Adductor" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida. (Ingles)" />
@@ -19313,7 +19313,7 @@
 	</bean>
 
 	<bean id="exercise101EN" class="domain.Exercise">
-		<property name="name" value="Gemelos en escalera a una pierna (Ingles)" />
+		<property name="name" value="Twins in a leg ladder" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos.(Ingles)" />
@@ -19349,8 +19349,7 @@
 
 	<bean id="exercise102EN" class="domain.Exercise">
 		<property name="name"
-			value="Press con mancuerna en banco
-			plano (Ingles)" />
+			value="Dumbbell Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Cuando hayas terminado, no dejes caer las pesas a tu lado ya que esto es peligroso para el manguito rotador de los hombros y para otras personas que trabajan a tu alrededor.(Ingles)" />
@@ -19386,8 +19385,7 @@
 
 	<bean id="exercise103EN" class="domain.Exercise">
 		<property name="name"
-			value="Press con barra en banco
-			declinado (Ingles)" />
+			value="Incline Bench Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
@@ -19421,7 +19419,7 @@
 	</bean>
 
 	<bean id="exercise104EN" class="domain.Exercise">
-		<property name="name" value="Pull-over con mancuernas (Ingles) " />
+		<property name="name" value="Dumbbell Pullover" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas. (Ingles)" />
@@ -19458,8 +19456,7 @@
 
 	<bean id="exercise105EN" class="domain.Exercise">
 		<property name="name"
-			value="Aperturas con mancuernas en
-			banco inclinado (Ingles)" />
+			value="Incline Bench Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes. (Ingles)" />
@@ -19493,7 +19490,7 @@
 	</bean>
 
 	<bean id="exercise106EN" class="domain.Exercise">
-		<property name="name" value="Cruces en polea (Ingles)" />
+		<property name="name" value="Barbell Standing" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular.(Ingles)" />
@@ -19530,8 +19527,7 @@
 
 	<bean id="exercise107EN" class="domain.Exercise">
 		<property name="name"
-			value="Elevaciones laterales alternadas
-			con polea baja (Ingles)" />
+			value="Standing Low-Pulley Deltoid Raise" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada. (Ingles)" />
@@ -19568,8 +19564,7 @@
 
 	<bean id="exercise108EN" class="domain.Exercise">
 		<property name="name"
-			value="Elevación frontal con barra
-			plana agarre abierto (Ingles)" />
+			value="Standing Front Barbell Raise Over Head" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio puede realizarse también con mancuernas.(Ingles)" />
@@ -19603,7 +19598,7 @@
 	</bean>
 
 	<bean id="exercise109EN" class="domain.Exercise">
-		<property name="name" value="Press sentado en máquina (Ingles)" />
+		<property name="name" value="Machine Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso. (Ingles)" />
@@ -19637,7 +19632,7 @@
 	</bean>
 
 	<bean id="exercise110EN" class="domain.Exercise">
-		<property name="name" value="Posterior en máquina (Ingles)" />
+		<property name="name" value="Reverse Machine Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Mantenga los brazos ligeramente doblados durante todo el movimiento.(Ingles)" />
@@ -19671,7 +19666,7 @@
 	</bean>
 
 	<bean id="exercise111EN" class="domain.Exercise">
-		<property name="name" value="Remo al cuello con barra (Ingles)" />
+		<property name="name" value="Upright Barbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja.(Ingles)" />
@@ -19705,7 +19700,7 @@
 	</bean>
 
 	<bean id="exercise112EN" class="domain.Exercise">
-		<property name="name" value="Curl de bíceps (Ingles)" />
+		<property name="name" value="Preacher Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. (Ingles)" />
@@ -19722,7 +19717,7 @@
 	</bean>
 
 	<bean id="exercise113ES" class="domain.Exercise">
-		<property name="name" value="Martillo " />
+		<property name="name" value="Martillo" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial)." />
@@ -19739,7 +19734,7 @@
 	</bean>
 
 	<bean id="exercise113EN" class="domain.Exercise">
-		<property name="name" value="Martillo (Ingles)" />
+		<property name="name" value="Alternate Hammer Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial). (Ingles)" />
@@ -19756,7 +19751,7 @@
 	</bean>
 
 	<bean id="exercise114ES" class="domain.Exercise">
-		<property name="name" value="Curl de biceps en el banco scott " />
+		<property name="name" value="Curl de biceps en el banco scott" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra." />
@@ -19773,7 +19768,7 @@
 	</bean>
 
 	<bean id="exercise114EN" class="domain.Exercise">
-		<property name="name" value="Curl de biceps en el banco scott (Ingles)" />
+		<property name="name" value="Preacher Curl Scott" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra. (Ingles)" />
@@ -19790,7 +19785,7 @@
 	</bean>
 
 	<bean id="exercise115ES" class="domain.Exercise">
-		<property name="name" value="Curl de biceps en el banco " />
+		<property name="name" value="Curl de biceps en el banco" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Este ejercicio de aislamiento permite el control del movimiento en amplitud, velocidad y rectitud. Trabaja, principalmente, el bíceps y el braquial anterior." />
@@ -19807,7 +19802,7 @@
 	</bean>
 
 	<bean id="exercise115EN" class="domain.Exercise">
-		<property name="name" value="Curl de biceps en el banco (Ingles)" />
+		<property name="name" value="Preacher Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Este ejercicio de aislamiento permite el control del movimiento en amplitud, velocidad y rectitud. Trabaja, principalmente, el bíceps y el braquial anterior.(Ingles)" />
@@ -19825,8 +19820,7 @@
 
 	<bean id="exercise116ES" class="domain.Exercise">
 		<property name="name"
-			value="Extensión alternada de los
-			antebrazos con mancuerna inclinado " />
+			value="Extensión alternada de los antebrazos con mancuerna inclinado " />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas." />
@@ -19844,8 +19838,7 @@
 
 	<bean id="exercise116EN" class="domain.Exercise">
 		<property name="name"
-			value="Extensión alternada de los
-			antebrazos con mancuerna inclinado (Ingles)" />
+			value="Standing Bent-Over One-Arm" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
@@ -19863,8 +19856,7 @@
 
 	<bean id="exercise117ES" class="domain.Exercise">
 		<property name="name"
-			value="Extensión de los antebrazos
-			sentado con mancuerna " />
+			value="Extensión de los antebrazos sentado con mancuerna " />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="La posición vertical del brazo estira con fuerza la porción larga del músculo favoreciendo una buena solicitación de esta región durante su contracción." />
@@ -19882,8 +19874,7 @@
 
 	<bean id="exercise117EN" class="domain.Exercise">
 		<property name="name"
-			value="Extensión de los antebrazos
-			sentado con mancuerna (Ingles)" />
+			value="Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="La posición vertical del brazo estira con fuerza la porción larga del músculo favoreciendo una buena solicitación de esta región durante su contracción. (Ingles)" />
@@ -19901,8 +19892,7 @@
 
 	<bean id="exercise118ES" class="domain.Exercise">
 		<property name="name"
-			value="Extensiones de triceps en polea
-			alta , manos en pronación " />
+			value="Extensiones de triceps en polea alta , manos en pronación " />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
 			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps." />
@@ -19920,8 +19910,7 @@
 
 	<bean id="exercise118EN" class="domain.Exercise">
 		<property name="name"
-			value="Extensiones de triceps en polea
-			alta , manos en pronación (Ingles)" />
+			value="Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps. (Ingles)" />
@@ -19958,8 +19947,7 @@
 
 	<bean id="exercise119EN" class="domain.Exercise">
 		<property name="name"
-			value="Extensiones de tríceps en polea
-			alta con agarre invertido (Ingles)" />
+			value="Reverse Grip Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
 			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos. (Ingles)" />
