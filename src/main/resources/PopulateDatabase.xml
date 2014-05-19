@@ -13320,7 +13320,7 @@
 
 	<!-- Martes perder peso 1 -->
 	<bean id="day22ES" class="domain.Day">
-		<property name="name" value="THURSDAY" />
+		<property name="name" value="TUESDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia 2" />
 
@@ -13342,7 +13342,7 @@
 
 
 	<bean id="day22EN" class="domain.Day">
-		<property name="name" value="THURSDAY" />
+		<property name="name" value="TUESDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Day 2" />
 
@@ -13411,7 +13411,7 @@
 
 	<!-- Jueves -->
 	<bean id="day24ES" class="domain.Day">
-		<property name="name" value="TUESDAY" />
+		<property name="name" value="THURSDAY" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="descriptiveName" value="Dia 4" />
 
@@ -13432,7 +13432,7 @@
 	</bean>
 
 	<bean id="day24EN" class="domain.Day">
-		<property name="name" value="TUESDAY" />
+		<property name="name" value="THURSDAY" />
 		<property name="entityLanguage" value="english" />
 		<property name="descriptiveName" value="Day 4" />
 
