@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import services.CustomerService;
 import controllers.AbstractController;
 import domain.Customer;
+import domain.Plan;
 import forms.ChangePasswordForm;
 
 @Controller
@@ -42,11 +43,27 @@ public class CustomerProfileController extends AbstractController {
 			result = createEditModelAndView(customer, new ChangePasswordForm());
 		} else {
 			try {
-				customerService.saveOnlyCustomer(customer);
-				result = createEditModelAndView(
-						customerService.findByPrincipal(),
-						new ChangePasswordForm(), null,
-						"profile.customer.editionSuccess");
+				Plan pre = customer.getPlan();
+				Boolean cambio = customerService.saveOnlyCustomer(customer);
+				Plan pos = customer.getPlan();
+				if (cambio) {
+					if (pre != pos) {
+						result = createEditModelAndView(
+								customerService.findByPrincipal(),
+								new ChangePasswordForm(), null,
+								"profile.customer.editionChangeSuccess");
+					} else {
+						result = createEditModelAndView(
+								customerService.findByPrincipal(),
+								new ChangePasswordForm(), null,
+								"profile.customer.register");
+					}
+				} else {
+					result = createEditModelAndView(
+							customerService.findByPrincipal(),
+							new ChangePasswordForm(), null,
+							"profile.customer.editionSuccess");
+				}
 			} catch (Throwable oops) {
 				result = createEditModelAndView(customer,
 						new ChangePasswordForm(), "profile.customer.register",
