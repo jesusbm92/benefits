@@ -3025,7 +3025,7 @@
 	</bean>
 	<bean id="food301EN" class="domain.Food">
 		<property name="name" value="Gazpacho" />
-		<property name="description" value="Un plato de gazpacho (Ingles)" />
+		<property name="description" value="Spanish Gazpacho" />
 		<property name="image" value="" />
 		<property name="entityLanguage" value="english" />
 		<property name="amounts">
@@ -6145,7 +6145,7 @@
 		<property name="name" value="BREAKFAST" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day31EN" />
@@ -6194,7 +6194,7 @@
 		<property name="name" value="MID_MORNING" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day31EN" />
@@ -6242,7 +6242,7 @@
 		<property name="name" value="TEA_TIME" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la merienda (Ingles)" />
+			value="This meals contains some foods for tea time" />
 		<property name="days">
 			<list>
 				<ref bean="day31EN" />
@@ -6288,7 +6288,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="Lunch" />
 		<property name="days">
 			<list>
 				<ref bean="day31EN" />
@@ -6329,7 +6329,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day31EN" />
@@ -6453,7 +6453,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="This meals contains some foods for lunch" />
 		<property name="days">
 			<list>
 				<ref bean="day33EN" />
@@ -6495,7 +6495,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day33EN" />
@@ -6536,7 +6536,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="This meals contains some foods for lunch." />
 		<property name="days">
 			<list>
 				<ref bean="day34EN" />
@@ -6577,7 +6577,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner." />
 		<property name="days">
 			<list>
 				<ref bean="day34EN" />
@@ -6616,7 +6616,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="This meals contains some foods for lunch." />
 		<property name="days">
 			<list>
 				<ref bean="day35EN" />
@@ -6657,7 +6657,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner" />
 		<property name="days">
 			<list>
 				<ref bean="day35EN" />
@@ -6695,7 +6695,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="This meals contains some foods for lunch." />
 		<property name="days">
 			<list>
 				<ref bean="day36EN" />
@@ -6733,7 +6733,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner." />
 		<property name="days">
 			<list>
 				<ref bean="day36EN" />
@@ -6772,7 +6772,7 @@
 		<property name="name" value="LUNCH" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para el almuerzo (Ingles)" />
+			value="This meals contains some foods for lunch." />
 		<property name="days">
 			<list>
 				<ref bean="day37EN" />
@@ -6810,7 +6810,7 @@
 		<property name="name" value="DINNER" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la cena (Ingles)" />
+			value="This meals contains some foods for dinner." />
 		<property name="days">
 			<list>
 				<ref bean="day37EN" />
@@ -18980,7 +18980,7 @@
 		<property name="name" value="Pullups" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio hay que realizarlo con poco peso. (Ingles)" />
+			value="This exercise should be done with not too much weigth." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="OhkMdW8NJuU" />
 		<property name="repetitions" value="20,20,15,12" />
@@ -19014,7 +19014,7 @@
 		<property name="name" value="V-Bar Pulldown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Evite la tentación de utilizar un peso muy grande que te haga comenzar a balancear el torso con el fin de realizar el ejercicio. (Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="sgyzfUGO7NA" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19048,7 +19048,7 @@
 		<property name="name" value="One-Arm Dumbbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Para una contracción máxima, se puede realizar una ligera torsión del tronco al final del movimiento.(Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="Yx0ixn8q2lU" />
 		<property name="repetitions" value="20,15,12,10" />
@@ -19082,7 +19082,7 @@
 		<property name="name" value="Bent Over Barbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio no está recomendado para personas con problemas de espalda. Para evitar cualquier riesgo de lesión, es importante no arquear la espalda durante la ejecución del movimiento. (Ingles)" />
+			value="This exercise shouldn't be done by people with back problems." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="02i92Xj3SsI" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19116,7 +19116,7 @@
 		<property name="name" value="Barbell Deadlift" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Esto no es un ejercicio para tomarse a la ligera. Si tienes problemas de espalda, es mejor sustituirlo por un movimiento de remo en su lugar. (Ingles)" />
+			value="This exercise shouldn't be done by people with back problems." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="_Vt9dHTLe2A" />
 		<property name="repetitions" value="15,12,15,10" />
@@ -19150,7 +19150,7 @@
 		<property name="name" value="Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="La utilización de la prensa con cargas importantes puede provocar, en algunas personas, un desplazamiento a nivel de la articulación sacro ilíaca lo cual puede provocar a su vez contracciones musculares. (Ingles)" />
+			value="This is an exercise for chest" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="Jy8Gqbtd1Y0" />
 		<property name="repetitions" value="15,12,12,10" />
@@ -19184,7 +19184,7 @@
 		<property name="name" value="Hack Squat" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Para proteger la espalda, es importante contraer la banda abdominal lo cual evitará cualquier movimiento lateral de la pelvis y la columna vertebral. (Ingles)" />
+			value="Be careful with your back when practising this exercise." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,12,12,10" />
@@ -19218,7 +19218,7 @@
 		<property name="name" value="Standing Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio es el mejor movimiento de aislamiento de los cuádriceps. Cabe señalar que cuanto más inclinado esté el respaldo, mayor será la retroversión de la pelvis. (Ingles)" />
+			value="Exercise for cuadriceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,12" />
@@ -19252,7 +19252,7 @@
 		<property name="name" value="Seated Leg Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. Se recomienda calentar bien los músculos y utilizar cargas moderadas al principio. (Ingles)" />
+			value="This is an exercise for biceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,12" />
@@ -19286,7 +19286,7 @@
 		<property name="name" value="Thigh Adductor" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio trabaja los aductores (pectíneo, aductor menor, aductor medio, aductor mayor y recto interno), y permite utilizar cargas más pesadas que en los ejercicios de aducción en la polea baja pero su amplitud de ejecución es más reducida. (Ingles)" />
+			value="This is an exercise for abductor." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="zd78y1E8xUE" />
 		<property name="repetitions" value="25,20,15,12" />
@@ -19320,7 +19320,7 @@
 		<property name="name" value="Twins in a leg ladder" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Se puede realizar el movimiento, sentándose en un banco con una calza bajo los pies y una barra situada en la parte alta de los muslos.(Ingles)" />
+			value="This is an exercise for legs" />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="IYyP7xIsf1I" />
 		<property name="repetitions" value="20,20,20,20" />
@@ -19356,7 +19356,7 @@
 			value="Dumbbell Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Cuando hayas terminado, no dejes caer las pesas a tu lado ya que esto es peligroso para el manguito rotador de los hombros y para otras personas que trabajan a tu alrededor.(Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19392,7 +19392,7 @@
 			value="Incline Bench Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="wjiZF5IFGlU" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19426,7 +19426,7 @@
 		<property name="name" value="Dumbbell Pullover" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Puede realizar este ejercicio con una barra o una barra EZ en lugar de mancuernas. (Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="jIvWxT6t0mM" />
 		<property name="repetitions" value="15,12,12,10" />
@@ -19463,7 +19463,7 @@
 			value="Incline Bench Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Para evitar el riesgo de desgarro en los pectorales, es aconsejable realizar el ejercicio con gran prudencia cuando las cargas empiezan a ser importantes. (Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="jmEtk-qX2o0" />
 		<property name="repetitions" value="20,15,12,12" />
@@ -19497,7 +19497,7 @@
 		<property name="name" value="Barbell Standing" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Excelente para trabajar los pectorales, este ejercicio permite, en series largas, obtener una buena congestión muscular.(Ingles)" />
+			value="This is an exercise for chest." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="0FgCyAdcfDw" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19534,7 +19534,7 @@
 			value="Standing Low-Pulley Deltoid Raise" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio desarrolla el deltoide y principalmente su porción media que al ser multipinnada. (Ingles)" />
+			value="This is an exercise for deltoid." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="Zh1WIesvzrs" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19571,7 +19571,7 @@
 			value="Standing Front Barbell Raise Over Head" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio puede realizarse también con mancuernas.(Ingles)" />
+			value="This is an exercise for shoulders." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="sbxcuplK0qU" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19605,7 +19605,7 @@
 		<property name="name" value="Machine Bench Press" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio solicita: el deltoides, principalmente su porción posterior; el infraespinoso. (Ingles)" />
+			value="This is an exercise for shoulders." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="qalqaMzkBWc" />
 		<property name="repetitions" value="15,20,12,12" />
@@ -19639,7 +19639,7 @@
 		<property name="name" value="Reverse Machine Flyes" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Mantenga los brazos ligeramente doblados durante todo el movimiento.(Ingles)" />
+			value="This is an exercise for shoulders." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="0DSV92Uzko4" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19673,7 +19673,7 @@
 		<property name="name" value="Upright Barbell Row" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio también se puede realizar utilizando una barra recta conectada a una polea baja.(Ingles)" />
+			value="This is an exercise for shoulders." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="_eq1w5gNG4Y" />
 		<property name="repetitions" value="20,15,12,12" />
@@ -19707,7 +19707,7 @@
 		<property name="name" value="Preacher Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Debido a la inclinación del banco, la tensión será muy importante durante la extensión completa de los codos. (Ingles)" />
+			value="This is an exercise for biceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19741,7 +19741,7 @@
 		<property name="name" value="Alternate Hammer Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Es el mejor ejercicio para desarrollar el supinador largo (húmero-cubito-radial). (Ingles)" />
+			value="This is an exercise for biceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="exobXrvhQ_o" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19775,7 +19775,7 @@
 		<property name="name" value="Preacher Curl Scott" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Puede realizarse frente a una polea y tomar el manillar de las mismas con las manos en reemplazo de las mancuernas o de la barra. (Ingles)" />
+			value="This is an exercise for biceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="ERtAmNchnFQ" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19809,7 +19809,7 @@
 		<property name="name" value="Preacher Curl" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este ejercicio de aislamiento permite el control del movimiento en amplitud, velocidad y rectitud. Trabaja, principalmente, el bíceps y el braquial anterior.(Ingles)" />
+			value="This is an exercise for biceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,20,12,10" />
@@ -19845,7 +19845,7 @@
 			value="Standing Bent-Over One-Arm" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Cuando termine, coloque las mancuernas sobre los muslos y luego en el suelo. Esta es la manera más segura de liberar las pesas. (Ingles)" />
+			value="This is an exercise for triceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19881,7 +19881,7 @@
 			value="Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="La posición vertical del brazo estira con fuerza la porción larga del músculo favoreciendo una buena solicitación de esta región durante su contracción. (Ingles)" />
+			value="This is an exercise for triceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value=" " />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19917,7 +19917,7 @@
 			value="Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="La variante realizada con una cuerda en lugar del mango solicita más intensamente el vasto externo del tríceps. (Ingles)" />
+			value="This is an exercise for triceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="RHIY0CU9XZk" />
 		<property name="repetitions" value="15,15,12,10" />
@@ -19954,7 +19954,7 @@
 			value="Reverse Grip Triceps Pushdown" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Flexionamos los codos y desde esa posición inspiramos y descendemos las manos que sujetan la polea hacia los muslos. (Ingles)" />
+			value="This is an exercise for triceps." />
 		<property name="image" value="" />
 		<property name="urlYoutube" value="cGEPFQ99pyQ" />
 		<property name="repetitions" value="20,15,15,12" />
@@ -21761,10 +21761,10 @@
 	</bean>
 
 	<bean id="exercisegroup16EN" class="domain.ExerciseGroup">
-		<property name="name" value="Espalda (Ingles)" />
+		<property name="name" value="Back" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer la espalda. (Ingles)" />
+			value="Exercise group for back." />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise91EN" />
@@ -21804,10 +21804,10 @@
 	</bean>
 
 	<bean id="exercisegroup17EN" class="domain.ExerciseGroup">
-		<property name="name" value="Piernas (Ingles)" />
+		<property name="name" value="Legs" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer las piernas.(Ingles)" />
+			value="Exercise group for legs" />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise96EN" />
@@ -21847,10 +21847,10 @@
 	</bean>
 
 	<bean id="exercisegroup18EN" class="domain.ExerciseGroup">
-		<property name="name" value="Pecho (Ingles)" />
+		<property name="name" value="Chest" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer el pecho. (Ingles)" />
+			value="Exercise group for chest." />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise102EN" />
@@ -21890,10 +21890,10 @@
 	</bean>
 
 	<bean id="exercisegroup19EN" class="domain.ExerciseGroup">
-		<property name="name" value="Hombros (Ingles)" />
+		<property name="name" value="Shoulders" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los hombros. (Ingles)" />
+			value="Exercise group for shoulders." />
 		<property name="exercises">
 			<list>
 
@@ -21939,7 +21939,7 @@
 		<property name="name" value="Brazos (Ingles)" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
-			value="Este grupo de ejercicio contiene una serie de ejercicios para fortalecer los brazos. (Ingles)" />
+			value="Exercise group for arms." />
 		<property name="exercises">
 			<list>
 				<ref bean="exercise112EN" />
@@ -22707,7 +22707,7 @@
 	<bean id="trainingday16EN" class="domain.TrainingDay">
 		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Dia de entrenamiento 1 (Ingles)" />
+		<property name="descriptiveName" value="Training day 1" />
 		<property name="trainings">
 			<list>
 				<ref bean="training4EN" />
@@ -22739,7 +22739,7 @@
 	<bean id="trainingday17EN" class="domain.TrainingDay">
 		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Dia de entrenamiento 2 (Ingles)" />
+		<property name="descriptiveName" value="Training day 2" />
 		<property name="trainings">
 			<list>
 				<ref bean="training4EN" />
@@ -22771,7 +22771,7 @@
 	<bean id="trainingday18EN" class="domain.TrainingDay">
 		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Dia de entrenamiento 3 (Ingles)" />
+		<property name="descriptiveName" value="Training day 3" />
 		<property name="trainings">
 			<list>
 				<ref bean="training4EN" />
@@ -22803,7 +22803,7 @@
 	<bean id="trainingday19EN" class="domain.TrainingDay">
 		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Dia de entrenamiento 4 (Ingles)" />
+		<property name="descriptiveName" value="Training day 4" />
 		<property name="trainings">
 			<list>
 				<ref bean="training4EN" />
@@ -22835,7 +22835,7 @@
 	<bean id="trainingday20EN" class="domain.TrainingDay">
 		<property name="name" value="FRIDAY" />
 		<property name="entityLanguage" value="english" />
-		<property name="descriptiveName" value="Dia de entrenamiento 5 (Ingles)" />
+		<property name="descriptiveName" value="Training day 5" />
 		<property name="trainings">
 			<list>
 				<ref bean="training4EN" />
