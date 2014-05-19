@@ -14875,6 +14875,8 @@
 		<property name="plans">
 			<list>
 				<!--Poner aqui el plan -->
+				
+		<ref bean="plan2EN" />
 			</list>
 		</property>
 		<property name="days">
@@ -14898,7 +14900,7 @@
 			value="Esta dieta tiene como objetivo mantener el peso del usuario." />
 		<property name="plans">
 			<list>
-				<!--Poner aqui el plan -->
+					<ref bean="plan2ES" />
 			</list>
 		</property>
 		<property name="days">
@@ -14925,6 +14927,7 @@
 		<property name="plans">
 			<list>
 
+		<ref bean="plan3ES" />
 			</list>
 		</property>
 		<property name="days">
@@ -14947,6 +14950,7 @@
 		<property name="plans">
 			<list>
 
+		<ref bean="plan3ES" />
 			</list>
 		</property>
 		<property name="days">
@@ -15046,7 +15050,7 @@
 			value="Esta dieta tiene como objetivo mantener el peso del usuario.(Ingles)" />
 		<property name="plans">
 			<list>
-				<ref bean="plan1" />
+				<ref bean="plan4EN" />
 			</list>
 		</property>
 		<property name="days">
@@ -23283,6 +23287,7 @@
 		<property name="plans">
 			<list>
 
+		<ref bean="plan3ES" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -23303,6 +23308,7 @@
 		<property name="plans">
 			<list>
 
+		<ref bean="plan3ES" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -23345,7 +23351,7 @@
 		<property name="entityLanguage" value="english" />
 		<property name="plans">
 			<list>
-				<ref bean="plan1" />
+				<ref bean="plan4EN" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -23369,6 +23375,7 @@
 		<property name="plans">
 			<list>
 
+		<ref bean="plan2EN" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -23390,7 +23397,7 @@
 		<property name="entityLanguage" value="spanish" />
 		<property name="plans">
 			<list>
-
+		<ref bean="plan2ES" />
 			</list>
 		</property>
 		<property name="trainingDays">
@@ -23453,7 +23460,7 @@
 	<!-- Juanmi -->
 	<!-- Plan de mantenerse 1 en español -->
 	<bean id="plan1ES" class="domain.Plan">
-		<property name="name" value="Plan para mantenerse" />
+		<property name="name" value="Plan para mantenerse 1" />
 		<property name="goal" value="KEEP_FIT" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
@@ -23476,7 +23483,7 @@
 	<!-- Plan de mantenerse 1 en ingles -->
 
 	<bean id="plan1EN" class="domain.Plan">
-		<property name="name" value="Plan to keep fit" />
+		<property name="name" value="Plan to keep fit 1" />
 		<property name="goal" value="KEEP_FIT" />
 		<property name="entityLanguage" value="english" />
 		<property name="description"
@@ -23498,69 +23505,101 @@
 
 
 
-	<bean id="plan1" class="domain.Plan">
-		<property name="name" value="Plan to keep fit" />
+	<!-- Plan de mantenerse 2 SUSSSS en español -->
+	<bean id="plan2ES" class="domain.Plan">
+		<property name="name" value="Plan para mantenerse 2" />
 		<property name="goal" value="KEEP_FIT" />
 		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This is a plan to keep fit" />
-		<property name="minWeight" value="5.0" />
-		<property name="maxWeight" value="150.5" />
-		<property name="minBodyFat" value="5.0" />
-		<property name="maxBodyFat" value="150.5" />
+		<property name="description"
+			value="Este es un plan cuyo objetivo es el de mantenerse. Los ejercicios que contiene han de realizarse de forma correcta y sin mucho peso." />
+		<property name="minWeight" value="40.0" />
+		<property name="maxWeight" value="80.5" />
+		<property name="minBodyFat" value="20.0" />
+		<property name="maxBodyFat" value="30.0" />
 		<property name="customers">
 			<list>
-				<ref bean="customer1" />
 			</list>
 		</property>
-		<property name="diet" ref="diet1ES" />
-		<property name="training" ref="training1ES" />
-		<property name="comments">
-			<list></list>
-		</property>
-	</bean>
-	<bean id="plan2" class="domain.Plan">
-		<property name="name" value="Plan to lose weight" />
-		<property name="goal" value="LOSE_WEIGHT" />
-		<property name="entityLanguage" value="spanish" />
-		<property name="description" value="This is a plan to lose weight" />
-		<property name="minWeight" value="5.0" />
-		<property name="maxWeight" value="150.5" />
-		<property name="minBodyFat" value="5.0" />
-		<property name="maxBodyFat" value="150.5" />
-		<property name="customers">
-			<list>
-				<ref bean="customer2" />
-			</list>
-		</property>
-		<property name="diet" ref="diet1ES" />
-		<property name="training" ref="training3es" />
-		<property name="comments">
-			<list>
-				<ref bean="comment1" />
-			</list>
-		</property>
-	</bean>
-	<bean id="plan3" class="domain.Plan">
-		<property name="name" value="Plan to gain muscle mass" />
-		<property name="goal" value="LOSE_WEIGHT" />
-		<property name="entityLanguage" value="english" />
-		<property name="description" value="This is a plan to gain muscle mass" />
-		<property name="minWeight" value="5.0" />
-		<property name="maxWeight" value="150.5" />
-		<property name="minBodyFat" value="5.0" />
-		<property name="maxBodyFat" value="150.5" />
-		<property name="customers">
-			<list></list>
-		</property>
-		<property name="diet" ref="diet1ES" />
-		<property name="training" ref="training3en" />
+		<property name="diet" ref="diet2es" />
+		<property name="training" ref="training2es" />
 		<property name="comments">
 			<list></list>
 		</property>
 	</bean>
 
+	<!-- Plan de mantenerse 2 en ingles -->
+
+	<bean id="plan2EN" class="domain.Plan">
+		<property name="name" value="Plan to keep fit 2" />
+		<property name="goal" value="KEEP_FIT" />
+		<property name="entityLanguage" value="english" />
+		<property name="description"
+			value="This is a plan whose goal is to keep fit. Containing exercises must be performed correctly and without too much weight." />
+		<property name="minWeight" value="40.0" />
+		<property name="maxWeight" value="80.5" />
+		<property name="minBodyFat" value="20.0" />
+		<property name="maxBodyFat" value="30.0" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet2en" />
+		<property name="training" ref="training2es" />
+		<property name="comments">
+			<list></list>
+		</property>
+	</bean>
+
+
+<!-- plan de feliciano -->
+	<bean id="plan3ES" class="domain.Plan">
+		<property name="name" value="Plan para perder peso 1" />
+		<property name="goal" value="GAIN_MUSCLE_MASS" />
+		<property name="entityLanguage" value="spanish" />
+		<property name="description" value="Este es un plan para perder peso" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="75.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="70.5" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet3EN" />
+		<property name="training" ref="training3es" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+	<bean id="plan3EN" class="domain.Plan">
+		<property name="name" value="Plan to lose weight 1" />
+		<property name="goal" value="LOSE_WEIGHT" />
+		<property name="entityLanguage" value="english" />
+		<property name="description" value="Plan to lose weight" />
+		<property name="minWeight" value="5.0" />
+		<property name="maxWeight" value="75.5" />
+		<property name="minBodyFat" value="5.0" />
+		<property name="maxBodyFat" value="70.5" />
+		<property name="customers">
+			<list>
+			</list>
+		</property>
+		<property name="diet" ref="diet3EN" />
+		<property name="training" ref="training3en" />
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+
+
+
 	<bean id="plan4ES" class="domain.Plan">
-		<property name="name" value="Plan to lose weight" />
+		<property name="name" value="Plan para perder peso 2" />
 		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description" value="Este es un plan para perder peso" />
@@ -23581,7 +23620,7 @@
 	</bean>
 
 	<bean id="plan4EN" class="domain.Plan">
-		<property name="name" value="Plan to lose weight" />
+		<property name="name" value="Plan to lose weight 2" />
 		<property name="goal" value="LOSE_WEIGHT" />
 		<property name="entityLanguage" value="english" />
 		<property name="description" value="This is a plan to lose weight" />
@@ -23635,7 +23674,7 @@
 			<list>
 			</list>
 		</property>
-		<property name="diet" ref="diet5ES" />
+		<property name="diet" ref="diet5EN" />
 		<property name="training" ref="training8en" />
 		<property name="comments">
 			<list>
@@ -23676,7 +23715,7 @@
 			<list>
 			</list>
 		</property>
-		<property name="diet" ref="diet6ES" />
+		<property name="diet" ref="diet6EN" />
 		<property name="training" ref="training9EN" />
 		<property name="comments">
 			<list>
@@ -23697,8 +23736,8 @@
 		<property name="userAccount" ref="userAccount1" />
 		<property name="plans">
 			<list>
-				<ref bean="plan1" />
-				<ref bean="plan2" />
+				<ref bean="plan11ES" />
+				<ref bean="plan11EN" />
 			</list>
 		</property>
 	</bean>
@@ -23719,7 +23758,7 @@
 		<property name="waistlineMeasure" value="180" />
 		<property name="hipMeasure" value="130" />
 		<property name="chestMeasure" value="130" />
-		<property name="plan" ref="plan1" />
+		<property name="plan" ref="plan1ES" />
 		<property name="issues">
 			<list></list>
 		</property>
@@ -23762,7 +23801,7 @@
 		<property name="waistlineMeasure" value="70" />
 		<property name="hipMeasure" value="80" />
 		<property name="chestMeasure" value="80" />
-		<property name="plan" ref="plan2" />
+		<property name="plan" ref="plan10EN" />
 		<property name="issues">
 			<list></list>
 		</property>
@@ -23773,7 +23812,7 @@
 		<property name="date" value="2014/03/28" />
 		<property name="content" value="Content Comment 1" />
 		<property name="user" ref="customer2" />
-		<property name="plan" ref="plan2" />
+		<property name="plan" ref="plan10ES" />
 	</bean>
 	<!-- ISSUES -->
 </beans>
