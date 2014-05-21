@@ -31,12 +31,10 @@
 				<form:hidden path="city" />
 				<form:hidden path="nationality" />
 				<form:hidden path="weight" />
-				<form:hidden path="nationality" />
 				<form:hidden path="height" />
 				<form:hidden path="bodyfat" />
 				<form:hidden path="waistlineMeasure" />
 				<form:hidden path="hipMeasure" />
-				<form:hidden path="nationality" />
 				<form:hidden path="chestMeasure" />
 				<form:hidden path="issues" />
 

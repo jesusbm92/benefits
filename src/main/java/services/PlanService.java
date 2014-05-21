@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -177,8 +178,14 @@ public class PlanService {
 	// Assertions
 
 	public Collection<Plan> findByGoal(Goals goal) {
-		// TODO Auto-generated method stub
-		return planRepository.findPlansByGoal(goal);
-	}
 
+		Collection<Plan> result;
+		String language = LocaleContextHolder.getLocale().getDisplayLanguage();
+		if (language.toLowerCase().equals(Language.english.toString())) {
+			result = planRepository.findPlansByGoal(goal, Language.english);
+		} else {
+			result = planRepository.findPlansByGoal(goal, Language.spanish);
+		}
+		return result;
+	}
 }

@@ -27,8 +27,8 @@ public interface PlanRepository extends JpaRepository<Plan, Integer> {
 	Collection<Plan> findPlansByGoal(Goals goal, Double bodyFat, Double weight,
 			Language language);
 
-	@Query("select p from Plan p where p.goal= ?1")
-	Collection<Plan> findPlansByGoal(Goals goal);
+	@Query("select p from Plan p where p.goal= ?1 and p.entityLanguage = ?2")
+	Collection<Plan> findPlansByGoal(Goals goal, Language language);
 
 	@Query("select p from Plan p where p.diet.id= ?1")
 	Collection<Plan> findPlansByDiet(int dietId);
