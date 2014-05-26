@@ -1,3 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+
 <!-- * PopulateDatabase.xml * * Copyright (C) 2014 Universidad de Sevilla 
 	* * The use of this project is hereby constrained to the conditions of the 
 	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
@@ -2540,11 +2542,11 @@
 			</list>
 		</property>
 	</bean>
-	<!-- Lunes Media MaÃ±ana -->
+	<!-- Lunes Media Mañana -->
 
 	<bean id="food4ES" class="domain.Food">
 		<property name="name" value="Fruta" />
-		<property name="description" value="Una pieza de fruta a tu elecciÃ³n" />
+		<property name="description" value="Una pieza de fruta a tu elección" />
 		<property name="image" value="" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
@@ -2739,7 +2741,7 @@
 
 	<bean id="food8ES" class="domain.Food">
 		<property name="name" value="Filete de pollo" />
-		<property name="description" value="Dos filetes de pollo pequeÃ±os" />
+		<property name="description" value="Dos filetes de pollo pequeños" />
 		<property name="image" value="" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
@@ -2791,7 +2793,7 @@
 	<bean id="food10ES" class="domain.Food">
 		<property name="name" value="Sopa de fideos con jamon" />
 		<property name="description"
-			value="Una sopa caliente de fideos con pequeÃ±os trozos de jamÃ³n" />
+			value="Una sopa caliente de fideos con pequeños trozos de jamón" />
 		<property name="image" value="" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="amounts">
@@ -4784,7 +4786,7 @@
 		<property name="name" value="MID_MORNING" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la media maÃ±ana" />
+			value="Este momento del dia contiene algunas comidas para la media mañana" />
 		<property name="days">
 			<list>
 				<ref bean="day1ES" />
@@ -5476,7 +5478,7 @@
 		<property name="name" value="MID_MORNING" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la media maÃƒÂ±ana" />
+			value="Este momento del dia contiene algunas comidas para la media mañana" />
 		<property name="days">
 			<list>
 				<ref bean="day21ES" />
@@ -6170,7 +6172,7 @@
 		<property name="name" value="MID_MORNING" />
 		<property name="entityLanguage" value="spanish" />
 		<property name="description"
-			value="Este momento del dia contiene algunas comidas para la media maÃ±ana" />
+			value="Este momento del dia contiene algunas comidas para la media mañana" />
 		<property name="days">
 			<list>
 				<ref bean="day31ES" />
@@ -11035,7 +11037,7 @@
 		<property name="food" ref="food3EN" />
 	</bean>
 
-	<!-- Lunes Media MaÃ±ana -->
+	<!-- Lunes Media Mañana -->
 
 	<bean id="amount4ES" class="domain.Amount">
 		<property name="quantity" value="1" />
@@ -11764,7 +11766,7 @@
 		<property name="food" ref="food403ES" />
 	</bean>
 
-	<!-- Lunes Media MaÃ±ana -->
+	<!-- Lunes Media Mañana -->
 
 	<bean id="amount404ES" class="domain.Amount">
 		<property name="quantity" value="1" />
@@ -12381,7 +12383,7 @@
 		<property name="food" ref="food403EN" />
 	</bean>
 
-	<!-- Lunes Media MaÃ±ana -->
+	<!-- Lunes Media Mañana -->
 
 	<bean id="amount404EN" class="domain.Amount">
 		<property name="quantity" value="1" />
