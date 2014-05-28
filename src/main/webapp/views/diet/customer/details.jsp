@@ -73,7 +73,7 @@
 																				<div class="pull-right">
 																					<img
 																						src="image/showFood.do?foodId=${thirt.food.id }"
-																						style="height: 50px" class="img-thumbnail" />
+																						style="height: 100px" class="img-thumbnail" />
 																				</div>
 																			</jstl:if>
 																		</div>
