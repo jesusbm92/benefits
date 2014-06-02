@@ -62,6 +62,7 @@ public class Day extends DomainEntity {
 	}
 
 	@Valid
+	@JsonIgnore
 	@NotNull
 	@ManyToMany
 	public Collection<Meal> getMeals() {

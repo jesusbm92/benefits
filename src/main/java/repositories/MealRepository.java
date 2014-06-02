@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import domain.Language;
 import domain.Meal;
+import domain.Meals;
 
 @Repository
 public interface MealRepository extends JpaRepository<Meal, Integer> {
@@ -17,4 +18,7 @@ public interface MealRepository extends JpaRepository<Meal, Integer> {
 
 	@Query("select m from Meal m where m.entityLanguage=?1")
 	Collection<Meal> findAllLanguage(Language language);
+
+	@Query("select m from Meal m JOIN m.days d where d.id=?1 AND m.name=?2")
+	Meal findMealByDayIdAndMealName(int dayId, Meals mealName);
 }
