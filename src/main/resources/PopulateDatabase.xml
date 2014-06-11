@@ -23546,7 +23546,7 @@
 			</list>
 		</property>
 		<property name="diet" ref="diet2en" />
-		<property name="training" ref="training2es" />
+		<property name="training" ref="training2en" />
 		<property name="comments">
 			<list></list>
 		</property>
@@ -23567,7 +23567,7 @@
 			<list>
 			</list>
 		</property>
-		<property name="diet" ref="diet3EN" />
+		<property name="diet" ref="diet3ES" />
 		<property name="training" ref="training3es" />
 		<property name="comments">
 			<list>
