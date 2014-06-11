@@ -11,7 +11,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-7 col-md-offset-1">
 			<h1 class="text-center">
 				<spring:message code="diet.mydiet" />
 			</h1>
@@ -53,13 +53,13 @@
 																<div class="panel panel-default">
 																	<div class="panel-body">
 																		<div class="row">
-																			<div class="col-sm-5">
+																			<div class="col-md-7">
 
-																				<p>
+																				<p style="font-size: 16px;">
 																					<spring:message code="diet.food" />
 																					: ${thirt.food.name }
 																				</p>
-																				<ul>
+																				<ul style="font-size: 16px;">
 																					<li><spring:message code="diet.description" />:
 																						${thirt.food.description }</li>
 																					<li><spring:message code="diet.quantity" />:
@@ -70,7 +70,7 @@
 																				</ul>
 																			</div>
 																			<jstl:if test="${thirt.food.validImage }">
-																				<div class="pull-right">
+																				<div class="col-md-4 col-md-offset-1">
 																					<img
 																						src="image/showFood.do?foodId=${thirt.food.id }"
 																						style="height: 100px" class="img-thumbnail" />
@@ -104,7 +104,7 @@
 				src="images/pdf_icon.gif"
 				onclick="self.location.href = diet/customer/export.do?dietId=${diet.id}" /></a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-md-offset-2">
 			<img class="media-object img-rounded img-responsive"
 				src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
 			<img class="media-object img-rounded img-responsive"
