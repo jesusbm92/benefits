@@ -11,7 +11,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-10">
+		<div class="col-md-8 col-md-offset-1">
 			<h1 class="text-center">
 				<spring:message code="training.mytraining" />
 			</h1>
@@ -51,7 +51,7 @@
 																<div class="panel panel-default">
 																	<div class="panel-body">
 																		<div class="row">
-																			<div class="col-sm-5">
+																			<div class="col-md-5">
 																				<p>
 																					<spring:message code="training.name" />
 																					: ${thirt.name }
@@ -66,8 +66,8 @@
 																						${thirt.muscle.name }</li>
 																				</ul>
 																			</div>
-																			<div class="pull-right">
-																				<iframe width="200" height="200"
+																			<div class="col-md-6 col-md-offset-1">
+																				<iframe width="300" height="200"
 																					src="https://www.youtube.com/embed/${thirt.urlYoutube}"></iframe>
 																			</div>
 																		</div>
@@ -96,7 +96,7 @@
 				src="images/pdf_icon.gif"
 				onclick="self.location.href = training/export.do?trainingId=${training.id}" /></a>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-md-offset-1">
 			<img class="media-object img-rounded img-responsive"
 				src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
 			<img class="media-object img-rounded img-responsive"
