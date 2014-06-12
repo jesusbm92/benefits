@@ -102,7 +102,7 @@ body {
 								<form:input path="urlYoutube" id="urlYoutube"
 									class="form-control" />
 								<a
-									href="http://www.youtube.com/results?search_query=${exercise.name }"
+									href="http://www.youtube.com/results?search_query=${exercise.name}"
 									type="button" target="_blank"><spring:message
 										code="exercise.addLink" /></a>
 							</div>

@@ -161,7 +161,7 @@
 								</div>
 							</div>
 							<br /> <br />
-							<div class="shared" align="center">
+							<div class="shared" align="center"  style="font-size: 16px;">
 
 								<label><spring:message code="welcome.shared1" /></label><br>
 								<label><spring:message code="welcome.shared2" /></label><br>

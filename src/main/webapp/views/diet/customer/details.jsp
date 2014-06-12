@@ -11,7 +11,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-7 col-md-offset-1">
+		<div class="col-md-8 col-md-offset-1">
 			<h1 class="text-center">
 				<spring:message code="diet.mydiet" />
 			</h1>
@@ -104,7 +104,7 @@
 				src="images/pdf_icon.gif"
 				onclick="self.location.href = diet/customer/export.do?dietId=${diet.id}" /></a>
 		</div>
-		<div class="col-md-2 col-md-offset-2">
+		<div class="col-md-2 col-md-offset-1">
 			<img class="media-object img-rounded img-responsive"
 				src="http://placehold.it/200x100" alt="placehold.it/200x100"><br>
 			<img class="media-object img-rounded img-responsive"

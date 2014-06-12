@@ -29,7 +29,7 @@
 <!-- 	<img src="images/benefits-transparente.png" alt="Benefits Co., Inc." /> -->
 <!-- </div> -->
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" style="font-size: 18px;">
 	<div class="container">
 		<!-- 		<div class="collapse navbar-collapse" -->
 		<!-- 			id="bs-example-navbar-collapse-1"> -->
