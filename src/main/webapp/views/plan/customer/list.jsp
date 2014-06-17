@@ -128,7 +128,7 @@ body {
 				<br />
 
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
+					<div class="col-md-8 col-md-offset-2">
 						<div class="panel panel-default widget">
 							<div class="panel-heading">
 								<!-- 					<span class="glyphicon glyphicon-comment"></span> -->
@@ -175,20 +175,24 @@ body {
 								</ul>
 							</div>
 							<div class="panel-footer">
-								<form:form action="comment/edit.do" modelAttribute="newComment">
-									<form:hidden path="id" />
-									<form:hidden path="date" />
-									<form:hidden path="version" />
-									<form:hidden path="user" />
-									<form:hidden path="plan" />
-									<div class="col-md-8">
-										<form:textarea path="content" rows="2" class="form-control" />
-									</div>
-									<form:errors path="content" cssClass="error" />
-									<br />
-									<input type="submit" name="save" class="btn btn-default"
-										value="<spring:message code="plan.comment.send" />" />
-								</form:form>
+								<div class="row">
+									<form:form action="comment/edit.do" modelAttribute="newComment">
+										<form:hidden path="id" />
+										<form:hidden path="date" />
+										<form:hidden path="version" />
+										<form:hidden path="user" />
+										<form:hidden path="plan" />
+										<div class="col-md-7 col-md-offset-1">
+											<form:textarea path="content" rows="2" class="form-control" />
+										</div>
+										<form:errors path="content" cssClass="error" />
+										<br />
+										<div class="col-md-3">
+											<input type="submit" name="save" class="btn btn-default"
+												value="<spring:message code="plan.comment.send" />" />
+										</div>
+									</form:form>
+								</div>
 							</div>
 						</div>
 					</div>

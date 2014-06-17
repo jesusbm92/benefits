@@ -52,12 +52,12 @@
 																	<div class="panel-body">
 																		<div class="row">
 																			<div class="col-md-5">
-																				<p style="font-size: 16px;">
+																				<p style="font-size: 17px;">
 																					<spring:message code="training.name" />
 																					: ${thirt.name }
 																				</p>
 
-																				<ul style="font-size: 16px;">
+																				<ul style="font-size: 17px;">
 																					<li><spring:message code="training.repetition" />:
 																						${thirt.repetitions }</li>
 																					<li><spring:message code="training.cycles" />:

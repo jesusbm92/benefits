@@ -55,11 +55,11 @@
 																		<div class="row">
 																			<div class="col-md-7">
 
-																				<p style="font-size: 16px;">
+																				<p style="font-size: 17px;">
 																					<spring:message code="diet.food" />
 																					: ${thirt.food.name }
 																				</p>
-																				<ul style="font-size: 16px;">
+																				<ul style="font-size: 17px;">
 																					<li><spring:message code="diet.description" />:
 																						${thirt.food.description }</li>
 																					<li><spring:message code="diet.quantity" />:

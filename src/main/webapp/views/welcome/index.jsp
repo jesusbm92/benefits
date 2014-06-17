@@ -113,8 +113,7 @@
 						<div class="panel-heading">
 							<h3 class="panel-title">
 								<spring:message code="welcome.hello" />
-								<security:authentication property="principal.username" />
-								!
+								<security:authentication property="principal.username" />!
 							</h3>
 						</div>
 						<div class="panel-body">
